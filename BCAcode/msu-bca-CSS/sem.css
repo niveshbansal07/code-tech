@@ -1,0 +1,86 @@
+.msu-bca-sem-header {
+    margin: 30px 200px;
+    padding: 10px 40px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.msu-bca-sem-header-sem-no{
+    color: green;
+}
+
+table {
+    width: 100%;
+    display: flex;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    justify-content: center;
+}
+
+th,
+td {
+    border: 1px solid #757575;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.bold-text {
+    font-weight: bold;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    background: white;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.container h2 {
+    color: #343a40;
+    font-size: 30px;
+}
+
+.container p {
+    font-size: 20px;
+}
+
+.horizontal-partition{
+    height: 5px;
+    background-color: black;
+}
+.unit {
+    font-weight: bold;
+    color: #007bff;
+    color: green;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+.unit:hover {
+    text-decoration: underline;
+}
+
+.content {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+ul {
+    text-align: left;
+}
