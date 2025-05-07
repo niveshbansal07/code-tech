@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Computer Architecture & Assembly language</div>
+
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Basic Computer Organization</a>
+        <div id="unit1" class="content">
+            Basic computer organization and design, Instructions and instruction codes, Timing and control, Register
+            types, Memory function, Bus, Data transfer instructions, Arithmetic logic micro-operations, Input/Output and
+            interrupts, Memory interfacing, Cache memory.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Central Processing Unit</a>
+        <div id="unit2" class="content">
+            General Register Organization, Stacks, Instruction formats, Addressing modes, Data transfer and
+            manipulation, Program control, RISC/CISC pipeline, Vector processing, Arithmetic Algorithms: Integer
+            multiplication, Booth’s algorithm, Integer division, Floating-point representations.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Computer Arithmetic</a>
+        <div id="unit3" class="content">
+            Addition, subtraction, multiplication algorithms, divisor algorithms, Floating-point arithmetic operations,
+            Decimal arithmetic operations.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Input-Output Organization</a>
+        <div id="unit4" class="content">
+            Peripheral devices, Input/output interface, ALU, Asynchronous Data transfer, Mode of transfer, Priority
+            interrupts, Direct memory Access (DMA), Input/Output processor (IOP), Serial communication.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Evaluation of Microprocessor</a>
+        <div id="unit5" class="content">
+            Overview of Intel 8085 to Intel Pentium processors, Basic microprocessors, Architecture and interface,
+            Internal and external architecture, Memory and Input/Output interface.
+        </div>
+
+        <a href="#unit6" class="unit">UNIT-VI: Assembly Language</a>
+        <div id="unit6" class="content">
+            Assembly language, Assembler, Assembly level instructions, Macros, Use of macros in I/C instructions,
+            Program loops, Programming arithmetic and logic subroutines, Input-Output programming.
+        </div>
+   </div>
+
+   <!-- UNIT 1 -->
+
+   <div class="topic-container" id="unit1">
+    <h1>UNIT-I: Basic Computer Organization and Design</h1>
+
+    <section class="section">
+        <h2>1. Basic Computer Organization</h2>
+        <p>In computer architecture, the organization of a computer system involves the structure and functionality of its components, such as the central processing unit (CPU), memory, and I/O devices. The main goal of computer organization is to execute instructions effectively.</p>
+        <p>Basic components of a computer system include:</p>
+        <ul>
+            <li><strong>CPU:</strong> The brain of the computer that executes instructions.</li>
+            <li><strong>Memory:</strong> Used to store data and instructions.</li>
+            <li><strong>I/O Devices:</strong> Used to communicate with the external environment.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Instructions and Instruction Codes</h2>
+        <p>An instruction is a binary code that tells the computer what operation to perform. The instruction code consists of an operation code (opcode) and operands. The opcode specifies the operation, and operands are the data or addresses involved in the operation.</p>
+        <pre class="code-block">
+            Example: 
+            Instruction: 10110001
+            - Opcode: 1011 (Add)
+            - Operand: 0001 (Address)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Timing and Control / Instruction Cycle</h2>
+        <p>The instruction cycle is the sequence of steps a computer follows to fetch and execute an instruction. It consists of:</p>
+        <ol>
+            <li><strong>Fetch:</strong> Retrieve the instruction from memory.</li>
+            <li><strong>Decode:</strong> Decode the instruction to determine the operation.</li>
+            <li><strong>Execute:</strong> Perform the operation as specified by the instruction.</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <h2>4. Registers: Types and Functions</h2>
+        <p>Registers are small, fast storage locations in the CPU that store data temporarily during execution. The types of registers include:</p>
+        <ul>
+            <li><strong>General Purpose Registers:</strong> Used for temporary data storage during operations.</li>
+            <li><strong>Special Purpose Registers:</strong> Used for specific control purposes, such as the Program Counter (PC) and the Accumulator (AC).</li>
+            <li><strong>Index Registers:</strong> Used for indexed addressing modes in instruction fetching.</li>
+        </ul>
+        <pre class="code-block">
+            Example: 
+            Program Counter (PC) - Holds the address of the next instruction to be executed.
+            Accumulator (AC) - Holds intermediate results of arithmetic operations.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Register Transfer and Micro-Operations</h2>
+        <p>Register transfer is the process of moving data between registers. A micro-operation refers to the smallest operation that can be performed on data in the registers.</p>
+        <pre class="code-block">
+            Example:
+            R1 ← R2 (Transfer contents of register R2 to R1)
+            R3 ← R1 + R2 (Perform addition and store result in R3)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Memory and Memory Functions</h2>
+        <p>Memory in a computer is used to store instructions and data. The two main types of memory are:</p>
+        <ul>
+            <li><strong>Primary Memory:</strong> Volatile memory (RAM), directly accessible by the CPU.</li>
+            <li><strong>Secondary Memory:</strong> Non-volatile memory (hard drives, SSDs).</li>
+        </ul>
+        <p>Memory functions include reading data from and writing data to memory.</p>
+    </section>
+
+    <section class="section">
+        <h2>7. Bus/Data Transfer Instructions</h2>
+        <p>A bus is a collection of parallel lines used for transferring data between various components of a computer. Data transfer instructions are used to move data between registers and memory locations.</p>
+        <pre class="code-block">
+            Example:
+            MOV A, B   ; Move data from register B to A
+            ADD A, C   ; Add contents of register C to A
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Arithmetic and Logic Micro-Operations</h2>
+        <p>Arithmetic micro-operations include basic operations such as addition and subtraction, while logic micro-operations include operations such as AND, OR, and NOT.</p>
+        <pre class="code-block">
+            Example:
+            ADD:  R1 ← R1 + R2
+            AND:  R1 ← R1 AND R2
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>9. Input/Output and Interrupts</h2>
+        <p>Input/Output operations involve communication between the computer and external devices. Interrupts allow devices to send signals to the CPU to indicate an event, prompting the CPU to interrupt its current task and handle the event.</p>
+        <pre class="code-block">
+            Example:
+            - Interrupt Request (IRQ) for an I/O device.
+            - Interrupt Service Routine (ISR) handles the request.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>10. Memory Reference Instructions</h2>
+        <p>Memory reference instructions are used to move data between memory and registers or perform operations on memory data.</p>
+        <pre class="code-block">
+            Example:
+            LOAD A, M     ; Load data from memory location M into register A
+            STORE A, M    ; Store data from register A into memory location M
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>11. Memory Interfacing and Cache Memory</h2>
+        <p>Memory interfacing involves connecting the memory to the CPU using buses. Cache memory is a small, high-speed memory that stores frequently accessed data to speed up processing.</p>
+        <p><strong>Cache Memory:</strong> A small but fast memory located between the CPU and RAM. It stores frequently used instructions and data to reduce access time.</p>
+    </section>
+</div>
+
+<!-- UNIT 2 -->
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Central Processing Unit and Arithmetic Algorithms</h1>
+
+    <section class="section">
+        <h2>1. Central Processing Unit (CPU)</h2>
+        <p>The Central Processing Unit (CPU) is the heart of a computer system. It is responsible for executing instructions and performing operations on data. The CPU is composed of various units that work together to execute programs.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. General Register Organization</h2>
+        <p>The general register organization of a CPU involves a set of registers that can be used for storing data during execution. These registers can be used for various operations, such as storing intermediate results, addressing memory, and controlling the flow of execution.</p>
+        <pre class="code-block">
+            Example: 
+            - R1, R2, R3 are general purpose registers in the CPU.
+            - R1 ← R2 + R3 (Addition operation between R2 and R3, storing the result in R1).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Stack Organization</h2>
+        <p>Stack organization refers to the use of a stack data structure to manage data in a last-in-first-out (LIFO) order. It is commonly used for function calls, interrupt handling, and storing return addresses.</p>
+        <pre class="code-block">
+            Example:
+            PUSH A    ; Push the value of register A onto the stack.
+            POP B     ; Pop the top value from the stack and store it in register B.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Instruction Formats</h2>
+        <p>Instruction formats define the layout of bits in an instruction. They typically include fields for the opcode (operation code), operands, and sometimes additional fields for addressing modes or control information.</p>
+        <pre class="code-block">
+            Example:
+            Instruction Format: [Opcode | Operand 1 | Operand 2]
+            - Opcode: 0001 (Addition)
+            - Operand 1: R1 (First operand)
+            - Operand 2: R2 (Second operand)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Addressing Modes</h2>
+        <p>Addressing modes define how the operand of an instruction is located in memory. Common addressing modes include:</p>
+        <ul>
+            <li><strong>Immediate Addressing:</strong> Operand is directly specified in the instruction.</li>
+            <li><strong>Direct Addressing:</strong> Operand's memory address is given directly in the instruction.</li>
+            <li><strong>Indirect Addressing:</strong> Operand's address is stored in a register or memory location.</li>
+            <li><strong>Register Addressing:</strong> Operand is located in a register.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Data Transfer and Manipulation</h2>
+        <p>Data transfer and manipulation involve moving data between registers, memory, and I/O devices, and performing operations like addition, subtraction, etc., on the data. Examples include:</p>
+        <pre class="code-block">
+            MOV A, B   ; Transfer data from register B to register A.
+            ADD A, C   ; Add contents of register C to register A.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Program Control</h2>
+        <p>Program control refers to mechanisms that control the execution flow of a program. This includes branching instructions (such as jumps, calls, and returns) and conditional statements.</p>
+        <pre class="code-block">
+            Example:
+            JUMP 1000   ; Jump to memory address 1000.
+            CALL FUNC   ; Call function FUNC.
+            RETURN      ; Return from function.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Reduced Computer: RISC and CISC</h2>
+        <p>RISC (Reduced Instruction Set Computer) and CISC (Complex Instruction Set Computer) are two types of CPU architectures. RISC processors have a smaller set of simple instructions, while CISC processors have a larger, more complex set of instructions.</p>
+        <ul>
+            <li><strong>RISC:</strong> Focuses on executing a small number of simple instructions per cycle. Examples: ARM, MIPS.</li>
+            <li><strong>CISC:</strong> Can execute more complex instructions, reducing the number of instructions needed. Examples: x86, Intel.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>9. Pipeline Processing</h2>
+        <p>Pipeline processing allows for overlapping instruction execution by breaking down the execution process into stages. This helps improve the throughput of the CPU by enabling multiple instructions to be processed simultaneously.</p>
+        <pre class="code-block">
+            Example: 
+            - Stage 1: Fetch instruction
+            - Stage 2: Decode instruction
+            - Stage 3: Execute instruction
+            - Stage 4: Write back result
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>10. Vector Processing and Array Processing</h2>
+        <p>Vector processing involves the simultaneous processing of multiple data elements, often used in scientific computations. Array processing refers to operations on arrays of data elements in parallel.</p>
+        <pre class="code-block">
+            Example: 
+            - Vector addition: A[i] = B[i] + C[i] (Perform addition on multiple elements of arrays simultaneously).
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>11. Arithmetic Algorithms</h2>
+        <p>Arithmetic algorithms are essential for performing mathematical operations like multiplication, division, and handling floating-point numbers. Key algorithms include:</p>
+        <ul>
+            <li><strong>Integer Multiplication using Shift and Add:</strong> A simple algorithm for multiplying integers by shifting and adding partial products.</li>
+            <pre class="code-block">
+                Example:
+                A * B = (A << 1) + (A << 2) + ...
+            </pre>
+            <li><strong>Booth’s Algorithm:</strong> An efficient method for multiplying binary numbers that handles both positive and negative numbers.</li>
+            <pre class="code-block">
+                Example:
+                Booth’s algorithm performs multiplication by examining pairs of bits.
+            </pre>
+            <li><strong>Integer Division:</strong> Algorithms for dividing integers, including restoring and non-restoring division methods.</li>
+            <li><strong>Floating-Point Representations:</strong> Floating-point numbers are represented using a sign bit, exponent, and mantissa. IEEE 754 is a widely used standard.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT 3 -->
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Computer Arithmetic</h1>
+
+    <section class="section">
+        <h2>1. Computer Arithmetic</h2>
+        <p>Computer arithmetic involves algorithms and techniques for performing arithmetic operations on binary numbers. These operations include addition, subtraction, multiplication, division, and floating-point operations. Efficient algorithms are designed to perform these operations quickly and accurately on a computer system.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. Addition Algorithm</h2>
+        <p>In binary arithmetic, addition is performed using a carry bit. The algorithm adds corresponding bits of two numbers, taking into account the carry from previous additions.</p>
+        <pre class="code-block">
+            Example:
+            Binary Addition of 1101 and 1011:
+            1101
+          + 1011
+            -----
+            11000
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>3. Subtraction Algorithm</h2>
+        <p>Binary subtraction can be performed using two's complement. The algorithm involves inverting the bits of the subtrahend and adding one, followed by performing binary addition.</p>
+        <pre class="code-block">
+            Example:
+            Binary Subtraction of 1101 and 1011:
+            1101
+          - 1011
+            -----
+            0010 (Using Two’s complement)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>4. Multiplication Algorithm</h2>
+        <p>Binary multiplication uses the shift-and-add method, where one number is shifted and added depending on the bits of the other number. The algorithm can be optimized using methods like Booth's algorithm.</p>
+        <pre class="code-block">
+            Example:
+            Binary Multiplication of 101 (5) and 11 (3):
+            101
+          x  11
+            -----
+            101
+          +1010
+            -----
+            1111 (5 * 3 = 15)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>5. Divisor Algorithms</h2>
+        <p>Division algorithms are designed to divide one binary number by another. Division is often more complex than multiplication, and algorithms like restoring division or non-restoring division are used to efficiently handle division of binary numbers.</p>
+        <pre class="code-block">
+            Example:
+            Restoring Division:
+            1101 ÷ 101 = 11 (quotient), 00 (remainder)
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>6. Floating Point Arithmetic Operations</h2>
+        <p>Floating-point arithmetic operations are used to perform calculations with real numbers. A floating-point number is represented in scientific notation, consisting of a sign bit, exponent, and mantissa. Operations like addition, subtraction, multiplication, and division follow specific algorithms to handle precision and rounding issues.</p>
+        <p>IEEE 754 is a widely accepted standard for representing floating-point numbers, which defines formats like single precision (32-bit) and double precision (64-bit).</p>
+        <pre class="code-block">
+            Example:
+            Floating-point Addition of 1.5 and 2.75:
+            1.5 = 1.1 * 2^0 (Binary representation)
+            2.75 = 1.11 * 2^1
+            The addition involves aligning the exponents and adding the mantissas.
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>7. Decimal Arithmetic Operations</h2>
+        <p>Decimal arithmetic operations involve performing arithmetic operations on decimal numbers (base 10) rather than binary numbers. The algorithms used for decimal arithmetic are similar to those used for binary arithmetic, but they work in base 10.</p>
+        <pre class="code-block">
+            Example:
+            Decimal Addition of 25 and 37:
+            25
+          + 37
+            -----
+            62
+        </pre>
+    </section>
+
+    <section class="section">
+        <h2>8. Decimal Arithmetic Algorithms</h2>
+        <p>Decimal arithmetic can be performed using similar algorithms as binary arithmetic. However, in decimal arithmetic, the carry in addition and the borrow in subtraction are based on base 10, not base 2.</p>
+        <pre class="code-block">
+            Example:
+            Decimal Subtraction of 45 from 90:
+            90
+          - 45
+            -----
+            45
+        </pre>
+    </section>
+</div>
+
+<!-- UNIT 4 -->
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Input – Output Organization</h1>
+
+    <section class="section">
+        <h2>1. Peripheral Devices</h2>
+        <p>Peripheral devices are external devices connected to the computer system to provide input or output functions. These include input devices like keyboards, mice, and scanners, and output devices like monitors and printers.</p>
+        <p>There are two main types of peripheral devices:</p>
+        <ul>
+            <li><strong>Input Devices:</strong> Devices that send data to the computer (e.g., keyboard, mouse).</li>
+            <li><strong>Output Devices:</strong> Devices that receive data from the computer (e.g., printer, monitor).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Input/Output Interface</h2>
+        <p>The input/output interface is a communication link between the computer’s processor and peripheral devices. It manages data transfer, timing, and protocols to ensure that data is sent and received correctly from peripherals.</p>
+        <p>Common I/O interfaces include:</p>
+        <ul>
+            <li><strong>Parallel Interface:</strong> Uses multiple data lines to transfer data at once, typically used for printers.</li>
+            <li><strong>Serial Interface:</strong> Transfers data bit by bit, typically used for communication with modems or external devices.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. ALU Asynchronous Data Transfer</h2>
+        <p>Asynchronous data transfer occurs when data is transferred without synchronization between the sender and receiver. The sending device transmits data whenever it’s ready, and the receiving device checks for data at its convenience.</p>
+        <p>This can lead to data transfer issues like data loss or overflow, which are mitigated through mechanisms like buffering and error handling protocols.</p>
+    </section>
+
+    <section class="section">
+        <h2>4. Modes of Transfer</h2>
+        <p>There are several modes of data transfer between the processor and peripheral devices:</p>
+        <ul>
+            <li><strong>Programmed I/O:</strong> The CPU controls the I/O operations, actively polling or waiting for the completion of the transfer.</li>
+            <li><strong>Interrupt-Driven I/O:</strong> The peripheral device sends an interrupt to the CPU when it’s ready for data transfer, prompting the CPU to respond.</li>
+            <li><strong>Direct Memory Access (DMA):</strong> DMA allows peripherals to transfer data directly to and from memory without CPU intervention, improving efficiency.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Priority Interrupts</h2>
+        <p>Interrupts are signals sent by hardware or software to get the CPU’s attention. Priority interrupts are used when multiple devices request CPU attention simultaneously. Devices with higher priority interrupts are serviced first.</p>
+        <p>Priority schemes include:</p>
+        <ul>
+            <li><strong>Fixed Priority:</strong> Devices are assigned fixed priority levels.</li>
+            <li><strong>Dynamic Priority:</strong> Priority is assigned dynamically based on certain factors like urgency.</li>
+        </ul>
+        <p>Priority interrupts ensure that critical tasks are handled first, improving the efficiency of multi-device systems.</p>
+    </section>
+
+    <section class="section">
+        <h2>6. Direct Memory Access (DMA)</h2>
+        <p>DMA is a method used to transfer data directly between a peripheral device and system memory, bypassing the CPU. This improves data transfer efficiency and reduces CPU load.</p>
+        <p>The basic steps involved in DMA are:</p>
+        <ol>
+            <li>The CPU initiates the DMA operation by setting up the DMA controller.</li>
+            <li>The peripheral device sends the data directly to the memory, with no CPU intervention.</li>
+            <li>The CPU is notified when the transfer is complete and can process the data.</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <h2>7. Input/Output Processor (IOP)</h2>
+        <p>The I/O Processor (IOP) is a dedicated processor designed to handle I/O operations, offloading work from the main CPU. The IOP manages the communication between the computer system and its peripherals, improving the efficiency of I/O operations.</p>
+        <p>Some key functions of the IOP include:</p>
+        <ul>
+            <li>Managing data transfer between I/O devices and memory.</li>
+            <li>Processing I/O interrupts and coordinating responses.</li>
+            <li>Performing error checking and handling during data transfer.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>8. Serial Communication</h2>
+        <p>Serial communication refers to the transmission of data one bit at a time over a single communication line. It is commonly used for long-distance communication and requires less hardware than parallel communication.</p>
+        <p>Serial communication standards include:</p>
+        <ul>
+            <li><strong>RS-232:</strong> Common standard used for communication between computers and peripherals like modems.</li>
+            <li><strong>USB:</strong> Universal Serial Bus is a widely used standard for connecting various devices to computers, such as keyboards, printers, and external storage devices.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT 5 -->
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Evaluation of Microprocessor</h1>
+
+    <section class="section">
+        <h2>1. Overview of Intel 8085 to Intel Pentium Processors</h2>
+        <p>Microprocessors are the heart of any computer system, and the evolution of these processors has significantly improved computing power. Let's look at the evolution from Intel 8085 to Intel Pentium processors:</p>
+        <ul>
+            <li><strong>Intel 8085:</strong> Introduced in 1976, the 8085 was an 8-bit microprocessor with a 5 MHz clock speed. It had 74 instructions and 246 opcodes. The architecture was simple, and it had 5 registers.</li>
+            <li><strong>Intel 8086:</strong> The 8086 was a 16-bit microprocessor, released in 1978, with a 20-bit address bus, allowing it to access up to 1MB of memory. It was the first x86 architecture processor.</li>
+            <li><strong>Intel 80286:</strong> Introduced in 1982, the 80286 was a 16-bit processor with improved performance over the 8086 and introduced protected mode, enabling multitasking.</li>
+            <li><strong>Intel 80386:</strong> Launched in 1985, the 80386 was a 32-bit processor, offering enhanced processing power and support for virtual memory.</li>
+            <li><strong>Intel 80486:</strong> Introduced in 1989, the 80486 was the first microprocessor to include a built-in math coprocessor and had improved processing speed.</li>
+            <li><strong>Intel Pentium:</strong> Released in 1993, the Pentium processor was the first to implement superscalar architecture, allowing for more than one instruction to be processed per clock cycle.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Basic Microprocessors</h2>
+        <p>A microprocessor is a central processing unit (CPU) integrated onto a single chip. The basic functions of a microprocessor include fetching, decoding, and executing instructions. It performs arithmetic and logic operations, controls data transfer, and manages input/output operations. Microprocessors can be categorized as:</p>
+        <ul>
+            <li><strong>8-bit Microprocessors:</strong> These processors operate on 8 bits of data at a time (e.g., Intel 8085).</li>
+            <li><strong>16-bit Microprocessors:</strong> Process data in 16-bit chunks, offering higher performance (e.g., Intel 8086).</li>
+            <li><strong>32-bit Microprocessors:</strong> Handle 32-bit data and memory addressing, offering more computational power (e.g., Intel 80386).</li>
+            <li><strong>64-bit Microprocessors:</strong> Advanced processors that handle 64-bit data and can access large amounts of memory (e.g., Intel Pentium).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Architecture and Interface</h2>
+        <p>The architecture of microprocessors refers to the internal design and components that allow the processor to perform operations. Here's a brief overview of the architecture for early microprocessors like Intel 8085 and Intel Pentium:</p>
+        <h3>Intel 8085 Architecture:</h3>
+        <ul>
+            <li><strong>ALU (Arithmetic Logic Unit):</strong> Handles arithmetic and logic operations.</li>
+            <li><strong>Registers:</strong> Includes five 8-bit registers (B, C, D, E, H, L), a 16-bit program counter, and a stack pointer.</li>
+            <li><strong>Flag Register:</strong> Holds flags for the results of arithmetic operations (e.g., zero, carry, sign, parity, and auxiliary carry).</li>
+            <li><strong>Instruction Register and Decoder:</strong> Decodes the instruction fetched from memory.</li>
+            <li><strong>Control Unit:</strong> Generates the necessary signals for the microprocessor’s operations.</li>
+            <li><strong>Clock and Timing Unit:</strong> Provides the clock pulses for the microprocessor.</li>
+        </ul>
+
+        <h3>Intel Pentium Architecture:</h3>
+        <ul>
+            <li><strong>Superscalar Architecture:</strong> Allows the execution of multiple instructions per clock cycle.</li>
+            <li><strong>Two Pipelines:</strong> Can process instructions in parallel, improving performance.</li>
+            <li><strong>Floating-Point Unit (FPU):</strong> Handles floating-point operations efficiently.</li>
+            <li><strong>Cache Memory:</strong> Includes multiple levels of cache (L1, L2) to speed up memory access.</li>
+            <li><strong>MMX and SIMD Instructions:</strong> Supports multimedia extensions for video and graphics processing.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Internal Architecture</h2>
+        <p>Internal architecture refers to the design of the microprocessor's internal components. This includes the ALU, registers, buses, and control units that perform data processing and memory management.</p>
+        <h3>Intel 8085 Internal Architecture:</h3>
+        <ul>
+            <li><strong>5 General Purpose Registers:</strong> B, C, D, E, H, L.</li>
+            <li><strong>Accumulator:</strong> An 8-bit register used for arithmetic and logical operations.</li>
+            <li><strong>Program Counter:</strong> A 16-bit register that holds the address of the next instruction.</li>
+            <li><strong>Stack Pointer:</strong> A 16-bit register used for memory addressing during subroutine calls.</li>
+        </ul>
+
+        <h3>Intel Pentium Internal Architecture:</h3>
+        <ul>
+            <li><strong>Registers:</strong> Includes general-purpose registers, floating-point registers, and MMX registers.</li>
+            <li><strong>Control Unit:</strong> Handles the execution of instructions by directing the other components.</li>
+            <li><strong>ALU:</strong> The Arithmetic Logic Unit handles all basic arithmetic and logic operations.</li>
+            <li><strong>Cache:</strong> The Pentium processor includes high-speed cache memory to speed up data access.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. External Architecture</h2>
+        <p>External architecture refers to how the microprocessor interfaces with external devices, including memory, I/O devices, and buses.</p>
+        <h3>Intel 8085 External Architecture:</h3>
+        <ul>
+            <li><strong>Address Bus:</strong> A 16-bit bus used to address up to 64KB of memory.</li>
+            <li><strong>Data Bus:</strong> An 8-bit bus used for data transfer between the microprocessor and peripherals.</li>
+            <li><strong>Control Bus:</strong> Used to control memory read/write operations and I/O operations.</li>
+            <li><strong>Memory and I/O Interface:</strong> Interfaces with external memory and I/O devices for data processing.</li>
+        </ul>
+
+        <h3>Intel Pentium External Architecture:</h3>
+        <ul>
+            <li><strong>Address Bus:</strong> A 32-bit or 64-bit bus (depending on the version of Pentium) that allows it to access large amounts of memory.</li>
+            <li><strong>Data Bus:</strong> A 64-bit wide bus that allows faster data transfer between the processor and memory.</li>
+            <li><strong>Cache Memory:</strong> Pentium processors have integrated cache memory that is divided into levels for faster data access.</li>
+            <li><strong>Peripheral Interfaces:</strong> Supports a wide range of peripheral devices such as network interfaces, audio, and video components.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Memory and Input/Output Interface</h2>
+        <p>The interface between the microprocessor and memory, along with the I/O system, determines the efficiency of data transfers and system performance. For Intel 8085, this involved a simple I/O and memory interfacing using basic control signals, while Intel Pentium has more advanced I/O and memory control mechanisms.</p>
+    </section>
+</div>
+
+<!-- UNIT 6 -->
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Assembly Language & Assembly Level Programming</h1>
+
+    <section class="section">
+        <h2>1. Assembly Language</h2>
+        <p>Assembly language is a low-level programming language that is designed to interact directly with the hardware. It provides a way to write instructions that the microprocessor can understand using human-readable mnemonics. Unlike high-level languages like C or Python, assembly language works closely with the underlying hardware architecture, giving programmers precise control over system resources.</p>
+        <p>Assembly language consists of basic instructions and operations that the microprocessor executes. Each instruction in assembly corresponds directly to a machine code instruction.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. Assembler</h2>
+        <p>An assembler is a software tool that converts assembly language programs into machine code (binary code) that the processor can execute. It translates each assembly instruction into an equivalent machine instruction based on the processor's instruction set architecture (ISA).</p>
+        <p>Assemblers can be categorized into:</p>
+        <ul>
+            <li><strong>Single-pass assembler:</strong> Translates the source code in one pass.</li>
+            <li><strong>Multi-pass assembler:</strong> Requires multiple passes to generate the machine code, allowing it to resolve undefined labels and references.</li>
+        </ul>
+        <p>In addition to converting assembly code to machine code, assemblers can perform optimizations such as removing redundant instructions and improving performance.</p>
+    </section>
+
+    <section class="section">
+        <h2>3. Assembly Level Instructions</h2>
+        <p>Assembly level instructions are the commands in assembly language that correspond directly to machine operations. These instructions operate on registers, memory, and the arithmetic logic unit (ALU). Common types of assembly instructions include:</p>
+        <ul>
+            <li><strong>Data Transfer Instructions:</strong> These instructions move data between registers or between memory and registers. Example: <div class="code-block">MOV A, B</div> (move data from register B to A).</li>
+            <li><strong>Arithmetic Instructions:</strong> These instructions perform arithmetic operations such as addition, subtraction, multiplication, and division. Example: <div class="code-block">ADD A, B</div> (add the value of B to A).</li>
+            <li><strong>Logical Instructions:</strong> These instructions perform logical operations like AND, OR, and NOT. Example: <div class="code-block">AND A, B</div> (perform logical AND between A and B).</li>
+            <li><strong>Control Flow Instructions:</strong> These instructions alter the flow of control in a program, such as branching or jumping. Example: <div class="code-block">JMP address</div> (jump to the specified address).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Macros</h2>
+        <p>A macro is a sequence of instructions that can be defined and reused in assembly programs. Macros help in reducing the length of the program, improving code readability, and making maintenance easier. Instead of writing the same instructions repeatedly, a macro is defined once and invoked multiple times.</p>
+        <p>Macros are typically used to encapsulate frequently used code segments, such as loops or arithmetic operations. They are expanded at assembly time into the actual machine instructions.</p>
+        <p>Example of defining a macro:</p>
+        <div class="code-block">
+        MACRO ADDITION
+            ADD A, B
+            MOV C, A
+        ENDM
+        </div>
+        <p>In this example, the macro <div class="code-block">ADDITION</div> adds the values in registers A and B and stores the result in register C. The macro can be invoked anywhere in the program by simply writing <div class="code-block">ADDITION</div>.</p>
+    </section>
+
+    <section class="section">
+        <h2>5. Use of Macros in I/O Instructions</h2>
+        <p>Macros can be especially useful in handling I/O instructions. For example, when performing I/O operations such as reading from or writing to a port, macros can abstract the details of the operation, making the program easier to read and maintain.</p>
+        <p>Example macro for reading from an input port:</p>
+        <div class="code-block">
+        MACRO READ_PORT
+            IN 0x00      ; Read from port 0x00
+            MOV A, L     ; Store the value in register L
+        ENDM
+        </div>
+        <p>This macro reads from a specified port address and stores the result in register L. The macro can be reused throughout the program whenever this operation is required.</p>
+    </section>
+
+    <section class="section">
+        <h2>6. Program Loops</h2>
+        <p>Loops are essential for repetitive tasks in assembly language. A loop allows a set of instructions to be executed repeatedly until a specific condition is met. Commonly used loop structures include <div class="code-block">FOR</div>, <div class="code-block">WHILE</div>, and <div class="code-block">DO-WHILE</div>.</p>
+        <p>Example of a simple loop in assembly language that adds numbers:</p>
+        <div class="code-block">
+        MOV CX, 10     ; Set the loop counter to 10
+        MOV AX, 0      ; Clear AX register to accumulate sum
+    LOOP_START:
+        ADD AX, BX     ; Add BX to AX
+        DEC CX         ; Decrement loop counter
+        JNZ LOOP_START ; Jump if CX is not zero
+        </div>
+        <p>In this example, the loop will execute 10 times, adding the value in register BX to AX, and the loop counter (CX) is decremented each time.</p>
+    </section>
+
+    <section class="section">
+        <h2>7. Programming Arithmetic and Logic Subroutines</h2>
+        <p>Subroutines are reusable blocks of code that perform specific tasks, such as arithmetic or logical operations. Subroutines allow for better code organization and reusability.</p>
+        <p>Example of an addition subroutine:</p>
+        <div class="code-block">
+        ADDITION_SUBROUTINE:
+            ADD A, B     ; Add A and B
+            RET          ; Return from the subroutine
+        </div>
+        <p>This subroutine adds the values of registers A and B and then returns to the calling point.</p>
+    </section>
+
+    <section class="section">
+        <h2>8. Input/Output Programming</h2>
+        <p>In assembly language, input/output programming is essential for interacting with external devices like keyboards, monitors, and sensors. I/O instructions allow a program to read data from input devices or send data to output devices.</p>
+        <p>Example of reading input from the keyboard and printing it to the screen:</p>
+        <div class="code-block">
+        MOV AH, 1        ; BIOS function to read a character from the keyboard
+        INT 21h          ; Interrupt to execute the function
+        MOV DL, AL       ; Move the character to DL for display
+        MOV AH, 2        ; BIOS function to display a character
+        INT 21h          ; Interrupt to execute the function
+        </div>
+        <p>This example demonstrates how to use the BIOS interrupt <div class="code-block">INT 21h</div> to read a character from the keyboard and display it on the screen.</p>
+    </section>
+</div>
+
+
+
+</body>
+
+</html>

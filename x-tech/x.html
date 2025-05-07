@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+<body>
+    <div class="topic-container">
+        <h1>Graph Theory Fundamentals</h1>
+    
+        <section class="section">
+            <h2>1. Definition of a Graph</h2>
+            <p>A <strong>graph</strong> G is a set of vertices (nodes) and a set of edges (lines) connecting some or all of the vertices. It is written as G = (V, E), where:</p>
+            <ul>
+                <li>V is a set of vertices.</li>
+                <li>E is a set of edges, where each edge is a pair of vertices.</li>
+            </ul>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Undirected.svg/400px-Undirected.svg.png" alt="Undirected Graph" class="diagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Undirected.svg/400px-Undirected.svg.png" alt="Graph Image">
+
+        </section>
+    
+        <section class="section">
+            <h2>2. Finite and Infinite Graphs</h2>
+            <p><strong>Finite Graph:</strong> A graph with a finite number of vertices and edges.</p>
+            <pre class="matrix">
+    Example: V = {A, B, C}, E = {(A, B), (B, C)}
+            </pre>
+            <p><strong>Infinite Graph:</strong> A graph with an infinite number of vertices and/or edges (not common in simple graph theory).</p>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Graph_extrusion.svg/500px-Graph_extrusion.svg.png" alt="Infinite Grid Graph" class="diagram">
+        </section>
+    
+        <section class="section">
+            <h2>3. Incidence and Degree of a Vertex</h2>
+            <p><strong>Incidence:</strong> An edge is said to be incident to a vertex if the vertex is one of its endpoints.</p>
+            <p><strong>Degree:</strong> The degree of a vertex is the number of edges incident to it.</p>
+            <pre class="matrix">
+    Example: If vertex A connects to B, C, and D, then deg(A) = 3
+            </pre>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Graph_with_degree.svg/600px-Graph_with_degree.svg.png" alt="Degree of Vertex Example" class="diagram">
+        </section>
+    
+        <section class="section">
+            <h2>4. Null Graph</h2>
+            <p>A <strong>null graph</strong> is a graph that has vertices but no edges.</p>
+            <pre class="matrix">
+    Example: V = {A, B, C}, E = {}
+            </pre>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Emptygraph.svg/400px-Emptygraph.svg.png" alt="Null Graph" class="diagram">
+        </section>
+    
+        <section class="section">
+            <h2>5. Subgraphs</h2>
+            <p>A <strong>subgraph</strong> is a graph formed from a subset of vertices and edges of a given graph.</p>
+            <pre class="matrix">
+    If G has V = {A, B, C, D}, E = {(A, B), (B, C), (C, D)},
+    Then a subgraph H can be: V = {A, B, C}, E = {(A, B), (B, C)}
+            </pre>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Subgraph2.svg/400px-Subgraph2.svg.png" alt="Subgraph Example" class="diagram">
+        </section>
+    
+        <section class="section">
+            <h2>6. Walks, Paths, Circuits</h2>
+            <ul>
+                <li><strong>Walk:</strong> A sequence of vertices and edges, where repetition is allowed.</li>
+                <li><strong>Path:</strong> A walk in which all edges and vertices (except possibly the first and last) are distinct.</li>
+                <li><strong>Circuit:</strong> A path that starts and ends at the same vertex.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Walk: A → B → C → A
+    Path: A → B → C
+    Circuit: A → B → C → A
+            </pre>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Graph_theory.svg/500px-Graph_theory.svg.png" alt="Walks and Paths" class="diagram">
+        </section>
+    
+        <section class="section">
+            <h2>7. Connected and Disconnected Graphs</h2>
+            <p><strong>Connected Graph:</strong> A graph is connected if there is a path between every pair of vertices.</p>
+            <p><strong>Disconnected Graph:</strong> A graph that is not connected; it has at least two vertices with no path between them.</p>
+            <pre class="matrix">
+    Connected: A - B - C
+    Disconnected: A   B - C (no edge connecting A to others)
+            </pre>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Connected_graph.svg/400px-Connected_graph.svg.png" alt="Connected Graph" class="diagram">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Disconnected_graph.svg/400px-Disconnected_graph.svg.png" alt="Disconnected Graph" class="diagram">
+        </section>
+    </div>
+    
+</body>
+</html>

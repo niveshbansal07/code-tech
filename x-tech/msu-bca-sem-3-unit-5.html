@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Numerical Methods</div>
+
+
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Roots of Equations</a>
+        <div id="unit1" class="content">
+            Bisection Method, False Position Method, Newton’s Raphson Method, Rate of convergence of Newton’s method.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Interpolation and Extrapolation</a>
+        <div id="unit2" class="content">
+            Finite Differences, The operator E, Newton’s Forward and Backward Differences, Newton’s divided differences
+            formulae, Lagrange’s Interpolation formula for unequal Intervals, Gauss’s Interpolation formula, Starling
+            formula, Bessel’s formula, Laplace-Everett formula.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Numerical Differentiation & Integration</a>
+        <div id="unit3" class="content">
+            Introduction, direct methods, maxima and minima of a tabulated function, General Quadratic formula,
+            Trapezoidal rule, Simpson’s One-third rule, Simpson’s Three-eight rule.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Solution of Linear Equations</a>
+        <div id="unit4" class="content">
+            Gauss’s Elimination method and Gauss’s Siedel iterative method.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Solution of Differential Equations</a>
+        <div id="unit5" class="content">
+            Euler’s method, Picard’s method, Fourth-order Runge-Kutta method.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Roots of Equations</h1>
+
+        <section class="section">
+            <h2>1. Bisection Method</h2>
+            <p>The Bisection Method is based on the Intermediate Value Theorem. If f(a) * f(b) < 0, then there exists a
+                    root between a and b.</p>
+                    <p><strong>Formula:</strong></p>
+                    <div class="code-block">
+                        c = (a + b) / 2
+                    </div>
+                    <p><strong>Example:</strong> Solve f(x) = x² - 4 for a root between 1 and 3. The midpoint is
+                        calculated as:</p>
+                    <div class="code-block">
+                        c = (1 + 3) / 2 = 2
+                    </div>
+        </section>
+
+        <section class="section">
+            <h2>2. False Position Method</h2>
+            <p>The False Position Method uses a linear approximation for finding the root of f(x) = 0.</p>
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                x₁ = a - f(a) * (b - a) / (f(b) - f(a))
+            </div>
+            <p><strong>Example:</strong> Solve f(x) = x³ - 5x - 9 using a = 2 and b = 3:</p>
+            <div class="code-block">
+                x₁ = 2 - (f(2) * (3 - 2)) / (f(3) - f(2))
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>3. Newton’s Raphson Method</h2>
+            <p>Newton’s method uses an initial guess and approximates the root by iterating using tangents.</p>
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                x₁ = x₀ - f(x₀) / f'(x₀)
+            </div>
+            <p><strong>Example:</strong> Solve f(x) = x³ - x - 2 with an initial guess x₀ = 1:</p>
+            <div class="code-block">
+                x₁ = 1 - ((1³ - 1 - 2) / (3 * 1² - 1)) = 1.5
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>4. Rate of Convergence of Newton’s Method</h2>
+            <p>The rate of convergence refers to how quickly the approximation reaches the root. Newton’s method
+                generally converges quadratically if the initial guess is close enough to the actual root.</p>
+            <p><strong>Formula for rate of convergence:</strong></p>
+            <div class="code-block">
+                Eₙ₊₁ ≈ C * Eₙ²
+            </div>
+            <p><strong>Example:</strong> Using f(x) = x² - 2 and an initial guess of x₀ = 1.5, check how the error
+                reduces after each iteration.</p>
+        </section>
+    </div>
+
+    <!-- UNIT 2 -->
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Interpolation and Extrapolation</h1>
+
+        <section class="section">
+            <h2>1. Newton’s Forward and Backward Difference</h2>
+            <p>Newton’s Forward Difference is used for interpolating when the data points are in increasing order, while
+                the Backward Difference is used when the data is in decreasing order.</p>
+
+            <h3>Forward Difference Formula:</h3>
+            <div class="code-block">
+
+                Pₙ(x) = y₀ + (x - x₀)Δy₀ + (x - x₀)(x - x₁)Δ²y₀ / 2! + ...
+            </div>
+
+            <h3>Backward Difference Formula:</h3>
+            <div class="code-block">
+                Pₙ(x) = yₙ + (x - xₙ)∇yₙ + (x - xₙ)(x - xₙ₋₁)∇²yₙ / 2! + ...
+            </div>
+            <p><strong>Example:</strong> Interpolate for x = 1.5 using the forward difference formula with data points
+                (1, 2), (2, 3), (3, 4).</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Lagrange’s Interpolation Formula for Unequal Intervals</h2>
+            <p>Lagrange’s formula is used to construct a polynomial that passes through a given set of points.</p>
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                L(x) = Σ[yₙ * Lₙ(x)], where <br>
+                Lₙ(x) = ∏(x - xᵢ) / (xₙ - xᵢ), for all i ≠ n.
+            </div>
+            <p><strong>Example:</strong> Interpolate for x = 2.5 using data points (1, 2), (3, 6), (5, 10).</p>
+        </section>
+
+        <section class="section">
+            <h2>3. Gauss’s Interpolation Formula</h2>
+            <p>Gauss’s interpolation is used for equally spaced data and can handle both forward and backward
+                differences.</p>
+            <p><strong>Example:</strong> Use Gauss’s formula to interpolate a function value at a given point using data
+                from an evenly spaced table.</p>
+        </section>
+    </div>
+
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Numerical Differentiation and Integration</h1>
+
+        <section class="section">
+            <h2>1. Numerical Differentiation</h2>
+            <p>Numerical differentiation approximates the derivative of a function using finite differences.</p>
+
+            <h3>Forward Difference Formula:</h3>
+            <div class="code-block">
+                f'(x) ≈ (f(x+h) - f(x)) / h
+            </div>
+
+            <h3>Backward Difference Formula:</h3>
+            <div class="code-block">
+                f'(x) ≈ (f(x) - f(x-h)) / h
+            </div>
+
+            <h3>Central Difference Formula:</h3>
+            <div class="code-block">
+                f'(x) ≈ (f(x+h) - f(x-h)) / (2h)
+            </div>
+            <p><strong>Example:</strong> Find the derivative of f(x) = x² using the forward difference with h = 0.1.</p>
+            <div class="code-block">
+                f'(x) ≈ (f(x + 0.1) - f(x)) / 0.1 = (1.21 - 1) / 0.1 = 2.1
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>2. Numerical Integration</h2>
+            <p>Numerical integration is used to approximate the integral of a function.</p>
+
+            <h3>Trapezoidal Rule:</h3>
+            <div class="code-block">
+                ∫(a to b) f(x) dx ≈ (b - a) / 2 * (f(a) + f(b))
+            </div>
+            <p><strong>Example:</strong> Estimate ∫(0 to 1) x² dx using the Trapezoidal Rule.</p>
+            <div class="code-block">
+                Integral ≈ (1 - 0) / 2 * (f(0) + f(1)) = 1/2 * (0 + 1) = 0.5
+            </div>
+
+            <h3>Simpson’s One-Third Rule:</h3>
+            <div class="code-block">
+                ∫(a to b) f(x) dx ≈ (b - a) / 3 * [f(a) + 4f((a + b) / 2) + f(b)]
+            </div>
+            <p><strong>Example:</strong> Estimate ∫(0 to 1) x² dx using Simpson’s One-Third Rule.</p>
+            <div class="code-block">
+                Integral ≈ (1 - 0) / 3 * [f(0) + 4f(0.5) + f(1)] = 1/3 * [0 + 4(0.25) + 1] = 0.3333
+            </div>
+
+            <h3>Simpson’s Three-Eighth Rule:</h3>
+            <div class="code-block">
+                ∫(a to b) f(x) dx ≈ 3(b - a) / 8 * [f(a) + 3f((a + b) / 3) + 3f((2a + b) / 3) + f(b)]
+            </div>
+            <p><strong>Example:</strong> Estimate ∫(0 to 1) x² dx using Simpson’s Three-Eighth Rule.</p>
+            <div class="code-block">
+                Integral ≈ 3(1 - 0) / 8 * [f(0) + 3f(0.3333) + 3f(0.6667) + f(1)]
+            </div>
+        </section>
+    </div>
+
+
+    <!-- UNIT 4 -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Solution of Linear Equations</h1>
+
+        <section class="section">
+            <h2>1. Gauss’s Elimination Method</h2>
+            <p>The Gauss Elimination method is used for solving a system of linear equations. It involves transforming
+                the system of equations into an upper triangular matrix and then solving by back substitution.</p>
+
+            <h3>Steps in Gauss’s Elimination Method:</h3>
+            <ol>
+                <li>Write the augmented matrix of the system of linear equations.</li>
+                <li>Perform row operations to convert the matrix into an upper triangular matrix.</li>
+                <li>Use back substitution to find the values of the unknowns.</li>
+            </ol>
+
+            <h3>Example:</h3>
+            <p>Solve the system of equations:</p>
+            <div class="code-block">
+                2x + y - 3z = 9 <br>
+                x - 2y + 4z = 2 <br>
+                3x + y + 2z = 3
+            </div>
+
+            <p>Step 1: Write the augmented matrix:</p>
+            <div class="code-block">
+                [ 2 1 -3 | 9 ] <br>
+                [ 1 -2 4 | 2 ] <br>
+                [ 3 1 2 | 3 ]
+            </div>
+
+            <p>Step 2: Use row operations to eliminate the variables and form an upper triangular matrix:</p>
+            <div class="code-block">
+                [ 2 1 -3 | 9 ] <br>
+                [ 0 -5 10 | -7 ] <br>
+                [ 0 0 -1 | 3 ]
+            </div>
+
+            <p>Step 3: Perform back substitution:</p>
+            <div class="code-block">
+                From the third row: z = -3 <br>
+                From the second row: -5y + 10z = -7, so y = 1 <br>
+                From the first row: 2x + y - 3z = 9, so x = 4
+            </div>
+
+            <p>The solution is: x = 4, y = 1, z = -3</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Gauss’s Seidel Iterative Method</h2>
+            <p>The Gauss-Seidel method is an iterative technique used to solve a system of linear equations. It improves
+                upon the Jacobi method by using updated values of variables as soon as they are calculated.</p>
+
+            <h3>Steps in Gauss’s Seidel Iterative Method:</h3>
+            <ol>
+                <li>Rearrange the system of equations in terms of each variable.</li>
+                <li>Make an initial guess for the values of all variables.</li>
+                <li>Iteratively update the values of the variables using the following equation:</li>
+            </ol>
+
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                x₁ = (b₁ - a₁₂y₁ - a₁₃z₁) / a₁₁ <br>
+                y₂ = (b₂ - a₂₁x₁ - a₂₃z₁) / a₂₂ <br>
+                z₃ = (b₃ - a₃₁x₁ - a₃₂y₁) / a₃₃
+            </div>
+
+            <p><strong>Example:</strong> Solve the system of equations:</p>
+            <div class="code-block">
+                4x + y + z = 4 <br>
+                x + 3y + z = 7 <br>
+                x + y + 3z = 10
+            </div>
+
+            <p>Step 1: Rearrange the system of equations:</p>
+            <div class="code-block">
+                x = (4 - y - z) / 4 <br>
+                y = (7 - x - z) / 3 <br>
+                z = (10 - x - y) / 3
+            </div>
+
+            <p>Step 2: Make an initial guess for x, y, and z. Let's take x₀ = 0, y₀ = 0, z₀ = 0.</p>
+
+            <p>Step 3: Iteratively update the values:</p>
+
+            <p>For the first iteration:</p>
+            <div class="code-block">
+                x₁ = (4 - 0 - 0) / 4 = 1 <br>
+                y₁ = (7 - 1 - 0) / 3 = 2 <br>
+                z₁ = (10 - 1 - 2) / 3 = 2.33
+            </div>
+
+            <p>For the second iteration:</p>
+            <div class="code-block">
+                x₂ = (4 - 2 - 2.33) / 4 = -0.08 <br>
+                y₂ = (7 - (-0.08) - 2.33) / 3 = 2.57 <br>
+                z₂ = (10 - (-0.08) - 2.57) / 3 = 2.47
+            </div>
+
+            <p>Continue iterating until the values converge to the desired accuracy.</p>
+        </section>
+    </div>
+
+
+    <!-- UNIT 5 -->
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Solution of Differential Equations</h1>
+
+        <section class="section">
+            <h2>1. Euler’s Method</h2>
+            <p>Euler’s method is a simple numerical technique for solving ordinary differential equations (ODEs) with a
+                given initial value.</p>
+
+            <h3>Formula:</h3>
+            <div class="code-block">
+                yₙ₊₁ = yₙ + h * f(xₙ, yₙ)
+            </div>
+
+            <p>Where:</p>
+            <ul>
+                <li>yₙ₊₁ is the value of y at the next step</li>
+                <li>yₙ is the value of y at the current step</li>
+                <li>h is the step size</li>
+                <li>f(xₙ, yₙ) is the function representing the differential equation</li>
+            </ul>
+
+            <h3>Example:</h3>
+            <p>Given the differential equation:</p>
+            <div class="code-block">
+                dy/dx = x + y, y(0) = 1
+            </div>
+
+            <p>Using Euler's method with a step size of h = 0.1, calculate y(0.1):</p>
+            <div class="code-block">
+                yₙ₊₁ = yₙ + h * (xₙ + yₙ) <br>
+                For xₙ = 0, yₙ = 1, we get: <br>
+                y₁ = 1 + 0.1 * (0 + 1) = 1 + 0.1 = 1.1
+            </div>
+
+            <p>The value of y(0.1) is 1.1.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Picard’s Method</h2>
+            <p>Picard’s method is a successive approximation method used to solve initial value problems for
+                differential equations.</p>
+
+            <h3>Formula:</h3>
+            <div class="code-block">
+                yₙ₊₁ = yₙ + h * f(xₙ, yₙ)
+            </div>
+
+            <h3>Steps:</h3>
+            <ol>
+                <li>Start with an initial guess for yₙ at xₙ (often yₙ = y₀).</li>
+                <li>Use the formula to compute yₙ₊₁.</li>
+                <li>Repeat the process until the values converge to the desired accuracy.</li>
+            </ol>
+
+            <h3>Example:</h3>
+            <p>Consider the differential equation:</p>
+            <div class="code-block">
+                dy/dx = y + x, y(0) = 1
+            </div>
+
+            <p>Start with y₀ = 1, h = 0.1, and compute yₙ for xₙ = 0, 0.1, 0.2, ... as follows:</p>
+            <div class="code-block">
+                y₁ = y₀ + h * (y₀ + x₀) = 1 + 0.1 * (1 + 0) = 1.1 <br>
+                y₂ = y₁ + h * (y₁ + x₁) = 1.1 + 0.1 * (1.1 + 0.1) = 1.1 + 0.12 = 1.22
+            </div>
+
+            <p>The successive approximations continue, improving the solution with each iteration.</p>
+        </section>
+
+        <section class="section">
+            <h2>3. Fourth-Order Runge-Kutta Method</h2>
+            <p>The Fourth-Order Runge-Kutta method is a more accurate iterative method for solving differential
+                equations. It uses the weighted average of slopes at multiple points to improve the approximation of the
+                solution.</p>
+
+            <h3>Formula:</h3>
+            <div class="code-block">
+                k₁ = h * f(xₙ, yₙ) <br>
+                k₂ = h * f(xₙ + h/2, yₙ + k₁/2) <br>
+                k₃ = h * f(xₙ + h/2, yₙ + k₂/2) <br>
+                k₄ = h * f(xₙ + h, yₙ + k₃) <br>
+                yₙ₊₁ = yₙ + (k₁ + 2k₂ + 2k₃ + k₄)/6
+            </div>
+
+            <h3>Example:</h3>
+            <p>Consider the differential equation:</p>
+            <div class="code-block">
+                dy/dx = x + y, y(0) = 1
+            </div>
+
+            <p>Using a step size of h = 0.1, calculate y(0.1):</p>
+
+            <div class="code-block">
+                Step 1: Compute k₁, k₂, k₃, and k₄ for xₙ = 0 and yₙ = 1 <br>
+                k₁ = 0.1 * (0 + 1) = 0.1 <br>
+                k₂ = 0.1 * (0 + 0.1/2 + 1 + 0.1/2) = 0.1 * (0.1 + 1.05) = 0.115 <br>
+                k₃ = 0.1 * (0 + 0.1/2 + 1 + 0.115/2) = 0.1 * (0.1 + 1.0575) = 0.11575 <br>
+                k₄ = 0.1 * (0 + 0.1 + 1 + 0.11575) = 0.1 * (1.21575) = 0.121575 <br>
+
+                y₁ = 1 + (0.1 + 2*0.115 + 2*0.11575 + 0.121575)/6 = 1 + (0.1 + 0.23 + 0.2315 + 0.121575)/6 = 1.1706
+            </div>
+
+            <p>The value of y(0.1) is approximately 1.1706.</p>
+        </section>
+    </div>
+
+
+</body>
+
+</html>

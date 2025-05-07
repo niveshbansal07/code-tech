@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header"> Introduction to DBMS</div>
+
+    <div class="container">
+           
+        <a href="#unit1" class="unit">UNIT-I: Introduction</a>
+        <div id="unit1" class="content">
+            Characteristics of database approach, data models, DBMS architecture, and data independence.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: E-R Modeling</a>
+        <div id="unit2" class="content">
+            Entity types, Entity set, attribute and key, relationships, relation types, roles and structural constraints, weak entities, enhanced E-R and object modeling, Subclasses, Superclasses, inheritance, specialization, and generalization.
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: File Organization</a>
+        <div id="unit3" class="content">
+            Indexed sequential access files; implementation using B & B++ trees, hashing, hashing functions, collision resolution, extendible hashing, dynamic hashing approach implementation and performance.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Relational Data Model</a>
+        <div id="unit4" class="content">
+            Relational model concepts, relational constraints, relational algebra. SQL: SQL queries, programming using SQL.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: EER and ER to Relational Mapping</a>
+        <div id="unit5" class="content">
+            Database design using EER to relational language.
+        </div>
+    
+        <a href="#unit6" class="unit">UNIT-VI: Data Normalization & Concurrency Control</a>
+        <div id="unit6" class="content">
+            Functional Dependencies, Normal form up to 3rd normal form. Concurrency Control: Transaction processing, locking techniques and associated database recovery, security, and authorization. Recovery Techniques, Database Security.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Introduction to DBMS</h1>
+    
+        <section class="section">
+            <h2>1.1 Characteristics of Database Approach</h2>
+            <p>A Database Management System (DBMS) is a collection of programs that enable users to create and manage databases. The database approach has several key characteristics that distinguish it from traditional file systems:</p>
+            <ul>
+                <li><strong>Data Redundancy Control:</strong> A DBMS eliminates the redundancy of data by allowing data to be stored in a central location. This ensures that the data is updated in only one place, reducing duplication.</li>
+                <li><strong>Data Integrity:</strong> DBMS ensures that data is consistent and accurate. Constraints and rules are applied to ensure that the data meets the required standards.</li>
+                <li><strong>Data Security:</strong> The DBMS provides security features, allowing data access to be controlled through user authentication and authorization.</li>
+                <li><strong>Data Independence:</strong> The DBMS allows changes to the database schema without affecting the application programs that use the data.</li>
+                <li><strong>Concurrent Access:</strong> A DBMS allows multiple users to access and modify the data at the same time, without conflicts.</li>
+                <li><strong>Backup and Recovery:</strong> A DBMS provides mechanisms to back up the data regularly and recover it in case of failure.</li>
+            </ul>
+            <p>For example, in a university database, the student's information is stored centrally, preventing the need to store the same data in multiple places (such as separate files for each department).</p>
+        </section>
+    
+        <section class="section">
+            <h2>1.2 Data Models</h2>
+            <p>Data models define the logical structure of data and how it is stored, organized, and manipulated. Common types of data models in a DBMS are:</p>
+            <ul>
+                <li><strong>Hierarchical Model:</strong> Data is organized in a tree-like structure with a parent-child relationship. For example, in a company database, departments are the parent nodes, and employees are the child nodes.</li>
+                <li><strong>Network Model:</strong> This model allows more complex relationships by permitting multiple parent-child links. It is typically used when data has many-to-many relationships.</li>
+                <li><strong>Relational Model:</strong> Data is organized into tables (relations) with rows (tuples) and columns (attributes). This is the most widely used data model in modern DBMSs, e.g., MySQL, PostgreSQL.</li>
+                <li><strong>Object-Oriented Model:</strong> This model combines the advantages of object-oriented programming and relational databases. Data is represented as objects, like in object-oriented programming languages.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Relational Data Model
+    # In a university database, the relational model would store information like students and courses in separate tables:
+    # Students table (Student_ID, Name, Age)
+    # Courses table (Course_ID, Course_Name, Credits)
+    # Enrollment table (Student_ID, Course_ID) - establishing a relationship between students and courses.
+    
+    students = [
+        {'Student_ID': 1, 'Name': 'John Doe', 'Age': 20},
+        {'Student_ID': 2, 'Name': 'Jane Smith', 'Age': 22},
+    ]
+    
+    courses = [
+        {'Course_ID': 101, 'Course_Name': 'Database Systems', 'Credits': 3},
+        {'Course_ID': 102, 'Course_Name': 'Operating Systems', 'Credits': 3},
+    ]
+    
+    enrollments = [
+        {'Student_ID': 1, 'Course_ID': 101},
+        {'Student_ID': 2, 'Course_ID': 102},
+    ]
+                </pre>
+            </div>
+    
+            <p>The example above represents how student, course, and enrollment data can be stored in tables, with relationships defined between them.</p>
+        </section>
+    
+        <section class="section">
+            <h2>1.3 DBMS Architecture and Data Independence</h2>
+            <p>The DBMS architecture defines the overall structure of the DBMS, including how the data is stored, accessed, and managed. There are three main levels in the DBMS architecture:</p>
+    
+            <ul>
+                <li><strong>External Level:</strong> The external view defines how users interact with the database. It includes user interfaces and applications that access the database.</li>
+                <li><strong>Conceptual Level:</strong> This level describes the logical view of the data and its relationships, independent of how the data is physically stored. It defines the structure of the entire database.</li>
+                <li><strong>Internal Level:</strong> The internal level describes how the data is physically stored in the database. This level deals with storage and access paths.</li>
+            </ul>
+    
+            <p>Data Independence refers to the ability to change the schema at one level without affecting the schema at the next higher level. There are two types of data independence:</p>
+            <ul>
+                <li><strong>Logical Data Independence:</strong> The ability to change the conceptual schema without affecting the external schema (user views).</li>
+                <li><strong>Physical Data Independence:</strong> The ability to change the internal schema (how data is stored) without affecting the conceptual schema.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Data Independence
+    # A change in the physical storage of data (e.g., moving a table from one storage medium to another)
+    # should not affect the logical schema or the user view. For instance, the data in the "students" table
+    # can be reorganized without affecting how users access or query the data.
+    # Example of query with no impact:
+    SELECT * FROM students WHERE age > 18;
+                </pre>
+            </div>
+    
+            <p>In the example above, even if the data storage mechanism is changed, the SQL query will remain unaffected, demonstrating physical data independence.</p>
+        </section>
+    
+    </div>
+    
+    <!-- UNIT 2 -->
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: E-R Modeling</h1>
+    
+        <section class="section">
+            <h2>2.1 Entity Types, Entity Set, Attribute, and Key</h2>
+            <p>In the Entity-Relationship (E-R) model, data is represented using entities and relationships between them. Here are the basic components of the E-R model:</p>
+            
+            <ul>
+                <li><strong>Entity Type:</strong> An entity type is a collection of entities that share common properties or attributes. For example, "Student" can be an entity type, where each student is an instance of the "Student" entity.</li>
+                <li><strong>Entity Set:</strong> An entity set is a collection of similar types of entities that are stored in the database. For instance, the entity set "Students" contains all individual "Student" entities.</li>
+                <li><strong>Attribute:</strong> An attribute represents a property or characteristic of an entity. For instance, the "Student" entity might have attributes like "Name," "Age," and "Student_ID."</li>
+                <li><strong>Key:</strong> A key is an attribute or a combination of attributes that uniquely identifies each entity in an entity set. For example, "Student_ID" can be the key for the "Student" entity.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Entity and Attributes
+    # Entity: Student
+    # Attributes: Student_ID, Name, Age
+    
+    # Entity: Course
+    # Attributes: Course_ID, Course_Name, Credits
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>2.2 Relationships, Relation Types, Roles, and Structural Constraints</h2>
+            <p>Relationships define the association between entities. Here's how relationships are represented in the E-R model:</p>
+            
+            <ul>
+                <li><strong>Relationship Type:</strong> A relationship type defines the relationship between entities. For instance, a "Student" might be enrolled in a "Course." This relationship could be called "Enrollment."</li>
+                <li><strong>Roles:</strong> Roles are the parts played by entities in a relationship. For example, in a relationship "Student enrolls in Course," the roles are "Student" and "Course."</li>
+                <li><strong>Structural Constraints:</strong> Structural constraints define the number of times an entity can participate in a relationship. These constraints are defined by cardinality:
+                    <ul>
+                        <li><strong>One-to-One (1:1):</strong> Each entity in the relationship is related to exactly one entity in the other set.</li>
+                        <li><strong>One-to-Many (1:N):</strong> One entity in the relationship is related to many entities in the other set.</li>
+                        <li><strong>Many-to-Many (M:N):</strong> Many entities in one set are related to many entities in the other set.</li>
+                    </ul>
+                </li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Relationship
+    # "Student" and "Course" entities have a "Enrollment" relationship
+    # A Student can enroll in multiple Courses, but a Course can have many Students.
+    
+    # This is a Many-to-Many relationship (M:N).
+    
+    # Cardinality: 1:N, 1:1, M:N
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>2.3 Weak Entities</h2>
+            <p>A weak entity is an entity that cannot be uniquely identified by its own attributes alone. It requires a "strong" or "owner" entity, along with some additional attributes, to form a composite key. For example, a "Dependent" entity in a company database cannot exist without being associated with an "Employee" entity, and it uses the "Employee_ID" as part of its key.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Weak Entity
+    # A weak entity "Dependent" can be identified by both "Employee_ID" and "Dependent_Name."
+    # This composite key ensures uniqueness for the weak entity.
+    
+    # Entity: Dependent
+    # Attributes: Dependent_Name, Employee_ID (part of the key from the "Employee" entity)
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>2.4 Enhanced E-R and Object Modeling</h2>
+            <p>Enhanced E-R (EER) modeling extends the basic E-R model by introducing more advanced concepts such as subclasses, superclasses, inheritance, specialization, and generalization.</p>
+    
+            <ul>
+                <li><strong>Subclasses and Superclasses:</strong> Inheritance allows us to model entities that share some attributes with others but also have their unique attributes. A "Vehicle" superclass can have subclasses like "Car" and "Truck," which inherit common attributes like "Vehicle_ID" and "Make," but each subclass may have specific attributes like "Payload_Capacity" for trucks or "Fuel_Type" for cars.</li>
+                <li><strong>Inheritance:</strong> Inheritance is the ability for subclasses to inherit attributes and relationships from their superclasses. For example, both "Car" and "Truck" inherit common attributes from "Vehicle."</li>
+                <li><strong>Specialization:</strong> Specialization is the process of defining a set of subclasses from a superclass based on some distinguishing characteristics. For example, "Employee" could be specialized into "Manager," "Developer," and "Tester."</li>
+                <li><strong>Generalization:</strong> Generalization is the reverse of specialization, where subclasses are generalized into a higher-level superclass. For instance, "Car" and "Truck" could be generalized into a common "Vehicle" superclass.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Superclass and Subclass
+    # Superclass: Vehicle
+    # Subclasses: Car, Truck
+    
+    # Vehicle
+    # Attributes: Vehicle_ID, Make
+    
+    # Car
+    # Attributes: Fuel_Type
+    
+    # Truck
+    # Attributes: Payload_Capacity
+    
+    # Inheritance: Car and Truck inherit the "Vehicle" attributes
+                </pre>
+            </div>
+    
+        </section>
+    
+    </div>
+    
+    <!-- UNIT 3 -->
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: File Organization</h1>
+    
+        <section class="section">
+            <h2>3.1 Indexed Sequential Access Files</h2>
+            <p>Indexed Sequential Access Method (ISAM) is a file organization method where records are stored sequentially, and an index is maintained to provide faster access to records. The index acts as a shortcut for searching records in the file, allowing both sequential and direct access to records.</p>
+    
+            <p>In ISAM, files are divided into two parts:</p>
+            <ul>
+                <li><strong>Data File:</strong> Contains the actual records.</li>
+                <li><strong>Index File:</strong> Contains pointers that help in quickly locating records in the data file.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Indexed Sequential Access File
+    # Data File:
+    # Records are stored sequentially.
+    # Index File:
+    # Contains key values and pointers to records in the Data File.
+    
+    # Pseudocode: Searching using ISAM
+    # 1. Use the index file to locate the correct position of the record in the data file.
+    # 2. Fetch the record directly using the pointer from the index.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>3.2 Implementation Using B & B++ Trees</h2>
+            <p>B-Trees and B++-Trees are popular data structures used in indexing, particularly in databases and file systems. These trees are self-balancing, ensuring efficient insertion, deletion, and search operations.</p>
+    
+            <h3>B-Tree</h3>
+            <p>A B-Tree is a balanced tree data structure where nodes contain multiple keys and child pointers. It is commonly used for indexing in databases and file systems. B-Trees maintain sorted data and allow searches, insertions, deletions, and sequential access.</p>
+    
+            <h3>B++-Tree</h3>
+            <p>A B++-Tree is an extension of the B-Tree. The main difference is that in a B++-Tree, all values are stored in the leaf nodes, while internal nodes only store keys. This makes the B++-Tree more suitable for indexing large datasets and files.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example: B-Tree Node
+    # Each node contains keys and pointers to children.
+    # B-Tree Insert Operation:
+    # 1. Find the correct position for the new key.
+    # 2. Split nodes if necessary to maintain balance.
+    
+    # Example: B++-Tree Node
+    # Leaf nodes store data values, internal nodes store keys only.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>3.3 Hashing</h2>
+            <p>Hashing is a technique used to uniquely identify a data item from a set of data items using a hash function. The key is passed through a hash function to get the corresponding index in a hash table.</p>
+    
+            <p>The main components of hashing are:</p>
+            <ul>
+                <li><strong>Hash Function:</strong> A function that takes an input (key) and computes an index in the hash table.</li>
+                <li><strong>Hash Table:</strong> A table where data is stored using the index generated by the hash function.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Hashing Function
+    # A simple hash function might take the sum of the ASCII values of a string and mod by the table size.
+    def hash_function(key):
+        return sum(ord(c) for c in key) % TABLE_SIZE
+    
+    # Example: Hash Table Insertion
+    # 1. Compute the hash value of the key.
+    # 2. Insert the record at the computed index in the hash table.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>3.4 Collision Resolution</h2>
+            <p>Collisions occur when two keys hash to the same index in a hash table. There are several techniques for resolving collisions:</p>
+    
+            <ul>
+                <li><strong>Chaining:</strong> In this method, each table index points to a linked list of records that hash to the same index.</li>
+                <li><strong>Open Addressing:</strong> In open addressing, when a collision occurs, the algorithm searches for the next available slot in the hash table.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Chaining Collision Resolution
+    # If two records hash to the same index, they are stored in a linked list at that index.
+    hash_table = [[] for _ in range(TABLE_SIZE)]
+    hash_table[hash_function(key)].append(record)
+    
+    # Example: Open Addressing Collision Resolution
+    # If a collision occurs, search for the next available slot using linear probing.
+    def linear_probing(hash_table, key):
+        index = hash_function(key)
+        while hash_table[index] != None:
+            index = (index + 1) % len(hash_table)
+        return index
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>3.5 Extendible Hashing</h2>
+            <p>Extendible hashing is a dynamic hashing technique used to handle large datasets. It uses a directory that maps hash values to buckets. As the table grows, the directory is extended to accommodate more buckets, allowing the hash table to grow dynamically.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Extendible Hashing
+    # 1. Maintain a directory that maps hash values to buckets.
+    # 2. When a bucket overflows, split it into two, and update the directory.
+    # 3. The directory grows dynamically to accommodate more buckets as needed.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>3.6 Dynamic Hashing</h2>
+            <p>Dynamic hashing extends extendible hashing by allowing the size of the hash table to grow or shrink based on the number of elements. This approach makes hashing more efficient in handling datasets of varying sizes.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Dynamic Hashing
+    # 1. The number of buckets is adjusted dynamically based on the number of records.
+    # 2. If a bucket is full, the hash table is expanded, and records are redistributed.
+    # 3. The table can shrink if the number of records decreases significantly.
+                </pre>
+            </div>
+    
+        </section>
+    
+    </div>
+    
+    <!-- UNIT 4 -->
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Relational Data Model & SQL</h1>
+    
+        <section class="section">
+            <h2>4.1 Relational Data Model</h2>
+            <p>The Relational Data Model (RDM) is based on the theory of sets and defines data as being organized in tables (also called relations). In this model, data is structured as rows and columns, where each table represents an entity type, and each row represents a record (or instance) of that entity.</p>
+    
+            <h3>Relational Model Concepts:</h3>
+            <ul>
+                <li><strong>Table (Relation):</strong> A table in a relational database, consisting of rows and columns. Each table represents an entity or relationship.</li>
+                <li><strong>Tuple (Row):</strong> A single record in a table, represented as a set of attribute values.</li>
+                <li><strong>Attribute (Column):</strong> A characteristic or property of an entity, represented by a column in a table.</li>
+                <li><strong>Domain:</strong> The set of allowable values for an attribute.</li>
+                <li><strong>Primary Key:</strong> A unique identifier for each record in a table. It ensures that each row can be uniquely identified.</li>
+                <li><strong>Foreign Key:</strong> An attribute in one table that links to the primary key in another table, establishing a relationship between the two tables.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Relational Model (Table)
+    # Table: Employee
+    # +------------+----------+------------+------------+
+    # | Emp_ID     | Name     | Department | Salary     |
+    # +------------+----------+------------+------------+
+    # | 101        | John     | HR         | 50000      |
+    # | 102        | Alice    | IT         | 60000      |
+    # | 103        | Bob      | IT         | 55000      |
+    # +------------+----------+------------+------------+
+    # Here, Emp_ID is the Primary Key.
+    # Department is a non-key attribute, and Salary is another attribute.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>4.2 Relational Constraints</h2>
+            <p>Relational constraints are rules that govern the validity of data in the relational database. These constraints ensure that the database remains consistent, accurate, and reliable. The primary types of relational constraints are:</p>
+    
+            <h3>Types of Constraints:</h3>
+            <ul>
+                <li><strong>Entity Integrity:</strong> This ensures that every table has a primary key, and no primary key value can be NULL.</li>
+                <li><strong>Referential Integrity:</strong> This ensures that a foreign key value must either be NULL or must match a primary key in another table.</li>
+                <li><strong>Domain Integrity:</strong> This ensures that every value in a column is of the correct data type, within a specific range, and meets other domain constraints (e.g., age must be between 18 and 65).</li>
+                <li><strong>Key Constraints:</strong> Ensures that all primary and foreign keys are valid and unique.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Referential Integrity
+    # Assume we have two tables: Employee and Department
+    
+    # Table: Employee
+    # +------------+----------+-----------------+
+    # | Emp_ID     | Name     | Dept_ID         |
+    # +------------+----------+-----------------+
+    # | 101        | John     | D1              |
+    # | 102        | Alice    | D2              |
+    # | 103        | Bob      | D2              |
+    # +------------+----------+-----------------+
+    
+    # Table: Department
+    # +----------+--------------------+
+    # | Dept_ID  | Dept_Name          |
+    # +----------+--------------------+
+    # | D1       | HR                 |
+    # | D2       | IT                 |
+    # +----------+--------------------+
+    
+    # Here, Dept_ID in the Employee table is a foreign key that references Dept_ID in the Department table.
+    # Referential integrity ensures that every Dept_ID in Employee must exist in Department.
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>4.3 Relational Algebra</h2>
+            <p>Relational Algebra is a procedural query language used to query relational databases. It uses operators to perform operations on relations (tables) and return results as relations. Some common operations in relational algebra are:</p>
+    
+            <ul>
+                <li><strong>Select (σ):</strong> Retrieves rows from a table that satisfy a given condition.</li>
+                <li><strong>Project (π):</strong> Retrieves specific columns from a table.</li>
+                <li><strong>Union (∪):</strong> Combines the results of two relations, removing duplicates.</li>
+                <li><strong>Difference (−):</strong> Retrieves rows that are in the first relation but not in the second.</li>
+                <li><strong>Intersection (∩):</strong> Retrieves rows that are common to both relations.</li>
+                <li><strong>Join (⨝):</strong> Combines two relations based on a common attribute.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Relational Algebra Operations
+    
+    # Table: Employee
+    # +------------+----------+------------+
+    # | Emp_ID     | Name     | Dept_ID    |
+    # +------------+----------+------------+
+    # | 101        | John     | D1         |
+    # | 102        | Alice    | D2         |
+    # | 103        | Bob      | D2         |
+    # +------------+----------+------------+
+    
+    # Select operation (σ): Select employees from Department D2
+    # σ Dept_ID=D2(Employee)
+    
+    # Project operation (π): Retrieve only the names of employees
+    # π Name(Employee)
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>4.4 SQL: Structured Query Language</h2>
+            <p>SQL is the standard language used to communicate with relational databases. It provides commands for creating, modifying, querying, and managing relational databases and their objects like tables, views, and indexes.</p>
+    
+            <h3>SQL Queries:</h3>
+            <ul>
+                <li><strong>SELECT:</strong> Retrieves data from one or more tables.</li>
+                <li><strong>INSERT:</strong> Adds new records into a table.</li>
+                <li><strong>UPDATE:</strong> Modifies existing records in a table.</li>
+                <li><strong>DELETE:</strong> Removes records from a table.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: SQL Queries
+    
+    # 1. SELECT Query: Retrieve all employees from the Employee table
+    SELECT * FROM Employee;
+    
+    # 2. INSERT Query: Add a new employee
+    INSERT INTO Employee (Emp_ID, Name, Dept_ID) VALUES (104, 'David', 'D1');
+    
+    # 3. UPDATE Query: Change the department of employee with Emp_ID 101
+    UPDATE Employee SET Dept_ID = 'D2' WHERE Emp_ID = 101;
+    
+    # 4. DELETE Query: Remove employee with Emp_ID 103
+    DELETE FROM Employee WHERE Emp_ID = 103;
+                </pre>
+            </div>
+    
+            <h3>SQL Programming:</h3>
+            <p>SQL allows for more advanced operations, such as joining multiple tables, filtering data using conditions, and grouping data for aggregation. Here are some advanced SQL commands:</p>
+    
+            <ul>
+                <li><strong>JOIN:</strong> Combines rows from two or more tables based on a related column.</li>
+                <li><strong>WHERE:</strong> Filters records based on a specified condition.</li>
+                <li><strong>GROUP BY:</strong> Groups rows that have the same values in specified columns.</li>
+                <li><strong>ORDER BY:</strong> Orders the results based on specified columns.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Advanced SQL Queries
+    
+    # 1. JOIN Query: Retrieve employees and their department names
+    SELECT Employee.Name, Department.Dept_Name
+    FROM Employee
+    JOIN Department ON Employee.Dept_ID = Department.Dept_ID;
+    
+    # 2. WHERE Query: Retrieve employees whose salary is greater than 50000
+    SELECT * FROM Employee WHERE Salary > 50000;
+    
+    # 3. GROUP BY Query: Get the count of employees per department
+    SELECT Dept_ID, COUNT(*) AS Employee_Count
+    FROM Employee
+    GROUP BY Dept_ID;
+    
+    # 4. ORDER BY Query: Retrieve employees ordered by their names
+    SELECT * FROM Employee ORDER BY Name ASC;
+                </pre>
+            </div>
+    
+        </section>
+    
+    </div>
+    
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: EER and ER to Relational Mapping</h1>
+    
+        <section class="section">
+            <h2>5.1 EER (Enhanced Entity-Relationship) Model</h2>
+            <p>The Enhanced Entity-Relationship (EER) Model is an extension of the basic Entity-Relationship (ER) Model. It incorporates additional concepts like specialization, generalization, and aggregation to better represent complex real-world situations.</p>
+    
+            <h3>Key Concepts of the EER Model:</h3>
+            <ul>
+                <li><strong>Specialization:</strong> The process of defining sub-entities (subtypes) within an entity set (supertype), where each subtype inherits attributes from the supertype but also has additional attributes.</li>
+                <li><strong>Generalization:</strong> The process of combining several entity sets with common attributes into a single higher-level entity set.</li>
+                <li><strong>Aggregation:</strong> The process of abstracting relationships between entities into a higher-level entity to simplify complex relationships.</li>
+                <li><strong>Cardinality Constraints:</strong> These constraints specify the number of instances of an entity that can be related to instances of another entity in the relationship.</li>
+                <li><strong>Participation Constraints:</strong> Specifies whether all or only some instances of an entity participate in a relationship (i.e., total or partial participation).</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: EER Diagram with Specialization
+    # Let's assume we have a "Person" supertype and two subtypes: "Employee" and "Student."
+    
+    # Person (Entity Supertype)
+    # +------------+-------------------+
+    # | Person_ID  | Name              |
+    # +------------+-------------------+
+    # | 101        | John Doe          |
+    # | 102        | Jane Smith        |
+    # +------------+-------------------+
+    
+    # Employee (Entity Subtype)
+    # +------------+-------------------+-----------------+
+    # | Emp_ID     | Department         | Salary         |
+    # +------------+-------------------+-----------------+
+    # | 201        | HR                 | 50000          |
+    # | 202        | IT                 | 60000          |
+    # +------------+-------------------+-----------------+
+    
+    # Student (Entity Subtype)
+    # +------------+-------------------+-----------------+
+    # | Stud_ID    | Major             | Graduation_Year |
+    # +------------+-------------------+-----------------+
+    # | 301        | Computer Science   | 2024           |
+    # | 302        | Mechanical Engg.   | 2025           |
+    # +------------+-------------------+-----------------+
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>5.2 ER to Relational Mapping</h2>
+            <p>Mapping an ER (Entity-Relationship) Diagram to a relational model is the process of translating an ER schema into a relational database schema. This mapping helps in converting the entities, attributes, and relationships into tables, columns, and keys in the relational model.</p>
+    
+            <h3>ER to Relational Mapping Rules:</h3>
+            <ul>
+                <li><strong>Entities to Relations:</strong> Each entity set in an ER diagram is mapped to a table. The attributes of the entity set become the columns of the table, and the primary key of the entity set becomes the primary key of the table.</li>
+                <li><strong>Relationships to Relations:</strong> Each relationship is mapped to a table, with foreign keys referring to the primary keys of the participating entity sets. For many-to-many relationships, a new table is created to represent the relationship and include foreign keys to both related tables.</li>
+                <li><strong>Weak Entities:</strong> A weak entity set has a partial key that depends on the existence of another (owner) entity. The weak entity is mapped to a table, with its attributes and foreign keys referencing the primary key of the strong entity.</li>
+                <li><strong>Multivalued Attributes:</strong> A multivalued attribute is mapped to a separate table with a foreign key referencing the entity that the attribute belongs to, along with the multivalued attribute as a column in the new table.</li>
+                <li><strong>Derived Attributes:</strong> Derived attributes are not directly stored in the database. Instead, they are calculated when needed.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: ER to Relational Mapping
+    
+    # 1. Entity "Employee" (Entity Set)
+    # Entity:
+    # Employee (Emp_ID, Name, Department)
+    # ER Diagram:
+    
+    # +------------+----------+------------+
+    # | Emp_ID     | Name     | Department |
+    # +------------+----------+------------+
+    # | 101        | John     | HR         |
+    # | 102        | Alice    | IT         |
+    # +------------+----------+------------+
+    
+    # Mapped to relational table:
+    # Employee(Emp_ID, Name, Department)
+    
+    # 2. Many-to-Many Relationship "Works_In"
+    # Relationship:
+    # Works_In (Emp_ID, Project_ID)
+    # ER Diagram:
+    
+    # +------------+--------------+
+    # | Emp_ID     | Project_ID   |
+    # +------------+--------------+
+    # | 101        | P1           |
+    # | 102        | P2           |
+    # +------------+--------------+
+    
+    # Mapped to relational table:
+    # Works_In(Emp_ID, Project_ID)  # Foreign keys to Employee(Emp_ID) and Project(Project_ID)
+                </pre>
+            </div>
+    
+        </section>
+    
+        <section class="section">
+            <h2>5.3 EER to Relational Mapping</h2>
+            <p>Mapping an Enhanced Entity-Relationship (EER) diagram to a relational model follows similar steps to ER-to-Relational mapping but includes handling of advanced concepts like specialization, generalization, and aggregation.</p>
+    
+            <h3>Mapping Enhanced ER Model to Relational Model:</h3>
+            <ul>
+                <li><strong>Specialization/Generalization:</strong> The subtypes from specialization or generalization are mapped to individual tables. The supertype is mapped to a table containing the common attributes. The subtype tables contain the attributes specific to each subtype and a foreign key referencing the supertype table.</li>
+                <li><strong>Aggregation:</strong> An aggregated entity is mapped to a separate table, and a relationship between this aggregated table and the entities involved is created. The aggregation is treated as a higher-level entity.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: EER to Relational Mapping
+    
+    # 1. Entity "Person" (Supertype)
+    # +------------+----------+
+    # | Person_ID  | Name     |
+    # +------------+----------+
+    # | 101        | John     |
+    # | 102        | Alice    |
+    # +------------+----------+
+    
+    # 2. Subtypes: "Employee" and "Student"
+    
+    # Employee Table
+    # +------------+-------------------+-----------------+
+    # | Emp_ID     | Dept_ID           | Salary          |
+    # +------------+-------------------+-----------------+
+    # | 201        | D1                | 50000           |
+    # | 202        | D2                | 60000           |
+    # +------------+-------------------+-----------------+
+    
+    # Student Table
+    # +------------+-------------------+-----------------+
+    # | Stud_ID    | Major             | Graduation_Year |
+    # +------------+-------------------+-----------------+
+    # | 301        | CS                | 2024            |
+    # | 302        | EE                | 2025            |
+    # +------------+-------------------+-----------------+
+    
+    # Relational Mapping:
+    # 1. The "Person" table stores common attributes (Person_ID, Name).
+    # 2. The "Employee" and "Student" tables store their specific attributes and a foreign key (Person_ID) referencing the "Person" table.
+    
+    # 3. Aggregation Example: Relationship between "Employee" and "Project"
+    # +------------+--------------+------------+
+    # | Emp_ID     | Project_ID   | Hours_Worked|
+    # +------------+--------------+------------+
+    # | 101        | P1           | 100        |
+    # | 102        | P2           | 80         |
+    # +------------+--------------+------------+
+                </pre>
+            </div>
+    
+        </section>
+    
+    </div>
+
+    <!-- UNIT 6 -->
+    <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: Comprehensive Examples Using Available Software Platforms/Case Tools, Configuration Management</h1>
+    
+        <section class="section">
+            <h2>6.1 Overview of Software Platforms and Case Tools</h2>
+            <p>Software platforms and case tools (Computer-Aided Software Engineering tools) are essential for developing software efficiently, improving collaboration, and ensuring quality during the software development lifecycle. These tools support various stages of development, such as requirements gathering, design, implementation, and testing.</p>
+    
+            <h3>Key Software Platforms and Case Tools:</h3>
+            <ul>
+                <li><strong>IDE (Integrated Development Environments):</strong> Tools like Eclipse, Visual Studio, and PyCharm provide an environment for writing, testing, and debugging code.</li>
+                <li><strong>Modeling Tools:</strong> CASE tools like Rational Rose and Enterprise Architect help design system models and diagrams (like UML diagrams) for better understanding and communication among teams.</li>
+                <li><strong>Version Control Systems:</strong> Tools like Git, SVN (Subversion), and Mercurial manage software versions, track changes, and allow collaborative development on large projects.</li>
+                <li><strong>Bug Tracking and Project Management:</strong> Tools like Jira, Bugzilla, and Trello help track project progress, manage tasks, and log issues or bugs.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Using Git for Version Control
+    
+    # To initialize a Git repository in a project folder:
+    $ git init
+    
+    # To add files to the staging area:
+    $ git add .
+    
+    # To commit changes with a message:
+    $ git commit -m "Initial commit"
+    
+    # To push changes to a remote repository:
+    $ git push origin main
+                </pre>
+            </div>
+    
+            <p>In addition to IDEs and modeling tools, software platforms often integrate with other tools for testing, deployment, and maintenance. These platforms also enhance productivity by offering automation and continuous integration features.</p>
+    
+        </section>
+    
+        <section class="section">
+            <h2>6.2 Configuration Management</h2>
+            <p>Configuration management (CM) is a discipline within software engineering that focuses on controlling and managing the changes made to a system throughout its lifecycle. CM ensures that the system's components are consistently and correctly identified, tracked, and updated during development and maintenance.</p>
+    
+            <h3>Key Concepts in Configuration Management:</h3>
+            <ul>
+                <li><strong>Configuration Items (CIs):</strong> These are the components that are managed within the configuration management process, such as source code files, documentation, and configuration settings.</li>
+                <li><strong>Version Control:</strong> The process of managing different versions of configuration items. It helps in tracking changes, reverting to previous versions, and ensuring that only the correct versions are deployed.</li>
+                <li><strong>Change Control:</strong> This involves reviewing, approving, and managing changes to configuration items. A formal process is followed to ensure that changes do not negatively affect the system's functionality.</li>
+                <li><strong>Baseline:</strong> A baseline is a snapshot of the system at a particular point in time, typically after major updates. It serves as a reference point for future changes and helps track the evolution of the system.</li>
+                <li><strong>Build and Release Management:</strong> CM tools help automate the building, testing, and release of software versions. This ensures that updates and new versions are delivered consistently and without errors.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Using Git for Configuration Management
+    
+    # To check the status of your repository and see changes made to files:
+    $ git status
+    
+    # To view the change history of a file (using commit ID):
+    $ git log --oneline
+    
+    # To create a branch for feature development:
+    $ git branch feature-xyz
+    
+    # To switch to the new branch:
+    $ git checkout feature-xyz
+    
+    # To merge changes from the development branch into the main branch:
+    $ git merge feature-xyz
+                </pre>
+            </div>
+    
+            <p>Configuration management tools like Git, Jenkins, and Ansible are widely used in software development to ensure that software configurations are systematically tracked and managed. These tools automate build processes, enforce consistent configurations across environments, and simplify the release process.</p>
+    
+        </section>
+    
+        <section class="section">
+            <h2>6.3 Comprehensive Example: Using CASE Tools and Configuration Management</h2>
+            <p>In this section, we will walk through a comprehensive example of using both CASE tools and configuration management practices within a project.</p>
+    
+            <h3>Scenario:</h3>
+            <p>Imagine a team working on a web application to manage user registrations. The team uses CASE tools for designing UML diagrams, an IDE for coding, and Git for configuration management. The team also employs Jenkins for Continuous Integration and deployment.</p>
+    
+            <h3>Steps:</h3>
+            <ul>
+                <li><strong>Step 1: Use CASE Tools to Design the Application</strong><br> The team starts by using Enterprise Architect to design UML class diagrams for the system’s structure and use case diagrams to define user interactions.</li>
+                <li><strong>Step 2: Write the Code Using an IDE</strong><br> Developers use Visual Studio Code to write Python code for the user registration system. The IDE provides syntax highlighting, debugging, and testing support.</li>
+                <li><strong>Step 3: Version Control Using Git</strong><br> Developers commit their changes to the Git repository. Every team member pulls the latest changes before starting their work and pushes their changes after completing tasks.</li>
+                <li><strong>Step 4: Continuous Integration with Jenkins</strong><br> Jenkins is configured to automatically build the project, run unit tests, and deploy it to a staging server whenever changes are pushed to the Git repository. This ensures early detection of bugs.</li>
+                <li><strong>Step 5: Managing Changes with Git</strong><br> When the team needs to introduce a new feature or fix a bug, they create a branch for the feature, work on the changes, and merge the changes back to the main branch after testing.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example: Jenkinsfile for Continuous Integration Pipeline
+    
+    # Define the pipeline for building, testing, and deploying the project
+    pipeline {
+        agent any
+        stages {
+            stage('Build') {
+                steps {
+                    script {
+                        echo 'Building the project...'
+                    }
+                }
+            }
+            stage('Test') {
+                steps {
+                    script {
+                        echo 'Running tests...'
+                    }
+                }
+            }
+            stage('Deploy') {
+                steps {
+                    script {
+                        echo 'Deploying the application to staging...'
+                    }
+                }
+            }
+        }
+    }
+                </pre>
+            </div>
+    
+            <p>By following this process, the team uses CASE tools for design, version control systems for configuration management, and Continuous Integration (CI) tools to ensure that their software is always up to date and ready for deployment. The automated build and deployment process increases efficiency, reduces errors, and helps maintain the integrity of the system.</p>
+    
+        </section>
+    
+    </div>
+    
+
+
+</body>
+</html>

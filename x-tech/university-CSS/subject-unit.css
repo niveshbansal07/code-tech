@@ -1,0 +1,46 @@
+.sem-unit-header {
+    margin: 30px 200px;
+    padding: 10px 40px;
+    font-size: 35px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    color: #343a40;
+}
+
+.unit {
+    font-weight: bold;
+    color: green;
+    cursor: pointer;
+    display: block;
+    margin: 10px 0;
+    font-size: 1.4rem;
+    text-decoration: none;
+
+}
+
+.unit:hover {
+    text-decoration: underline;
+}
+
+.content {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+ul {
+    text-align: left;
+}

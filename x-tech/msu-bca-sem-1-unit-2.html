@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Website Name</div>
+
+        <ul class="nav-links">
+            <li><a href="x-home.html">Home</a></li>
+            <li><a href="x-syllabus.html">Syllabus</a></li>
+            <li><a href="study-Material.html">Study Material</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a8 8 0 0 1 5.292 13.708l4.5 4.5-1.414 1.414-4.5-4.5A8 8 0 1 1 10 2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button id="modeToggle" class="toggle-btn">
+                <svg id="sunIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 4a1 1 0 0 1 1-1h.09a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1zm6.364 1.636a1 1 0 0 1 0 1.414l-.064.064a1 1 0 0 1-1.414-1.414l.064-.064a1 1 0 0 1 1.414 0zM20 13a1 1 0 1 1 0-2h.09a1 1 0 1 1 0 2H20zM18.364 19.364a1 1 0 0 1-1.414 0l-.064-.064a1 1 0 0 1 1.414-1.414l.064.064a1 1 0 0 1 0 1.414zM12 20a1 1 0 0 1-1 1h-.09a1 1 0 1 1 0-2H11a1 1 0 0 1 1 1zM5.636 18.364a1 1 0 0 1 0-1.414l.064-.064a1 1 0 0 1 1.414 1.414l-.064.064a1 1 0 0 1-1.414 0zM4 11a1 1 0 1 1 0 2h-.09a1 1 0 1 1 0-2H4zM5.636 5.636a1 1 0 0 1 1.414 0l.064.064a1 1 0 0 1-1.414 1.414l-.064-.064a1 1 0 0 1 0-1.414zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                </svg>
+
+                <svg id="moonIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 0 1 11.21 3a8 8 0 1 0 9.79 9.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sem-unit-header">Computer Fundamental and Office Automation</div>
+
+
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Introduction to Computers</a>
+        <div class="content">
+            Introduction, Characteristics of Computers, Block diagram of computer. Types of computers and features, Mini
+            Computers, Micro Computers, Mainframe Computers, Super Computers.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Algorithm and Flowcharts</a>
+        <div class="content">
+            Algorithm: Definition, Characteristics, Advantages and disadvantages, Examples. Flowchart: Definition,
+            Define symbols of flowchart, Advantages and disadvantages, Examples.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Operating System and Services in O.S.</a>
+        <div class="content">
+            DOS History, Files and Directories, Internal and External Commands, Batch Files, Types of Operative System.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Windows Operating Environment</a>
+        <div class="content">
+            Features of MS – Windows, Control Panel, Taskbar, Desktop, Windows Application, Icons, Windows Accessories,
+            Notepad, Paintbrush.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Editors and Word Processors</a>
+        <div class="content">
+            Basic Concepts, Examples: MS-Word, Introduction to desktop publishing.
+        </div>
+
+        <a href="#unit6" class="unit">UNIT-VI: Spreadsheets and Database Packages</a>
+        <div class="content">
+            Purpose, usage, command, MS-Excel, Creation of files in MS-Access, Switching between applications,
+            MS-PowerPoint.
+        </div>
+    </div>
+
+    <!-- UNTI 1 -->
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Introduction to Computers</h1>
+
+        <section class="section">
+            <h2>1. Introduction</h2>
+            <p>A computer is an electronic device that accepts input, processes it, and delivers the output. It can
+                store and retrieve data efficiently.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Characteristics of Computers</h2>
+            <ul>
+                <li><strong>Speed:</strong> Processes data quickly.</li>
+                <li><strong>Accuracy:</strong> Performs operations without errors.</li>
+                <li><strong>Automation:</strong> Can work automatically without manual intervention.</li>
+                <li><strong>Storage:</strong> Can store large amounts of data.</li>
+                <li><strong>Versatility:</strong> Can perform a wide range of tasks.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Block Diagram of a Computer</h2>
+            <pre>
+                +------------+       +------------+       +------------+
+                | Input Unit | --->  | CPU        | --->  | Output Unit|
+                +------------+       +------------+       +------------+
+                                         |
+                                         v
+                                   +-------------+
+                                   | Memory Unit |
+                                   +-------------+
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Types of Computers and Features</h2>
+            <ul>
+                <li><strong>Micro Computers:</strong> Used at home or for personal tasks.</li>
+                <li><strong>Mini Computers:</strong> Mid-sized computers for small organizations.</li>
+                <li><strong>Mainframe Computers:</strong> Used in large organizations for bulk data processing.</li>
+                <li><strong>Super Computers:</strong> Highly powerful computers used for scientific simulations and
+                    research.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>5. Types of Programming Languages</h2>
+            <ul>
+                <li><strong>Machine Language:</strong> Binary language directly executed by CPU.</li>
+                <li><strong>Assembly Language:</strong> Uses mnemonics and requires assembler.</li>
+                <li><strong>High-Level Language:</strong> Like Python, C++, Java – user-friendly and portable.</li>
+            </ul>
+            <pre>
+    Example:
+    Machine: 10110010
+    Assembly: MOV A, B
+    High-Level: sum = a + b;
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Data Organization</h2>
+            <ul>
+                <li><strong>Bit:</strong> Smallest unit (0 or 1)</li>
+                <li><strong>Byte:</strong> Group of 8 bits</li>
+                <li><strong>Field:</strong> Group of characters</li>
+                <li><strong>Record:</strong> Collection of related fields</li>
+                <li><strong>File:</strong> Collection of records</li>
+                <li><strong>Directory:</strong> Folder that contains files</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>7. Types of Memory</h2>
+            <ul>
+                <li><strong>Primary Memory:</strong> RAM (temporary), ROM (permanent)</li>
+                <li><strong>Secondary Memory:</strong> HDD, SSD, CD/DVD, USB drives</li>
+                <li><strong>ROM Types:</strong> PROM (Programmable), EPROM (Erasable)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>8. Secondary Storage Devices</h2>
+            <ul>
+                <li><strong>FD:</strong> Floppy Disk – obsolete now</li>
+                <li><strong>CD:</strong> Compact Disc – optical storage</li>
+                <li><strong>HD:</strong> Hard Disk – magnetic storage</li>
+                <li><strong>Pen Drive:</strong> USB flash storage</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>9. I/O Devices</h2>
+            <ul>
+                <li><strong>Scanners:</strong> Convert paper documents into digital form</li>
+                <li><strong>Plotters:</strong> Print vector graphics</li>
+                <li><strong>LCD:</strong> Liquid Crystal Display screens</li>
+                <li><strong>Plasma Display:</strong> Use plasma gas to show images (older tech)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>10. Number Systems</h2>
+            <p>Computers understand binary system (0 and 1), but humans also use octal, decimal, and hexadecimal.</p>
+
+            <ul>
+                <li><strong>Binary (Base-2):</strong> Uses 0, 1</li>
+                <li><strong>Octal (Base-8):</strong> Uses 0-7</li>
+                <li><strong>Decimal (Base-10):</strong> Uses 0-9</li>
+                <li><strong>Hexadecimal (Base-16):</strong> Uses 0-9 and A-F</li>
+            </ul>
+
+            <pre>
+    Examples:
+    Binary of 5 = 101
+    Octal of 9 = 11
+    Decimal of 101 = 5
+    Hexadecimal of 15 = F
+            </pre>
+
+            <h3>Binary Operations:</h3>
+            <pre>
+    Addition:     101 + 001 = 110
+    Subtraction:  101 - 001 = 100
+    Multiplication:  101 x 10 = 1010
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Algorithm and Flowcharts</h1>
+
+        <section class="section">
+            <h2>1. Algorithm</h2>
+            <p><strong>Definition:</strong> An algorithm is a set of well-defined, logical steps designed to perform a
+                task or solve a problem. It forms the foundation of programming and computational logic.</p>
+
+            <h3>Key Characteristics of an Algorithm:</h3>
+            <ul>
+                <li><strong>Finiteness:</strong> An algorithm must always terminate after a finite number of steps.</li>
+                <li><strong>Definiteness:</strong> Each step must be clear and unambiguous.</li>
+                <li><strong>Input:</strong> Zero or more inputs are supplied externally.</li>
+                <li><strong>Output:</strong> At least one output is produced.</li>
+                <li><strong>Effectiveness:</strong> Each step must be simple enough to be performed.</li>
+            </ul>
+
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Helps understand the logic before coding.</li>
+                <li>Easy to write and debug.</li>
+                <li>Language-independent representation.</li>
+            </ul>
+
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li>No standardized format.</li>
+                <li>Can become complex for large problems.</li>
+            </ul>
+
+            <h3>Example 1: Largest of Two Numbers</h3>
+            <pre>
+    Algorithm: Find the largest of two numbers A and B
+    
+    Step 1: Start
+    Step 2: Read A and B
+    Step 3: If A > B then
+               Print "A is greater"
+            Else
+               Print "B is greater"
+    Step 4: Stop
+            </pre>
+
+            <h3>Example 2: Factorial of a Number</h3>
+            <pre>
+    Algorithm: Calculate the factorial of a number N
+    
+    Step 1: Start
+    Step 2: Read N
+    Step 3: Set fact = 1
+    Step 4: Repeat from i = 1 to N
+                fact = fact * i
+    Step 5: Print fact
+    Step 6: Stop
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Flowchart</h2>
+            <p><strong>Definition:</strong> A flowchart is a visual representation of the sequence of steps and
+                decisions needed to perform a process using standardized symbols.</p>
+
+            <h3>Standard Flowchart Symbols:</h3>
+            <pre>
+    [Oval]          - Start or End
+    [Parallelogram] - Input or Output
+    [Rectangle]     - Process or Calculation
+    [Diamond]       - Decision (Yes/No)
+    [Arrow]         - Flow of control
+            </pre>
+
+            <h3>Advantages:</h3>
+            <ul>
+                <li>Easy to visualize and communicate logic.</li>
+                <li>Highlights logical flow and decision-making paths.</li>
+                <li>Helps detect errors before coding.</li>
+            </ul>
+
+            <h3>Disadvantages:</h3>
+            <ul>
+                <li>Can become complex for detailed logic.</li>
+                <li>Difficult to modify once completed.</li>
+            </ul>
+
+            <h3>Example Flowchart: Find the Largest of Two Numbers</h3>
+            <pre>
+              +---------+
+              |  Start  |
+              +----+----+
+                   |
+                   v
+         +---------------------+
+         | Input A and B       |
+         +---------------------+
+                   |
+                   v
+         +-----------------------------+
+         | Is A greater than B?        |
+         +----------+------------------+
+                    |
+               Yes / \ No
+                  /     \
+                 v       v
+    +----------------+  +----------------+
+    | Print "A > B"   |  | Print "B > A"   |
+    +----------------+  +----------------+
+                  \     /
+                   v   v
+                +--------+
+                |  Stop  |
+                +--------+
+            </pre>
+
+            <h3>Example Flowchart: Factorial of a Number</h3>
+            <pre>
+             +--------+
+             | Start  |
+             +---+----+
+                 |
+                 v
+         +----------------+
+         | Read N         |
+         +----------------+
+                 |
+                 v
+         +----------------+
+         | Set F = 1, i=1 |
+         +----------------+
+                 |
+                 v
+         +-------------------------+
+         | Is i <= N?              |
+         +----------+--------------+
+                    |
+               Yes / \ No
+                  /     \
+                 v       v
+    +---------------------+     +--------------+
+    | F = F * i, i = i +1  |     | Print F      |
+    +---------------------+     +--------------+
+                  \                 |
+                   \_______________/
+                            |
+                            v
+                        +-------+
+                        | Stop  |
+                        +-------+
+            </pre>
+        </section>
+    </div>
+
+
+
+<!-- UNIT 3 -->
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Operating System and Services in OS</h1>
+
+        <section class="section">
+            <h2>1. Introduction to Operating System</h2>
+            <p>An <strong>Operating System (OS)</strong> is system software that acts as an intermediary between
+                computer hardware and software. It manages hardware resources and provides essential services for
+                computer programs. Without an OS, users wouldn't be able to interact with the computer or run
+                applications efficiently.</p>
+
+            <h3>Key Functions of an OS:</h3>
+            <ul>
+                <li><strong>Process Management:</strong> The OS manages processes running on the computer, allocating
+                    resources to processes and scheduling their execution. For example, the OS determines which process
+                    gets the CPU at any given time.</li>
+                <li><strong>Memory Management:</strong> It allocates and deallocates memory to processes as needed. The
+                    OS ensures that each program has enough memory to run, and prevents processes from interfering with
+                    each other.</li>
+                <li><strong>File and Disk Management:</strong> It handles the organization, storage, retrieval, and
+                    management of files on the disk. It keeps track of files, directories, and permissions, ensuring
+                    secure and efficient access to stored data.</li>
+                <li><strong>Device Management:</strong> The OS controls hardware devices like printers, scanners, and
+                    disk drives. It provides device drivers that allow software applications to interact with hardware
+                    devices.</li>
+                <li><strong>User Interface and Security:</strong> The OS provides an interface (like GUI or
+                    command-line) for the user to interact with the computer. It also handles user authentication and
+                    enforces security policies to protect data and system integrity.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. DOS (Disk Operating System)</h2>
+
+            <h3>History of DOS:</h3>
+            <p><strong>MS-DOS</strong> (Microsoft Disk Operating System) was the first widely used operating system for
+                IBM PCs in the 1980s. It is a single-user, single-tasking operating system. Later, Windows began to
+                dominate, but MS-DOS was foundational in the development of personal computing.</p>
+
+            <h3>Files and Directories in DOS:</h3>
+            <p>In DOS, files are stored in directories. A directory can contain both files and other directories
+                (subdirectories), which are used to organize the system’s data. A file has a name and an extension
+                (e.g., <code>report.txt</code>), which indicates its type.</p>
+
+            <h4>Example Directory Structure:</h4>
+            <pre>
+            C:\
+             ├── Documents\
+             │     └── report.txt
+             ├── Programs\
+             │     └── setup.exe
+             └── System\
+                   └── autoexec.bat
+            </pre>
+
+            <h3>Internal Commands in DOS:</h3>
+            <p>Internal commands are built into the command interpreter (COMMAND.COM) and do not require separate
+                program files. They execute quickly and are typically used for basic system functions.</p>
+            <ul>
+                <li><code>DIR</code> - Displays a list of files and subdirectories in the current directory.</li>
+                <li><code>CLS</code> - Clears the screen.</li>
+                <li><code>DEL</code> - Deletes a specified file (e.g., <code>DEL report.txt</code>).</li>
+                <li><code>COPY</code> - Copies files from one location to another (e.g.,
+                    <code>COPY report.txt D:\Backup</code>).
+                </li>
+            </ul>
+
+            <h3>External Commands in DOS:</h3>
+            <p>External commands are separate program files that reside on disk. They are invoked from the command line
+                and are usually used for more advanced operations.</p>
+            <ul>
+                <li><code>FORMAT</code> - Used to format a disk (e.g., <code>FORMAT A:</code>).</li>
+                <li><code>DISKCOPY</code> - Copies all files from one disk to another.</li>
+                <li><code>XCOPY</code> - Copies entire directories and their contents (e.g.,
+                    <code>XCOPY /E C:\Data D:\Backup</code>).
+                </li>
+            </ul>
+
+            <h3>Batch Files:</h3>
+            <p>Batch files are text files containing a series of commands. These files are executed in sequence when the
+                batch file is run. Batch files allow for automation of tasks.</p>
+
+            <h4>Example Batch File:</h4>
+            <pre>
+            @echo off
+            cls
+            echo Starting the backup process...
+            xcopy C:\Documents D:\Backup\ /E
+            echo Backup complete.
+            pause
+            </pre>
+
+            <p>In this batch file, the commands clear the screen, display a message, copy files from one directory to
+                another, and then pause the process until the user presses any key.</p>
+        </section>
+
+        <section class="section">
+            <h2>3. Types of Operating Systems</h2>
+            <h3>1. Single-user, Single-tasking OS</h3>
+            <p>These are simple operating systems that allow one user to perform one task at a time. MS-DOS is an
+                example of this type of OS.</p>
+            <h4>Example:</h4>
+            <pre>
+            MS-DOS: Only one program can be executed at a time.
+            </pre>
+
+            <h3>2. Single-user, Multitasking OS</h3>
+            <p>These operating systems allow a single user to run multiple programs simultaneously. Modern OSes like
+                Windows and macOS fall into this category.</p>
+            <h4>Example:</h4>
+            <pre>
+            Windows: Allows running web browsers, text editors, and games simultaneously.
+            </pre>
+
+            <h3>3. Multi-user OS</h3>
+            <p>These operating systems allow multiple users to access and use the system resources at the same time.
+                Examples include UNIX and Linux.</p>
+            <h4>Example:</h4>
+            <pre>
+            Linux: Multiple users can log in remotely and run programs at the same time.
+            </pre>
+
+            <h3>4. Real-time OS</h3>
+            <p>Real-time OSes are used in systems where time constraints are critical. They are found in embedded
+                systems like medical devices, industrial robots, and aerospace controls.</p>
+            <h4>Example:</h4>
+            <pre>
+            VxWorks: Used in embedded systems that require real-time processing.
+            </pre>
+
+            <h3>5. Distributed OS</h3>
+            <p>These OSes manage a group of separate computers and make them appear as a single system to the user.
+                Examples include Google's distributed OS and cloud computing services.</p>
+            <h4>Example:</h4>
+            <pre>
+            Hadoop: A framework for distributed data processing across many computers.
+            </pre>
+        </section>
+    </div>
+
+
+    <!-- UNIT 4 -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Windows Operating Environment</h1>
+
+        <section class="section">
+            <h2>1. Features of MS Windows</h2>
+            <p><strong>Microsoft Windows</strong> is one of the most widely used operating systems for personal
+                computers. It provides a graphical user interface (GUI) that allows users to interact with the computer
+                using visual elements like icons, buttons, and windows, rather than text-based commands.</p>
+
+            <h3>Key Features of MS Windows:</h3>
+            <ul>
+                <li><strong>Graphical User Interface (GUI):</strong> Windows allows users to interact with the system
+                    using graphical elements (icons, buttons, windows). The GUI is intuitive, making it easy to navigate
+                    and perform tasks.
+                    <br><strong>Example:</strong> You can open a web browser by double-clicking the browser icon on the
+                    desktop or taskbar.
+                </li>
+                <li><strong>Multitasking:</strong> MS Windows allows you to run multiple applications at once, and you
+                    can switch between them without closing any.
+                    <br><strong>Example:</strong> You can have a web browser open for research while also editing a Word
+                    document, and switch between them easily.
+                </li>
+                <li><strong>File Management:</strong> Windows uses File Explorer to help manage files and folders on the
+                    system. You can organize files in directories, move them, delete them, or copy them to other
+                    locations.
+                    <br><strong>Example:</strong> To save a new document, you would use File Explorer to choose the
+                    folder where it should be saved.
+                </li>
+                <li><strong>Security Features:</strong> Windows comes with built-in security features like
+                    <strong>Windows Defender</strong>, which helps protect the computer from viruses and malware.
+                    <br><strong>Example:</strong> If you download a suspicious file, Windows Defender will notify you
+                    and may block the download to keep your system safe.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. Control Panel</h2>
+            <p>The <strong>Control Panel</strong> in Windows is where users can access and adjust the system settings
+                and configuration. This includes everything from hardware setup to security and network settings.</p>
+
+            <h3>Key Components of the Control Panel:</h3>
+            <ul>
+                <li><strong>System and Security:</strong> Adjust settings related to system performance and security.
+                    <br><strong>Example:</strong> You can view system information, configure backup settings, or change
+                    firewall settings.
+                </li>
+                <li><strong>Network and Internet:</strong> Manage network connections and internet settings.
+                    <br><strong>Example:</strong> If you want to set up Wi-Fi, you can do it through this section.
+                </li>
+                <li><strong>Hardware and Sound:</strong> Manage hardware devices, such as printers or speakers.
+                    <br><strong>Example:</strong> You can change the default printer or adjust the sound settings here.
+                </li>
+                <li><strong>User Accounts:</strong> Manage user accounts, change passwords, and control account access.
+                    <br><strong>Example:</strong> You can create a new user account or change an existing user’s
+                    password.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Taskbar</h2>
+            <p>The <strong>Taskbar</strong> is located at the bottom of the screen and is an essential part of the
+                Windows interface. It shows running applications, gives you access to pinned programs, and displays
+                notifications.</p>
+
+            <h3>Taskbar Components:</h3>
+            <ul>
+                <li><strong>Start Menu:</strong> Located at the left side of the Taskbar, the Start Menu provides quick
+                    access to programs, settings, and files.
+                    <br><strong>Example:</strong> Clicking the Start button shows the list of installed apps, documents,
+                    and system settings.
+                </li>
+                <li><strong>Quick Launch:</strong> This section allows you to pin frequently used programs for faster
+                    access.
+                    <br><strong>Example:</strong> Pin applications like Chrome, Word, or File Explorer for easy access.
+                </li>
+                <li><strong>System Tray:</strong> Located on the right side of the Taskbar, it shows notifications like
+                    the time, volume control, and system alerts.
+                    <br><strong>Example:</strong> You can check the battery level or click the network icon to manage
+                    Wi-Fi connections.
+                </li>
+                <li><strong>Open Windows:</strong> The taskbar displays icons for any applications that are open. You
+                    can click on these to bring the corresponding window to the foreground.
+                    <br><strong>Example:</strong> If you're working on multiple documents, each open document will have
+                    its icon on the Taskbar for easy switching.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>4. Desktop</h2>
+            <p>The <strong>Desktop</strong> is the primary workspace in Windows. It serves as a canvas for organizing
+                shortcuts, files, and running programs. You can customize the desktop to fit your needs and preferences.
+            </p>
+
+            <h3>Key Desktop Components:</h3>
+            <ul>
+                <li><strong>Icons:</strong> Small graphical representations of files, programs, or folders. You can
+                    double-click these icons to open or execute the corresponding item.
+                    <br><strong>Example:</strong> Double-click the "This PC" icon to open the file explorer and access
+                    your computer’s files.
+                </li>
+                <li><strong>Wallpaper:</strong> The background image of the desktop. Users can choose an image from the
+                    default options or upload their own.
+                    <br><strong>Example:</strong> You might change the wallpaper to a picture of your favorite landscape
+                    for a personalized touch.
+                </li>
+                <li><strong>Shortcuts:</strong> These are icons that provide quick access to files, applications, or
+                    websites without opening the corresponding location in the file system.
+                    <br><strong>Example:</strong> You might create a shortcut for a frequently used document so you
+                    don’t have to navigate through folders each time.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>5. Windows Applications</h2>
+            <p>Windows comes pre-installed with a wide range of <strong>applications</strong> that help you perform
+                various tasks, from writing documents to editing photos.</p>
+
+            <h3>Common Windows Applications:</h3>
+            <ul>
+                <li><strong>Notepad:</strong> A simple text editor for creating and editing plain text files. It’s often
+                    used for taking quick notes.
+                    <br><strong>Example:</strong> Write a to-do list or take a note during a meeting.
+                </li>
+                <li><strong>Paint:</strong> A basic graphics editing program. It allows you to create and edit images
+                    using simple drawing tools.
+                    <br><strong>Example:</strong> You can create basic drawings or resize images using Paint.
+                </li>
+                <li><strong>Calculator:</strong> A basic arithmetic tool for performing simple calculations.
+                    <br><strong>Example:</strong> Use the calculator to perform basic math or convert units like inches
+                    to centimeters.
+                </li>
+                <li><strong>Windows Media Player:</strong> A multimedia player that lets you play music and videos.
+                    <br><strong>Example:</strong> Open your favorite music files using Windows Media Player to listen to
+                    them.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>6. Windows Accessories</h2>
+            <p><strong>Windows Accessories</strong> are a set of tools provided by Windows that are lightweight but very
+                useful for various tasks. These accessories make daily tasks easier and faster.</p>
+
+            <h3>Examples of Windows Accessories:</h3>
+            <ul>
+                <li><strong>Snipping Tool:</strong> A tool for capturing screenshots of parts of the screen.
+                    <br><strong>Example:</strong> Capture an image of a specific section of a webpage and save it as a
+                    file.
+                </li>
+                <li><strong>WordPad:</strong> A basic word processing tool that is more advanced than Notepad but
+                    simpler than Microsoft Word.
+                    <br><strong>Example:</strong> You can use WordPad to create documents that include basic formatting
+                    like bold, italics, and bullet points.
+                </li>
+                <li><strong>Calculator:</strong> A simple application to perform arithmetic operations like addition,
+                    subtraction, and multiplication.
+                    <br><strong>Example:</strong> Use the Calculator app to quickly find the total cost of items during
+                    shopping.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>Additional Diagrams (Text Representation)</h2>
+            <h3>1. Taskbar Layout Example:</h3>
+            <pre>
+    ----------------------------------------------------------
+    | Start Menu | Quick Launch | Open Windows | System Tray |
+    ----------------------------------------------------------
+                </pre>
+
+            <h3>2. Desktop Icon Layout:</h3>
+            <pre>
+    +--------------------------------------+
+    | [My Documents] [This PC] [Recycle Bin] |
+    +--------------------------------------+
+    | [Notepad] [Paint] [Calculator]        |
+    +--------------------------------------+
+                </pre>
+        </section>
+    </div>
+
+
+    <!-- UNIT 5 -->
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Editors and Word Processors</h1>
+      
+        <section class="section">
+          <h2>1. Basic Concepts</h2>
+          <p><strong>Editor:</strong> An editor is a software used to write, modify, or view plain text. It is mainly used for writing code, notes, or configuration files. Editors do not support rich formatting like bold text or inserting images.</p>
+          <p><strong>Example:</strong> Notepad is a basic editor used for writing text or code like HTML, Python, etc.</p>
+      
+          <p><strong>Word Processor:</strong> A word processor is an application that allows users to create and format documents using various fonts, colors, alignments, and graphics. It is mostly used to write letters, reports, resumes, etc.</p>
+          <p><strong>Example:</strong> MS Word is a popular word processor used for creating formatted documents like reports or essays.</p>
+      
+          <h3>Comparison Table:</h3>
+          <table>
+            <tr>
+              <th>Feature</th>
+              <th>Text Editor</th>
+              <th>Word Processor</th>
+            </tr>
+            <tr>
+              <td>Purpose</td>
+              <td>Write plain text or code</td>
+              <td>Create formatted documents</td>
+            </tr>
+            <tr>
+              <td>Formatting</td>
+              <td>No formatting (plain text only)</td>
+              <td>Rich formatting (bold, fonts, color)</td>
+            </tr>
+            <tr>
+              <td>Image Support</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+            <tr>
+              <td>Spell Check</td>
+              <td>No</td>
+              <td>Yes</td>
+            </tr>
+          </table>
+      
+          <h3>Diagram: Simple Difference</h3>
+          <pre>
+        +--------------------+       +-----------------------------+
+        |     Notepad        |       |      Microsoft Word         |
+        |--------------------|       |-----------------------------|
+        | Plain text only    |       | Text, Images, Fonts, Colors |
+        | No formatting      |       | Formatting Tools Available  |
+        +--------------------+       +-----------------------------+
+          </pre>
+      
+          <h3>Example of Using an Editor:</h3>
+          <pre>
+        Notepad code:
+      
+        print("Hello Nivesh!")
+          </pre>
+      
+          <h3>Example of Using Word Processor:</h3>
+          <ul>
+            <li>Write "My Resume" using bold heading.</li>
+            <li>Add bullet points for Skills.</li>
+            <li>Insert a profile picture and contact table.</li>
+          </ul>
+        </section>
+      
+        <section class="section">
+          <h2>2. MS Word</h2>
+          <p><strong>Microsoft Word</strong> is a powerful word processing application from Microsoft that helps users to create professional-looking documents.</p>
+      
+          <h3>Main Features of MS Word:</h3>
+          <ul>
+            <li>Text formatting (font, size, color)</li>
+            <li>Insert pictures, charts, and tables</li>
+            <li>Spell and grammar check</li>
+            <li>Page setup: margins, orientation</li>
+            <li>Header, footer, watermark, and page numbers</li>
+          </ul>
+      
+          <h3>Example: Creating a Resume</h3>
+          <ol>
+            <li>Open MS Word and select a resume template or blank document.</li>
+            <li>Write your name in bold, large font.</li>
+            <li>Add a section for Education, Experience, and Skills.</li>
+            <li>Insert a table for qualifications.</li>
+            <li>Save the document as .docx or export to PDF.</li>
+          </ol>
+      
+          <h3>Diagram: MS Word Interface</h3>
+          <pre>
+        +---------------------------------------------------------+
+        | File | Home | Insert | Design | Layout | Review | View  |
+        +---------------------------------------------------------+
+        | Font Options | Paragraph | Styles | Editing Tools       |
+        +---------------------------------------------------------+
+        |                  Typing Area (Document)                 |
+        +---------------------------------------------------------+
+        | Status Bar       | Page No. | Word Count | Zoom Slider  |
+        +---------------------------------------------------------+
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>3. Introduction to Desktop Publishing (DTP)</h2>
+          <p><strong>Desktop Publishing (DTP)</strong> is the process of using software to create documents for print or digital publishing. It involves layout, design, and typography to make documents visually appealing.</p>
+      
+          <h3>Common DTP Software:</h3>
+          <ul>
+            <li>Adobe InDesign – for professional publishing</li>
+            <li>Microsoft Publisher – for small projects</li>
+            <li>CorelDRAW – for graphic-rich designs</li>
+            <li>Scribus – free DTP software</li>
+          </ul>
+      
+          <h3>Uses of DTP:</h3>
+          <ul>
+            <li>Designing magazines and books</li>
+            <li>Creating posters and flyers</li>
+            <li>Brochures and newsletters</li>
+          </ul>
+      
+          <h3>Example: Making a School Poster</h3>
+          <ul>
+            <li>Open Microsoft Publisher</li>
+            <li>Choose a poster template or start blank</li>
+            <li>Add a bold heading: “Annual Sports Day”</li>
+            <li>Insert images of students and games</li>
+            <li>Use colorful fonts and background design</li>
+          </ul>
+      
+          <h3>Diagram: Poster Design Elements</h3>
+          <pre>
+        +-------------------------------+
+        |      ANNUAL SPORTS DAY        |
+        |-------------------------------|
+        |  Date: 12th March 2025        |
+        |  Time: 9:00 AM – 4:00 PM      |
+        |  Venue: School Playground     |
+        |                               |
+        | [Images of Students Playing]  |
+        +-------------------------------+
+          </pre>
+        </section>
+      </div>
+      
+      <!-- UNIT 6 -->
+
+
+      <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: Spreadsheets and Database Packages</h1>
+      
+        <section class="section">
+          <h2>1. Purpose and Usage</h2>
+          <p>
+            <strong>Spreadsheets</strong> and <strong>Database Packages</strong> are tools used to organize, analyze, and store data efficiently.
+          </p>
+          <p>
+            <strong>Spreadsheets:</strong> Help in managing numeric data, performing calculations, and visualizing data using charts.
+            <br><strong>Usage:</strong> Budgeting, accounting, data entry, analysis.
+            <br><strong>Examples:</strong> MS Excel, Google Sheets.
+          </p>
+          <p>
+            <strong>Database Packages:</strong> Used for storing large amounts of structured data and retrieving it efficiently.
+            <br><strong>Usage:</strong> Managing student records, inventory systems, customer details.
+            <br><strong>Examples:</strong> MS Access, MySQL.
+          </p>
+        </section>
+      
+        <section class="section">
+          <h2>2. Spreadsheet Commands and MS Excel</h2>
+          <p><strong>MS Excel</strong> is a spreadsheet program that allows users to perform calculations, create charts, and store tabular data.</p>
+      
+          <h3>Common Commands in MS Excel:</h3>
+          <ul>
+            <li><strong>=SUM(A1:A5):</strong> Adds values from cells A1 to A5.</li>
+            <li><strong>=AVERAGE(B1:B10):</strong> Calculates the average of values in B1 to B10.</li>
+            <li><strong>=IF(A1>10, "Yes", "No"):</strong> Conditional formula to check if A1 is greater than 10.</li>
+            <li><strong>Merge Cells:</strong> Combine multiple cells into one large cell.</li>
+            <li><strong>Sort & Filter:</strong> Organize and search data easily.</li>
+          </ul>
+      
+          <h3>Example Table: Monthly Expenses</h3>
+          <pre>
+      +-----------+-------------+
+      | Category  | Amount (₹)  |
+      +-----------+-------------+
+      | Rent      | 10,000      |
+      | Grocery   | 5,000       |
+      | Transport | 2,000       |
+      | Utilities | 1,500       |
+      +-----------+-------------+
+      | Total     | =SUM(B2:B5) |
+      +-----------+-------------+
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>3. MS Access - Creation of Files</h2>
+          <p><strong>MS Access</strong> is a database management system (DBMS) that helps create, manage, and query databases.</p>
+      
+          <h3>Steps to Create a Database File in MS Access:</h3>
+          <ol>
+            <li>Open MS Access → Click "Blank Database"</li>
+            <li>Name your database file and click "Create"</li>
+            <li>Add tables by clicking "Table Design"</li>
+            <li>Define fields like ID, Name, Age, Address</li>
+            <li>Save the table and set a Primary Key</li>
+          </ol>
+      
+          <h3>Example Table Structure:</h3>
+          <pre>
+      +----------+-----------+-------+------------+
+      | Field    | Data Type | Size  | Description|
+      +----------+-----------+-------+------------+
+      | ID       | Number    | Auto  | Unique key |
+      | Name     | Text      | 50    | Full Name  |
+      | Age      | Number    | 2     | Student Age|
+      | Address  | Text      | 100   | Home Addr. |
+      +----------+-----------+-------+------------+
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>4. Switching Between Applications</h2>
+          <p>
+            Windows allows switching between running applications using simple shortcuts and controls.
+          </p>
+      
+          <h3>Methods:</h3>
+          <ul>
+            <li><strong>Alt + Tab:</strong> Cycle through open applications quickly.</li>
+            <li><strong>Taskbar:</strong> Click on the app icons in the taskbar to switch.</li>
+            <li><strong>Task View (Win + Tab):</strong> Shows thumbnails of all open apps and desktops.</li>
+          </ul>
+      
+          <h4>Example:</h4>
+          <p>You are writing a report in MS Word and need data from Excel. Press <strong>Alt + Tab</strong> to switch from Word to Excel and back.</p>
+        </section>
+      
+        <section class="section">
+          <h2>5. MS PowerPoint</h2>
+          <p><strong>MS PowerPoint</strong> is used to create slide-based presentations for meetings, education, and more.</p>
+      
+          <h3>Key Features:</h3>
+          <ul>
+            <li>Add and format slides with text, images, and charts</li>
+            <li>Use transitions and animations for visual appeal</li>
+            <li>Insert multimedia (audio, video)</li>
+            <li>Apply templates for quick design</li>
+            <li>Presenter view and slide show mode</li>
+          </ul>
+      
+          <h4>Example: Class Project Presentation</h4>
+          <ol>
+            <li>Open PowerPoint → New Presentation</li>
+            <li>Title Slide: “My Science Project”</li>
+            <li>Slide 2: Objective with bullet points</li>
+            <li>Slide 3: Add image and explanation</li>
+            <li>Apply animations to headings</li>
+            <li>Press F5 to start slide show</li>
+          </ol>
+        </section>
+      </div>
+</body>
+
+</html>

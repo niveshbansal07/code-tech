@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Website Name</div>
+
+        <ul class="nav-links">
+            <li><a href="x-home.html">Home</a></li>
+            <li><a href="x-syllabus.html">Syllabus</a></li>
+            <li><a href="study-Material.html">Study Material</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a8 8 0 0 1 5.292 13.708l4.5 4.5-1.414 1.414-4.5-4.5A8 8 0 1 1 10 2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button id="modeToggle" class="toggle-btn">
+                <svg id="sunIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 4a1 1 0 0 1 1-1h.09a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1zm6.364 1.636a1 1 0 0 1 0 1.414l-.064.064a1 1 0 0 1-1.414-1.414l.064-.064a1 1 0 0 1 1.414 0zM20 13a1 1 0 1 1 0-2h.09a1 1 0 1 1 0 2H20zM18.364 19.364a1 1 0 0 1-1.414 0l-.064-.064a1 1 0 0 1 1.414-1.414l.064.064a1 1 0 0 1 0 1.414zM12 20a1 1 0 0 1-1 1h-.09a1 1 0 1 1 0-2H11a1 1 0 0 1 1 1zM5.636 18.364a1 1 0 0 1 0-1.414l.064-.064a1 1 0 0 1 1.414 1.414l-.064.064a1 1 0 0 1-1.414 0zM4 11a1 1 0 1 1 0 2h-.09a1 1 0 1 1 0-2H4zM5.636 5.636a1 1 0 0 1 1.414 0l.064.064a1 1 0 0 1-1.414 1.414l-.064-.064a1 1 0 0 1 0-1.414zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                </svg>
+
+                <svg id="moonIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 0 1 11.21 3a8 8 0 1 0 9.79 9.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sem-unit-header">Mathematical Foundation for Computer Science</div>
+
+
+    <div class="container">
+        <a href="#unit1" class="unit">UNIT-I: Matrix Theory</a>
+        <div class="content">
+            Matrix Theory: Review of fundamentals, equivalent matrices, elementary row (column)
+            operations, rank of a matrix by reducing it to the normal form, rank of a matrix by reducing it to
+            echelon form.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Mathematical Logic</a>
+        <div class="content">
+            Mathematical Logic: Connectives, Negation, Conjunction, Disjunction, conditional, bi-conditional,
+            statement formulas, Tautology and contradiction, Equivalence formulae.<br>
+            Normal forms: Principle conjunctive and disjunctive normal forms, Theory of inferences for statement
+            calculus validating using truth tables.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Graph Theory</a>
+        <div class="content">
+            Graph Theory: Definition of a Graph, Finite and infinite Graphs, Incidence and Degree of a vertex,
+            Null Graph, Sub graphs, Walks, Paths, Circuits, Connected, Disconnected graphs and Components,
+            Euler Graph, Hamiltonian Path and Hamiltonian Circuits.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Trees and Matrix Representation</a>
+        <div class="content">
+            Trees and Matrix Representation: Properties of Trees, Distance and Centres in a Tree, Rooted and
+            Binary Trees, Spanning Trees and Fundamental Circuits. Cutset, properties of a Cutset.<br>
+            Matrix Representation of graphs: Incidence matrix, Circuit matrix, Fundamental Circuit matrix,
+            Cutset matrix, Path matrix, Adjacency matrix.<br>
+            Planar and Dual Graphs: Planar Graphs, Kurtowski’s two Graphs, Different Representations of a
+            Planar Graph, Detection of Planarity.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Directed Graphs</a>
+        <div class="content">
+            Directed Graphs: Definition, Some types of Digraphs, Digraphs and Binary relations, Directed paths
+            and Connectedness, Euler Digraphs, Trees with directed edges, Fundamental Circuits in Digraphs,
+            Adjacency Matrix of a Digraph.
+        </div>
+    </div>
+
+
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Matrix Theory</h1>
+
+        <section class="section">
+            <h2>1. Review of Fundamentals</h2>
+            <p>A <strong>matrix</strong> is a rectangular arrangement of numbers in rows and columns. It is used to
+                represent data or systems of linear equations. The size of a matrix is defined as m × n, where m is
+                the
+                number of rows and n is the number of columns.</p>
+            <pre class="matrix">
+    Example:
+    A = [ [1, 2], [3, 4] ] is a 2×2 matrix.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Equivalent Matrices</h2>
+            <p>Two matrices are <strong>equivalent</strong> if one can be obtained from the other by a sequence of
+                elementary row or column operations.</p>
+            <pre class="matrix">
+    Example:
+    A = [ [1, 2], [3, 4] ]
+    B = [ [1, 2], [0, -2] ] (obtained by replacing second row with R2 - 3×R1)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Elementary Row (Column) Operations</h2>
+            <ul>
+                <li>Row switching: Swap two rows.</li>
+                <li>Row multiplication: Multiply a row by a nonzero scalar.</li>
+                <li>Row addition: Replace a row with the sum of itself and a scalar multiple of another row.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Original: [ [1, 2], [3, 4] ]
+    Operation: R2 → R2 - 3×R1
+    Result: [ [1, 2], [0, -2] ]
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Rank of a Matrix (Normal Form)</h2>
+            <p>The <strong>rank</strong> of a matrix is the maximum number of linearly independent rows or columns.
+                By
+                reducing a matrix to its <strong>normal form</strong> (also known as row-reduced form), we can find
+                its
+                rank.</p>
+            <pre class="matrix">
+    Example:
+    A = [ [1, 2], [3, 4] ]
+    Reduce to normal form:
+    → [ [1, 2], [0, -2] ] → [ [1, 2], [0, 1] ]
+    Rank = 2
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Rank of a Matrix (Echelon Form)</h2>
+            <p>A matrix is in <strong>echelon form</strong> if all nonzero rows are above any rows of all zeros, and
+                the
+                leading entry of each nonzero row is to the right of the leading entry of the row above it. The
+                number
+                of non-zero rows gives the rank.</p>
+            <pre class="matrix">
+    Example:
+    A = [ [1, 2, -1], [2, 4, 3], [1, 1, 1] ]
+    → Row reduce to echelon form
+    → [ [1, 2, -1], [0, 0, 5], [0, 0, 0] ]
+    Rank = 2
+            </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Mathematical Logic</h1>
+
+        <section class="section">
+            <h2>1. Connectives</h2>
+            <p><strong>Connectives</strong> are logical operators used to combine statements or propositions. The
+                most
+                common connectives are:</p>
+            <ul>
+                <li><strong>Negation (¬):</strong> Negates a statement, e.g., ¬P means 'not P'.</li>
+                <li><strong>Conjunction (∧):</strong> A logical AND, e.g., P ∧ Q means 'P and Q'.</li>
+                <li><strong>Disjunction (∨):</strong> A logical OR, e.g., P ∨ Q means 'P or Q'.</li>
+                <li><strong>Conditional (→):</strong> If-then relation, e.g., P → Q means 'If P then Q'.</li>
+                <li><strong>Biconditional (↔):</strong> If and only if relation, e.g., P ↔ Q means 'P if and only if
+                    Q'.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. Statement Formulas</h2>
+            <p>A <strong>statement formula</strong> is a combination of logical variables (propositions) connected
+                by
+                logical connectives. Example:</p>
+            <pre class="matrix">
+    Example: (P ∧ Q) → (R ∨ S)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Tautology and Contradiction</h2>
+            <p><strong>Tautology:</strong> A statement that is always true, regardless of the truth values of the
+                individual propositions.</p>
+            <p><strong>Contradiction:</strong> A statement that is always false, regardless of the truth values of
+                the
+                individual propositions.</p>
+            <pre class="matrix">
+    Example of Tautology: P ∨ ¬P (Always true)
+    Example of Contradiction: P ∧ ¬P (Always false)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Equivalence Formulae</h2>
+            <p><strong>Equivalence formulae</strong> show when two formulas are logically equivalent. This means
+                that
+                both formulas have the same truth value in all cases. Examples of equivalence:</p>
+            <ul>
+                <li><strong>De Morgan's Laws:</strong> ¬(P ∧ Q) ≡ (¬P ∨ ¬Q) and ¬(P ∨ Q) ≡ (¬P ∧ ¬Q)</li>
+                <li><strong>Double Negation:</strong> ¬(¬P) ≡ P</li>
+                <li><strong>Implication:</strong> (P → Q) ≡ (¬P ∨ Q)</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>5. Normal Forms</h2>
+            <p><strong>Conjunctive Normal Form (CNF):</strong> A logical formula is in CNF if it is a conjunction of
+                disjunctions of literals. Example:</p>
+            <pre class="matrix">
+    Example: (P ∨ Q) ∧ (¬P ∨ R)
+            </pre>
+            <p><strong>Disjunctive Normal Form (DNF):</strong> A logical formula is in DNF if it is a disjunction of
+                conjunctions of literals. Example:</p>
+            <pre class="matrix">
+    Example: (P ∧ Q) ∨ (¬P ∧ R)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Theory of Inferences</h2>
+            <p><strong>Inferences</strong> in logical statements are derived from premises using rules of logic. A
+                statement can be validated using <strong>truth tables</strong> to determine its validity.</p>
+            <pre class="matrix">
+    Example: To validate P → Q using a truth table:
+    | P | Q | P → Q |
+    |---|---|-------|
+    | T | T |   T   |
+    | T | F |   F   |
+    | F | T |   T   |
+    | F | F |   T   |
+            </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Graph Theory</h1>
+
+        <section class="section">
+            <h2>1. Definition of a Graph</h2>
+            <p>A <strong>graph</strong> G is a set of vertices (nodes) and a set of edges (lines) connecting some or
+                all
+                of the vertices. It is written as G = (V, E), where:</p>
+            <ul>
+                <li><strong>V</strong> is a set of vertices.</li>
+                <li><strong>E</strong> is a set of edges, where each edge is a pair of vertices.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. Finite and Infinite Graphs</h2>
+            <p><strong>Finite Graph:</strong> A graph with a finite number of vertices and edges.</p>
+            <pre class="matrix">
+    Example: V = {A, B, C}, E = {(A, B), (B, C)}
+            </pre>
+            <p><strong>Infinite Graph:</strong> A graph with an infinite number of vertices and/or edges (not common
+                in
+                simple graph theory).</p>
+        </section>
+
+        <section class="section">
+            <h2>3. Incidence and Degree of a Vertex</h2>
+            <p><strong>Incidence:</strong> An edge is said to be incident to a vertex if the vertex is one of its
+                endpoints.</p>
+            <p><strong>Degree:</strong> The degree of a vertex is the number of edges incident to it.</p>
+            <pre class="matrix">
+    Example: If vertex A connects to B, C, and D, then deg(A) = 3
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Null Graph</h2>
+            <p>A <strong>null graph</strong> is a graph that has vertices but no edges.</p>
+            <pre class="matrix">
+    Example: V = {A, B, C}, E = {}
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Subgraphs</h2>
+            <p>A <strong>subgraph</strong> is a graph formed from a subset of vertices and edges of a given graph.
+            </p>
+            <pre class="matrix">
+    If G has V = {A, B, C, D}, E = {(A, B), (B, C), (C, D)},
+    Then a subgraph H can be: V = {A, B, C}, E = {(A, B), (B, C)}
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Walks, Paths, Circuits</h2>
+            <ul>
+                <li><strong>Walk:</strong> A sequence of vertices and edges, where repetition is allowed.</li>
+                <li><strong>Path:</strong> A walk in which all edges and vertices (except possibly the first and
+                    last)
+                    are distinct.</li>
+                <li><strong>Circuit:</strong> A path that starts and ends at the same vertex.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    Walk: A → B → C → A
+    Path: A → B → C
+    Circuit: A → B → C → A
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Connected and Disconnected Graphs</h2>
+            <p><strong>Connected Graph:</strong> A graph is connected if there is a path between every pair of
+                vertices.
+            </p>
+            <p><strong>Disconnected Graph:</strong> A graph that is not connected; it has at least two vertices with
+                no
+                path between them.</p>
+            <pre class="matrix">
+    Connected: A - B - C
+    Disconnected: A   B - C (no edge connecting A to others)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Euler Graph</h2>
+            <p>A <strong>Euler Graph</strong> is a graph in which a path exists that visits every edge exactly once.
+                The
+                graph must satisfy two conditions:</p>
+            <ul>
+                <li>All vertices with non-zero degree are connected.</li>
+                <li>Every vertex has an even degree.</li>
+            </ul>
+            <pre class="matrix">
+    Example: A - B - C - A (Euler Path exists)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>9. Hamiltonian Path and Hamiltonian Circuits</h2>
+            <p><strong>Hamiltonian Path:</strong> A path in a graph that visits every vertex exactly once.</p>
+            <p><strong>Hamiltonian Circuit:</strong> A Hamiltonian Path that starts and ends at the same vertex,
+                forming
+                a cycle.</p>
+            <pre class="matrix">
+    Example of Hamiltonian Path: A → B → C → D
+    Example of Hamiltonian Circuit: A → B → C → D → A
+            </pre>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Trees and Matrix Representation</h1>
+
+        <section class="section">
+            <h2>1. Properties of Trees</h2>
+            <p>A <strong>tree</strong> is a connected graph with no cycles. It has the following properties:</p>
+            <ul>
+                <li><strong>Connected:</strong> There is a path between every pair of vertices.</li>
+                <li><strong>Acyclic:</strong> There are no cycles or loops in the graph.</li>
+                <li><strong>Number of Edges:</strong> A tree with <em>N</em> vertices will always have <em>N-1</em>
+                    edges.</li>
+            </ul>
+            <p><strong>Example:</strong> A tree with 3 vertices and 2 edges:</p>
+            <pre class="matrix">
+        A
+       / \
+      B   C
+            </pre>
+            <p>This graph is a tree, as it is connected and acyclic. It has 3 vertices and 2 edges.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Distance and Centres in a Tree</h2>
+            <p><strong>Distance:</strong> The distance between two vertices is the number of edges in the shortest
+                path
+                between them.</p>
+            <p><strong>Centre:</strong> The centre of a tree is the set of all vertices that are at an equal or
+                minimal
+                distance from all other vertices.</p>
+            <p><strong>Example:</strong> In the tree:</p>
+            <pre class="matrix">
+            A
+           / \
+          B   C
+         /     \
+        D       E
+            </pre>
+            <p>The distance between vertex A and D is 2 (A → B → D).</p>
+            <p>The <strong>centre</strong> of the tree would be vertex B because it minimizes the maximum distance
+                to
+                all other vertices.</p>
+        </section>
+
+        <section class="section">
+            <h2>3. Rooted and Binary Trees</h2>
+            <p><strong>Rooted Tree:</strong> A tree with a specific vertex (the root) from which all other vertices
+                are
+                descended.</p>
+            <p><strong>Binary Tree:</strong> A rooted tree where each vertex has at most two children.</p>
+            <p><strong>Example:</strong> Rooted tree:</p>
+            <pre class="matrix">
+            A
+           / \
+          B   C
+         / \
+        D   E
+            </pre>
+            <p><strong>Example:</strong> Binary tree:</p>
+            <pre class="matrix">
+            A
+           / \
+          B   C
+            </pre>
+            <p>In a <strong>binary tree</strong>, each node can only have two children (left and right).</p>
+        </section>
+
+        <section class="section">
+            <h2>4. Spanning Trees and Fundamental Circuits</h2>
+            <p><strong>Spanning Tree:</strong> A subgraph that includes all vertices of the original graph and is a
+                tree.</p>
+            <p><strong>Fundamental Circuit:</strong> A cycle formed by adding an edge to a spanning tree.</p>
+            <p><strong>Example:</strong> For the graph:</p>
+            <pre class="matrix">
+            A---B
+            |   |
+            C---D
+            </pre>
+            <p>A spanning tree could be:</p>
+            <pre class="matrix">
+            A---B
+            |
+            C
+            </pre>
+            <p>Adding the edge D-A creates a fundamental circuit:</p>
+            <pre class="matrix">
+            A---B
+            |   |
+            C---D
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Cutset, Properties of a Cutset</h2>
+            <p><strong>Cutset:</strong> A set of edges whose removal disconnects the graph.</p>
+            <p><strong>Properties:</strong> Removing a cutset disconnects the graph, and every tree has at least one
+                cutset.</p>
+            <p><strong>Example:</strong> In the graph:</p>
+            <pre class="matrix">
+            A
+           / \
+          B   C
+            </pre>
+            <p>The cutset is {(A, B), (A, C)} because removing these edges disconnects the graph into separate
+                components.</p>
+        </section>
+
+        <section class="section">
+            <h2>6. Matrix Representation of Graphs</h2>
+            <p>The <strong>matrix representation</strong> of a graph can be done using several types of matrices:
+            </p>
+            <ul>
+                <li><strong>Incidence Matrix:</strong> An <em>n x m</em> matrix where <em>n</em> is the number of
+                    vertices and <em>m</em> is the number of edges. Each entry represents the incidence of a vertex
+                    and
+                    an edge.</li>
+                <li><strong>Circuit Matrix:</strong> A matrix used to represent cycles in a graph.</li>
+                <li><strong>Fundamental Circuit Matrix:</strong> A matrix representing the fundamental circuits in a
+                    graph.</li>
+                <li><strong>Path Matrix:</strong> A matrix where the entry in row <em>i</em> and column <em>j</em>
+                    is
+                    the number of paths from vertex <em>i</em> to vertex <em>j</em>.</li>
+                <li><strong>Adjacency Matrix:</strong> A square matrix used to represent a graph where the entry at
+                    <em>(i, j)</em> is 1 if there is an edge between vertex <em>i</em> and vertex <em>j</em>, and 0
+                    otherwise.
+                </li>
+            </ul>
+            <p><strong>Example of an Adjacency Matrix:</strong></p>
+            <pre class="matrix">
+            A  B  C  D
+        A [0, 1, 1, 0]
+        B [1, 0, 0, 1]
+        C [1, 0, 0, 1]
+        D [0, 1, 1, 0]
+            </pre>
+            <p>Here, <strong>1</strong> indicates an edge exists between the vertices, and <strong>0</strong>
+                indicates
+                no edge.</p>
+        </section>
+
+        <section class="section">
+            <h2>7. Planar and Dual Graphs</h2>
+            <p><strong>Planar Graph:</strong> A graph that can be drawn on a plane without any edges crossing.</p>
+            <p><strong>Kuratowski's Theorem:</strong> A graph is non-planar if it contains a subgraph that is a
+                subdivision of <em>K5</em> (the complete graph on 5 vertices) or <em>K3,3</em> (the complete
+                bipartite
+                graph on 3 vertices and 3 vertices).</p>
+            <p><strong>Example:</strong> Planar Graph:</p>
+            <pre class="matrix">
+            A---B
+            |   |
+            C---D
+            </pre>
+            <p>This graph can be drawn without edges crossing, so it's planar.</p>
+            <p><strong>Non-planar Graph:</strong></p>
+            <pre class="matrix">
+            K5 (Complete graph on 5 vertices)
+            </pre>
+            <p>This graph can't be drawn on a plane without edges crossing.</p>
+        </section>
+
+        <section class="section">
+            <h2>8. Detection of Planarity</h2>
+            <p>To detect if a graph is planar, algorithms like <strong>Kuratowski's Algorithm</strong> or
+                <strong>Euler's Formula</strong> are used. Euler's formula states that for a planar graph with
+                <em>V</em> vertices, <em>E</em> edges, and <em>F</em> faces, the following holds:
+            </p>
+            <pre class="matrix">
+            V - E + F = 2
+            </pre>
+            <p><strong>Example:</strong> For the planar graph above, if we have 4 vertices, 4 edges, and 1 face (the
+                outer region), we get:</p>
+            <pre class="matrix">
+            4 - 4 + 1 = 2
+            </pre>
+            <p>This satisfies Euler's formula, confirming the graph is planar.</p>
+        </section>
+    </div>
+
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Directed Graphs</h1>
+
+        <section class="section">
+            <h2>1. Directed Graphs (Digraphs)</h2>
+            <p>A <strong>directed graph</strong> or <strong>digraph</strong> is a graph in which edges have a
+                direction.
+                That means an edge connects one vertex to another in a specific direction. These directed edges are
+                often represented by arrows.</p>
+            <pre class="matrix">
+    Example:
+    Consider a directed graph where:
+    - Vertices: A, B, C
+    - Edges: (A → B), (B → C), (C → A)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Some Types of Digraphs</h2>
+            <ul>
+                <li><strong>Simple Digraph:</strong> A directed graph with no loops (edges from a vertex to itself)
+                    and
+                    no multiple edges.</li>
+                <li><strong>Multigraph:</strong> A digraph where multiple edges between the same pair of vertices
+                    are
+                    allowed.</li>
+                <li><strong>Weighted Digraph:</strong> A digraph where each edge has a weight (a value representing
+                    cost, distance, etc.).</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    - Simple Digraph: A → B → C → A
+    - Weighted Digraph: A → B (weight: 5), B → C (weight: 3), C → A (weight: 2)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Digraphs and Binary Relations</h2>
+            <p>A <strong>binary relation</strong> on a set is a relation between elements of the set. In the context
+                of
+                digraphs, a directed edge from vertex A to vertex B represents a binary relation from A to B.</p>
+            <pre class="matrix">
+    Example:
+    - Set of vertices: {A, B, C}
+    - Binary relation R: (A → B), (B → C)
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Directed Paths and Connectedness</h2>
+            <p>A <strong>directed path</strong> is a sequence of vertices such that there is a directed edge from
+                one
+                vertex to the next. A digraph is <strong>connected</strong> if there is a directed path between any
+                two
+                vertices.</p>
+            <pre class="matrix">
+    Example:
+    In the directed graph:
+    A → B → C → A
+    There is a directed path between A and B, B and C, and C and A, so the graph is <strong>connected</strong>.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Euler Digraphs</h2>
+            <p>An <strong>Eulerian Digraph</strong> is a digraph in which there exists a <strong>Eulerian
+                    path</strong>
+                (a path that visits every edge exactly once) or a <strong>Eulerian circuit</strong> (a circuit that
+                visits every edge exactly once and returns to the starting vertex).</p>
+            <p><strong>Conditions for an Eulerian Digraph:</strong></p>
+            <ul>
+                <li>All vertices with nonzero degree must be strongly connected.</li>
+                <li>For every vertex, the in-degree must be equal to the out-degree.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    - Eulerian Circuit: In a digraph with vertices A, B, C:
+    A → B → C → A
+    This digraph has an Eulerian circuit because every edge is visited exactly once, and the path returns to A.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Trees with Directed Edges</h2>
+            <p>A <strong>directed tree</strong> is a type of digraph that is connected and has no cycles. The edges
+                have
+                directions, and there is one root vertex that can reach all other vertices by following directed
+                edges.
+            </p>
+            <pre class="matrix">
+    Example:
+    Consider a directed tree with:
+       A
+      / \
+     B   C
+    Here, A is the root, and B and C are connected by directed edges from A to them.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Fundamental Circuits in Digraphs</h2>
+            <p>A <strong>fundamental circuit</strong> in a digraph is a cycle that is formed by adding one edge to a
+                spanning tree (the edges of a tree that connect all vertices).</p>
+            <pre class="matrix">
+    Example:
+    In a digraph with the following structure:
+    A → B → C → A
+    There is a fundamental circuit: A → B → C → A.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Adjacency Matrix of a Digraph</h2>
+            <p>An <strong>adjacency matrix</strong> is a way to represent a digraph. Each element in the matrix
+                indicates whether there is an edge between two vertices.</p>
+            <pre class="matrix">
+    For a directed graph with vertices A, B, and C, the adjacency matrix looks like this:
+         A   B   C
+    A   [0,  1,  0]
+    B   [0,  0,  1]
+    C   [1,  0,  0]
+    
+    This matrix shows:
+    - There's a directed edge from A to B.
+    - There's a directed edge from B to C.
+    - There's a directed edge from C to A.
+            </pre>
+        </section>
+    </div>
+
+</body>
+
+</html>

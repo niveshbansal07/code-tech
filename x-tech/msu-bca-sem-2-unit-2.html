@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+
+
+    <div class="sem-unit-header">Advance C-Programming</div>
+
+    <div class="container">
+        <a href="#unit1" class="unit">UNIT-I: Arrays</a>
+        <div id="unit1" class="content">
+            Arrays: Definition, declaration and initialization of one-dimensional array; Accessing array elements;
+            Displaying array elements; Sorting arrays; Arrays and functions; Two-Dimensional array: Declaration and
+            Initialization, Accessing and Displaying, Memory representation of array (Row Major, Column Major);
+            Multidimensional array.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Pointers</a>
+        <div id="unit2" class="content">
+            Pointers: Definition and declaration, Initialization; Indirection operator, address of operator; pointer
+            arithmetic; dynamic memory allocation; arrays and pointers; functions and pointers.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Strings</a>
+        <div id="unit3" class="content">
+            Strings: Definition, declaration and initialization of strings; Standard library functions: strlen(),
+            strcpy(), strcat(), strcmp(); Implementation without using standard library functions.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Structures and Unions</a>
+        <div id="unit4" class="content">
+            Structures: Definition and declaration; Variable initialization; Accessing fields and structure operations;
+            Nested structures. Union: Definition and declaration; Differences between Union and Structure.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: C Preprocessor & Bitwise Operators</a>
+        <div id="unit5" class="content">
+            Introduction to C Preprocessor: Definition of Pre-processor; Macro substitution directives; File inclusion
+            directives; Conditional compilation. <br> Bitwise Operators: Bitwise operators; Shift operators; Masks; Bit
+            fields.
+        </div>
+
+        <a href="#unit6" class="unit">UNIT-VI: File Handling</a>
+        <div id="unit6" class="content">
+            File Handling: Definition of Files, Opening modes of files; Standard functions: fopen(), fclose(), feof(),
+            fseek(), ftell(); Using text files: fgetc(), fputc(), fscanf(); Command line arguments.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Arrays in C (Advanced Programming)</h1>
+    
+        <section class="section">
+            <h2>1. One-Dimensional Arrays</h2>
+            <p>An <strong>array</strong> is a collection of variables of the same type, stored at contiguous memory locations. A one-dimensional array stores elements in a linear form.</p>
+            <pre class="code-block">
+        // Declaration and Initialization
+        int numbers[5] = {10, 20, 30, 40, 50};
+    
+        // Accessing array elements
+        printf("%d", numbers[2]);  // Output: 30
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Displaying Array Elements</h2>
+            <p>You can use a loop to print all the array elements.</p>
+            <pre class="code-block">
+        int i;
+        for(i = 0; i < 5; i++) {
+            printf("%d ", numbers[i]);
+        }
+        // Output: 10 20 30 40 50
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Sorting Arrays</h2>
+            <p>Here is an example of sorting an array using the bubble sort algorithm:</p>
+            <pre class="code-block">
+        int arr[5] = {5, 2, 4, 3, 1};
+        int i, j, temp;
+    
+        for(i = 0; i < 5; i++) {
+            for(j = 0; j < 4 - i; j++) {
+                if(arr[j] > arr[j+1]) {
+                    temp = arr[j];
+                    arr[j] = arr[j+1];
+                    arr[j+1] = temp;
+                }
+            }
+        }
+    
+        // Output after sorting: 1 2 3 4 5
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Arrays and Functions</h2>
+            <p>You can pass arrays to functions either by reference (as a pointer) or directly.</p>
+            <pre class="code-block">
+        void display(int a[], int size) {
+            for(int i = 0; i < size; i++)
+                printf("%d ", a[i]);
+        }
+    
+        int main() {
+            int arr[] = {1, 2, 3, 4, 5};
+            display(arr, 5);
+            return 0;
+        }
+        // Output: 1 2 3 4 5
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Two-Dimensional Arrays</h2>
+            <p>A 2D array is like a matrix with rows and columns. It is used for tabular data.</p>
+            <pre class="code-block">
+        int matrix[2][3] = {
+            {1, 2, 3},
+            {4, 5, 6}
+        };
+    
+        printf("%d", matrix[1][2]); // Output: 6
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Displaying 2D Arrays</h2>
+            <p>Nested loops are used to access all the elements in a 2D array.</p>
+            <pre class="code-block">
+        for(int i = 0; i < 2; i++) {
+            for(int j = 0; j < 3; j++) {
+                printf("%d ", matrix[i][j]);
+            }
+            printf("\n");
+        }
+        // Output:
+        // 1 2 3
+        // 4 5 6
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Memory Representation</h2>
+            <p>2D arrays in C are stored in memory in row-major order (by default):</p>
+            <ul>
+                <li><strong>Row Major:</strong> All elements of a row are stored before moving to the next row.</li>
+                <li><strong>Column Major:</strong> All elements of a column are stored before the next column. (Not default in C)</li>
+            </ul>
+            <pre class="code-block">
+        // Example: int mat[2][3] = { {1, 2, 3}, {4, 5, 6} };
+    
+        // Row-major memory layout:
+        [1][2][3][4][5][6]
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Multidimensional Arrays</h2>
+            <p>These are arrays with more than 2 dimensions (e.g., 3D arrays).</p>
+            <pre class="code-block">
+        int cube[2][2][2] = {
+            { {1, 2}, {3, 4} },
+            { {5, 6}, {7, 8} }
+        };
+    
+        printf("%d", cube[1][1][1]); // Output: 8
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 2 -->
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Pointers in C (Advanced Programming)</h1>
+    
+        <section class="section">
+            <h2>1. Pointers: Definition and Declaration</h2>
+            <p>A <strong>pointer</strong> is a variable that stores the memory address of another variable. It points to the location in memory where the value of a variable is stored.</p>
+            <pre class="code-block">
+        int x = 10;
+        int *ptr;  // pointer to integer
+        ptr = &x;  // stores the address of x
+    
+        printf("Address of x: %p\n", ptr);  // Output: Address of x
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Indirection Operator and Address of Operator</h2>
+            <p>The <strong>indirection operator</strong> (*) is used to access the value at the address the pointer is pointing to. The <strong>address of operator</strong> (&) gives the memory address of a variable.</p>
+            <pre class="code-block">
+        int x = 10;
+        int *ptr = &x;  // pointer to x
+    
+        printf("Value of x: %d\n", *ptr);  // Output: 10 (indirection)
+        printf("Address of x: %p\n", &x);  // Output: Address of x
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Pointer Arithmetic</h2>
+            <p>Pointer arithmetic refers to operations on pointers like addition or subtraction, allowing us to navigate through arrays or memory addresses.</p>
+            <pre class="code-block">
+        int arr[] = {10, 20, 30, 40, 50};
+        int *ptr = arr;  // points to the first element of the array
+    
+        printf("First element: %d\n", *ptr);  // Output: 10
+        ptr++;  // move to the next element
+        printf("Second element: %d\n", *ptr);  // Output: 20
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Dynamic Memory Allocation</h2>
+            <p>Dynamic memory allocation in C is done using functions like <strong>malloc</strong>, <strong>calloc</strong>, <strong>realloc</strong>, and <strong>free</strong> for memory management at runtime.</p>
+            <pre class="code-block">
+        int *ptr;
+        ptr = (int *)malloc(5 * sizeof(int));  // dynamically allocate memory for 5 integers
+    
+        if(ptr != NULL) {
+            for(int i = 0; i < 5; i++) {
+                ptr[i] = i * 10;
+            }
+    
+            for(int i = 0; i < 5; i++) {
+                printf("%d ", ptr[i]);  // Output: 0 10 20 30 40
+            }
+    
+            free(ptr);  // free dynamically allocated memory
+        }
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Arrays and Pointers</h2>
+            <p>Arrays and pointers are closely related in C. The name of an array is essentially a pointer to the first element. You can use pointers to access array elements and manipulate arrays.</p>
+            <pre class="code-block">
+        int arr[] = {1, 2, 3, 4, 5};
+        int *ptr = arr;
+    
+        // Accessing array elements using pointer arithmetic
+        printf("%d\n", *(ptr + 2));  // Output: 3 (pointer arithmetic to access the 3rd element)
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Functions and Pointers</h2>
+            <p>Pointers can be passed to functions, allowing functions to modify the actual value of variables.</p>
+            <pre class="code-block">
+        void modifyValue(int *p) {
+            *p = 100;  // modifies the value at the address
+        }
+    
+        int main() {
+            int x = 10;
+            printf("Before: %d\n", x);  // Output: 10
+    
+            modifyValue(&x);
+            printf("After: %d\n", x);  // Output: 100
+            return 0;
+        }
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Strings in C (Advanced Programming)</h1>
+    
+        <section class="section">
+            <h2>1. Strings: Definition, Declaration, and Initialization</h2>
+            <p>A <strong>string</strong> is an array of characters terminated by a null character '\0'. In C, strings are handled as arrays of characters.</p>
+            <pre class="code-block">
+        char str1[] = "Hello, World!";  // String initialized with a literal
+        char str2[20];  // Declaration of a string with enough space
+        strcpy(str2, "Hello, C!");  // Copying a string into str2
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Standard Library Functions for Strings</h2>
+            <p>Here are some commonly used standard library functions for working with strings:</p>
+            
+            <ul>
+                <li><strong>strlen()</strong>: Returns the length of the string (excluding the null character).</li>
+                <li><strong>strcpy()</strong>: Copies the content of one string into another.</li>
+                <li><strong>strcat()</strong>: Concatenates two strings (appends one to the other).</li>
+                <li><strong>strcmp()</strong>: Compares two strings lexicographically.</li>
+            </ul>
+            
+            <pre class="code-block">
+        char str1[] = "Hello";
+        char str2[] = "World";
+        char str3[20];
+    
+        // Using strlen()
+        int len = strlen(str1);  // Output: 5
+    
+        // Using strcpy()
+        strcpy(str3, str1);  // str3 will hold "Hello"
+    
+        // Using strcat()
+        strcat(str1, str2);  // str1 will hold "HelloWorld"
+    
+        // Using strcmp()
+        int result = strcmp(str1, str2);  // Result will be negative since "Hello" < "World"
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Implementation Without Using Standard Library Functions</h2>
+            <p>Below are implementations of the above functions without using standard library functions:</p>
+            
+            <h3>a. Implementing strlen()</h3>
+            <pre class="code-block">
+        int my_strlen(char str[]) {
+            int i = 0;
+            while (str[i] != '\0') {  // Traverse until the null character
+                i++;
+            }
+            return i;  // Return the length of the string
+        }
+    
+        char my_str[] = "Hello";
+        printf("Length of string: %d\n", my_strlen(my_str));  // Output: 5
+            </pre>
+    
+            <h3>b. Implementing strcpy()</h3>
+            <pre class="code-block">
+        void my_strcpy(char *dest, const char *src) {
+            while (*src != '\0') {  // Traverse until the null character
+                *dest = *src;  // Copy each character
+                dest++;
+                src++;
+            }
+            *dest = '\0';  // Null terminate the destination string
+        }
+    
+        char src[] = "Hello";
+        char dest[20];
+        my_strcpy(dest, src);
+        printf("Copied string: %s\n", dest);  // Output: Hello
+            </pre>
+    
+            <h3>c. Implementing strcat()</h3>
+            <pre class="code-block">
+        void my_strcat(char *dest, const char *src) {
+            while (*dest != '\0') {  // Move to the end of the destination string
+                dest++;
+            }
+            while (*src != '\0') {  // Append characters from source to destination
+                *dest = *src;
+                dest++;
+                src++;
+            }
+            *dest = '\0';  // Null terminate the concatenated string
+        }
+    
+        char str1[50] = "Hello";
+        char str2[] = " World";
+        my_strcat(str1, str2);
+        printf("Concatenated string: %s\n", str1);  // Output: Hello World
+            </pre>
+    
+            <h3>d. Implementing strcmp()</h3>
+            <pre class="code-block">
+        int my_strcmp(const char *str1, const char *str2) {
+            while (*str1 != '\0' && *str2 != '\0') {
+                if (*str1 != *str2) {
+                    return *str1 - *str2;  // Return the difference between the characters
+                }
+                str1++;
+                str2++;
+            }
+            return *str1 - *str2;  // Return the difference between the null characters (0 if equal)
+        }
+    
+        char str1[] = "Hello";
+        char str2[] = "World";
+        int result = my_strcmp(str1, str2);
+        printf("Comparison result: %d\n", result);  // Output: Negative number because "Hello" < "World"
+            </pre>
+        </section>
+    </div>
+
+    
+    <!-- UNIT 4 -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Structures and Unions in C (Advanced Programming)</h1>
+    
+        <section class="section">
+            <h2>1. Structures: Definition and Declaration</h2>
+            <p>A <strong>structure</strong> is a user-defined data type in C that allows grouping of different data types into a single unit. Each member of the structure is called a <strong>field</strong> or <strong>member</strong>.</p>
+            
+            <pre class="code-block">
+        struct Person {
+            char name[50];
+            int age;
+            float salary;
+        };
+    
+        // Declaration of structure variable
+        struct Person person1;
+        </pre>
+        <p>In the above example, a structure named <strong>Person</strong> is defined with three fields: name, age, and salary. The structure variable <strong>person1</strong> is then declared.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Variables Initialization</h2>
+            <p>Structure variables can be initialized at the time of declaration. You can also initialize them later in the program.</p>
+            
+            <pre class="code-block">
+        struct Person person2 = {"John", 25, 50000.50};  // Initialization at the time of declaration
+    
+        // Alternatively, structure members can be initialized later:
+        person1.age = 30;
+        strcpy(person1.name, "Alice");
+        person1.salary = 75000.00;
+            </pre>
+        <p>In this example, we initialize the structure <strong>person2</strong> at the time of declaration with values. The fields of <strong>person1</strong> are initialized later in the program.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. Accessing Fields and Structure Operations</h2>
+            <p>To access or manipulate the members of a structure, the <strong>dot (.)</strong> operator is used.</p>
+            
+            <pre class="code-block">
+        // Accessing structure members
+        printf("Name: %s\n", person1.name);
+        printf("Age: %d\n", person1.age);
+        printf("Salary: %.2f\n", person1.salary);
+            </pre>
+            <p>In the above example, we access and print the values of the fields of the structure <strong>person1</strong> using the dot operator.</p>
+        </section>
+    
+        <section class="section">
+            <h2>4. Nested Structures</h2>
+            <p>A <strong>nested structure</strong> is a structure that contains another structure as one of its members.</p>
+            
+            <pre class="code-block">
+        struct Address {
+            char city[50];
+            char state[50];
+            int pin_code;
+        };
+    
+        struct Employee {
+            char name[50];
+            struct Address address;  // Nested structure
+            float salary;
+        };
+    
+        struct Employee emp1 = {"David", {"New York", "NY", 10001}, 60000.00};
+            </pre>
+            <p>Here, the structure <strong>Employee</strong> contains another structure <strong>Address</strong> as a member. The field <strong>address</strong> is initialized with an address when creating <strong>emp1</strong>.</p>
+        </section>
+    
+        <section class="section">
+            <h2>5. Union: Definition and Declaration</h2>
+            <p>A <strong>union</strong> is a special data type that allows storing different data types in the same memory location. However, only one of the union's members can hold a value at any given time. The size of a union is the size of its largest member.</p>
+            
+            <pre class="code-block">
+        union Data {
+            int i;
+            float f;
+            char str[20];
+        };
+    
+        union Data data1;  // Declaration of union variable
+            </pre>
+            <p>In this example, a union named <strong>Data</strong> is defined with three members: an integer, a float, and a string. The union variable <strong>data1</strong> is then declared.</p>
+        </section>
+    
+        <section class="section">
+            <h2>6. Differentiating Between Union and Structure</h2>
+            <p>Although both structures and unions allow grouping of different data types, there are key differences:</p>
+            
+            <ul>
+                <li><strong>Memory Allocation:</strong> In a structure, each member has its own memory location, and all members are stored simultaneously. In a union, all members share the same memory location, meaning only one member can be stored at a time.</li>
+                <li><strong>Size:</strong> The size of a structure is the sum of the sizes of all its members. The size of a union is the size of its largest member.</li>
+                <li><strong>Access:</strong> In a structure, all members can be accessed at any time. In a union, only the last accessed member can hold a valid value.</li>
+            </ul>
+            
+            <h3>Example of Structure:</h3>
+            <pre class="code-block">
+        struct Student {
+            int roll_no;
+            char name[50];
+        };
+            </pre>
+            
+            <h3>Example of Union:</h3>
+            <pre class="code-block">
+        union Value {
+            int i;
+            float f;
+            char c;
+        };
+            </pre>
+        </section>
+    </div>
+
+    
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Introduction to C Preprocessor and Bitwise Operators</h1>
+    
+        <section class="section">
+            <h2>1. Introduction to C Preprocessor</h2>
+            <p>The <strong>C Preprocessor</strong> is a tool that processes the source code before the actual compilation begins. It handles tasks like macro substitution, file inclusion, and conditional compilation.</p>
+            
+            <h3>1.1 Macro Substitution Directives</h3>
+            <p>Macro substitution is done using the <strong>#define</strong> directive. It allows us to define constants or functions that are replaced in the code before compilation.</p>
+            
+            <pre class="code-block">
+        #define PI 3.14  // Macro definition for a constant
+    
+        int main() {
+            float area = PI * 5 * 5;  // Macro PI gets substituted with 3.14
+            printf("Area: %.2f\n", area);
+            return 0;
+        }
+            </pre>
+            <p>In the above example, the preprocessor replaces <strong>PI</strong> with <strong>3.14</strong> before the program is compiled.</p>
+    
+            <h3>1.2 File Inclusion Directives</h3>
+            <p>The <strong>#include</strong> directive is used to include the contents of a file in the source code. It can be used to include header files containing declarations and function prototypes.</p>
+            
+            <pre class="code-block">
+        #include <stdio.h>  // Standard library header file
+        #include "myheader.h"  // Custom header file
+    
+        int main() {
+            printf("Hello, World!\n");
+            return 0;
+        }
+            </pre>
+            <p>The <strong>#include</strong> directive allows us to include standard library files or custom header files containing function prototypes.</p>
+    
+            <h3>1.3 Conditional Compilation</h3>
+            <p>The <strong>#if</strong>, <strong>#else</strong>, <strong>#elif</strong>, and <strong>#endif</strong> directives are used for conditional compilation. These directives allow different parts of the program to be compiled based on conditions.</p>
+            
+            <pre class="code-block">
+        #define DEBUG
+    
+        int main() {
+        #ifdef DEBUG
+            printf("Debugging is enabled.\n");
+        #else
+            printf("Debugging is disabled.\n");
+        #endif
+            return 0;
+        }
+            </pre>
+            <p>In this example, the code block inside <strong>#ifdef DEBUG</strong> is included if the macro <strong>DEBUG</strong> is defined. If it's not defined, the code inside <strong>#else</strong> will be compiled.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Bitwise Operators</h2>
+            <p>Bitwise operators are used to perform operations on individual bits of integers. They are particularly useful in low-level programming, such as system programming or hardware interfacing.</p>
+    
+            <h3>2.1 Bitwise Operators</h3>
+            <p>Bitwise operators perform operations on corresponding bits of two operands. The common bitwise operators are:</p>
+            
+            <ul>
+                <li><strong>&</strong> (AND): Sets each bit to 1 if both bits are 1.</li>
+                <li><strong>|</strong> (OR): Sets each bit to 1 if one of the bits is 1.</li>
+                <li><strong>^</strong> (XOR): Sets each bit to 1 if the corresponding bits are different.</li>
+                <li><strong>~</strong> (NOT): Inverts all the bits.</li>
+            </ul>
+            
+            <pre class="code-block">
+        int a = 5, b = 3;
+        int result;
+    
+        result = a & b;  // Bitwise AND: 0101 & 0011 = 0001 (1 in decimal)
+        result = a | b;  // Bitwise OR: 0101 | 0011 = 0111 (7 in decimal)
+        result = a ^ b;  // Bitwise XOR: 0101 ^ 0011 = 0110 (6 in decimal)
+        result = ~a;     // Bitwise NOT: 0101 becomes 1010 (complement in binary)
+            </pre>
+            <p>In the above example, we perform different bitwise operations on two integer variables <strong>a</strong> and <strong>b</strong>.</p>
+    
+            <h3>2.2 Shift Operators</h3>
+            <p>Shift operators shift the bits of a number to the left or right.</p>
+            
+            <ul>
+                <li><strong>&lt;&lt;</strong> (Left Shift): Shifts the bits to the left, filling the rightmost bits with 0.</li>
+                <li><strong>&gt;&gt;</strong> (Right Shift): Shifts the bits to the right, filling the leftmost bits with 0 (for unsigned numbers).</li>
+            </ul>
+            
+            <pre class="code-block">
+        int num = 5;   // 0101 in binary
+        num = num << 1;  // Left shift: 1010 (10 in decimal)
+        num = num >> 2;  // Right shift: 0010 (2 in decimal)
+            </pre>
+            <p>In the example, we first shift the bits of <strong>num</strong> to the left by 1 position, then shift it to the right by 2 positions.</p>
+    
+            <h3>2.3 Masks</h3>
+            <p>A <strong>mask</strong> is a bit pattern used to isolate or modify certain bits of a number. It is often used in conjunction with bitwise operators to modify specific bits.</p>
+            
+            <pre class="code-block">
+        int num = 5;   // 0101 in binary
+        int mask = 1;  // 0001 in binary
+        int result = num & mask;  // Bitwise AND to isolate the least significant bit
+            </pre>
+            <p>In this example, we create a <strong>mask</strong> with the least significant bit set to 1, and use the bitwise AND operator to isolate the least significant bit of <strong>num</strong>.</p>
+    
+            <h3>2.4 Bit Fields</h3>
+            <p>A <strong>bit field</strong> allows the packing of data in a structure. It provides an efficient way to store boolean or small integer values by using a specific number of bits.</p>
+            
+            <pre class="code-block">
+        struct Flags {
+            unsigned int isActive : 1;    // 1 bit for isActive
+            unsigned int isVisible : 1;   // 1 bit for isVisible
+            unsigned int isEnabled : 1;   // 1 bit for isEnabled
+        };
+    
+        struct Flags status;
+        status.isActive = 1;  // Set the isActive bit to 1
+        status.isVisible = 0; // Set the isVisible bit to 0
+            </pre>
+            <p>In the example, we define a structure with bit fields. Each field uses only 1 bit of memory.</p>
+        </section>
+    </div>
+
+    <!-- UNIT 6 -->
+    <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: File Handling</h1>
+    
+        <section class="section">
+            <h2>1. Definition of Files</h2>
+            <p>A <strong>file</strong> in C is a collection of data stored on a permanent storage medium such as a hard disk. Files allow programs to store data and retrieve it even after the program has ended.</p>
+            <p>C provides standard functions to handle files, allowing operations such as reading from or writing to files, as well as closing and opening them.</p>
+    
+            <h2>2. Opening Modes of Files</h2>
+            <p>The <strong>fopen()</strong> function is used to open a file. The file opening mode determines how the file is accessed, and there are several modes available:</p>
+            
+            <ul>
+                <li><strong>"r"</strong>: Open for reading. The file must exist.</li>
+                <li><strong>"w"</strong>: Open for writing. If the file exists, it will be truncated. If the file doesn't exist, it will be created.</li>
+                <li><strong>"a"</strong>: Open for appending. Data will be written at the end of the file.</li>
+                <li><strong>"rb", "wb", "ab"</strong>: Binary file modes for reading, writing, and appending.</li>
+                <li><strong>"r+"</strong>: Open for reading and writing. The file must exist.</li>
+                <li><strong>"w+"</strong>: Open for reading and writing. The file is created or truncated.</li>
+                <li><strong>"a+"</strong>: Open for reading and appending. Data is written at the end of the file.</li>
+            </ul>
+    
+            <h3>2.1 Example of File Opening</h3>
+            <pre class="code-block">
+        FILE *file;
+        file = fopen("example.txt", "w");  // Open file for writing
+        if (file == NULL) {
+            printf("Error opening file.\n");
+            return 1;
+        }
+            </pre>
+            <p>In the above code, we attempt to open a file named <strong>example.txt</strong> in write mode. If the file cannot be opened (e.g., due to permissions), the function returns <strong>NULL</strong>.</p>
+    
+            <h2>3. Standard Functions for File Handling</h2>
+            
+            <h3>3.1 fopen()</h3>
+            <p>The <strong>fopen()</strong> function opens a file with the specified mode. It returns a pointer to the file, which can be used to read or write to the file.</p>
+    
+            <h3>3.2 fclose()</h3>
+            <p>The <strong>fclose()</strong> function is used to close a file once it is no longer needed. It releases the resources associated with the file.</p>
+            
+            <pre class="code-block">
+        fclose(file);  // Close the file after operations
+            </pre>
+            
+            <h3>3.3 feof()</h3>
+            <p>The <strong>feof()</strong> function checks if the end-of-file (EOF) has been reached. It returns a non-zero value if EOF is reached.</p>
+            
+            <pre class="code-block">
+        while (!feof(file)) {
+            // Read data from file
+        }
+            </pre>
+    
+            <h3>3.4 fseek()</h3>
+            <p>The <strong>fseek()</strong> function sets the file position to a specified location within the file. It allows for moving to specific parts of a file (useful for random access).</p>
+            
+            <pre class="code-block">
+        fseek(file, 0, SEEK_SET);  // Move to the beginning of the file
+        fseek(file, 10, SEEK_CUR); // Move 10 bytes forward from the current position
+        fseek(file, -10, SEEK_END); // Move 10 bytes backward from the end
+            </pre>
+    
+            <h3>3.5 fread(), fwrite()</h3>
+            <p>The <strong>fread()</strong> and <strong>fwrite()</strong> functions are used for reading and writing binary data to and from a file.</p>
+    
+            <pre class="code-block">
+        char buffer[20];
+        fread(buffer, sizeof(char), 20, file);  // Read 20 characters from file
+        fwrite(buffer, sizeof(char), 20, file); // Write 20 characters to file
+            </pre>
+    
+            <h2>4. Working with Text Files</h2>
+            <p>For working with text files, we use functions like <strong>fgetc()</strong>, <strong>fputc()</strong>, and <strong>fscanf()</strong> for reading and writing single characters or formatted input.</p>
+    
+            <h3>4.1 fgetc()</h3>
+            <p>The <strong>fgetc()</strong> function reads a single character from the file.</p>
+            
+            <pre class="code-block">
+        char ch;
+        ch = fgetc(file);  // Read a character from the file
+        printf("%c", ch);  // Print the character
+            </pre>
+    
+            <h3>4.2 fputc()</h3>
+            <p>The <strong>fputc()</strong> function writes a single character to the file.</p>
+            
+            <pre class="code-block">
+        fputc('A', file);  // Write character 'A' to the file
+            </pre>
+    
+            <h3>4.3 fscanf()</h3>
+            <p>The <strong>fscanf()</strong> function reads formatted input from the file, similar to <strong>scanf()</strong>.</p>
+            
+            <pre class="code-block">
+        int x, y;
+        fscanf(file, "%d %d", &x, &y);  // Read two integers from the file
+        printf("x = %d, y = %d", x, y);  // Print the values
+            </pre>
+    
+            <h2>5. Command Line Arguments</h2>
+            <p>Command-line arguments are passed to a program when it is executed. They provide a way to pass data to the program without needing user interaction.</p>
+    
+            <h3>5.1 Example of Command Line Arguments</h3>
+            <p>Command-line arguments are passed as parameters to the <strong>main()</strong> function, as an array of strings.</p>
+            
+            <pre class="code-block">
+        int main(int argc, char *argv[]) {
+            if (argc < 2) {
+                printf("Usage: %s <filename>\n", argv[0]);
+                return 1;
+            }
+            FILE *file = fopen(argv[1], "r");  // Open file passed as argument
+            if (file == NULL) {
+                printf("Error opening file.\n");
+                return 1;
+            }
+            // Process file
+            fclose(file);
+            return 0;
+        }
+            </pre>
+            <p>In this example, <strong>argc</strong> stores the number of command-line arguments, and <strong>argv</strong> is an array of strings holding the arguments. The first argument is always the name of the program itself, and the remaining arguments are the ones passed by the user.</p>
+        </section>
+    </div>
+    
+
+</body>
+
+</html>

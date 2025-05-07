@@ -1,0 +1,49 @@
+.course-header{
+    margin: 30px 200px;
+    padding: 10px 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.course-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Box Styling */
+.university-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    width: 250px;
+    height: 280px;
+}
+
+/* Image inside the box */
+.university-box-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* Button Styling */
+.university-btn {
+    margin-top: 10px;
+    padding: 10px 16px;
+    border: none;
+    background-color: rgb(0, 100, 0);
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.university-btn:hover {
+   text-decoration: underline;
+}

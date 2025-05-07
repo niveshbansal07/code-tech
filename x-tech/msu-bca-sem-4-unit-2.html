@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Introduction to Python</div>
+
+    <div class="container">
+           
+        <a href="#unit1" class="unit">UNIT-I: Planning the Computer Program</a>
+        <div id="unit1" class="content">
+            Concept of problem solving, problem definition, program design, debugging, types of errors in programming, documentation. Techniques of problem solving: flowcharting, decision table, algorithms, structured programming concepts, programming methodologies viz. Top-down and bottom-up programming. Overview of programming: structure of a Python program, elements of Python memory.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: Introduction to Python</a>
+        <div id="unit2" class="content">
+            Python interpreter, using Python as calculator, Python shell, indentation. Atoms, identifiers and keywords, literals, strings, operators (arithmetic operator, relational operator, logical or Boolean operator, assignment operator, ternary operator, bitwise operator, increment or decrement operator). Creating Python programs: input and output statements, control statements (branching, looping, conditional statement, exit function, difference between break, continue and pass.), defining functions, default arguments, errors and exceptions. Iteration and recursion: conditional execution, alternative execution, nested conditionals, the return statement.
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: Recursion and Strings</a>
+        <div id="unit3" class="content">
+            Recursion, stack diagrams for recursive functions, multiple assignment, the while statement, tables, two-dimensional tables. Strings and lists: string as a compound data type, length, traversal and the for loop, string slices, string comparison, a find function.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Lists and Object-Oriented Programming</a>
+        <div id="unit4" class="content">
+            Looping and counting, list values, accessing elements, list length, list membership, lists and for loops, list operations, list deletion. Cloning lists, nested lists. Object-oriented programming: introduction to classes, objects and methods, standard libraries.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: Data Structures and Searching/Sorting</a>
+        <div id="unit5" class="content">
+            Data structures: arrays, list, set, stacks and queues. Searching and sorting: linear and binary search, bubble, selection and insertion sorting.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Planning the Computer Program</h1>
+    
+        <section class="section">
+            <h2>1. Concept of Problem Solving</h2>
+            <p>Problem solving in programming involves analyzing a problem, designing a solution, implementing the solution, and testing the result. It is the first step in creating a working computer program.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Problem Definition</h2>
+            <p>Clearly stating the problem helps define what inputs are required, what processing is needed, and what the expected output should be.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. Program Design</h2>
+            <p>Program design refers to planning the logical steps (algorithm) before coding. Techniques include using flowcharts, pseudocode, and structure diagrams.</p>
+        </section>
+    
+        <section class="section">
+            <h2>4. Debugging and Types of Errors</h2>
+            <ul>
+                <li><strong>Syntax Errors</strong>: Mistakes in the code syntax (e.g., missing colon).</li>
+                <li><strong>Runtime Errors</strong>: Errors that occur during execution (e.g., divide by zero).</li>
+                <li><strong>Logical Errors</strong>: Program runs but produces incorrect results.</li>
+            </ul>
+            <p><strong>Debugging</strong> is the process of finding and fixing errors in a program.</p>
+        </section>
+    
+        <section class="section">
+            <h2>5. Documentation</h2>
+            <p>Good documentation helps other programmers understand the code. It includes comments in the code, user manuals, and technical specifications.</p>
+        </section>
+    
+        <section class="section">
+            <h2>6. Techniques of Problem Solving</h2>
+    
+            <h4>Flowcharting</h4>
+            <p>A graphical representation of the program logic using standard symbols like arrows, decision blocks, and processes.</p>
+    
+            <h4>Decision Table</h4>
+            <p>It shows different conditions and corresponding actions in a table format for clarity in decision-making processes.</p>
+    
+            <h4>Algorithm</h4>
+            <p>An algorithm is a step-by-step set of instructions to solve a specific problem.</p>
+            <div class="code-block">
+                <pre>
+    Algorithm to find the largest of two numbers:
+    1. Start
+    2. Input a, b
+    3. If a &gt; b then
+         print a is largest
+       else
+         print b is largest
+    4. Stop
+                </pre>
+            </div>
+    
+            <h4>Structured Programming Concepts</h4>
+            <p>Encourages dividing a program into small, reusable modules or functions. It improves clarity and debugging.</p>
+        </section>
+    
+        <section class="section">
+            <h2>7. Programming Methodologies</h2>
+            <ul>
+                <li><strong>Top-down Programming:</strong> Start from the main task and break it down into smaller sub-tasks or modules.</li>
+                <li><strong>Bottom-up Programming:</strong> Start by writing small modules and combine them to form the complete program.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>8. Overview of Python Programming</h2>
+            <p>Python is a high-level, interpreted, general-purpose programming language with a focus on readability and simplicity.</p>
+        </section>
+    
+        <section class="section">
+            <h2>9. Structure of a Python Program</h2>
+            <ul>
+                <li>Import statements (if any)</li>
+                <li>Function definitions</li>
+                <li>Main program logic (indentation matters)</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    # Simple Python Program
+    def greet():
+        print("Hello, World!")
+    
+    greet()
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. Elements of Python</h2>
+            <ul>
+                <li><strong>Variables</strong>: Containers to store data values</li>
+                <li><strong>Data Types</strong>: int, float, str, list, dict, etc.</li>
+                <li><strong>Operators</strong>: +, -, *, /, //, %, ==, !=, etc.</li>
+                <li><strong>Indentation</strong>: Used instead of braces to define blocks of code</li>
+                <li><strong>Comments</strong>: Written with # symbol</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    # Variable and arithmetic operation
+    x = 10
+    y = 5
+    print("Sum is:", x + y)
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 2 -->
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Python Programming Basics</h1>
+    
+        <section class="section">
+            <h2>1. Python Interpreter</h2>
+            <p>The Python interpreter reads and executes Python code line by line. It can be accessed via the command line or through an IDE like VS Code or IDLE.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Using Python as a Calculator</h2>
+            <p>Python can be used for arithmetic operations directly in the shell.</p>
+            <div class="code-block">
+                <pre>
+    # Python as a calculator
+    print(5 + 3)
+    print(10 / 2)
+    print(2 ** 3)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Python Shell</h2>
+            <p>The interactive environment where you type code and see immediate output is called the Python shell.</p>
+        </section>
+    
+        <section class="section">
+            <h2>4. Indentation</h2>
+            <p>Python uses indentation (spaces/tabs) to define blocks of code. Incorrect indentation leads to errors.</p>
+            <div class="code-block">
+                <pre>
+    if 5 &gt; 2:
+        print("5 is greater than 2")  # Correct indentation
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Atoms, Identifiers, and Keywords</h2>
+            <ul>
+                <li><strong>Atoms:</strong> Basic units like numbers, strings, etc.</li>
+                <li><strong>Identifiers:</strong> Names for variables/functions.</li>
+                <li><strong>Keywords:</strong> Reserved words like if, else, def, return.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>6. Literals and Strings</h2>
+            <p>Literals are fixed values in code, like numbers or text. Strings are enclosed in single or double quotes.</p>
+            <div class="code-block">
+                <pre>
+    name = "Python"
+    age = 20
+    print(name, "is", age, "years old")
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Operators</h2>
+            <ul>
+                <li><strong>Arithmetic:</strong> +, -, *, /, %, //, **</li>
+                <li><strong>Relational:</strong> &gt;, &lt;, &gt;=, &lt;=, ==, !=</li>
+                <li><strong>Logical:</strong> and, or, not</li>
+                <li><strong>Assignment:</strong> =, +=, -=, *=</li>
+                <li><strong>Ternary:</strong> a if condition else b</li>
+                <li><strong>Bitwise:</strong> &, |, ^, ~, &lt;&lt;, &gt;&gt;</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    # Ternary operator example
+    a = 5
+    b = 10
+    max_val = a if a &gt; b else b
+    print("Max is:", max_val)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Creating Python Programs</h2>
+            <p>Python files end with <strong>.py</strong>. You can write code in any text editor or IDE and run it using the Python interpreter.</p>
+        </section>
+    
+        <section class="section">
+            <h2>9. Input and Output Statements</h2>
+            <div class="code-block">
+                <pre>
+    name = input("Enter your name: ")
+    print("Hello", name)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. Control Statements</h2>
+    
+            <h4>Branching</h4>
+            <div class="code-block">
+                <pre>
+    x = 10
+    if x &gt; 5:
+        print("x is greater than 5")
+    else:
+        print("x is 5 or less")
+                </pre>
+            </div>
+    
+            <h4>Looping</h4>
+            <div class="code-block">
+                <pre>
+    for i in range(5):
+        print(i)
+    
+    # While loop
+    i = 0
+    while i &lt; 3:
+        print(i)
+        i += 1
+                </pre>
+            </div>
+    
+            <h4>Exit Function</h4>
+            <div class="code-block">
+                <pre>
+    import sys
+    sys.exit()  # exits the program
+                </pre>
+            </div>
+    
+            <h4>Break, Continue, Pass</h4>
+            <ul>
+                <li><strong>break:</strong> exits the loop</li>
+                <li><strong>continue:</strong> skips to the next iteration</li>
+                <li><strong>pass:</strong> does nothing (placeholder)</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    for i in range(5):
+        if i == 2:
+            continue
+        print(i)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>11. Defining Functions</h2>
+            <div class="code-block">
+                <pre>
+    def greet(name):
+        print("Hello", name)
+    
+    greet("Alice")
+                </pre>
+            </div>
+    
+            <h4>Default Arguments</h4>
+            <div class="code-block">
+                <pre>
+    def greet(name="Guest"):
+        print("Hello", name)
+    
+    greet()
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>12. Errors and Exceptions</h2>
+            <p>Exceptions can be handled using try-except blocks.</p>
+            <div class="code-block">
+                <pre>
+    try:
+        x = int(input("Enter number: "))
+    except ValueError:
+        print("Invalid input!")
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>13. Iteration and Recursion</h2>
+    
+            <h4>Conditional Execution</h4>
+            <p>Execution depends on conditions using if-else.</p>
+    
+            <h4>Alternative Execution</h4>
+            <p>Using if-elif-else for multiple conditions.</p>
+            <div class="code-block">
+                <pre>
+    x = 5
+    if x &gt; 10:
+        print("Big")
+    elif x == 5:
+        print("Medium")
+    else:
+        print("Small")
+                </pre>
+            </div>
+    
+            <h4>Nested Conditionals</h4>
+            <div class="code-block">
+                <pre>
+    x = 5
+    if x &gt; 0:
+        if x &lt; 10:
+            print("x is between 0 and 10")
+                </pre>
+            </div>
+    
+            <h4>The return Statement</h4>
+            <div class="code-block">
+                <pre>
+    def square(n):
+        return n * n
+    
+    print(square(4))
+                </pre>
+            </div>
+    
+            <h4>Recursion</h4>
+            <p>A function that calls itself.</p>
+            <div class="code-block">
+                <pre>
+    def factorial(n):
+        if n == 1:
+            return 1
+        else:
+            return n * factorial(n - 1)
+    
+    print(factorial(5))
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Recursion, Data Structures, and String/Lists</h1>
+    
+        <section class="section">
+            <h2>1. Recursion</h2>
+            <p>Recursion occurs when a function calls itself in order to solve a problem. Each recursive call breaks the problem into simpler sub-problems.</p>
+            <div class="code-block">
+                <pre>
+    # Example of recursion: Factorial function
+    def factorial(n):
+        if n == 1:
+            return 1
+        else:
+            return n * factorial(n - 1)
+    
+    print(factorial(5))
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Stack Diagrams for Recursive Functions</h2>
+            <p>Each recursive call is placed on the call stack. As the recursion progresses, a new stack frame is created. When the function reaches the base case, it starts unwinding and returns the result.</p>
+            <div class="code-block">
+                <pre>
+    # Factorial stack diagram representation:
+    # factorial(5) → factorial(4) → factorial(3) → factorial(2) → factorial(1)
+    # Unwinding: factorial(1) → factorial(2) → factorial(3) → factorial(4) → factorial(5)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Multiple Assignment</h2>
+            <p>Multiple assignment allows you to assign values to multiple variables in a single statement.</p>
+            <div class="code-block">
+                <pre>
+    x, y, z = 10, 20, 30
+    print(x, y, z)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. The while Statement</h2>
+            <p>The `while` loop repeatedly executes a block of code as long as a given condition is true.</p>
+            <div class="code-block">
+                <pre>
+    # Example of while loop
+    x = 0
+    while x < 5:
+        print(x)
+        x += 1
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Tables</h2>
+            <p>Tables are typically represented as lists of lists (two-dimensional arrays) in Python. These can be used to store data in rows and columns.</p>
+            <div class="code-block">
+                <pre>
+    # Creating a 2D table (list of lists)
+    table = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    
+    # Accessing elements
+    print(table[0][1])  # Output: 2
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Two-Dimensional Tables</h2>
+            <p>Two-dimensional tables can be useful for storing grids, matrices, or tabular data. You can access elements using two indices: one for the row and one for the column.</p>
+            <div class="code-block">
+                <pre>
+    # Example of accessing and modifying a 2D table
+    matrix = [[1, 2], [3, 4]]
+    matrix[0][1] = 99  # Change value
+    print(matrix)  # Output: [[1, 99], [3, 4]]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Strings and Lists</h2>
+    
+            <h4>String as a Compound Data Type</h4>
+            <p>A string is a sequence of characters. It is a compound data type because it can hold multiple values (characters).</p>
+            <div class="code-block">
+                <pre>
+    # Example of a string as a compound data type
+    s = "Hello"
+    print(s[0])  # Output: H
+                </pre>
+            </div>
+    
+            <h4>String Length</h4>
+            <p>Strings have a length, which can be found using the built-in `len()` function.</p>
+            <div class="code-block">
+                <pre>
+    s = "Python"
+    print(len(s))  # Output: 6
+                </pre>
+            </div>
+    
+            <h4>Traversal Using a for Loop</h4>
+            <p>You can use a `for` loop to traverse a string (or any iterable).</p>
+            <div class="code-block">
+                <pre>
+    s = "Python"
+    for char in s:
+        print(char)
+                </pre>
+            </div>
+    
+            <h4>String Slices</h4>
+            <p>Strings can be sliced to get substrings. The slicing syntax is <code>s[start:end]</code>.</p>
+            <div class="code-block">
+                <pre>
+    s = "Python"
+    print(s[1:4])  # Output: yth
+                </pre>
+            </div>
+    
+            <h4>String Comparison</h4>
+            <p>Strings can be compared using relational operators.</p>
+            <div class="code-block">
+                <pre>
+    s1 = "apple"
+    s2 = "banana"
+    print(s1 == s2)  # Output: False
+    print(s1 &lt; s2)  # Output: True
+                </pre>
+            </div>
+    
+            <h4>Find Function</h4>
+            <p>The `find()` method returns the index of the first occurrence of a substring. If not found, it returns -1.</p>
+            <div class="code-block">
+                <pre>
+    s = "Python programming"
+    index = s.find("programming")
+    print(index)  # Output: 7
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Lists</h2>
+            <h4>Creating Lists</h4>
+            <p>Lists are ordered collections of items in Python. They can hold different data types.</p>
+            <div class="code-block">
+                <pre>
+    lst = [1, 2, 3, 4]
+    print(lst)  # Output: [1, 2, 3, 4]
+                </pre>
+            </div>
+    
+            <h4>Accessing and Modifying Lists</h4>
+            <p>You can access elements by index and modify them by assigning new values.</p>
+            <div class="code-block">
+                <pre>
+    lst[0] = 10
+    print(lst)  # Output: [10, 2, 3, 4]
+                </pre>
+            </div>
+    
+            <h4>List Slicing</h4>
+            <p>Lists can also be sliced to get sublists.</p>
+            <div class="code-block">
+                <pre>
+    lst = [1, 2, 3, 4, 5]
+    print(lst[1:4])  # Output: [2, 3, 4]
+                </pre>
+            </div>
+    
+            <h4>List Methods</h4>
+            <ul>
+                <li><strong>append(item):</strong> Adds an item to the end of the list.</li>
+                <li><strong>remove(item):</strong> Removes the first occurrence of an item.</li>
+                <li><strong>pop():</strong> Removes and returns the last item.</li>
+                <li><strong>insert(index, item):</strong> Inserts an item at the specified index.</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    lst = [1, 2, 3]
+    lst.append(4)
+    print(lst)  # Output: [1, 2, 3, 4]
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 4 -->
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Lists, Loops, and Object-Oriented Programming</h1>
+    
+        <section class="section">
+            <h2>1. Looping and Counting with Lists</h2>
+            <p>Looping allows us to iterate over list elements. The `for` loop is commonly used for counting elements in a list, and can also be used to iterate through the list to perform specific operations.</p>
+            <div class="code-block">
+                <pre>
+    # Loop through a list and count the number of elements
+    lst = [1, 2, 3, 4, 5]
+    count = 0
+    for item in lst:
+        count += 1
+    print("Total elements:", count)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Accessing List Elements</h2>
+            <p>Each item in a list has an index, which can be used to access elements directly. Indexing starts at 0.</p>
+            <div class="code-block">
+                <pre>
+    # Accessing elements in a list
+    lst = ['apple', 'banana', 'cherry']
+    print(lst[0])  # Output: apple
+    print(lst[1])  # Output: banana
+    print(lst[2])  # Output: cherry
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. List Length</h2>
+            <p>The `len()` function returns the number of elements in a list.</p>
+            <div class="code-block">
+                <pre>
+    # Find the length of a list
+    lst = ['apple', 'banana', 'cherry']
+    print(len(lst))  # Output: 3
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. List Membership</h2>
+            <p>The `in` operator is used to check if an element is present in a list.</p>
+            <div class="code-block">
+                <pre>
+    # Check membership in a list
+    lst = ['apple', 'banana', 'cherry']
+    print('banana' in lst)  # Output: True
+    print('orange' in lst)  # Output: False
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Lists and For Loops</h2>
+            <p>You can use `for` loops to iterate over a list and perform operations on each element.</p>
+            <div class="code-block">
+                <pre>
+    # Example of looping through a list
+    lst = [10, 20, 30, 40]
+    for item in lst:
+        print(item * 2)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. List Operations</h2>
+            <p>Python provides various operations to manipulate lists, such as adding, removing, or modifying elements.</p>
+            <div class="code-block">
+                <pre>
+    # Adding elements to a list
+    lst = [1, 2, 3]
+    lst.append(4)
+    lst.insert(1, 10)  # Insert at index 1
+    print(lst)  # Output: [1, 10, 2, 3, 4]
+    
+    # Removing elements
+    lst.remove(10)  # Removes the first occurrence of 10
+    lst.pop()  # Removes the last element
+    print(lst)  # Output: [1, 2, 3]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. List Deletion</h2>
+            <p>Elements in a list can be deleted using the `del` keyword or the `remove()` method.</p>
+            <div class="code-block">
+                <pre>
+    # Deleting elements from a list
+    lst = [1, 2, 3, 4]
+    del lst[1]  # Removes element at index 1
+    print(lst)  # Output: [1, 3, 4]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Cloning Lists</h2>
+            <p>Cloning a list allows you to create a new copy of the list. You can use slicing or the `copy()` method to clone a list.</p>
+            <div class="code-block">
+                <pre>
+    # Cloning a list
+    lst = [1, 2, 3]
+    cloned_lst = lst[:]  # Slicing method
+    print(cloned_lst)  # Output: [1, 2, 3]
+                
+    # Alternatively, using the copy() method
+    cloned_lst = lst.copy()
+    print(cloned_lst)  # Output: [1, 2, 3]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Nested Lists</h2>
+            <p>A nested list is a list within another list, allowing you to store more complex data structures.</p>
+            <div class="code-block">
+                <pre>
+    # Example of a nested list (list of lists)
+    nested_lst = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+    
+    # Accessing elements in a nested list
+    print(nested_lst[0][1])  # Output: 2
+    print(nested_lst[2][2])  # Output: 9
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. Object-Oriented Programming (OOP)</h2>
+            <h4>Introduction to Classes, Objects, and Methods</h4>
+            <p>OOP is a programming paradigm based on the concept of objects. Objects are instances of classes, and methods are functions defined within classes.</p>
+            <div class="code-block">
+                <pre>
+    # Creating a class and an object
+    class Person:
+        def __init__(self, name, age):
+            self.name = name
+            self.age = age
+    
+        def greet(self):
+            print(f"Hello, my name is {self.name} and I am {self.age} years old.")
+    
+    # Creating an object of the class
+    person1 = Person("Alice", 30)
+    person1.greet()  # Output: Hello, my name is Alice and I am 30 years old.
+                </pre>
+            </div>
+    
+            <h4>Standard Libraries</h4>
+            <p>Python has many built-in libraries that provide various functionalities. Some of the commonly used libraries include:</p>
+            <ul>
+                <li><strong>math</strong>: Provides mathematical functions (e.g., sin, cos, sqrt).</li>
+                <li><strong>random</strong>: Used to generate random numbers and select random items.</li>
+                <li><strong>datetime</strong>: Used for working with dates and times.</li>
+                <li><strong>os</strong>: Provides functionalities for interacting with the operating system (e.g., file handling).</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    # Example using the math library
+    import math
+    print(math.sqrt(16))  # Output: 4.0
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 5 -->
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Data Structures, Searching, and Sorting Algorithms</h1>
+    
+        <section class="section">
+            <h2>1. Data Structures</h2>
+            <p>Data structures are a way of organizing and storing data efficiently. Let's look at some common data structures in Python.</p>
+    
+            <h4>1.1 Arrays</h4>
+            <p>Arrays are used to store multiple values in a single variable. In Python, arrays can be represented using lists, as Python does not have a dedicated array data structure.</p>
+            <div class="code-block">
+                <pre>
+    # Creating an array using a list
+    arr = [1, 2, 3, 4, 5]
+    print(arr)  # Output: [1, 2, 3, 4, 5]
+                </pre>
+            </div>
+    
+            <h4>1.2 Lists</h4>
+            <p>Lists in Python are dynamic arrays that can store elements of different types and sizes. They can be modified after creation by adding, removing, or changing elements.</p>
+            <div class="code-block">
+                <pre>
+    # Creating a list
+    lst = [10, 20, 30, 40]
+    print(lst)  # Output: [10, 20, 30, 40]
+                </pre>
+            </div>
+    
+            <h4>1.3 Sets</h4>
+            <p>Sets are unordered collections of unique elements. They do not allow duplicates and are useful for membership tests and mathematical operations like union and intersection.</p>
+            <div class="code-block">
+                <pre>
+    # Creating a set
+    s = {1, 2, 3, 4}
+    print(s)  # Output: {1, 2, 3, 4}
+    
+    # Adding and removing elements
+    s.add(5)
+    s.remove(2)
+    print(s)  # Output: {1, 3, 4, 5}
+                </pre>
+            </div>
+    
+            <h4>1.4 Stacks</h4>
+            <p>A stack is a collection of elements with two main operations: push (adding an element) and pop (removing an element). It follows the Last In, First Out (LIFO) principle.</p>
+            <div class="code-block">
+                <pre>
+    # Stack operations using a list
+    stack = []
+    stack.append(1)  # Push
+    stack.append(2)  # Push
+    stack.append(3)  # Push
+    print(stack)  # Output: [1, 2, 3]
+    
+    stack.pop()  # Pop
+    print(stack)  # Output: [1, 2]
+                </pre>
+            </div>
+    
+            <h4>1.5 Queues</h4>
+            <p>A queue is a collection of elements that follows the First In, First Out (FIFO) principle. Elements are added at the back and removed from the front.</p>
+            <div class="code-block">
+                <pre>
+    # Queue operations using collections.deque
+    from collections import deque
+    queue = deque()
+    queue.append(1)  # Enqueue
+    queue.append(2)  # Enqueue
+    queue.append(3)  # Enqueue
+    print(queue)  # Output: deque([1, 2, 3])
+    
+    queue.popleft()  # Dequeue
+    print(queue)  # Output: deque([2, 3])
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Searching Algorithms</h2>
+            <p>Searching algorithms are used to find a specific element in a data structure. Below are two common searching algorithms: Linear Search and Binary Search.</p>
+    
+            <h4>2.1 Linear Search</h4>
+            <p>Linear search is a simple method that checks every element in a list until the target element is found.</p>
+            <div class="code-block">
+                <pre>
+    # Linear Search
+    def linear_search(arr, target):
+        for i in range(len(arr)):
+            if arr[i] == target:
+                return i  # Return the index of the target element
+        return -1  # Target not found
+    
+    arr = [5, 3, 8, 4, 2]
+    target = 4
+    result = linear_search(arr, target)
+    print("Element found at index:", result)  # Output: Element found at index: 3
+                </pre>
+            </div>
+    
+            <h4>2.2 Binary Search</h4>
+            <p>Binary search works on sorted arrays. It repeatedly divides the search interval in half. If the target value is less than the middle element, the search continues on the left half, otherwise, it searches the right half.</p>
+            <div class="code-block">
+                <pre>
+    # Binary Search
+    def binary_search(arr, target):
+        low = 0
+        high = len(arr) - 1
+        while low <= high:
+            mid = (low + high) // 2
+            if arr[mid] == target:
+                return mid  # Target found
+            elif arr[mid] < target:
+                low = mid + 1  # Search right half
+            else:
+                high = mid - 1  # Search left half
+        return -1  # Target not found
+    
+    arr = [1, 2, 3, 4, 5, 6, 7, 8]
+    target = 4
+    result = binary_search(arr, target)
+    print("Element found at index:", result)  # Output: Element found at index: 3
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Sorting Algorithms</h2>
+            <p>Sorting algorithms are used to arrange elements in a specific order, either ascending or descending. Below are three common sorting algorithms: Bubble Sort, Selection Sort, and Insertion Sort.</p>
+    
+            <h4>3.1 Bubble Sort</h4>
+            <p>Bubble sort works by repeatedly stepping through the list, comparing adjacent elements, and swapping them if they are in the wrong order. This process repeats until the list is sorted.</p>
+            <div class="code-block">
+                <pre>
+    # Bubble Sort
+    def bubble_sort(arr):
+        n = len(arr)
+        for i in range(n):
+            for j in range(0, n-i-1):
+                if arr[j] > arr[j+1]:
+                    arr[j], arr[j+1] = arr[j+1], arr[j]  # Swap
+        return arr
+    
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    sorted_arr = bubble_sort(arr)
+    print("Sorted array:", sorted_arr)  # Output: Sorted array: [11, 12, 22, 25, 34, 64, 90]
+                </pre>
+            </div>
+    
+            <h4>3.2 Selection Sort</h4>
+            <p>Selection sort works by repeatedly finding the minimum element from the unsorted part of the list and swapping it with the first unsorted element.</p>
+            <div class="code-block">
+                <pre>
+    # Selection Sort
+    def selection_sort(arr):
+        for i in range(len(arr)):
+            min_idx = i
+            for j in range(i+1, len(arr)):
+                if arr[j] < arr[min_idx]:
+                    min_idx = j
+            arr[i], arr[min_idx] = arr[min_idx], arr[i]  # Swap
+        return arr
+    
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    sorted_arr = selection_sort(arr)
+    print("Sorted array:", sorted_arr)  # Output: Sorted array: [11, 12, 22, 25, 34, 64, 90]
+                </pre>
+            </div>
+    
+            <h4>3.3 Insertion Sort</h4>
+            <p>Insertion sort works by taking each element and inserting it into the correct position in the sorted part of the list.</p>
+            <div class="code-block">
+                <pre>
+    # Insertion Sort
+    def insertion_sort(arr):
+        for i in range(1, len(arr)):
+            key = arr[i]
+            j = i-1
+            while j >= 0 and key < arr[j]:
+                arr[j+1] = arr[j]
+                j -= 1
+            arr[j+1] = key
+        return arr
+    
+    arr = [64, 34, 25, 12, 22, 11, 90]
+    sorted_arr = insertion_sort(arr)
+    print("Sorted array:", sorted_arr)  # Output: Sorted array: [11, 12, 22, 25, 34, 64, 90]
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+
+</body>
+</html>

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Operating System concepts</div>
+
+    <div class="container">
+       
+        <a href="#unit1" class="unit">UNIT-I: Introduction & Memory Management</a>
+        <div id="unit1" class="content">
+            Introduction, What is an operating system, Simple Batch Systems, Multi-programmed Batch systems, Time-Sharing Systems, Personal – Computer Systems, Parallel systems, Distributed systems, Real-Time Systems.
+            <br>Memory Management: Background, Logical versus physical Address space, swapping, Contiguous allocation, Paging, Segmentation.
+            <br>Virtual Memory: Demand Paging, Page Replacement, Page-replacement Algorithms, Performance of Demand Paging, Allocation of Frames, Thrashing, Other Considerations.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: Processes & CPU Scheduling</a>
+        <div id="unit2" class="content">
+            Processes: Process Concept, Process Scheduling, Operation on Processes.
+            <br>CPU Scheduling: Basic Concepts, Scheduling Criteria, Scheduling Algorithms, Multiple – Processor Scheduling.
+            <br>Process Synchronization: Background, The Critical – Section Problem, Synchronization Hardware, Semaphores, Classical Problems of Synchronization.
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: Deadlocks</a>
+        <div id="unit3" class="content">
+            System Model, Deadlock Characterization, Methods for Handling Deadlocks, Deadlock Prevention, Deadlock Avoidance, Deadlock Detection, Recovery from Deadlock.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Device Management</a>
+        <div id="unit4" class="content">
+            Techniques for Device Management, Dedicated Devices, Shared Devices, Virtual Devices; Input or Output Devices, Storage Devices, Buffering, Secondary Storage Structure: Disk Structure, Disk Scheduling, Disk Management, Swap-Space Management, Disk Reliability.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: Information Management</a>
+        <div id="unit5" class="content">
+            Introduction, A Simple File System, General Model of a File System, Symbolic File System, Basic File System, Access Control Verification, Logical File System, Physical File System.
+            <br>File – System Interface: File Concept, Access Methods, Directory Structure, Protection, Consistency Semantics.
+            <br>File – System Implementation: File – System Structure, Allocation Methods, Free-Space Management.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+
+    <div class="topic-container" id="unit-1">
+        <h1>UNIT-I: Introduction to Operating Systems</h1>
+    
+        <section class="section">
+            <h2>1. Introduction to Operating Systems</h2>
+            <p><strong>Operating System (OS)</strong> is a system software that manages hardware resources and provides an environment for software applications to run. It acts as an intermediary between the computer hardware and the computer user.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. What is an Operating System?</h2>
+            <p>An <strong>Operating System (OS)</strong> is software that manages computer hardware and software resources and provides services for computer programs. It serves as the bridge between hardware and the user, enabling interaction with the system and managing resources efficiently.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. Types of Operating Systems</h2>
+            <p>Operating systems can be categorized into different types based on their design and usage:</p>
+    
+            <ul>
+                <li><strong>Simple Batch Systems:</strong> Executes a series of jobs without user interaction. Jobs are processed in batches.</li>
+                <li><strong>Multi-programmed Batch Systems:</strong> Allows multiple programs to be loaded and executed at the same time by sharing the CPU.</li>
+                <li><strong>Time-Sharing Systems:</strong> Multiple users share the computer resources by each getting a time slice of the CPU.</li>
+                <li><strong>Personal-Computer Systems:</strong> Designed to run on personal computers (PCs), where one user has complete control over the system.</li>
+                <li><strong>Parallel Systems:</strong> Uses multiple processors to perform tasks concurrently, enhancing processing speed.</li>
+                <li><strong>Distributed Systems:</strong> Consists of multiple independent computers that communicate and work together, often over a network.</li>
+                <li><strong>Real-Time Systems:</strong> Designed to respond to inputs within strict time constraints, ensuring critical tasks are performed on time.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>4. Memory Management</h2>
+            <p><strong>Memory Management</strong> is the process of managing computer memory, including the allocation of memory to programs during execution and the deallocation when they are no longer needed.</p>
+    
+            <h3>Background:</h3>
+            <p>Memory management is crucial in ensuring that the CPU and memory are used efficiently. Proper memory management helps in optimizing performance and preventing issues like memory fragmentation.</p>
+    
+            <h3>Logical vs Physical Address Space:</h3>
+            <ul>
+                <li><strong>Logical Address Space:</strong> The address generated by the CPU during program execution.</li>
+                <li><strong>Physical Address Space:</strong> The actual address in the computer’s memory (RAM).</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                Logical Address: 0x1000 (generated by the program)<br>
+                Physical Address: 0x2000 (actual location in RAM)
+            </div>
+    
+            <h3>Memory Allocation Techniques:</h3>
+            <ul>
+                <li><strong>Swapping:</strong> Moving processes in and out of memory to make room for others, ensuring efficient memory usage.</li>
+                <li><strong>Contiguous Allocation:</strong> Allocates a single contiguous block of memory for a process.</li>
+                <li><strong>Paging:</strong> Divides memory into fixed-size pages and maps them into physical memory frames, allowing non-contiguous allocation.</li>
+                <li><strong>Segmentation:</strong> Divides memory into segments based on the logical structure of a program (such as functions or data). Each segment can be stored in different parts of memory.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Paging:<br>
+                Physical Memory: divided into frames of size 4KB.<br>
+                Logical Memory: divided into pages of size 4KB.<br>
+                Page 1 maps to Frame 3, Page 2 maps to Frame 6, etc.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Virtual Memory</h2>
+            <p><strong>Virtual Memory</strong> is a memory management technique that gives an "idealized" view of memory to users, abstracting physical memory and allowing programs to access more memory than physically available by using disk space.</p>
+    
+            <h3>Demand Paging:</h3>
+            <p><strong>Demand Paging</strong> is a method of paging where a page is only brought into memory when it is needed (i.e., on-demand). This helps to minimize memory usage by loading only the necessary pages at runtime.</p>
+    
+            <div class="code-block">
+                Example of Demand Paging:<br>
+                The program starts with minimal pages loaded.<br>
+                Pages are loaded into memory when they are referenced.
+            </div>
+    
+            <h3>Page Replacement:</h3>
+            <p>When a page needs to be loaded but the memory is full, the OS must decide which page to swap out. This is called page replacement.</p>
+    
+            <h3>Page Replacement Algorithms:</h3>
+            <ul>
+                <li><strong>FIFO (First-In-First-Out):</strong> Replaces the oldest page in memory.</li>
+                <li><strong>LRU (Least Recently Used):</strong> Replaces the page that hasn’t been used for the longest period.</li>
+                <li><strong>Optimal Page Replacement:</strong> Replaces the page that will not be used for the longest time in the future.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of FIFO:<br>
+                Pages loaded into memory: 1, 2, 3.<br>
+                When a new page (4) needs to be loaded, page 1 is replaced.
+            </div>
+    
+            <h3>Performance of Demand Paging:</h3>
+            <p>The performance of demand paging is measured by the <strong>Page Fault Rate</strong>, which represents how often a page is not found in memory. A high page fault rate results in slower performance due to the overhead of swapping pages in and out of memory.</p>
+    
+            <h3>Allocation of Frames:</h3>
+            <p><strong>Allocation of Frames</strong> refers to the number of frames each process is allocated in memory. The number of frames allocated impacts the process’s performance and the system’s overall efficiency.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                Process A: Allocated 3 frames.<br>
+                Process B: Allocated 2 frames.<br>
+                Total frames = 5.
+            </div>
+    
+            <h3>Thrashing:</h3>
+            <p><strong>Thrashing</strong> occurs when the system spends more time swapping pages in and out of memory than executing processes, leading to poor system performance. This typically happens when too many processes are running simultaneously, and memory is too fragmented to efficiently manage.</p>
+    
+            <div class="code-block">
+                Example of Thrashing:<br>
+                If too many processes are running and the system is constantly swapping pages in and out, the CPU becomes underutilized, and the system performance significantly degrades.
+            </div>
+    
+            <h3>Other Considerations:</h3>
+            <p>Other factors that influence memory management include:</p>
+            <ul>
+                <li><strong>Access Time:</strong> The time it takes to read from or write to memory.</li>
+                <li><strong>Memory Fragmentation:</strong> Both internal and external fragmentation can lead to inefficient memory usage.</li>
+                <li><strong>Cost of Swapping:</strong> The overhead involved in swapping pages to and from disk.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- UNTI 2 -->
+
+    <div class="topic-container" id="unit-2">
+        <h1>UNIT-II: Processes</h1>
+    
+        <section class="section">
+            <h2>1. Process Concept</h2>
+            <p>A <strong>process</strong> is a program in execution. It is an active entity, unlike a program which is passive. A process includes the program code, its current activity, the contents of the program counter, registers, and variables. Each process is represented by a process control block (PCB) in the operating system.</p>
+    
+            <h3>Components of a Process:</h3>
+            <ul>
+                <li><strong>Process ID (PID):</strong> Unique identifier for each process.</li>
+                <li><strong>Program Counter (PC):</strong> Points to the next instruction to be executed.</li>
+                <li><strong>CPU Registers:</strong> Hold intermediate data during execution.</li>
+                <li><strong>Process State:</strong> Current state of the process (e.g., running, waiting, ready).</li>
+                <li><strong>Memory Allocation:</strong> The memory space allocated for the process.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2. Process Scheduling</h2>
+            <p><strong>Process Scheduling</strong> refers to the method by which processes are assigned to the CPU. The operating system uses scheduling algorithms to decide which process should run next, optimizing the use of system resources.</p>
+    
+            <h3>Types of Scheduling:</h3>
+            <ul>
+                <li><strong>Long-Term Scheduling:</strong> Decides which processes are admitted to the system for execution.</li>
+                <li><strong>Short-Term Scheduling:</strong> Decides which process should execute next on the CPU.</li>
+                <li><strong>Medium-Term Scheduling:</strong> Determines which processes should be swapped in or out of memory.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Process Scheduling:<br>
+                When Process A (ID: 1) and Process B (ID: 2) are ready to execute, the scheduler assigns the CPU to one based on the scheduling algorithm (e.g., FCFS, Round Robin).
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Operations on Processes</h2>
+            <p>Processes can undergo several operations throughout their lifecycle:</p>
+            <ul>
+                <li><strong>Create:</strong> A new process is created by the operating system.</li>
+                <li><strong>Execute:</strong> The process is executed on the CPU.</li>
+                <li><strong>Wait:</strong> The process waits for some event (e.g., I/O completion).</li>
+                <li><strong>Terminate:</strong> The process finishes execution and terminates.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Process Operation:<br>
+                Process A is created, begins execution, waits for I/O completion, and then terminates once execution is done.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. CPU Scheduling</h2>
+            <p><strong>CPU Scheduling</strong> is the process of determining which process gets to use the CPU next. Efficient scheduling is critical to maximizing CPU utilization and ensuring that processes run efficiently.</p>
+    
+            <h3>Basic Concepts:</h3>
+            <ul>
+                <li><strong>Context Switch:</strong> The process of saving the state of a currently running process and loading the state of the next process.</li>
+                <li><strong>CPU Bound Process:</strong> A process that spends more time performing CPU operations than I/O operations.</li>
+                <li><strong>I/O Bound Process:</strong> A process that spends more time waiting for I/O operations than performing CPU operations.</li>
+            </ul>
+    
+            <h3>Scheduling Criteria:</h3>
+            <ul>
+                <li><strong>CPU Utilization:</strong> Maximize the amount of time the CPU is busy.</li>
+                <li><strong>Throughput:</strong> Maximize the number of processes completed per unit time.</li>
+                <li><strong>Turnaround Time:</strong> Minimize the time taken from process submission to completion.</li>
+                <li><strong>Waiting Time:</strong> Minimize the time a process spends waiting in the ready queue.</li>
+                <li><strong>Response Time:</strong> Minimize the time between the submission of a request and the first response from the system.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Scheduling Criteria:<br>
+                CPU utilization = 90%, Throughput = 50 processes per minute, Average Waiting Time = 3 ms.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Scheduling Algorithms</h2>
+            <p><strong>Scheduling Algorithms</strong> are used by the OS to decide the order in which processes should be executed on the CPU. Some common algorithms are:</p>
+            <ul>
+                <li><strong>First-Come, First-Served (FCFS):</strong> Processes are executed in the order they arrive in the ready queue.</li>
+                <li><strong>Shortest Job First (SJF):</strong> The process with the shortest burst time (i.e., CPU execution time) is executed next.</li>
+                <li><strong>Round Robin (RR):</strong> Each process is assigned a fixed time slice (quantum) and is executed in a circular order.</li>
+                <li><strong>Priority Scheduling:</strong> Each process is assigned a priority, and the process with the highest priority is executed first.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Round Robin:<br>
+                Process A (10 ms), Process B (5 ms), Process C (7 ms).<br>
+                Time Quantum = 4 ms.<br>
+                Order of execution: A (4 ms), B (4 ms), C (4 ms), A (6 ms), C (3 ms).
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Multiple Processor Scheduling</h2>
+            <p><strong>Multiple Processor Scheduling</strong> involves scheduling processes across multiple CPUs. The main challenge is to balance the load among processors to ensure optimal performance.</p>
+    
+            <h3>Types of Multiple Processor Scheduling:</h3>
+            <ul>
+                <li><strong>Asymmetric Multiprocessing:</strong> One processor (master) controls the others (slaves) which are used for computation.</li>
+                <li><strong>Symmetric Multiprocessing (SMP):</strong> All processors are equal, and each can perform tasks independently.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of SMP:<br>
+                Processor A, B, and C all handle different tasks simultaneously, and the OS schedules tasks in a way that makes best use of all available processors.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Process Synchronization</h2>
+            <p><strong>Process Synchronization</strong> is necessary when multiple processes share resources. It ensures that processes do not interfere with each other while accessing shared resources, leading to data inconsistency.</p>
+    
+            <h3>The Critical-Section Problem:</h3>
+            <p>The <strong>Critical-Section Problem</strong> occurs when multiple processes access shared resources simultaneously, causing data inconsistencies. Proper synchronization is needed to avoid this problem.</p>
+    
+            <h3>Synchronization Hardware:</h3>
+            <ul>
+                <li><strong>Test-and-Set Lock:</strong> An atomic operation used to set a lock.</li>
+                <li><strong>Compare-and-Swap:</strong> An atomic operation that swaps values only if certain conditions are met.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Test-and-Set Lock:<br>
+                A process first checks whether the lock is set. If it is not, it sets the lock and enters the critical section. If the lock is already set, the process waits.
+            </div>
+    
+            <h3>Semaphores:</h3>
+            <p>A <strong>semaphore</strong> is a synchronization tool used to control access to a shared resource. There are two types:</p>
+            <ul>
+                <li><strong>Counting Semaphore:</strong> Used for controlling access to a pool of resources.</li>
+                <li><strong>Binary Semaphore:</strong> Used for mutual exclusion.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Semaphore:<br>
+                Semaphore S = 1 (indicating the resource is available).<br>
+                Process A: P(S); // waits if S = 0, enters critical section.<br>
+                Process B: V(S); // signals when done, releasing the resource.
+            </div>
+    
+            <h3>Classical Problems of Synchronization:</h3>
+            <ul>
+                <li><strong>Producer-Consumer Problem:</strong> Ensures that a producer does not overflow a buffer and a consumer does not underflow it.</li>
+                <li><strong>Readers-Writers Problem:</strong> Manages concurrent access to a shared resource by readers and writers.</li>
+                <li><strong>Dining Philosophers Problem:</strong> Solves resource contention issues among processes (philosophers) who need multiple resources to work.</li>
+            </ul>
+        </section>
+    </div>
+
+    <!-- UNIT 3 -->
+
+    <div class="topic-container" id="unit-3">
+        <h1>UNIT-III: Deadlocks</h1>
+    
+        <section class="section">
+            <h2>1. System Model</h2>
+            <p>A <strong>deadlock</strong> occurs when a set of processes are blocked because each process is holding a resource and waiting for another resource held by another process. To understand deadlocks, we need to consider the system model which involves resources, processes, and their interactions.</p>
+    
+            <h3>System Components:</h3>
+            <ul>
+                <li><strong>Resources:</strong> These are the entities such as CPU, memory, disk space, etc., that processes need for execution.</li>
+                <li><strong>Processes:</strong> The programs that request and use resources.</li>
+                <li><strong>Request:</strong> A process requesting a resource from the system.</li>
+                <li><strong>Allocation:</strong> A resource currently held by a process.</li>
+                <li><strong>Waiting:</strong> A process is waiting for a resource to become available.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of System Model:<br>
+                Process A holds resource 1 and requests resource 2. Process B holds resource 2 and requests resource 1. Both processes are now in a deadlock state.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Deadlock Characterization</h2>
+            <p>A <strong>deadlock</strong> can be characterized by the following four conditions, which must all hold for a deadlock to occur:</p>
+            <ul>
+                <li><strong>Mutual Exclusion:</strong> At least one resource must be held in a non-shareable mode (i.e., only one process can use the resource at any given time).</li>
+                <li><strong>Hold and Wait:</strong> A process holding one resource is waiting for additional resources held by other processes.</li>
+                <li><strong>No Preemption:</strong> Resources cannot be forcibly taken from processes holding them; they must release them voluntarily.</li>
+                <li><strong>Circular Wait:</strong> A set of processes exists such that each process is waiting for a resource held by the next process in the set, forming a circular chain.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Circular Wait:<br>
+                Process A is waiting for a resource held by Process B, Process B is waiting for a resource held by Process C, and Process C is waiting for a resource held by Process A, forming a circular wait.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Methods for Handling Deadlocks</h2>
+            <p>There are several methods for handling deadlocks:</p>
+            <ul>
+                <li><strong>Deadlock Prevention:</strong> Techniques to ensure that at least one of the necessary conditions for a deadlock is not met.</li>
+                <li><strong>Deadlock Avoidance:</strong> Dynamically allocates resources and ensures that the system never enters a deadlock state.</li>
+                <li><strong>Deadlock Detection:</strong> Periodically checks the system for deadlock conditions and takes actions to recover from deadlock.</li>
+                <li><strong>Deadlock Recovery:</strong> Involves taking action to recover from deadlock once it has been detected.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>4. Deadlock Prevention</h2>
+            <p><strong>Deadlock Prevention</strong> ensures that at least one of the necessary conditions for deadlock does not occur. Here are strategies for each condition:</p>
+            <ul>
+                <li><strong>Mutual Exclusion:</strong> Not possible to remove mutual exclusion entirely, as some resources (e.g., printers) must be exclusive.</li>
+                <li><strong>Hold and Wait:</strong> Require processes to request all resources they need at once, or allow them to request only one resource at a time.</li>
+                <li><strong>No Preemption:</strong> If a process holding resources is preempted, those resources are taken from it and allocated to another process.</li>
+                <li><strong>Circular Wait:</strong> Impose an ordering of resources and require that processes request resources in a specific order, preventing circular waits.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Deadlock Prevention:<br>
+                Process A requests resources 1 and 2 at once, ensuring it does not hold a resource while waiting for another.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Deadlock Avoidance</h2>
+            <p><strong>Deadlock Avoidance</strong> requires knowledge of future process requests. The system dynamically makes resource allocation decisions to ensure that a deadlock is not introduced. The <strong>Banker's Algorithm</strong> is a popular approach to deadlock avoidance.</p>
+    
+            <h3>Banker's Algorithm:</h3>
+            <p>The Banker's Algorithm evaluates whether granting a resource request will result in a safe or unsafe state. If the state is safe, the request is granted; otherwise, the request is denied.</p>
+    
+            <div class="code-block">
+                Example of Banker's Algorithm:<br>
+                Consider a system with three processes (P1, P2, P3) and two resources (R1, R2). The Banker's Algorithm checks if the current allocation will allow for a safe sequence of process execution and resource allocation.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Deadlock Detection</h2>
+            <p><strong>Deadlock Detection</strong> involves periodically checking for deadlock in the system. If a deadlock is detected, recovery methods are applied. A common approach is to construct a resource allocation graph or use a wait-for graph to identify circular waits.</p>
+    
+            <h3>Resource Allocation Graph (RAG):</h3>
+            <p>A Resource Allocation Graph is a directed graph in which nodes represent processes and resources. An edge from process P to resource R indicates that P is requesting R, while an edge from resource R to process P indicates that P is holding R.</p>
+    
+            <div class="code-block">
+                Example of RAG:<br>
+                Process P1 is requesting resource R1, so there is a directed edge from P1 to R1. If a cycle is detected, a deadlock has occurred.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Recovery from Deadlock</h2>
+            <p><strong>Recovery from Deadlock</strong> involves breaking the deadlock by either aborting processes or preempting resources:</p>
+            <ul>
+                <li><strong>Process Termination:</strong> Terminate one or more processes involved in the deadlock. This can be done in a variety of ways (e.g., killing a process or choosing a process to abort based on priority).</li>
+                <li><strong>Resource Preemption:</strong> Preempt resources from processes involved in the deadlock and allocate them to other processes. This may involve saving the state of the process before preempting it.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example of Recovery:<br>
+                If a deadlock is detected between Process A and Process B, one of them might be terminated, or resources might be preempted and reallocated to break the deadlock.
+            </div>
+        </section>
+    </div>
+
+    <!-- UNIT 4 -->
+    <div class="topic-container" id="unit-4">
+        <h1>UNIT-IV: Device Management</h1>
+    
+        <section class="section">
+            <h2>1. Techniques for Device Management</h2>
+            <p><strong>Device management</strong> is a key function of the operating system, responsible for managing hardware devices such as input/output devices and storage devices. The OS interacts with devices using device drivers and provides a uniform interface for applications to communicate with hardware.</p>
+            
+            <h3>Types of Devices:</h3>
+            <ul>
+                <li><strong>Dedicated Devices:</strong> These are devices that are assigned to a single process or application (e.g., a printer dedicated to one user).</li>
+                <li><strong>Shared Devices:</strong> These are devices that can be used by multiple processes or users (e.g., a shared disk drive or network printer).</li>
+                <li><strong>Virtual Devices:</strong> These are abstracted devices created by the OS for better resource utilization and simplified programming interfaces (e.g., virtual disk drives or virtual printers).</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                A dedicated printer can only be used by one user at a time, while a shared disk drive can be accessed by multiple users concurrently.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Input or Output Devices</h2>
+            <p><strong>Input and Output devices</strong> allow interaction between the user and the system. The OS manages these devices through device controllers, which convert data between the computer's binary format and the human-readable or machine-readable format.</p>
+            
+            <h3>Examples of I/O Devices:</h3>
+            <ul>
+                <li><strong>Input Devices:</strong> Devices like keyboards, mice, scanners, and microphones that allow users to input data into the system.</li>
+                <li><strong>Output Devices:</strong> Devices like monitors, printers, and speakers that provide feedback or output from the system to the user.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                A keyboard is an input device used to enter data, while a monitor is an output device used to display results.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Storage Devices</h2>
+            <p><strong>Storage devices</strong> are used to store data permanently or temporarily. They are an essential part of a computer system, and the OS manages access to these devices through file systems.</p>
+    
+            <h3>Types of Storage Devices:</h3>
+            <ul>
+                <li><strong>Primary Storage:</strong> Also known as main memory (RAM), it is fast but volatile, meaning it loses data when the power is off.</li>
+                <li><strong>Secondary Storage:</strong> Non-volatile storage used to store large amounts of data permanently (e.g., hard drives, SSDs, CDs, DVDs).</li>
+                <li><strong>Tertiary Storage:</strong> This includes removable storage media used for backup or archiving, such as tape drives or optical media.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                A hard disk drive (HDD) is a secondary storage device used to store the operating system, applications, and user data permanently.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Buffering</h2>
+            <p><strong>Buffering</strong> is a technique used to manage the data flow between devices that operate at different speeds. It involves temporarily storing data in a buffer (a small, fast memory) before it is processed or transferred.</p>
+    
+            <h3>Types of Buffering:</h3>
+            <ul>
+                <li><strong>Single Buffering:</strong> One buffer is used to store data temporarily before being transferred to or from a device.</li>
+                <li><strong>Double Buffering:</strong> Two buffers are used to allow one buffer to be filled while the other is being emptied, improving the efficiency of data transfer.</li>
+                <li><strong>Circular Buffering:</strong> A buffer with a fixed size that operates in a circular manner, allowing continuous data flow without needing to clear the buffer.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                A printer uses double buffering to allow data to be sent to one buffer while the printer is working on the data in the other buffer.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Secondary Storage Structure</h2>
+            <p><strong>Secondary storage structure</strong> refers to the methods used to organize and access data stored in secondary storage devices, such as hard drives or SSDs.</p>
+    
+            <h3>Disk Structure:</h3>
+            <p>Disks are divided into tracks, sectors, and blocks. A <strong>track</strong> is a circular path on the surface of the disk, a <strong>sector</strong> is a subdivision of a track, and a <strong>block</strong> is the smallest unit of data that can be read or written.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                A hard disk consists of concentric tracks and sectors, and data is stored in blocks. Each block is addressed by its track and sector number.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Disk Scheduling</h2>
+            <p><strong>Disk scheduling</strong> refers to the methods used by the OS to decide the order in which disk I/O requests are serviced to minimize the seek time and improve performance.</p>
+    
+            <h3>Popular Disk Scheduling Algorithms:</h3>
+            <ul>
+                <li><strong>First-Come, First-Served (FCFS):</strong> Serves disk requests in the order they are received.</li>
+                <li><strong>Shortest Seek Time First (SSTF):</strong> Selects the request with the shortest seek time from the current position of the disk head.</li>
+                <li><strong>Circular Scan (C-SCAN):</strong> The disk head moves in one direction, servicing requests, and then jumps back to the beginning to continue servicing.</li>
+                <li><strong>Elevator Algorithm:</strong> Similar to C-SCAN, but it services requests in both directions (up and down) to minimize movement.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                Using the SSTF algorithm, if the disk head is at track 50 and the next closest request is at track 52, it will service that request first.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Disk Management</h2>
+            <p><strong>Disk management</strong> involves managing the allocation and deallocation of space on disks. The OS uses disk management algorithms to efficiently utilize disk space and ensure data integrity.</p>
+    
+            <h3>Disk Allocation Methods:</h3>
+            <ul>
+                <li><strong>Contiguous Allocation:</strong> Files are stored in contiguous blocks on the disk. This method is simple but can lead to fragmentation.</li>
+                <li><strong>Linked Allocation:</strong> Files are stored in non-contiguous blocks, and each block points to the next block in the file.</li>
+                <li><strong>Indexed Allocation:</strong> An index block is used to store pointers to the blocks of the file, reducing fragmentation.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                In contiguous allocation, a file may be stored in blocks 5, 6, and 7 on the disk, while in linked allocation, the file may be scattered across non-contiguous blocks.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Swap-Space Management</h2>
+            <p><strong>Swap-space management</strong> involves managing the space on a disk that is used to store data from memory when the system is low on physical memory (RAM). This is typically done using a swap file or partition.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                When the system runs low on RAM, part of a process's data may be swapped to the disk swap space, allowing more processes to run concurrently in memory.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Disk Reliability</h2>
+            <p><strong>Disk reliability</strong> ensures that data stored on disks is not lost due to disk failures. The OS uses error-detection and recovery methods to maintain data integrity.</p>
+    
+            <h3>Techniques to Enhance Disk Reliability:</h3>
+            <ul>
+                <li><strong>Redundancy:</strong> Using techniques like RAID (Redundant Array of Independent Disks) to store data in multiple locations for backup.</li>
+                <li><strong>Error Checking:</strong> Using checksums or parity bits to detect and correct errors in data stored on disks.</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                In RAID 1, data is mirrored across two disks. If one disk fails, the data is still available on the other disk.
+            </div>
+        </section>
+    </div>
+
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit-5">
+        <h1>UNIT-V: Information Management</h1>
+    
+        <section class="section">
+            <h2>1. Introduction</h2>
+            <p><strong>Information management</strong> in operating systems refers to the handling of files, directories, and associated data. It involves the efficient storage, retrieval, and security of data within the system.</p>
+            
+            <div class="code-block">
+                Example:<br>
+                Operating systems like Linux and Windows use file systems to organize and manage files in storage devices (e.g., hard drives).
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. A Simple File System</h2>
+            <p>A simple file system consists of a few basic operations such as creating, reading, writing, and deleting files. It provides basic access control and file storage, typically without sophisticated management or protection features.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                In a simple file system, a file might be stored as a sequence of blocks on a disk, and the operating system provides basic functions like open(), read(), write(), and close().
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. General Model of a File System</h2>
+            <p>The general model of a file system consists of several layers that manage different aspects of files, including file storage, access control, and file system interfaces. It also handles operations like file creation, deletion, and modification.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                The general model includes components such as the logical file system (LFS) and physical file system (PFS), which interact with each other to handle file operations.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Symbolic File System</h2>
+            <p>A symbolic file system uses symbolic links to refer to files, which allows files to be accessed indirectly. Symbolic links act as pointers to files or directories, enabling easy redirection without modifying the file itself.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                In Linux, a symbolic link can be created using the <code>ln -s</code> command, which allows a file or directory to be referenced by another name.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Basic File System</h2>
+            <p>The basic file system is responsible for managing the physical storage and keeping track of file locations on a disk. It works closely with the operating system's file system interface to store and retrieve files.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                The basic file system stores data in blocks, which are mapped to physical locations on the disk. It is also responsible for managing free space and handling disk I/O operations.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Access Control Verification</h2>
+            <p><strong>Access control verification</strong> ensures that only authorized users can perform specific actions on files (e.g., read, write, execute). This is a critical component of file security and is often enforced using permissions and access control lists (ACLs).</p>
+    
+            <div class="code-block">
+                Example:<br>
+                In a UNIX-like system, file permissions like <code>rwxr-xr-x</code> define the access rights for the owner, group, and others.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Logical File System</h2>
+            <p>The <strong>logical file system (LFS)</strong> is responsible for managing files at the logical level, providing abstraction from the physical storage. It defines file attributes and the structure of directories, handles file naming, and ensures access control.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                The LFS maps files to physical blocks on a storage device, managing metadata like file names, sizes, and timestamps.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Physical File System</h2>
+            <p>The <strong>physical file system (PFS)</strong> handles the actual storage of files on physical devices such as hard drives or SSDs. It is responsible for allocating space, managing storage devices, and performing read/write operations at the hardware level.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                The PFS works with the operating system's block device drivers to read and write file data to and from physical storage.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. File-System Interface</h2>
+            <p>The file-system interface provides the user or application program with an API to interact with files. This includes operations like creating, opening, reading, writing, and closing files.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                In C, the <code>fopen()</code> function is used to open a file, while <code>fread()</code> and <code>fwrite()</code> are used to read from and write to files.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. File Concept</h2>
+            <p>The <strong>file concept</strong> defines a file as a collection of related data stored on a storage device. Files are identified by unique file names, and they can have different types and structures (e.g., text files, binary files, directories).</p>
+    
+            <div class="code-block">
+                Example:<br>
+                A text file might store characters in ASCII or Unicode format, while a binary file stores data in raw binary format for machine processing.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>11. Access Methods</h2>
+            <p><strong>Access methods</strong> define how files are accessed and manipulated. Common access methods include:</p>
+            <ul>
+                <li><strong>Sequential Access:</strong> Data is read or written in a linear fashion, one after the other (e.g., text files).</li>
+                <li><strong>Direct Access:</strong> Data can be accessed randomly, allowing faster retrieval (e.g., database files).</li>
+                <li><strong>Indexed Access:</strong> Uses an index to quickly locate data in the file (e.g., index files in databases).</li>
+            </ul>
+    
+            <div class="code-block">
+                Example:<br>
+                A sequential access file can only be read from start to finish, while a direct access file allows reading from any location.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>12. Directory Structure</h2>
+            <p>The <strong>directory structure</strong> organizes files into a hierarchical structure, allowing files to be grouped and located efficiently. Directories may contain files as well as other subdirectories.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                A directory structure might look like this: <code>/home/user/documents/file.txt</code>, where <code>/home/user/documents/</code> is a directory containing the file <code>file.txt</code>.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>13. Protection</h2>
+            <p><strong>Protection</strong> in file systems ensures that only authorized users or processes can access or modify files. The OS enforces access control policies to protect sensitive data and prevent unauthorized actions.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                File permissions like read, write, and execute (rwx) help prevent unauthorized users from accessing or modifying files.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>14. Consistency Semantics</h2>
+            <p><strong>Consistency semantics</strong> refers to ensuring that file system operations preserve data integrity, especially in concurrent access scenarios. The OS ensures that the system remains in a consistent state after operations like file updates.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                When two processes write to the same file simultaneously, the OS must ensure that the final file content is consistent and free from corruption.
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>15. File-System Implementation</h2>
+            <p><strong>File-system implementation</strong> refers to how the file system is structured and managed by the operating system. The implementation includes file system structure, allocation methods, and free-space management.</p>
+    
+            <h3>File-System Structure:</h3>
+            <ul>
+                <li><strong>File Control Block (FCB):</strong> Stores metadata about files, including file name, size, and location.</li>
+                <li><strong>Inodes:</strong> Data structures that represent files, storing attributes like ownership, permissions, and pointers to data blocks.</li>
+            </ul>
+    
+            <h3>Allocation Methods:</h3>
+            <ul>
+                <li><strong>Contiguous Allocation:</strong> Allocates a contiguous block of space for each file.</li>
+                <li><strong>Linked Allocation:</strong> Uses linked lists to store file data blocks non-contiguously.</li>
+                <li><strong>Indexed Allocation:</strong> Uses an index to manage file data blocks.</li>
+            </ul>
+    
+            <h3>Free-Space Management:</h3>
+            <p>The OS maintains a free-space list or bitmap to track available blocks in storage and ensure efficient space utilization.</p>
+    
+            <div class="code-block">
+                Example:<br>
+                Free space on a disk is managed using a bitmap where each bit corresponds to a block. A value of 1 indicates the block is occupied, and 0 means it is free.
+            </div>
+        </section>
+    </div>
+    
+
+</body>
+
+</html>

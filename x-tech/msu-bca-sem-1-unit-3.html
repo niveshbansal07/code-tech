@@ -1,0 +1,1144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Website Name</div>
+
+        <ul class="nav-links">
+            <li><a href="x-home.html">Home</a></li>
+            <li><a href="x-syllabus.html">Syllabus</a></li>
+            <li><a href="study-Material.html">Study Material</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a8 8 0 0 1 5.292 13.708l4.5 4.5-1.414 1.414-4.5-4.5A8 8 0 1 1 10 2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button id="modeToggle" class="toggle-btn">
+                <svg id="sunIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 4a1 1 0 0 1 1-1h.09a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1zm6.364 1.636a1 1 0 0 1 0 1.414l-.064.064a1 1 0 0 1-1.414-1.414l.064-.064a1 1 0 0 1 1.414 0zM20 13a1 1 0 1 1 0-2h.09a1 1 0 1 1 0 2H20zM18.364 19.364a1 1 0 0 1-1.414 0l-.064-.064a1 1 0 0 1 1.414-1.414l.064.064a1 1 0 0 1 0 1.414zM12 20a1 1 0 0 1-1 1h-.09a1 1 0 1 1 0-2H11a1 1 0 0 1 1 1zM5.636 18.364a1 1 0 0 1 0-1.414l.064-.064a1 1 0 0 1 1.414 1.414l-.064.064a1 1 0 0 1-1.414 0zM4 11a1 1 0 1 1 0 2h-.09a1 1 0 1 1 0-2H4zM5.636 5.636a1 1 0 0 1 1.414 0l.064.064a1 1 0 0 1-1.414 1.414l-.064-.064a1 1 0 0 1 0-1.414zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                </svg>
+
+                <svg id="moonIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 0 1 11.21 3a8 8 0 1 0 9.79 9.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sem-unit-header">Programming in C</div>
+
+
+    <div class="container">
+       
+
+        <a href="#unit1" class="unit">UNIT-I: Introduction to ‘C’ Language</a>
+        <div id="unit1" class="content">
+            History, Structures of ‘C’ Programming, Function as building blocks. Language Fundamentals: Character set, C
+            Tokens, Keywords, Identifiers, Variables, Constant, Data Types, and Comments.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Operators</a>
+        <div id="unit2" class="content">
+            Types of operators, Precedence and Associativity, Expression, Statement and types of statements. Built-in
+            Operators and function: Console-based I/O and related built-in I/O function: printf(), scanf(), getch(),
+            getchar(), putchar(); Concept of header files, Preprocessor directives: #include, #define.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Control Structures</a>
+        <div id="unit3" class="content">
+            Decision making structures: If, If-else, Nested If-else, Switch; Loop Control structures: While, Do-while,
+            for, Nested for loop; Other statements: break, continue, goto, exit.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Simple Arithmetic Problems</a>
+        <div id="unit4" class="content">
+            Addition / Multiplication of integers, Determining if a number is positive/negative/even/odd, Maximum of 2
+            or 3 numbers, Sum of first n numbers, Integer division, Digit reversing, Table generation, Factorial, sine
+            series, cosine series, Pascal Triangle, Prime number, Factors of a number, Other problems such as Perfect
+            number, GCD numbers, Swapping.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Functions</a>
+        <div id="unit5" class="content">
+            Basic types of function, Declaration and definition, Function call, Types of function, Parameter passing,
+            Call by value, Call by reference, Scope of variable, Storage classes, Recursion.
+        </div>
+    </div>
+
+    <div class="topic-container">
+        <h1>UNIT-I: Introduction to ‘C’ Language</h1>
+    
+        <section class="section">
+            <h2>1. History of 'C' Language</h2>
+            <p>The C programming language was developed by <strong>Dennis Ritchie</strong> in 1972 at Bell Labs. It was initially designed for system programming, particularly for writing operating systems. C has since evolved and influenced many other languages, such as C++, Java, and Python.</p>
+            <p><strong>Key Features of C:</strong></p>
+            <ul>
+                <li>Portable and efficient</li>
+                <li>Structured programming language</li>
+                <li>Used in system and application software development</li>
+            </ul>
+            <p><strong>Example:</strong> The C language is used in developing operating systems like Unix and embedded systems.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Structure of a C Program</h2>
+            <p>A C program consists of several key components:</p>
+            <ul>
+                <li><strong>Header Files:</strong> These are included at the top of the program to use predefined functions. For example, <code>#include <stdio.h></code> includes standard input/output functions.</li>
+                <li><strong>Main Function:</strong> The execution of a C program starts from the <code>main()</code> function. Every C program must have a <code>main()</code> function.</li>
+                <li><strong>Statements/Functions:</strong> Inside the <code>main()</code> function, you write the code that performs the actual work of the program.</li>
+            </ul>
+    
+            <h3>Example C Program Structure:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        printf("Hello, World!\\n");
+        return 0;
+    }
+            </pre>
+            <p>Explanation: This program simply prints "Hello, World!" to the screen. The <code>printf</code> function is used for output, and <code>return 0</code> indicates the program finished successfully.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. Functions as Building Blocks</h2>
+            <p>In C, functions are used to group code that performs a specific task. Functions help organize the program and make it more modular. Functions can either be built-in (like <code>printf</code>) or user-defined.</p>
+    
+            <h3>Structure of a Function in C:</h3>
+            <ul>
+                <li><strong>Return Type:</strong> This specifies the type of value the function will return, such as <code>int</code> for integers or <code>void</code> for functions that do not return a value.</li>
+                <li><strong>Function Name:</strong> This is the name used to call the function.</li>
+                <li><strong>Parameters:</strong> These are values passed to the function, used inside the function body.</li>
+                <li><strong>Function Body:</strong> This contains the statements that define the task of the function.</li>
+            </ul>
+    
+            <h3>Example of a Simple Function:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    int main() {
+        int result = add(5, 3);  // Calling the add function
+        printf("Sum: %d\\n", result);
+        return 0;
+    }
+            </pre>
+            <p>Explanation: The function <code>add</code> takes two integers as input and returns their sum. In the <code>main</code> function, the <code>add</code> function is called with the values 5 and 3, and the result is printed using <code>printf</code>.</p>
+        </section>
+    
+        <section class="section">
+            <h2>4. Language Fundamentals</h2>
+            <p>In C, there are several language fundamentals that every programmer should understand. These include:</p>
+    
+            <h3>Character Set:</h3>
+            <p>The character set of C includes all alphabets (both uppercase and lowercase), digits, special characters, and whitespace. Characters are represented by single quotes, like <code>'A'</code>, <code>'b'</code>, etc.</p>
+    
+            <h3>C Tokens:</h3>
+            <p>C tokens are the basic building blocks of a C program. They include:</p>
+            <ul>
+                <li><strong>Keywords:</strong> Reserved words like <code>int</code>, <code>char</code>, <code>if</code>, <code>while</code>.</li>
+                <li><strong>Identifiers:</strong> Names used for variables and functions, like <code>myVar</code> or <code>sum</code>.</li>
+                <li><strong>Constants:</strong> Fixed values that do not change during program execution, like <code>5</code>, <code>'A'</code>.</li>
+                <li><strong>Operators:</strong> Symbols like <code>+</code>, <code>-</code>, <code>*</code>, <code>/</code> that perform operations on variables.</li>
+                <li><strong>Comments:</strong> These are used to add explanations to the code. Single-line comments use <code>//</code>, while block comments use <code>/* */</code>.</li>
+            </ul>
+    
+            <h3>Example Code:</h3>
+            <pre class="code-block">
+    // This is a single-line comment
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 10;       // Declaring a variable
+        printf("Number: %d\\n", num);  // Printing the variable
+        return 0;
+    }
+            </pre>
+            <p>Explanation: The program declares an integer variable <code>num</code>, assigns it the value 10, and prints it using the <code>printf</code> function.</p>
+        </section>
+    
+        <section class="section">
+            <h2>5. Variables, Constants, and Data Types</h2>
+            <p>In C, a <strong>variable</strong> is a container for storing data values, while <strong>constants</strong> are fixed values that cannot be changed once assigned.</p>
+    
+            <h3>Data Types:</h3>
+            <p>C provides several data types to define the type of data a variable can store. Some of the common data types are:</p>
+            <ul>
+                <li><strong>int:</strong> Used for integers (whole numbers). Example: <code>int num = 10;</code></li>
+                <li><strong>float:</strong> Used for floating-point numbers (decimal numbers). Example: <code>float price = 10.99;</code></li>
+                <li><strong>char:</strong> Used for storing a single character. Example: <code>char grade = 'A';</code></li>
+                <li><strong>double:</strong> Used for storing larger floating-point numbers. Example: <code>double pi = 3.14159;</code></li>
+            </ul>
+    
+            <h3>Constants in C:</h3>
+            <p>Constants are values that cannot be changed during program execution. They can be declared using the <code>const</code> keyword.</p>
+            <ul>
+                <li><strong>Literal Constants:</strong> Direct values like <code>5</code>, <code>'A'</code>, <code>3.14</code>.</li>
+                <li><strong>Constant Variables:</strong> Variables that cannot be modified, declared using the <code>const</code> keyword. Example: <code>const int MAX = 100;</code>.</li>
+            </ul>
+    
+            <h3>Example Code with Variables and Constants:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int x = 5;       // Variable
+        const int y = 10; // Constant
+        printf("x = %d, y = %d\\n", x, y);
+        return 0;
+    }
+            </pre>
+            <p>Explanation: The program declares a variable <code>x</code> with a value of 5 and a constant <code>y</code> with a value of 10. The values are then printed using <code>printf</code>.</p>
+        </section>
+    </div>
+    
+    
+    <div class="topic-container">
+        <h1>UNIT-II: Operators, Expressions, Console I/O, and Preprocessor Directives</h1>
+    
+        <section class="section">
+            <h2>1. Types of Operators in C</h2>
+            <p>C supports various operators to perform computations and logical operations.</p>
+            <ul>
+                <li><strong>Arithmetic Operators:</strong> +, -, *, /, %</li>
+                <li><strong>Relational Operators:</strong> ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+                <li><strong>Logical Operators:</strong> &&, ||, !</li>
+                <li><strong>Assignment Operators:</strong> =, +=, -=, *=, /=, %=</li>
+                <li><strong>Increment/Decrement:</strong> ++, --</li>
+                <li><strong>Bitwise Operators:</strong> &, |, ^, ~, &lt;&lt;, &gt;&gt;</li>
+                <li><strong>Conditional (Ternary) Operator:</strong> condition ? true : false</li>
+                <li><strong>Special Operators:</strong> sizeof, &, *, , (comma)</li>
+            </ul>
+    
+            <h3>Examples:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 5, b = 2;
+    
+        // Arithmetic
+        printf("Add: %d\n", a + b);
+        printf("Modulus: %d\n", a % b);
+    
+        // Relational
+        printf("a == b: %d\n", a == b);
+    
+        // Logical
+        printf("a &gt; 0 && b &gt; 0: %d\n", a &gt; 0 && b &gt; 0);
+    
+        // Assignment
+        a += 3;
+        printf("a after += 3: %d\n", a);
+    
+        // Bitwise
+        printf("a & b: %d\n", a & b);
+    
+        // Conditional
+        int max = (a &gt; b) ? a : b;
+        printf("Max: %d\n", max);
+    
+        return 0;
+    }
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Precedence and Associativity</h2>
+            <p>Operator precedence determines the order of evaluation. Associativity determines direction.</p>
+    
+            <h3>Example:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int result = 10 + 2 * 3;
+        printf("Result: %d\n", result);  // Output: 16
+        return 0;
+    }
+            </pre>
+            <p>Explanation: <code>*</code> has higher precedence than <code>+</code>.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. Expressions, Statements & Types of Statements</h2>
+            <p><strong>Expression:</strong> Any combination of variables and operators (e.g., a + b).</p>
+            <p><strong>Statement:</strong> A complete instruction (e.g., int x = 5;).</p>
+            <p><strong>Types:</strong></p>
+            <ul>
+                <li>Declaration: <code>int x;</code></li>
+                <li>Assignment: <code>x = 10;</code></li>
+                <li>I/O: <code>printf()</code>, <code>scanf()</code></li>
+                <li>Control: <code>if</code>, <code>for</code>, <code>while</code>, <code>switch</code></li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int x = 5;
+        if (x &gt; 0) {
+            printf("Positive\n");
+        }
+        return 0;
+    }
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Built-in Console I/O Functions</h2>
+            <ul>
+                <li><code>printf()</code>: Outputs data to screen</li>
+                <li><code>scanf()</code>: Reads input from user</li>
+                <li><code>getchar()</code>: Reads single character</li>
+                <li><code>putchar()</code>: Outputs single character</li>
+                <li><code>getch()</code>: Reads char (doesn’t show on screen)</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        char ch;
+        printf("Enter a char: ");
+        ch = getchar();     // Input
+        printf("You entered: ");
+        putchar(ch);        // Output
+        return 0;
+    }
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Header Files and Preprocessor Directives</h2>
+            <p><strong>Header Files:</strong> Contain code for built-in functions.</p>
+            <ul>
+                <li><code>#include &lt;stdio.h&gt;</code>: Standard I/O</li>
+                <li><code>#include &lt;math.h&gt;</code>: Math functions</li>
+                <li><code>#include &lt;string.h&gt;</code>: String functions</li>
+            </ul>
+    
+            <p><strong>Preprocessor Directives:</strong></p>
+            <ul>
+                <li><code>#include</code>: Adds header files</li>
+                <li><code>#define</code>: Defines constants/macros</li>
+            </ul>
+    
+            <h3>Example of #define:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    #define PI 3.14159
+    
+    int main() {
+        float r = 3;
+        float area = PI * r * r;
+        printf("Area: %.2f\n", area);
+        return 0;
+    }
+            </pre>
+        </section>
+    </div>
+    
+    
+    <div class="topic-container">
+        <h1>UNIT-III: Control Structures in C</h1>
+    
+        <section class="section">
+            <h2>1. Decision Making Structures</h2>
+    
+            <h3>1.1 if Statement</h3>
+            <p>Executes a block of code if the condition is true.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 10;
+        if (num &gt; 0) {
+            printf("Positive number");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Positive number
+            </pre>
+    
+            <h3>1.2 if-else Statement</h3>
+            <p>Executes one block if true, another if false.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = -5;
+        if (num &gt;= 0) {
+            printf("Positive");
+        } else {
+            printf("Negative");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Negative
+            </pre>
+    
+            <h3>1.3 Nested if-else</h3>
+            <p>Multiple conditions checked in hierarchy.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 0;
+        if (num &gt; 0) {
+            printf("Positive");
+        } else if (num &lt; 0) {
+            printf("Negative");
+        } else {
+            printf("Zero");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Zero
+            </pre>
+    
+            <h3>1.4 switch Statement</h3>
+            <p>Used for multiple selections based on value.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int choice = 2;
+        switch (choice) {
+            case 1: printf("One"); break;
+            case 2: printf("Two"); break;
+            case 3: printf("Three"); break;
+            default: printf("Invalid");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Two
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Loop Control Structures</h2>
+    
+            <h3>2.1 while Loop</h3>
+            <p>Repeats a block while the condition is true.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int i = 1;
+        while (i &lt;= 5) {
+            printf("%d ", i);
+            i++;
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    1 2 3 4 5
+            </pre>
+    
+            <h3>2.2 do-while Loop</h3>
+            <p>Executes first, then checks the condition.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int i = 1;
+        do {
+            printf("%d ", i);
+            i++;
+        } while (i &lt;= 5);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    1 2 3 4 5
+            </pre>
+    
+            <h3>2.3 for Loop</h3>
+            <p>Compact loop structure for fixed iterations.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        for (int i = 1; i &lt;= 5; i++) {
+            printf("%d ", i);
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    1 2 3 4 5
+            </pre>
+    
+            <h3>2.4 Nested for Loop</h3>
+            <p>Loops inside another loop (useful for patterns).</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        for (int i = 1; i &lt;= 3; i++) {
+            for (int j = 1; j &lt;= 3; j++) {
+                printf("(%d,%d) ", i, j);
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    (1,1) (1,2) (1,3) 
+    (2,1) (2,2) (2,3) 
+    (3,1) (3,2) (3,3)
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Other Control Statements</h2>
+    
+            <h3>3.1 break Statement</h3>
+            <p>Exits a loop or switch early.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        for (int i = 1; i &lt;= 10; i++) {
+            if (i == 5) break;
+            printf("%d ", i);
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    1 2 3 4
+            </pre>
+    
+            <h3>3.2 continue Statement</h3>
+            <p>Skips to the next iteration.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        for (int i = 1; i &lt;= 5; i++) {
+            if (i == 3) continue;
+            printf("%d ", i);
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    1 2 4 5
+            </pre>
+    
+            <h3>3.3 goto Statement</h3>
+            <p>Jumps to a labeled statement (use with caution).</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 1;
+        if (num == 1) {
+            goto label;
+        }
+        printf("This will be skipped\n");
+    
+        label:
+        printf("Jumped to label!\n");
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Jumped to label!
+            </pre>
+    
+            <h3>3.4 exit() Function</h3>
+            <p>Terminates the program immediately.</p>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    #include &lt;stdlib.h&gt;
+    
+    int main() {
+        printf("Before exit\n");
+        exit(0);
+        printf("This won't be printed\n");
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Before exit
+            </pre>
+        </section>
+    </div>
+    
+
+
+
+    <div class="topic-container">
+        <h1>UNIT-IV: Simple Arithmetic Problems</h1>
+    
+        <section class="section">
+            <h2>1. Addition / Multiplication of Integers</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 5, b = 3;
+        printf("Addition: %d\n", a + b);
+        printf("Multiplication: %d\n", a * b);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Addition: 8
+    Multiplication: 15
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Positive / Negative / Even / Odd</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = -7;
+        if(num > 0)
+            printf("Positive\n");
+        else if(num < 0)
+            printf("Negative\n");
+        else
+            printf("Zero\n");
+    
+        if(num % 2 == 0)
+            printf("Even\n");
+        else
+            printf("Odd\n");
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Negative
+    Odd
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Maximum of 2 and 3 Numbers</h2>
+            <pre class="code-block">
+    // Maximum of 2 numbers
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 10, b = 20;
+        if(a > b)
+            printf("Max: %d\n", a);
+        else
+            printf("Max: %d\n", b);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Max: 20
+            </pre>
+    
+            <pre class="code-block">
+    // Maximum of 3 numbers
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 10, b = 20, c = 15;
+        if(a > b && a > c)
+            printf("Max: %d\n", a);
+        else if(b > c)
+            printf("Max: %d\n", b);
+        else
+            printf("Max: %d\n", c);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Max: 20
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Sum of First N Numbers</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int n = 5, sum = 0;
+        for(int i = 1; i <= n; i++) {
+            sum += i;
+        }
+        printf("Sum = %d\n", sum);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Sum = 15
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Integer Division</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 10, b = 3;
+        printf("Quotient = %d\n", a / b);
+        printf("Remainder = %d\n", a % b);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Quotient = 3
+    Remainder = 1
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Digit Reversing</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 1234, rev = 0;
+        while(num != 0) {
+            rev = rev * 10 + num % 10;
+            num /= 10;
+        }
+        printf("Reversed = %d\n", rev);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Reversed = 4321
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Multiplication Table of a Number</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int n = 5;
+        for(int i = 1; i <= 10; i++) {
+            printf("%d x %d = %d\n", n, i, n * i);
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    5 x 1 = 5
+    5 x 2 = 10
+    ...
+    5 x 10 = 50
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Factorial of a Number</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int n = 5, fact = 1;
+        for(int i = 1; i <= n; i++) {
+            fact *= i;
+        }
+        printf("Factorial = %d\n", fact);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Factorial = 120
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>9. Prime Number</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int num = 7, isPrime = 1;
+        for(int i = 2; i <= num / 2; i++) {
+            if(num % i == 0) {
+                isPrime = 0;
+                break;
+            }
+        }
+        if(isPrime)
+            printf("Prime Number\n");
+        else
+            printf("Not Prime\n");
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    Prime Number
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>10. Pascal’s Triangle (n = 5)</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int fact(int n) {
+        int f = 1;
+        for(int i = 1; i <= n; i++) f *= i;
+        return f;
+    }
+    
+    int main() {
+        int n = 5;
+        for(int i = 0; i < n; i++) {
+            for(int space = 0; space < n - i; space++) printf(" ");
+            for(int j = 0; j <= i; j++) {
+                printf("%d ", fact(i)/(fact(j)*fact(i-j)));
+            }
+            printf("\n");
+        }
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+         1
+        1 1
+       1 2 1
+      1 3 3 1
+     1 4 6 4 1
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>11. GCD of Two Numbers</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 36, b = 60, gcd;
+        for(int i = 1; i <= a && i <= b; ++i) {
+            if(a % i == 0 && b % i == 0)
+                gcd = i;
+        }
+        printf("GCD = %d\n", gcd);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    GCD = 12
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>12. Swapping Two Numbers</h2>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int main() {
+        int a = 5, b = 10, temp;
+        temp = a;
+        a = b;
+        b = temp;
+        printf("a = %d, b = %d\n", a, b);
+        return 0;
+    }
+            </pre>
+            <pre class="code-block">
+    Output:
+    a = 10, b = 5
+            </pre>
+        </section>
+    </div>
+    
+
+    <div class="topic-container">
+        <h1>UNIT-V: Functions in C</h1>
+    
+        <section class="section">
+            <h2>1. Basic Types of Functions</h2>
+            <p>Functions in C are blocks of code that perform a specific task. There are mainly two types:</p>
+            <ul>
+                <li><strong>Library Functions:</strong> Built-in functions like <code>printf()</code>, <code>scanf()</code>.</li>
+                <li><strong>User-defined Functions:</strong> Created by the programmer to perform custom tasks.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2. Declaration and Definition</h2>
+            <p><strong>Function Declaration:</strong> Tells the compiler about the function name, return type, and parameters.</p>
+            <p><strong>Function Definition:</strong> Contains the actual body or implementation of the function.</p>
+            
+            <h3>Example:</h3>
+            <pre class="code-block">
+    // Declaration
+    int add(int, int);
+    
+    // Definition
+    int add(int a, int b) {
+        return a + b;
+    }
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Function Call</h2>
+            <p>To use a function, we call it from another function (typically <code>main()</code>).</p>
+            
+            <h3>Example:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    int main() {
+        int sum = add(5, 3);
+        printf("Sum = %d\\n", sum);
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Sum = 8
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Types of Functions</h2>
+            <ul>
+                <li>Function with no arguments and no return value</li>
+                <li>Function with arguments and no return value</li>
+                <li>Function with arguments and return value</li>
+                <li>Function with no arguments but return value</li>
+            </ul>
+    
+            <h3>Example (Function with arguments and return value):</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int multiply(int a, int b) {
+        return a * b;
+    }
+    
+    int main() {
+        int result = multiply(4, 5);
+        printf("Product = %d\\n", result);
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Product = 20
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Parameter Passing</h2>
+            <p>There are two types of parameter passing:</p>
+            <ul>
+                <li><strong>Call by Value:</strong> Copies the value of arguments. Changes don’t reflect in the caller.</li>
+                <li><strong>Call by Reference:</strong> Passes address. Changes affect the original value (via pointers).</li>
+            </ul>
+    
+            <h3>Example (Call by Value):</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    void change(int x) {
+        x = 100;
+    }
+    
+    int main() {
+        int a = 5;
+        change(a);
+        printf("Value of a = %d\\n", a);
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Value of a = 5
+            </pre>
+    
+            <h3>Example (Call by Reference):</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    void change(int *x) {
+        *x = 100;
+    }
+    
+    int main() {
+        int a = 5;
+        change(&a);
+        printf("Value of a = %d\\n", a);
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Value of a = 100
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Scope of Variables</h2>
+            <ul>
+                <li><strong>Local:</strong> Declared inside a function, accessible only within that function.</li>
+                <li><strong>Global:</strong> Declared outside all functions, accessible in the whole program.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int global = 50; // Global
+    
+    int main() {
+        int local = 10; // Local
+        printf("Global = %d, Local = %d\\n", global, local);
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Global = 50, Local = 10
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Storage Classes</h2>
+            <p>Storage classes define scope, lifetime, and linkage of variables.</p>
+            <ul>
+                <li><strong>auto:</strong> Default for local variables.</li>
+                <li><strong>static:</strong> Retains value between function calls.</li>
+                <li><strong>extern:</strong> Refers to global variable declared elsewhere.</li>
+                <li><strong>register:</strong> Suggests storing variable in a CPU register.</li>
+            </ul>
+    
+            <h3>Example (Static variable):</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    void counter() {
+        static int count = 0;
+        count++;
+        printf("Count = %d\\n", count);
+    }
+    
+    int main() {
+        counter();
+        counter();
+        counter();
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Count = 1
+    Count = 2
+    Count = 3
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Recursion</h2>
+            <p>Recursion is when a function calls itself to solve a smaller part of the problem.</p>
+    
+            <h3>Example: Factorial using Recursion</h3>
+            <pre class="code-block">
+    #include &lt;stdio.h&gt;
+    
+    int factorial(int n) {
+        if(n == 0) return 1;
+        else return n * factorial(n - 1);
+    }
+    
+    int main() {
+        int num = 5;
+        printf("Factorial of %d = %d\\n", num, factorial(num));
+        return 0;
+    }
+            </pre>
+    
+            <h3>Output:</h3>
+            <pre class="code-block">
+    Factorial of 5 = 120
+            </pre>
+        </section>
+    </div>
+    
+    
+</body>
+
+</html>

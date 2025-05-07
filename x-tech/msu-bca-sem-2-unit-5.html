@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Financial Accounting with Tally</div>
+
+    <div class="container">
+        <a href="#unit1" class="unit">UNIT-I: Basic Accounting & Company Configuration</a>
+        <div id="unit1" class="content">
+            Basic Concepts of Accounting, Financial Statements, Financial Statement Analysis, Cost Centre, Basic
+            concepts of Inventory. Tally Configuration & INI setup, Data Directory & Folders configuration, Single &
+            Multiple User, Tally Screen Components, Mouse / Keyboard Conventions & Key Combinations, Switching between
+            screen areas, Quitting Tally. Maintaining Company Data, Basic Company Details,
+            Create/Alter/Select/Load/Close a Company, Chart of Accounts, Company Features, Configuration.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Voucher Entries & Advanced Transactions</a>
+        <div id="unit2" class="content">
+            Create, Alter & Display Groups and Ledgers, All accounting voucher types and transactions, Create and Alter
+            new Voucher type, Item and Account Invoice transactions, Excise Invoice, Export Invoice, Transactions using
+            Bill-wise details. Create, Alter & Display Cost Centre and Cost Categories, Cost Centre & Category
+            allocation in voucher entry, Creating Cost Centre Class, Invoice entry in a Class situation. Create, Alter &
+            Delete Foreign Currencies, Voucher entry using foreign currency, Bank Reconciliation, Interest calculations
+            using simple & advanced parameters, Interest on outstanding balances & invoices, Use of voucher class,
+            Adjustment of interest, Creation of voucher class.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Budgeting, Job Costing & Reports</a>
+        <div id="unit3" class="content">
+            Create, Alter & Delete Budgets for groups, ledgers & cost centres, Defining credit limit & period, Display
+            Budgets & Variances, Create, Alter & Delete a scenario. Enabling Job Costing in Tally, Master creation &
+            configuration, Creation of Voucher type & Class for Stock Transactions, Transfer journal for Godowns,
+            Consumption journal, Payment voucher, Godown summary report, Job Work Analysis, Material consumption
+            summary. Reports: Balance Sheet, Profit & Loss, Ratio Analysis, Trial Balance, Cash/Bank Book, All Ledgers,
+            Group Summary & Vouchers, Registers, Cost Centre Reports, Outstanding reports, Interest Reports, Cash/Fund
+            Flow, Day Book, List of Accounts, Reversing Journals, Optional & Post-dated Vouchers.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Inventory Management & Reports</a>
+        <div id="unit4" class="content">
+            Create, Alter & Display Stock Groups and Items, Stock behavior via costing/market valuation,
+            Sales/Purchase/Rejected stock behavior, Negative balance handling, Physical count adjustment. Create, Alter
+            & Display Stock Categories, Units of Measure, Alternate Units, Standard Cost/Selling Price, Rate of Duty,
+            MRP. Create & Allocate Godowns, All Inventory Voucher types, Inventory in Accounting Vouchers, Reorder
+            Level, Tracking Numbers, Batch-wise details, Additional costs, Bill of Material, Cost Estimation, Price List
+            & Levels, Zero Valued Entries, Actual vs Billed Quantity Transactions. Inventory Reports: Stock Summary,
+            Stock Registers, Movement & Ageing Analysis, Order Books, Reorder Status, Bill Pendings, Exception Reports.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Printing, Security, Data Management</a>
+        <div id="unit5" class="content">
+            Cheque Printing, Common and Format-specific Printing, Multi-Account Printing, Dynamic Reporting Options.
+            Group Company Creation, Tally Vault, Security Control, Security Levels, Tally Audit. Backup & Restore,
+            Company Split, Data Export/Import, ODBC Compliance, E-mail Use, Internet Publishing, Uploading, Web Browser
+            & Online Help, Rewriting Data.
+        </div>
+    </div>
+</body>
+
+<!-- UNIT 1 -->
+
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Basic Concepts of Accounting, Financial Statements, Financial Statement Analysis, Cost Centre, Basic Concepts of Inventory, Tally Configuration & INI Setup</h1>
+
+    <section class="section">
+        <h2>1. Basic Concepts of Accounting</h2>
+        <p>Accounting is the process of recording, summarizing, and reporting financial transactions to provide insights into a business's financial performance and position. Key concepts include:</p>
+        <ul>
+            <li><strong>Assets:</strong> Resources owned by a business, e.g., cash, buildings, machinery.</li>
+            <li><strong>Liabilities:</strong> Obligations the business must fulfill, e.g., loans, payables.</li>
+            <li><strong>Equity:</strong> Owner's claim on the assets, calculated as assets - liabilities.</li>
+            <li><strong>Revenue:</strong> Income from sales of goods or services.</li>
+            <li><strong>Expenses:</strong> Costs incurred in running the business.</li>
+        </ul>
+        <p><strong>Example:</strong> A company sells products worth $1000 and incurs expenses of $600. The profit is calculated as:</p>
+        <div class="code-block">
+            Profit = Revenue - Expenses <br>
+            Profit = $1000 - $600 = $400
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Financial Statements</h2>
+        <p>Financial statements summarize the financial activities of a company. The key statements include:</p>
+        <ul>
+            <li><strong>Income Statement:</strong> Shows the company's profitability over a period, highlighting revenues and expenses.</li>
+            <li><strong>Balance Sheet:</strong> Displays the company's financial position at a point in time, showing assets, liabilities, and equity.</li>
+            <li><strong>Cash Flow Statement:</strong> Indicates the inflows and outflows of cash, showing how cash is being used.</li>
+        </ul>
+        <p><strong>Example:</strong> The income statement of a company for the year might show $50,000 in revenue and $30,000 in expenses. The net income is:</p>
+        <div class="code-block">
+            Net Income = Revenue - Expenses <br>
+            Net Income = $50,000 - $30,000 = $20,000
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Financial Statement Analysis</h2>
+        <p>Financial statement analysis involves evaluating the performance and financial health of a company through its financial statements. Key tools include:</p>
+        <ul>
+            <li><strong>Ratios:</strong> Financial ratios such as liquidity ratios, profitability ratios, and solvency ratios are used to evaluate the company's performance.</li>
+            <li><strong>Trend Analysis:</strong> Analyzing financial statements over multiple periods to identify trends.</li>
+            <li><strong>Common-size Statements:</strong> Converting financial data into percentages for better comparison across companies.</li>
+        </ul>
+        <p><strong>Example:</strong> The current ratio is calculated as:</p>
+        <div class="code-block">
+            Current Ratio = Current Assets / Current Liabilities <br>
+            Current Assets = $50,000, Current Liabilities = $20,000 <br>
+            Current Ratio = $50,000 / $20,000 = 2.5
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Cost Centre</h2>
+        <p>A cost centre is a department or unit within an organization where costs are incurred, but it does not generate revenue. Its primary goal is cost control and monitoring.</p>
+        <ul>
+            <li><strong>Example:</strong> A production department in a factory might be a cost centre, with costs for labor, materials, and overheads being tracked.</li>
+        </ul>
+        <p><strong>Example of Cost Centre:</strong> If a factory's production department spends $10,000 on labor and $5,000 on materials, the total cost for that department is:</p>
+        <div class="code-block">
+            Total Cost = Labor + Materials <br>
+            Total Cost = $10,000 + $5,000 = $15,000
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Basic Concepts of Inventory</h2>
+        <p>Inventory refers to the goods and materials held by a business for resale or production. Basic inventory types include:</p>
+        <ul>
+            <li><strong>Raw Materials:</strong> Materials used in manufacturing products.</li>
+            <li><strong>Work-in-Progress:</strong> Products that are in the process of being manufactured.</li>
+            <li><strong>Finished Goods:</strong> Products that are completed and ready for sale.</li>
+        </ul>
+        <p><strong>Example:</strong> A company may hold:</p>
+        <div class="code-block">
+            Raw Materials = $10,000 <br>
+            Work-in-Progress = $5,000 <br>
+            Finished Goods = $15,000
+        </div>
+        <p>Total Inventory = Raw Materials + Work-in-Progress + Finished Goods = $10,000 + $5,000 + $15,000 = $30,000</p>
+    </section>
+
+    <section class="section">
+        <h2>6. Tally Configuration & INI Setup</h2>
+        <p>Tally is an accounting software that allows businesses to manage financial data efficiently. The configuration of Tally involves setting up various features and options such as:</p>
+        <ul>
+            <li><strong>INI Setup:</strong> Configuration files that determine Tally's settings and functionalities.</li>
+            <li><strong>Data Directory:</strong> The folder where Tally stores data files, reports, and configurations.</li>
+            <li><strong>Single & Multiple Users:</strong> Configuring Tally for use by one or more users.</li>
+            <li><strong>Company Configuration:</strong> Creating and configuring company details such as name, address, financial year, etc.</li>
+        </ul>
+        <p><strong>Example:</strong> In Tally, you can set the financial year to start from April 1 and the currency symbol to ₹. You can also configure whether the company uses GST or not.</p>
+    </section>
+
+    <section class="section">
+        <h2>7. Tally Screen Components</h2>
+        <p>The Tally screen consists of various components that facilitate the smooth operation of the software. These include:</p>
+        <ul>
+            <li><strong>Gateway of Tally:</strong> The main screen that provides access to various features like accounts, inventory, and reports.</li>
+            <li><strong>Menus:</strong> Options available for navigating through Tally's features.</li>
+            <li><strong>Keyboard/Mouse Conventions:</strong> Keyboard shortcuts and mouse controls for efficient navigation.</li>
+        </ul>
+        <p><strong>Example:</strong> To create a new company in Tally, navigate to "Gateway of Tally" and select "Create Company."</p>
+    </section>
+
+    <section class="section">
+        <h2>8. Maintaining Company Data</h2>
+        <p>Maintaining company data in Tally involves creating, altering, and managing company-specific details. Key aspects include:</p>
+        <ul>
+            <li><strong>Create Company:</strong> Creating a new company by entering basic details such as name, address, and financial year.</li>
+            <li><strong>Alter Company:</strong> Modifying existing company details.</li>
+            <li><strong>Chart of Accounts:</strong> Defining and managing the list of accounts used for recording transactions.</li>
+            <li><strong>Load/Close Company:</strong> Opening and closing the company data for use in Tally.</li>
+        </ul>
+        <p><strong>Example:</strong> When you start Tally, you can select the "Load" option to open an existing company's data.</p>
+    </section>
+</div>
+
+<!-- UNIT 2 -->
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Create, Alter & Display Groups and Ledgers, All Accounting Voucher Types and Transactions</h1>
+
+    <section class="section">
+        <h2>1. Create, Alter & Display Groups and Ledgers</h2>
+        <p>In Tally, groups and ledgers are essential for classifying transactions. Groups classify similar ledgers, and each ledger represents an account.</p>
+        <ul>
+            <li><strong>Create Group:</strong> A group is created by selecting a predefined category such as 'Assets,' 'Liabilities,' etc., and entering the group name.</li>
+            <li><strong>Create Ledger:</strong> A ledger is created within a group, representing individual accounts like 'Cash,' 'Sales,' or 'Purchases.'</li>
+        </ul>
+        <p><strong>Example:</strong> To create a new ledger in the 'Assets' group for 'Bank Account', follow these steps:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Create Ledger" <br>
+            3. Choose "Assets" as the Group <br>
+            4. Enter "Bank Account" as the Ledger Name
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. All Accounting Voucher Types and Transactions</h2>
+        <p>Tally provides various types of accounting vouchers for different types of transactions. Some common voucher types include:</p>
+        <ul>
+            <li><strong>Receipt Voucher:</strong> Used for recording cash or bank receipts.</li>
+            <li><strong>Payment Voucher:</strong> Used for recording cash or bank payments.</li>
+            <li><strong>Sales Voucher:</strong> Used for recording sales transactions.</li>
+            <li><strong>Purchase Voucher:</strong> Used for recording purchase transactions.</li>
+            <li><strong>Journal Voucher:</strong> Used for non-cash transactions like adjusting accounts.</li>
+        </ul>
+        <p><strong>Example:</strong> To record a receipt transaction for Rs. 5000, use the following steps:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Receipt" Voucher Type <br>
+            3. Select "Cash" as the ledger <br>
+            4. Enter the amount as Rs. 5000
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Create and Alter New Voucher Type</h2>
+        <p>You can create or alter new voucher types in Tally to match specific business needs. Tally allows customization of voucher types, such as adding new fields or changing existing ones.</p>
+        <p><strong>Example:</strong> To create a new voucher type for 'Loan Receipt':</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Accounts Info" > "Voucher Types" <br>
+            3. Click "Create" to add a new voucher type <br>
+            4. Name it "Loan Receipt" and set the appropriate configurations
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Item and Account Invoice Transactions</h2>
+        <p>Tally allows the entry of both item invoices (inventory-related) and account invoices (non-inventory transactions). The difference is that item invoices track stock, while account invoices do not.</p>
+        <p><strong>Example:</strong> For an item invoice:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Sales" Voucher Type <br>
+            3. Choose the "Item Invoice" option <br>
+            4. Enter the item details and the amount
+        </div>
+        <p><strong>Example:</strong> For an account invoice:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Sales" Voucher Type <br>
+            3. Choose "Account Invoice" option <br>
+            4. Enter the relevant account and amount details
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Excise Invoice</h2>
+        <p>Excise invoices are used in businesses that deal with excise duty. Tally helps to generate excise invoices for sales of exciseable goods.</p>
+        <p><strong>Example:</strong> To create an Excise Invoice:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Sales" Voucher Type <br>
+            3. Choose "Excise Invoice" <br>
+            4. Enter the sales details along with excise duty calculation
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6. Export Invoice</h2>
+        <p>Export invoices are used when goods are sold internationally. Tally can be configured to handle export-related details, including export duty and tax exemptions.</p>
+        <p><strong>Example:</strong> To create an Export Invoice:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Sales" Voucher Type <br>
+            3. Choose "Export Invoice" <br>
+            4. Enter export details like country, currency, and tax exemptions
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Transactions Using Bill-wise Details</h2>
+        <p>Bill-wise details are used to manage outstanding bills and their payments. This feature allows tracking of due amounts and payments for a particular bill.</p>
+        <p><strong>Example:</strong> To record a bill payment using bill-wise details:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Payment" Voucher Type <br>
+            3. Choose the "Bill-wise Details" option <br>
+            4. Enter the bill number, due date, and amount paid
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>8. Create, Alter & Display Cost Centre and Cost Categories</h2>
+        <p>Cost Centres and Cost Categories help in tracking and allocating expenses to specific departments or projects. Cost centres represent individual units, while cost categories represent different types of costs.</p>
+        <p><strong>Example:</strong> To create a cost centre for "Production Department":</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Cost Centres" > "Create" <br>
+            3. Name it "Production Department" <br>
+            4. Enter the relevant details
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>9. Cost Centre & Cost Category Allocation in Voucher Entry</h2>
+        <p>Once cost centres and cost categories are created, they can be assigned to relevant voucher entries to track specific expenses.</p>
+        <p><strong>Example:</strong> During a payment voucher entry, you can allocate the cost to the "Production Department" cost centre.</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Payment" Voucher Type <br>
+            3. Enter the voucher details <br>
+            4. Allocate the cost to the relevant cost centre
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>10. Creating Cost Centre Class and Invoice Entry in a Class Situation</h2>
+        <p>A Cost Centre Class is used when you want to group similar cost centres under a common class. This can simplify cost reporting.</p>
+        <p><strong>Example:</strong> To create a Cost Centre Class:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Cost Centre Class" > "Create" <br>
+            3. Enter the class name, such as "Departmental Costs" <br>
+            4. Assign relevant cost centres to the class
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>11. Create, Alter & Delete Foreign Currencies</h2>
+        <p>Tally supports transactions in foreign currencies. You can create, alter, or delete foreign currencies used in your transactions.</p>
+        <p><strong>Example:</strong> To create a new foreign currency:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Currencies" > "Create" <br>
+            3. Enter the currency name and symbol, e.g., USD
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>12. Voucher Entry Using Foreign Currency</h2>
+        <p>When recording transactions in foreign currencies, Tally automatically converts them into the base currency based on the exchange rate.</p>
+        <p><strong>Example:</strong> To enter a sales voucher using USD as the foreign currency:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Sales" Voucher Type <br>
+            3. Choose the "Foreign Currency" option <br>
+            4. Enter the amount in USD
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>13. Bank Reconciliation</h2>
+        <p>Bank reconciliation is the process of comparing the bank's records with the company's ledger. Tally allows automatic reconciliation of bank accounts.</p>
+        <p><strong>Example:</strong> To reconcile a bank account:</p>
+        <div class="code-block">
+            1. Go to "Banking" <br>
+            2. Select "Reconciliation" <br>
+            3. Choose the bank account to reconcile <br>
+            4. Match the transactions with the bank's records
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>14. Interest Calculations Using Simple & Advance Parameters</h2>
+        <p>Interest can be calculated in Tally using both simple and advanced methods, with options to adjust the calculation method.</p>
+        <p><strong>Example:</strong> To calculate interest on outstanding balances using advanced parameters:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select the relevant voucher type <br>
+            3. Choose the "Interest Calculation" option <br>
+            4. Enter the parameters like interest rate, start date, and end date
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>15. Use of Voucher Class and Adjustment of Interest</h2>
+        <p>A voucher class is used to automate recurring transactions. Adjustments can be made to the interest in the voucher class.</p>
+        <p><strong>Example:</strong> To adjust interest in a voucher class:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Voucher Classes" <br>
+            3. Create or alter a voucher class <br>
+            4. Set the interest adjustment parameters
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>16. Creation of Voucher Class and Invoice Entry in a Class Situation</h2>
+        <p>The voucher class helps in setting predefined rules for voucher entries, like default ledgers and taxes.</p>
+        <p><strong>Example:</strong> To create a voucher class for a special discount:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Voucher Classes" <br>
+            3. Create a new class for "Discount Sale" <br>
+            4. Set the default discounts and ledgers
+        </div>
+    </section>
+</div>
+
+<!-- UNIT 3 -->
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Create, Alter & Delete Budgets, Credit Limits, Job Costing, and Various Reports</h1>
+
+    <section class="section">
+        <h2>1. Create, Alter & Delete Budgets for Groups, Ledgers & Cost Centres</h2>
+        <p>Budgets are used to set financial targets for groups, ledgers, or cost centres. They help track expenses and incomes against predefined targets.</p>
+        <p><strong>Example:</strong> To create a budget for a ledger (e.g., "Sales"):</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Budgets" > "Create" <br>
+            3. Choose the ledger "Sales" <br>
+            4. Set the budget amount for a given period (e.g., Rs. 50,000 for the month)
+        </div>
+        <p>Similarly, you can alter or delete budgets by selecting the relevant group, ledger, or cost centre and making the necessary adjustments.</p>
+    </section>
+
+    <section class="section">
+        <h2>2. Defining Credit Limit & Credit Period</h2>
+        <p>Credit limits and credit periods are set to control the amount and time for which a customer or supplier can avail credit.</p>
+        <p><strong>Example:</strong> To set a credit limit and period for a customer:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Ledgers" > "Create" <br>
+            3. Enter the customer's name <br>
+            4. Set the credit limit (e.g., Rs. 20,000) <br>
+            5. Define the credit period (e.g., 30 days)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Display Budgets & Variances</h2>
+        <p>After setting up budgets, you can display them alongside actual figures to analyze any variances (differences) between the budgeted and actual amounts.</p>
+        <p><strong>Example:</strong> To display budget and variances:</p>
+        <div class="code-block">
+            1. Go to "Display" <br>
+            2. Select "Budgets" <br>
+            3. Choose the relevant group or ledger <br>
+            4. View the comparison between the budgeted and actual amounts
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Create, Alter & Delete a Scenario</h2>
+        <p>Scenarios in Tally allow you to manage different situations or versions of budgets, such as best-case, worst-case, and most likely scenarios.</p>
+        <p><strong>Example:</strong> To create a new scenario:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Scenarios" > "Create" <br>
+            3. Name the scenario (e.g., "Best Case") <br>
+            4. Set the desired budget or targets for that scenario
+        </div>
+        <p>Similarly, you can alter or delete existing scenarios by selecting the relevant scenario.</p>
+    </section>
+
+    <section class="section">
+        <h2>5. Enabling Job Costing in Tally</h2>
+        <p>Job costing allows you to track the costs associated with specific jobs, such as a manufacturing project or a service contract. It helps in calculating the profitability of individual jobs.</p>
+        <p><strong>Example:</strong> To enable Job Costing:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "F11: Features" <br>
+            3. Enable "Job Costing" by setting it to "Yes"
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6. Master Creation & Configuration for Job Costing</h2>
+        <p>For job costing to work effectively, you must create job cost masters that define the job parameters.</p>
+        <p><strong>Example:</strong> To create a Job Cost Master:</p>
+        <div class="code-block">
+            1. Go to "Job Costing" <br>
+            2. Select "Create Job Cost Master" <br>
+            3. Enter the Job Name (e.g., "Manufacturing Job 1") <br>
+            4. Set the job details, such as start and end dates, and any relevant cost centres
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Creation of Voucher Type & Voucher Class for Stock Transactions</h2>
+        <p>Voucher types and classes help streamline stock transactions such as purchases, sales, and stock adjustments. A voucher class can automate certain details, like tax calculations and account allocations.</p>
+        <p><strong>Example:</strong> To create a new voucher type for stock transactions:</p>
+        <div class="code-block">
+            1. Go to "Accounting Info" <br>
+            2. Select "Voucher Types" > "Create" <br>
+            3. Enter "Stock Purchase" as the voucher type <br>
+            4. Set the details, such as applicable taxes and ledgers
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>8. Creation of Transfer Journal for Transfer of Stock Between Godowns</h2>
+        <p>The transfer journal helps in transferring stock from one godown (warehouse) to another.</p>
+        <p><strong>Example:</strong> To create a transfer journal:</p>
+        <div class="code-block">
+            1. Go to "Stock Journal" <br>
+            2. Select "Transfer" as the type <br>
+            3. Enter the stock details, specifying the godown to transfer stock from and to
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>9. Consumption Journal Transactions</h2>
+        <p>The consumption journal helps in tracking the use of stock or materials, often for production processes.</p>
+        <p><strong>Example:</strong> To record a consumption journal:</p>
+        <div class="code-block">
+            1. Go to "Stock Journal" <br>
+            2. Select "Consumption" as the type <br>
+            3. Enter the details of materials consumed for production
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>10. Payment Voucher</h2>
+        <p>The payment voucher is used to record payments made by the company, whether in cash or through bank transfer.</p>
+        <p><strong>Example:</strong> To record a payment voucher:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Payment" as the voucher type <br>
+            3. Enter the payment details (e.g., paid to a supplier for goods purchased)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>11. Godown Summary Report</h2>
+        <p>The Godown Summary Report provides a summary of stock movement across various godowns.</p>
+        <p><strong>Example:</strong> To view the Godown Summary:</p>
+        <div class="code-block">
+            1. Go to "Display" <br>
+            2. Select "Stock Summary" <br>
+            3. View the stock movement details for each godown
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>12. Job Work Analysis</h2>
+        <p>The Job Work Analysis helps to track the cost incurred on job work and assess its profitability.</p>
+        <p><strong>Example:</strong> To view Job Work Analysis:</p>
+        <div class="code-block">
+            1. Go to "Display" <br>
+            2. Select "Job Work Analysis" <br>
+            3. View the report based on job costing for the selected job
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>13. Material Consumption Summary</h2>
+        <p>The Material Consumption Summary report provides details on the materials consumed in production.</p>
+        <p><strong>Example:</strong> To view Material Consumption Summary:</p>
+        <div class="code-block">
+            1. Go to "Display" <br>
+            2. Select "Material Consumption Summary" <br>
+            3. View the consumed materials over a selected period
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>14. Reports</h2>
+        <p>Various reports in Tally help in financial analysis and monitoring business health. Some commonly used reports include:</p>
+        <ul>
+            <li><strong>Balance Sheet:</strong> Provides an overview of assets and liabilities.</li>
+            <li><strong>Profit & Loss Account:</strong> Displays the company's income and expenses.</li>
+            <li><strong>Ratio Analysis:</strong> Helps analyze the financial ratios such as liquidity, profitability, etc.</li>
+            <li><strong>Trial Balance:</strong> Lists all accounts with their balances, ensuring the books are in balance.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>15. Accounts Books and Registers</h2>
+        <p>Tally offers several useful books and registers, such as:</p>
+        <ul>
+            <li><strong>Cash/Bank Book:</strong> Tracks all cash and bank transactions.</li>
+            <li><strong>Sales Register:</strong> Lists all sales transactions.</li>
+            <li><strong>Purchase Register:</strong> Lists all purchase transactions.</li>
+            <li><strong>Journal Register:</strong> Includes all journal entries.</li>
+            <li><strong>Cost Centre & Category Summary:</strong> Tracks costs associated with cost centres and categories.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT 4 -->
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Stock Groups, Stock Items, Inventory Management, and Reports</h1>
+
+    <section class="section">
+        <h2>1. Create, Alter & Display Stock Groups and Stock Items</h2>
+        <p>Stock Groups are used to classify stock items into different categories, whereas Stock Items represent the individual products being managed in the inventory.</p>
+        <p><strong>Example:</strong> To create a Stock Group for "Electronics":</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Groups" > "Create" <br>
+            3. Enter the name "Electronics" <br>
+            4. Assign it to a higher group like "Finished Goods"
+        </div>
+        <p><strong>Example:</strong> To create a Stock Item like "Mobile Phone":</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Items" > "Create" <br>
+            3. Enter the name "Mobile Phone" <br>
+            4. Assign it to the "Electronics" stock group <br>
+            5. Define the unit of measure (e.g., Piece)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Stock Item Behaviour Using Costing and Market Valuation Methods</h2>
+        <p>Stock item behavior defines how the cost and valuation are managed. Costing methods include FIFO, LIFO, and Weighted Average, and Market Valuation methods control the valuation based on the market price.</p>
+        <p><strong>Example:</strong> Setting up costing for a stock item:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Items" > "Alter" <br>
+            3. Choose the item "Mobile Phone" <br>
+            4. Set the "Valuation Method" to "FIFO" or "Weighted Average" as per your requirements
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Stock Item Behaviour: Additional Features</h2>
+        <p>Additional behaviors allow you to manage stock in more detailed ways:</p>
+        <ul>
+            <li><strong>Treat all sales as new manufacture:</strong> This ensures that each sale is treated as a fresh manufactured item.</li>
+            <li><strong>Treat all purchases as consumed:</strong> This feature adjusts inventory immediately when a purchase is made, as if the stock is already consumed.</li>
+            <li><strong>Treat rejections inward as scrap:</strong> Items returned due to rejections are treated as scrap material.</li>
+            <li><strong>Ignore negative balances:</strong> This ensures no warning is displayed when stock goes negative, which can be useful for certain industries.</li>
+            <li><strong>Handling differences due to physical counting:</strong> This manages discrepancies found during stock audits or physical stock-taking.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Create, Alter & Display Stock Categories</h2>
+        <p>Stock categories allow grouping of stock items based on various criteria, such as type, usage, or other attributes.</p>
+        <p><strong>Example:</strong> To create a new Stock Category like "Smartphones":</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Categories" > "Create" <br>
+            3. Enter the name "Smartphones" <br>
+            4. Assign it to a relevant parent category if necessary
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Create, Alter & Display Units of Measure</h2>
+        <p>Units of measure define how stock items are quantified, such as pieces, kilograms, liters, etc. You can also create compound units for combinations of base units.</p>
+        <p><strong>Example:</strong> To create a new unit "Box" as a compound unit:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Units of Measure" > "Create" <br>
+            3. Enter "Box" <br>
+            4. Define it as a compound unit, based on the number of pieces in a box (e.g., 10 pieces)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6. Define Standard Cost & Selling Price</h2>
+        <p>Setting up standard cost helps you track the expected cost of items. Selling price is defined to set up the price at which goods are sold to customers.</p>
+        <p><strong>Example:</strong> To define a standard cost and selling price for a stock item:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Items" > "Alter" <br>
+            3. Choose the item "Mobile Phone" <br>
+            4. Set the "Standard Cost" (e.g., Rs. 8,000) <br>
+            5. Set the "Selling Price" (e.g., Rs. 10,000)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Define Rate of Duty & MRP</h2>
+        <p>Define the rate of duty (like GST or other applicable taxes) and the maximum retail price (MRP) of items to ensure compliance with regulations and accurate pricing.</p>
+        <p><strong>Example:</strong> To define the rate of duty and MRP for an item:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Items" > "Alter" <br>
+            3. Enter the "Rate of Duty" (e.g., 18% GST) <br>
+            4. Enter the "MRP" (e.g., Rs. 15,000)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>8. Create, Alter & Display Godowns</h2>
+        <p>Godowns are physical locations where stock items are stored. You can manage multiple godowns in Tally.</p>
+        <p><strong>Example:</strong> To create a new godown:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Godowns" > "Create" <br>
+            3. Enter the name "Warehouse 1" <br>
+            4. Define its location (e.g., "Mumbai Branch")
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>9. Allocation of Items to Godowns</h2>
+        <p>Allocating items to godowns helps track inventory across various locations.</p>
+        <p><strong>Example:</strong> To allocate a stock item to a godown:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Stock Items" > "Alter" <br>
+            3. Choose the item "Mobile Phone" <br>
+            4. Allocate it to the relevant godown, such as "Warehouse 1"
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>10. Inventory Voucher Types and Transactions</h2>
+        <p>Inventory vouchers are used for recording various stock transactions like purchases, sales, stock transfers, and adjustments.</p>
+        <p><strong>Example:</strong> To record a stock purchase:</p>
+        <div class="code-block">
+            1. Go to "Accounting Vouchers" <br>
+            2. Select "Purchase" <br>
+            3. Enter the stock item "Mobile Phone" <br>
+            4. Specify the quantity and rate
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>11. Create & Use Bill of Material (BoM)</h2>
+        <p>A Bill of Material is used in manufacturing businesses to define the raw materials needed to produce a finished product.</p>
+        <p><strong>Example:</strong> To create a BoM for assembling a mobile phone:</p>
+        <div class="code-block">
+            1. Go to "Inventory Info" <br>
+            2. Select "Bill of Materials" > "Create" <br>
+            3. Choose the finished product "Mobile Phone" <br>
+            4. List the components like "Screen," "Battery," and "Charger" with their required quantities
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>12. Reports</h2>
+        <p>Several inventory-related reports in Tally help track stock movements and manage inventory effectively. These reports include:</p>
+        <ul>
+            <li><strong>Stock Summary:</strong> Displays the stock level for each item.</li>
+            <li><strong>Physical Stock Register:</strong> Tracks physical stock as per the last audit.</li>
+            <li><strong>Stock Group & Item Analysis:</strong> Shows stock status by group or individual items.</li>
+            <li><strong>Sales & Purchase Order Summary:</strong> Helps manage orders efficiently.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT 5 -->
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Advanced Features in Tally</h1>
+
+    <section class="section">
+        <h2>1. Cheque Printing</h2>
+        <p>Cheque printing in Tally allows you to print payment cheques directly from the software, which streamlines the payment process for businesses.</p>
+        <p><strong>Example:</strong> To print a cheque in Tally:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Accounts Info" > "Bank Accounts" <br>
+            3. Choose the bank account <br>
+            4. Select the option for "Cheque Printing" <br>
+            5. Choose the payment voucher and press "Print" <br>
+            6. Configure the printer settings and print the cheque
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Common Printing Options</h2>
+        <p>Printing options in Tally allow you to customize various document prints, like invoices, ledgers, and reports, based on your preferences.</p>
+        <ul>
+            <li><strong>Preview:</strong> View the print format before actually printing.</li>
+            <li><strong>Printer Settings:</strong> Choose printer type and paper size.</li>
+            <li><strong>Page Layout:</strong> Adjust the page layout for clarity.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Different Printing Formats</h2>
+        <p>Tally supports various printing formats for different business documents, such as invoices, reports, and cheques.</p>
+        <p><strong>Example:</strong> To change the printing format for invoices:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Print Configuration" <br>
+            3. Choose "Invoice" and select the preferred format <br>
+            4. Customize the layout (e.g., add your company logo or modify fields)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Multi-Account Printing</h2>
+        <p>Multi-account printing allows you to print multiple account statements or vouchers at once, saving time when handling bulk printing tasks.</p>
+        <p><strong>Example:</strong> To print multiple ledgers at once:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Accounts Books" > "Ledger" <br>
+            3. Choose the multiple ledgers to print <br>
+            4. Select "Print" to print all selected ledgers
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Dynamic Report-Specific Options</h2>
+        <p>Dynamic report-specific options in Tally allow users to customize and filter reports based on specific criteria such as date range, group, and category.</p>
+        <p><strong>Example:</strong> To view a dynamic Profit and Loss statement:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Display" > "Profit & Loss A/c" <br>
+            3. Use the filter options to select the specific date range or categories
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6. Creating Group Company</h2>
+        <p>A Group Company in Tally is useful when managing multiple companies under a single umbrella for reporting purposes.</p>
+        <p><strong>Example:</strong> To create a group company:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Create Company" <br>
+            3. Choose "Group Company" as the company type <br>
+            4. Enter the required details for the group (e.g., name, GST details)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Use of Tally Vault</h2>
+        <p>Tally Vault is a feature that provides enhanced security for company data, allowing password protection and encryption for sensitive data.</p>
+        <p><strong>Example:</strong> To activate Tally Vault:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Company" > "Create/Alter" <br>
+            3. Enable "Tally Vault" and set a secure password for the company data
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>8. Using Security Control & Defining Different Security Levels</h2>
+        <p>Security control in Tally allows the admin to set different levels of access for users, ensuring data security and control over actions.</p>
+        <p><strong>Example:</strong> To define user roles and security levels:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Security Control" <br>
+            3. Create or alter users and assign specific security levels (e.g., Admin, Data Entry)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>9. Use of Tally Audit</h2>
+        <p>Tally Audit is used to monitor and track changes in financial data, ensuring transparency and accuracy in accounts.</p>
+        <p><strong>Example:</strong> To enable Tally Audit:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Company" > "Audit" <br>
+            3. Enable auditing and review changes made to company data
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>10. Backup & Restore</h2>
+        <p>Backup and Restore features in Tally help safeguard company data by creating copies and restoring them if necessary.</p>
+        <p><strong>Example:</strong> To create a backup of company data:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Backup" <br>
+            3. Choose the directory where the backup should be stored <br>
+            4. Click "Yes" to complete the backup process
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>11. Splitting Company Data</h2>
+        <p>Data splitting in Tally allows you to divide company data into multiple periods (e.g., financial years) for easier management and archiving.</p>
+        <p><strong>Example:</strong> To split company data:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Company" > "Split Company Data" <br>
+            3. Define the split date and save the new data set
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>12. Export & Import of Data</h2>
+        <p>Data export and import features allow Tally users to move data between different systems or software.</p>
+        <p><strong>Example:</strong> To export data from Tally:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Export" <br>
+            3. Choose the format (e.g., XML, Excel) <br>
+            4. Select the data to be exported and specify the location
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>13. ODBC Compliance</h2>
+        <p>ODBC (Open Database Connectivity) compliance in Tally allows the integration of Tally data with other software applications that support ODBC.</p>
+        <p><strong>Example:</strong> To use ODBC in Tally:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Enable "ODBC Server" under configuration settings <br>
+            3. Use compatible software to connect to Tally via ODBC
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>14. Use of E-mail & Internet Publishing</h2>
+        <p>Tally allows users to send reports and data via email and publish them on the internet directly from the software.</p>
+        <p><strong>Example:</strong> To send an invoice via email:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Send by E-mail" <br>
+            3. Choose the invoice to send and enter recipient details <br>
+            4. Click "Send"
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>15. Rewriting Data</h2>
+        <p>Rewriting data in Tally ensures that the data is cleaned, reorganized, and optimized for better performance.</p>
+        <p><strong>Example:</strong> To rewrite data:</p>
+        <div class="code-block">
+            1. Go to "Gateway of Tally" <br>
+            2. Select "Rewrite Data" <br>
+            3. Confirm the action and allow Tally to optimize the data
+        </div>
+    </section>
+</div>
+
+
+</html>

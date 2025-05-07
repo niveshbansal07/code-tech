@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">Website Name</div>
+
+        <ul class="nav-links">
+            <li><a href="x-home.html">Home</a></li>
+            <li><a href="x-syllabus.html">Syllabus</a></li>
+            <li><a href="study-Material.html">Study Material</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 2a8 8 0 0 1 5.292 13.708l4.5 4.5-1.414 1.414-4.5-4.5A8 8 0 1 1 10 2z" />
+                    </svg>
+                </button>
+            </div>
+
+            <button id="modeToggle" class="toggle-btn">
+                <svg id="sunIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 4a1 1 0 0 1 1-1h.09a1 1 0 1 1 0 2H13a1 1 0 0 1-1-1zm6.364 1.636a1 1 0 0 1 0 1.414l-.064.064a1 1 0 0 1-1.414-1.414l.064-.064a1 1 0 0 1 1.414 0zM20 13a1 1 0 1 1 0-2h.09a1 1 0 1 1 0 2H20zM18.364 19.364a1 1 0 0 1-1.414 0l-.064-.064a1 1 0 0 1 1.414-1.414l.064.064a1 1 0 0 1 0 1.414zM12 20a1 1 0 0 1-1 1h-.09a1 1 0 1 1 0-2H11a1 1 0 0 1 1 1zM5.636 18.364a1 1 0 0 1 0-1.414l.064-.064a1 1 0 0 1 1.414 1.414l-.064.064a1 1 0 0 1-1.414 0zM4 11a1 1 0 1 1 0 2h-.09a1 1 0 1 1 0-2H4zM5.636 5.636a1 1 0 0 1 1.414 0l.064.064a1 1 0 0 1-1.414 1.414l-.064-.064a1 1 0 0 1 0-1.414zM12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z" />
+                </svg>
+
+                <svg id="moonIcon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 12.79A9 9 0 0 1 11.21 3a8 8 0 1 0 9.79 9.79z" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div class="sem-unit-header"> Digital Electronics and Computer Organization</div>
+
+
+    <div class="container">
+               <a href="#unit1" class="unit">UNIT-I: Logic Gates and Circuit</a>
+        <div id="unit1" class="content">
+            Gates (OR, AND, NOR, NAND, XOR & XNOR); Demogran’s laws; Boolean laws, Circuit designing techniques (SOP,
+            POS, K-Map).
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Combinational Building Blocks</a>
+        <div id="unit2" class="content">
+            Multiplexes; Decoder; Encoder; Adder and Subtracter.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Memories</a>
+        <div id="unit3" class="content">
+            ROMs, PROMs, EPROMs, RAMs, Hard Disk, Floppy Disk and CD-ROM.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Sequential Building Blocks</a>
+        <div id="unit4" class="content">
+            Flip-Flop (RS, D, JK, Master-slave & T flip-flops); Registers & Shift registers; Counters; Synchronous and
+            Asynchronous Designing method.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Memory Organization</a>
+        <div id="unit5" class="content">
+            Basic cell of static and dynamic RAM; Building large memories using chips; Associative memory; Cache memory
+            organisation and Virtual memory organisation.
+        </div>
+    </div>
+
+
+    <!-- UNIT 1  -->
+
+    <div class="topic-container">
+        <h1>UNIT-I: Logic Gates and Circuit</h1>
+    
+        <section class="section">
+            <h2>1. Logic Gates</h2>
+            <p>Logic gates are the basic building blocks of digital electronics. Each gate performs a specific logical operation on one or more inputs to produce an output.</p>
+    
+            <h3>Common Logic Gates:</h3>
+            <ul>
+                <li><strong>AND Gate:</strong> Output is HIGH (1) only if all inputs are HIGH.</li>
+                <li><strong>OR Gate:</strong> Output is HIGH if at least one input is HIGH.</li>
+                <li><strong>NOT Gate:</strong> Inverts the input. (Also called an inverter)</li>
+                <li><strong>NAND Gate:</strong> Output is inverse of AND.</li>
+                <li><strong>NOR Gate:</strong> Output is inverse of OR.</li>
+                <li><strong>XOR Gate:</strong> Output is HIGH only if inputs are different.</li>
+                <li><strong>XNOR Gate:</strong> Output is HIGH only if inputs are the same.</li>
+            </ul>
+    
+            <h3>Example Truth Table: XOR Gate</h3>
+            <pre class="code-block">
+    A | B | A ⊕ B
+    -------------
+    0 | 0 |  0
+    0 | 1 |  1
+    1 | 0 |  1
+    1 | 1 |  0
+            </pre>
+    
+            <h3>Diagram:</h3>
+            <p>[Illustration of each logic gate symbol – can be added as images if required]</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. De Morgan’s Laws</h2>
+            <p>These laws are used to simplify expressions in Boolean algebra.</p>
+            <ul>
+                <li><strong>First Law:</strong> (A ⋅ B)' = A' + B'</li>
+                <li><strong>Second Law:</strong> (A + B)' = A' ⋅ B'</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <pre class="code-block">
+    Given: (A + B)'
+    Apply: A' ⋅ B'
+    So, (A + B)' = A' ⋅ B'
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Boolean Laws</h2>
+            <p>These are rules used to simplify Boolean expressions.</p>
+            <ul>
+                <li>Identity Law: A + 0 = A, A ⋅ 1 = A</li>
+                <li>Null Law: A + 1 = 1, A ⋅ 0 = 0</li>
+                <li>Idempotent Law: A + A = A, A ⋅ A = A</li>
+                <li>Inverse Law: A + A' = 1, A ⋅ A' = 0</li>
+                <li>Distributive Law: A(B + C) = AB + AC</li>
+            </ul>
+    
+            <h3>Example Simplification:</h3>
+            <pre class="code-block">
+    Expression: A + AB
+    Apply: A(1 + B) = A ⋅ 1 = A
+    Final Answer: A
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Circuit Designing Techniques</h2>
+    
+            <h3>1. SOP (Sum of Products)</h3>
+            <p>SOP is the sum (OR) of multiple product (AND) terms.</p>
+            <pre class="code-block">
+    Example: F = A'B + AB'
+            </pre>
+    
+            <h3>2. POS (Product of Sums)</h3>
+            <p>POS is the product (AND) of multiple sum (OR) terms.</p>
+            <pre class="code-block">
+    Example: F = (A + B)(A' + C)
+            </pre>
+    
+            <h3>3. K-Map (Karnaugh Map)</h3>
+            <p>K-Map is used to simplify Boolean expressions by organizing them into a table format.</p>
+            <p>Example for 2 variables:</p>
+            <pre class="code-block">
+    | A | B | Output |
+    |---|---|--------|
+    | 0 | 0 |   0    |
+    | 0 | 1 |   1    |
+    | 1 | 0 |   1    |
+    | 1 | 1 |   0    |
+    
+    This is XOR logic. K-map grouping simplifies to A'B + AB'
+            </pre>
+    
+            <h3>Diagram:</h3>
+            <p>[Draw K-map grids and groupings – image or diagram can be inserted]</p>
+        </section>
+    </div>
+    
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container">
+        <h1>UNIT-II: Combinational Building Blocks</h1>
+      
+        <section class="section">
+          <h2>1. Multiplexer (MUX)</h2>
+          <p>A multiplexer selects one input from multiple inputs and forwards it to the output using selection lines.</p>
+      
+          <h3>Example: 4-to-1 Multiplexer</h3>
+          <pre class="code-block">
+      Inputs: I0, I1, I2, I3
+      Select lines: S0, S1
+      Output: Y = I0.(S1'.S0') + I1.(S1'.S0) + I2.(S1.S0') + I3.(S1.S0)
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      S1 | S0 | Output (Y)
+      --------------------
+       0 |  0 |   I0
+       0 |  1 |   I1
+       1 |  0 |   I2
+       1 |  1 |   I3
+          </pre>
+      
+          <h3>Diagram:</h3>
+          <p>[Block diagram of 4-to-1 MUX with 4 inputs, 2 selection lines, and 1 output]</p>
+        </section>
+      
+        <section class="section">
+          <h2>2. Decoder</h2>
+          <p>A decoder converts binary data from 'n' input lines to a maximum of 2ⁿ unique output lines.</p>
+      
+          <h3>Example: 2-to-4 Decoder</h3>
+          <pre class="code-block">
+      Inputs: A0, A1
+      Outputs: Y0 to Y3
+      Y0 = A1'.A0' ; Y1 = A1'.A0 ; Y2 = A1.A0' ; Y3 = A1.A0
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      A1 | A0 | Y3 Y2 Y1 Y0
+      ---------------------
+       0 |  0 |  0  0  0  1
+       0 |  1 |  0  0  1  0
+       1 |  0 |  0  1  0  0
+       1 |  1 |  1  0  0  0
+          </pre>
+      
+          <h3>Diagram:</h3>
+          <p>[Diagram of 2 input lines connected to logic gates generating 4 outputs]</p>
+        </section>
+      
+        <section class="section">
+          <h2>3. Encoder</h2>
+          <p>An encoder performs the reverse operation of a decoder. It converts 2ⁿ inputs into n output lines.</p>
+      
+          <h3>Example: 4-to-2 Encoder</h3>
+          <pre class="code-block">
+      Inputs: D0 to D3
+      Outputs: A0, A1
+      
+      A1 = D2 + D3
+      A0 = D1 + D3
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      D3 | D2 | D1 | D0 | A1 A0
+      -------------------------
+       0 |  0 |  0 |  1 |  0  0
+       0 |  0 |  1 |  0 |  0  1
+       0 |  1 |  0 |  0 |  1  0
+       1 |  0 |  0 |  0 |  1  1
+          </pre>
+      
+          <h3>Diagram:</h3>
+          <p>[Logic gate connections converting 4 input lines to 2 output lines]</p>
+        </section>
+      
+        <section class="section">
+          <h2>4. Adder</h2>
+          <p>An adder circuit adds binary numbers. Two types: Half Adder and Full Adder.</p>
+      
+          <h3>4.1 Half Adder</h3>
+          <pre class="code-block">
+      Inputs: A, B
+      Sum = A ⊕ B
+      Carry = A ⋅ B
+          </pre>
+      
+          <pre class="code-block">
+      A | B | Sum | Carry
+      -------------------
+      0 | 0 |  0  |   0
+      0 | 1 |  1  |   0
+      1 | 0 |  1  |   0
+      1 | 1 |  0  |   1
+          </pre>
+      
+          <h3>4.2 Full Adder</h3>
+          <pre class="code-block">
+      Inputs: A, B, Cin
+      Sum = A ⊕ B ⊕ Cin
+      Carry = (A ⋅ B) + (B ⋅ Cin) + (A ⋅ Cin)
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      A | B | Cin | Sum | Carry
+      -------------------------
+      0 | 0 |  0  |  0  |  0
+      0 | 1 |  0  |  1  |  0
+      1 | 0 |  0  |  1  |  0
+      1 | 1 |  0  |  0  |  1
+      0 | 0 |  1  |  1  |  0
+      0 | 1 |  1  |  0  |  1
+      1 | 0 |  1  |  0  |  1
+      1 | 1 |  1  |  1  |  1
+          </pre>
+      
+          <h3>Diagram:</h3>
+          <p>[Full adder circuit using two half adders and OR gate]</p>
+        </section>
+      
+        <section class="section">
+          <h2>5. Subtractor</h2>
+          <p>A subtractor circuit subtracts binary numbers. Two types: Half Subtractor and Full Subtractor.</p>
+      
+          <h3>5.1 Half Subtractor</h3>
+          <pre class="code-block">
+      Inputs: A, B
+      Difference = A ⊕ B
+      Borrow = A' ⋅ B
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      A | B | Diff | Borrow
+      ---------------------
+      0 | 0 |  0   |   0
+      0 | 1 |  1   |   1
+      1 | 0 |  1   |   0
+      1 | 1 |  0   |   0
+          </pre>
+      
+          <h3>5.2 Full Subtractor</h3>
+          <pre class="code-block">
+      Inputs: A, B, Bin
+      Difference = A ⊕ B ⊕ Bin
+      Borrow = A' ⋅ B + (A' ⊕ B) ⋅ Bin
+          </pre>
+      
+          <h3>Truth Table:</h3>
+          <pre class="code-block">
+      A | B | Bin | Diff | Borrow
+      ---------------------------
+      0 | 0 |  0  |  0   |   0
+      0 | 1 |  0  |  1   |   1
+      1 | 0 |  0  |  1   |   0
+      1 | 1 |  0  |  0   |   0
+      0 | 0 |  1  |  1   |   1
+      0 | 1 |  1  |  0   |   1
+      1 | 0 |  1  |  0   |   0
+      1 | 1 |  1  |  1   |   1
+          </pre>
+      
+          <h3>Diagram:</h3>
+          <p>[Full subtractor using two half subtractors and OR gate]</p>
+        </section>
+      </div>
+    
+      
+    <!-- UNIT 3 -->
+
+    <div class="topic-container">
+        <h1>UNIT-III: Memories</h1>
+      
+        <section class="section">
+          <h2>1. ROM (Read Only Memory)</h2>
+          <p>ROM is non-volatile memory used to store firmware or permanent data that doesn't change frequently.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Data is permanently written during manufacturing.</li>
+            <li>Cannot be modified (read-only).</li>
+            <li>Non-volatile (retains data without power).</li>
+          </ul>
+          <p><strong>Used In:</strong> BIOS, embedded systems, calculators.</p>
+          <p><strong>Diagram:</strong> [Block diagram showing address lines &rarr; ROM &rarr; Data Output]</p>
+        </section>
+      
+        <section class="section">
+          <h2>2. PROM (Programmable ROM)</h2>
+          <p>PROM is a type of ROM that can be programmed once by the user after manufacturing.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Initially blank.</li>
+            <li>Written once using a PROM programmer.</li>
+            <li>Non-volatile memory.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [PROM chip with programming fuses shown]</p>
+        </section>
+      
+        <section class="section">
+          <h2>3. EPROM (Erasable Programmable ROM)</h2>
+          <p>EPROM can be erased using ultraviolet light and reprogrammed.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Can be erased and reused.</li>
+            <li>Erasure done using UV light through a quartz window.</li>
+            <li>Non-volatile.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [EPROM with quartz window shown]</p>
+        </section>
+      
+        <section class="section">
+          <h2>4. RAM (Random Access Memory)</h2>
+          <p>RAM is volatile memory used for temporary data storage while programs are running.</p>
+          <h3>Types:</h3>
+          <ul>
+            <li><strong>SRAM</strong> – Static RAM: Fast, uses more power, costly.</li>
+            <li><strong>DRAM</strong> – Dynamic RAM: Slower, cheaper, needs refreshing.</li>
+          </ul>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Volatile (data lost on power off).</li>
+            <li>Read/write memory.</li>
+            <li>Used as primary memory in computers.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [RAM block with address, data lines and control lines]</p>
+        </section>
+      
+        <section class="section">
+          <h2>5. Hard Disk</h2>
+          <p>A hard disk is a magnetic storage device used for storing OS, software, files, etc.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Non-volatile, permanent storage.</li>
+            <li>High capacity (GBs to TBs).</li>
+            <li>Consists of spinning platters and a read/write head.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Platter, spindle, actuator arm, read/write head]</p>
+        </section>
+      
+        <section class="section">
+          <h2>6. Floppy Disk</h2>
+          <p>A floppy disk is an older magnetic storage device used for small data transfer and backup.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Portable, rewritable.</li>
+            <li>Low storage (1.44 MB).</li>
+            <li>Now obsolete.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Circular disk inside plastic casing with magnetic coating]</p>
+        </section>
+      
+        <section class="section">
+          <h2>7. CD-ROM (Compact Disc - Read Only Memory)</h2>
+          <p>CD-ROMs are optical disks used for storing music, software, and other read-only data.</p>
+          <h3>Characteristics:</h3>
+          <ul>
+            <li>Non-volatile and read-only.</li>
+            <li>Can store up to 700 MB of data.</li>
+            <li>Uses laser technology for reading data.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Laser lens reading circular track on CD surface]</p>
+        </section>
+      </div>
+
+
+    <!-- UNIT 4 -->
+
+    <div class="topic-container">
+        <h1>UNIT-IV: Sequential Building Blocks</h1>
+      
+        <section class="section">
+          <h2>1. Flip-Flop</h2>
+          <p>Flip-flops are fundamental building blocks in digital electronics used to store binary data. A flip-flop is a bistable multivibrator with two stable states, used for storing one bit of information.</p>
+      
+          <h3>Types of Flip-Flops:</h3>
+          
+          <h4>1. RS Flip-Flop (Reset-Set)</h4>
+          <p>RS flip-flop has two inputs: <code>R</code> (reset) and <code>S</code> (set). The output changes based on the input combination.</p>
+          <p><strong>Truth Table:</strong></p>
+          <table border="1">
+            <tr>
+              <th>R</th>
+              <th>S</th>
+              <th>Q</th>
+              <th>Q'</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>Previous State</td>
+              <td>Previous State</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>Invalid</td>
+              <td>Invalid</td>
+            </tr>
+          </table>
+          <p><strong>Diagram:</strong> [RS Flip-Flop symbol with reset and set inputs]</p>
+          
+          <h4>2. D Flip-Flop (Data Flip-Flop)</h4>
+          <p>The D flip-flop is a modified version of the RS flip-flop, which eliminates the invalid state. It has a single input: <code>D</code> (data), and the output follows the value of the data input.</p>
+          <p><strong>Truth Table:</strong></p>
+          <table border="1">
+            <tr>
+              <th>D</th>
+              <th>Q</th>
+              <th>Q'</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+          </table>
+          <p><strong>Diagram:</strong> [D Flip-Flop symbol with data input and Q output]</p>
+          
+          <h4>3. JK Flip-Flop</h4>
+          <p>The JK flip-flop is a more versatile flip-flop. It has two inputs: <code>J</code> and <code>K</code>. It combines the functionality of the RS flip-flop and adds the ability to toggle the output.</p>
+          <p><strong>Truth Table:</strong></p>
+          <table border="1">
+            <tr>
+              <th>J</th>
+              <th>K</th>
+              <th>Q</th>
+              <th>Q'</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>0</td>
+              <td>Previous State</td>
+              <td>Previous State</td>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td>1</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>1</td>
+              <td>Toggled</td>
+              <td>Toggled</td>
+            </tr>
+          </table>
+          <p><strong>Diagram:</strong> [JK Flip-Flop symbol with J and K inputs]</p>
+          
+          <h4>4. Master-Slave Flip-Flop</h4>
+          <p>Master-slave flip-flops are designed using two flip-flops connected in series, where the master flip-flop captures the input and the slave flip-flop holds the output, preventing race conditions.</p>
+          <p><strong>Diagram:</strong> [Master-Slave Flip-Flop symbol with inputs and outputs]</p>
+          
+          <h4>5. T Flip-Flop (Toggle Flip-Flop)</h4>
+          <p>The T flip-flop changes its state (toggles) with each clock pulse when the input <code>T</code> is high (1).</p>
+          <p><strong>Truth Table:</strong></p>
+          <table border="1">
+            <tr>
+              <th>T</th>
+              <th>Q</th>
+              <th>Q'</th>
+            </tr>
+            <tr>
+              <td>0</td>
+              <td>Previous State</td>
+              <td>Previous State</td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Toggled</td>
+              <td>Toggled</td>
+            </tr>
+          </table>
+          <p><strong>Diagram:</strong> [T Flip-Flop symbol with T input and Q output]</p>
+        </section>
+      
+        <section class="section">
+          <h2>2. Registers & Shift Registers</h2>
+          <p>Registers are used to store multiple bits of data in a digital system. A shift register is a type of register used for shifting data in or out of the register, usually used in data transmission and storage applications.</p>
+      
+          <h3>Shift Register Types:</h3>
+          <ul>
+            <li><strong>Serial In Serial Out (SISO)</strong> – Data is shifted in and out serially.</li>
+            <li><strong>Serial In Parallel Out (SIPO)</strong> – Data is shifted in serially and read out in parallel.</li>
+            <li><strong>Parallel In Serial Out (PISO)</strong> – Data is loaded in parallel and shifted out serially.</li>
+            <li><strong>Parallel In Parallel Out (PIPO)</strong> – Data is loaded and read out in parallel.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Shift Register symbol showing input, clock, output]</p>
+        </section>
+      
+        <section class="section">
+          <h2>3. Counters</h2>
+          <p>Counters are sequential circuits used to count events or clock pulses. They can be asynchronous or synchronous.</p>
+      
+          <h3>Types of Counters:</h3>
+          <ul>
+            <li><strong>Asynchronous Counters:</strong> In these counters, flip-flops are triggered by different clock pulses.</li>
+            <li><strong>Synchronous Counters:</strong> In these counters, all flip-flops are triggered by the same clock pulse.</li>
+          </ul>
+          <p><strong>Example: 4-bit Synchronous Counter using JK Flip-Flops</strong></p>
+          <p><strong>Diagram:</strong> [Synchronous counter circuit with JK flip-flops]</p>
+        </section>
+      
+        <section class="section">
+          <h2>4. Synchronous vs Asynchronous Designing Method</h2>
+          <p>The design methods of digital circuits are classified as synchronous and asynchronous:</p>
+          <h3>Synchronous Design:</h3>
+          <ul>
+            <li>Uses a common clock signal to synchronize all flip-flops and logic gates.</li>
+            <li>Easy to design and debug.</li>
+          </ul>
+          
+          <h3>Asynchronous Design:</h3>
+          <ul>
+            <li>Does not use a common clock signal.</li>
+            <li>Flip-flops are triggered by external signals, leading to more complex design and timing issues.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Synchronous and Asynchronous block diagrams]</p>
+        </section>
+      </div>
+
+      
+
+      <!-- UNIT 5 -->
+
+      <div class="topic-container">
+        <h1>UNIT-V: Memory Organization</h1>
+      
+        <section class="section">
+          <h2>1. Basic Cell of Static and Dynamic RAM</h2>
+          <p>Memory in digital systems can be categorized into two primary types: Static RAM (SRAM) and Dynamic RAM (DRAM). Both are used for storing data but have different structures and properties.</p>
+      
+          <h3>1.1 Static RAM (SRAM)</h3>
+          <p>SRAM uses bistable latches (flip-flops) to store data. The data is retained as long as the power is supplied, making it faster but more expensive compared to DRAM.</p>
+          <p><strong>Basic Cell:</strong> A typical SRAM cell consists of four to six transistors forming a flip-flop that stores each bit of data.</p>
+          <p><strong>Diagram:</strong> [SRAM cell diagram with 4 transistors]</p>
+      
+          <h3>1.2 Dynamic RAM (DRAM)</h3>
+          <p>DRAM stores each bit of data in a capacitor, which must be periodically refreshed to maintain the stored data. DRAM is slower than SRAM but cheaper and more dense, making it suitable for larger memory systems.</p>
+          <p><strong>Basic Cell:</strong> A DRAM cell consists of one transistor and one capacitor for each bit of data.</p>
+          <p><strong>Diagram:</strong> [DRAM cell diagram with a single transistor and capacitor]</p>
+        </section>
+      
+        <section class="section">
+          <h2>2. Building Large Memories Using Chips</h2>
+          <p>Large memory systems are built by connecting multiple memory chips in parallel or series. Memory is typically organized in rows and columns, allowing for the selection of individual bits in a large memory space.</p>
+      
+          <h3>2.1 Memory Addressing</h3>
+          <p>To address large memories, a memory controller is used to select rows and columns. Each memory chip has a specific address range, and the controller maps the address to the correct chip and location.</p>
+          <p><strong>Diagram:</strong> [Memory chip addressing with multiple chips in parallel]</p>
+      
+          <h3>2.2 Chip Selection</h3>
+          <p>Memory chips can be selected using address lines and chip-select signals. The memory controller sends the appropriate signals to select the correct chip based on the address provided by the CPU.</p>
+          <p><strong>Diagram:</strong> [Block diagram of chip selection and memory organization]</p>
+        </section>
+      
+        <section class="section">
+          <h2>3. Associative Memory</h2>
+          <p>Associative memory, also known as content-addressable memory (CAM), is a type of memory that allows data to be accessed based on content rather than its address. In CAM, data is compared to a stored value, and if a match is found, the corresponding data is retrieved.</p>
+      
+          <h3>3.1 Functionality of CAM</h3>
+          <p>CAM consists of memory cells where each cell has a comparator that compares the input with the stored data. If a match is found, the address of the matching data is output.</p>
+          <p><strong>Diagram:</strong> [Block diagram showing a CAM cell with comparator and address lines]</p>
+        </section>
+      
+        <section class="section">
+          <h2>4. Cache Memory Organization</h2>
+          <p>Cache memory is a small, high-speed memory that stores frequently accessed data. It acts as a buffer between the CPU and main memory, reducing the average time to access data from the main memory.</p>
+      
+          <h3>4.1 Cache Levels</h3>
+          <ul>
+            <li><strong>L1 Cache:</strong> This is the smallest and fastest cache, integrated into the CPU.</li>
+            <li><strong>L2 Cache:</strong> This cache is larger than L1 and is often located near the CPU.</li>
+            <li><strong>L3 Cache:</strong> The largest cache level, shared among multiple cores in multi-core processors.</li>
+          </ul>
+      
+          <h3>4.2 Cache Mapping Techniques</h3>
+          <ul>
+            <li><strong>Direct Mapped Cache:</strong> Each block in main memory maps to exactly one cache line.</li>
+            <li><strong>Fully Associative Cache:</strong> Any block of memory can be stored in any cache line.</li>
+            <li><strong>Set-Associative Cache:</strong> A compromise between direct mapped and fully associative caches, where memory is divided into sets of cache lines.</li>
+          </ul>
+          <p><strong>Diagram:</strong> [Cache memory organization with L1, L2, and L3 caches]</p>
+        </section>
+      
+        <section class="section">
+          <h2>5. Virtual Memory Organization</h2>
+          <p>Virtual memory is a technique that uses a portion of the hard disk as an extension of RAM, allowing programs to use more memory than is physically available. Virtual memory is managed by the operating system using a page table that maps virtual addresses to physical addresses in RAM.</p>
+      
+          <h3>5.1 Page Tables</h3>
+          <p>Page tables are used to map virtual addresses to physical addresses. Each page in virtual memory corresponds to a block in physical memory. The operating system manages page tables and performs paging to transfer data between RAM and the hard disk when needed.</p>
+          <p><strong>Diagram:</strong> [Page table diagram showing virtual and physical address mapping]</p>
+      
+          <h3>5.2 Page Faults</h3>
+          <p>A page fault occurs when a program accesses a page that is not currently in physical memory. When this happens, the operating system must load the page from the hard disk into RAM, causing a delay in execution.</p>
+          <p><strong>Diagram:</strong> [Page fault flowchart showing the steps of handling a page fault]</p>
+        </section>
+      </div>
+      
+</body>
+
+</html>

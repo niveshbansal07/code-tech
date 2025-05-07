@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Java Programming</div>
+
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Java Data Types and Operators</a>
+        <div id="unit1" class="content">
+            Genesis of Java: Creation of Java, why Java is important to the internet, Java Buzzwords, an overview of
+            Java Object-Oriented Programming. Data types: Simple types – Integers, Floating point types, characters,
+            Booleans. Literals, Variables, Type conversion and casting, Automatic type promotion in Expressions,
+            Strings. Arrays: One-Dimensional and Multi-Dimensional Arrays. Operators: Arithmetic, Bitwise, Relational,
+            Boolean Logical, Assignment, Conditional, Operator Precedence.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Introducing Classes, Methods, and Inheritance</a>
+        <div id="unit2" class="content">
+            Class Fundamentals, Declaring objects, Assigning object Reference variables, Introducing Methods,
+            Constructors, Garbage collection, Finalize() Method, Stack class. Overloading Methods, Using objects as
+            parameters, Argument passing, Returning objects, Recursion, Access control, Understanding static,
+            Introducing final, Nested and Inner classes, String class, Using command line arguments. Inheritance Basics,
+            Using super, creating Multilevel Hierarchy, Method overriding, Dynamic Method Dispatch, Using Abstract
+            class, Using final with inheritance, The object class.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Packages, Interfaces, Exception Handling, and Multithreading</a>
+        <div id="unit3" class="content">
+            Packages, Access Protection, Importing packages, Interfaces. Exception Handling Introduction, Exception
+            Types, Uncaught Exceptions, Using try and catch, Multiple catch clauses, Nested try statements,
+            throw-throws-finally, Java’s Built-in Exception, creating custom Exception subclasses. Multithreaded
+            Programming: Java Thread Model, Main Thread, Creating a Thread, Creating Multiple Threads, Using isAlive()
+            and join(), Thread priorities, Synchronization, Inter-thread Communication, Suspending, Resuming, and
+            Stopping Threads, Using Multithreading.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Applets and Event Handling</a>
+        <div id="unit4" class="content">
+            I/O Basics: Reading console Input, Writing console output, The PrintWriter class, Reading and Writing Files.
+            The Applet class: Applet Basics, Applet Architecture, Applet Skeleton, Applet Display method, Requesting
+            Repainting, HTML APPLET tag, Passing Parameters to Applet, Audio Clip Interface. Event Handling Mechanisms:
+            Delegation Event Model, Event classes (Action Event, Item Event, Key Event, Mouse Event), Sources of Events,
+            Event Listener Interfaces (Action Listener, Item Listener, Key Listener, Mouse Listener), Adapter Classes.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Introducing AWT and AWT Controls</a>
+        <div id="unit5" class="content">
+            AWT Classes, Window fundamentals, working with Frame Windows, working with Graphics. Using AWT controls:
+            Labels, Buttons, Check Boxes, Check Box Group, Choice controls, Text Field, Text Area. Understanding Layout
+            Managers (Flow Layout only), Menu Bars and Menus.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Java Data Types and Operators</h1>
+
+        <div class="section">
+            <h2>Genesis of Java</h2>
+            <p>Java was developed by James Gosling at Sun Microsystems. Originally designed for embedded systems, Java
+                became widely popular due to its platform independence and security features, making it ideal for web
+                applications.</p>
+        </div>
+
+        <div class="section">
+            <h2>Java Buzzwords</h2>
+            <ul>
+                <li>Simple</li>
+                <li>Object-Oriented</li>
+                <li>Secure</li>
+                <li>Portable</li>
+                <li>Robust</li>
+                <li>Multithreaded</li>
+                <li>Architecture-Neutral</li>
+                <li>Interpreted</li>
+                <li>High Performance</li>
+                <li>Distributed</li>
+                <li>Dynamic</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Overview of Java OOP</h2>
+            <p>Java is a pure object-oriented language where everything revolves around objects and classes. Key OOP
+                principles include:</p>
+            <ul>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+                <li>Abstraction</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Data Types in Java</h2>
+            <p>Java has two types of data types:</p>
+            <ul>
+                <li><b>Primitive:</b> byte, short, int, long, float, double, char, boolean</li>
+                <li><b>Non-Primitive:</b> String, Arrays, Classes, Interfaces</li>
+            </ul>
+            <div class="code-block">
+                int age = 25;
+                float marks = 92.5f;
+                char grade = 'A';
+                boolean isPass = true;
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Literals in Java</h2>
+            <p>Literals are fixed values that appear directly in the code:</p>
+            <ul>
+                <li><b>Integer:</b> 10, -200</li>
+                <li><b>Float:</b> 3.14f, -0.99f</li>
+                <li><b>Character:</b> 'A', 'z'</li>
+                <li><b>String:</b> "Hello", "Java"</li>
+                <li><b>Boolean:</b> true, false</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Variables in Java</h2>
+            <p>Variables store values with a defined type:</p>
+            <div class="code-block">
+                int number = 100;
+                String name = "Tony Stark";
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Type Conversion and Casting</h2>
+            <p>Java supports two types of type conversions:</p>
+            <ul>
+                <li><b>Widening:</b> Automatically converts smaller to larger type</li>
+                <li><b>Narrowing:</b> Manual conversion using casting</li>
+            </ul>
+            <div class="code-block">
+                // Widening
+                int a = 10;
+                double b = a;
+
+                // Narrowing
+                double x = 20.5;
+                int y = (int) x;
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Automatic Type Promotion</h2>
+            <p>In expressions, Java promotes smaller data types automatically:</p>
+            <div class="code-block">
+                byte b = 42;
+                char c = 'a';
+                int result = b + c;
+                System.out.println(result); // Output: 139
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Strings in Java</h2>
+            <p>Strings are objects that represent sequences of characters.</p>
+            <div class="code-block">
+                String greeting = "Hello, Java!";
+                System.out.println(greeting.length()); // Output: 12
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Arrays in Java</h2>
+            <p>Java supports single and multi-dimensional arrays.</p>
+
+            <h3>One-Dimensional Array</h3>
+            <div class="code-block">
+                int[] nums = {10, 20, 30};
+                System.out.println(nums[1]); // Output: 20
+            </div>
+
+            <h3>Multi-Dimensional Array</h3>
+            <div class="code-block">
+                int[][] matrix = {
+                {1, 2},
+                {3, 4}
+                };
+                System.out.println(matrix[1][0]); // Output: 3
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Operators in Java</h2>
+            <p>Java supports several types of operators:</p>
+            <ul>
+                <li><b>Arithmetic:</b> +, -, *, /, %</li>
+                <li><b>Relational:</b> ==, !=, &gt;, &lt;, &gt;=, &lt;=</li>
+                <li><b>Logical:</b> &&, ||, !</li>
+                <li><b>Assignment:</b> =, +=, -=, etc.</li>
+                <li><b>Bitwise:</b> &, |, ^, ~, <<,>></li>
+                <li><b>Conditional:</b> ? :</li>
+            </ul>
+            <div class="code-block">
+                int a = 10, b = 5;
+                System.out.println(a + b); // 15
+                System.out.println(a > b); // true
+                System.out.println((a > 0 && b > 0)); // true
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Operator Precedence in Java</h2>
+            <p>Operator precedence determines the order in which operators are evaluated in expressions. For example,
+                multiplication and division have higher precedence than addition and subtraction.</p>
+            <p><b>Order (from highest to lowest):</b></p>
+            <ol>
+                <li>Postfix: expr++, expr--</li>
+                <li>Unary: ++expr, --expr, +expr, -expr, ~, !</li>
+                <li>Multiplicative: *, /, %</li>
+                <li>Additive: +, -</li>
+                <li>Shift: <<,>>, >>></li>
+                <li>Relational: <,>, <=,>=</li>
+                <li>Equality: ==, !=</li>
+                <li>Bitwise AND: &</li>
+                <li>Bitwise XOR: ^</li>
+                <li>Bitwise OR: |</li>
+                <li>Logical AND: &&</li>
+                <li>Logical OR: ||</li>
+                <li>Conditional: ? :</li>
+                <li>Assignment: =, +=, -=, *=, etc.</li>
+            </ol>
+            <div class="code-block">
+                int result = 10 + 2 * 5;
+                // Output: 20 (because * has higher precedence than +)
+            </div>
+        </div>
+
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Introducing Classes, Methods and Inheritance</h1>
+
+        <section class="section">
+            <h2>1. Class Fundamentals</h2>
+            <p>In Java, a class is a blueprint for creating objects. It can contain fields (variables) and methods to
+                define behavior.</p>
+            <pre class="code-block">
+class TonyStark {
+    int power = 100;
+
+    void showPower() {
+        System.out.println("Power level: " + power);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Declaring Objects</h2>
+            <p>Objects are instances of a class. Here's how to declare and use them:</p>
+            <pre class="code-block">
+public class Main {
+    public static void main(String[] args) {
+        TonyStark ironMan = new TonyStark(); // Object declaration
+        ironMan.showPower();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Constructors</h2>
+            <p>Constructors are special methods used to initialize objects.</p>
+            <pre class="code-block">
+class TonyStark {
+    int suitNumber;
+
+    TonyStark(int n) {
+        suitNumber = n;
+    }
+
+    void showSuit() {
+        System.out.println("Mark " + suitNumber);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Method Overloading</h2>
+            <p>You can define multiple methods with the same name but different parameters.</p>
+            <pre class="code-block">
+class Jarvis {
+    void greet() {
+        System.out.println("Hello, Tony!");
+    }
+
+    void greet(String name) {
+        System.out.println("Hello, " + name + "!");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Argument Passing and Returning Objects</h2>
+            <pre class="code-block">
+class Reactor {
+    int level;
+
+    Reactor(int l) {
+        level = l;
+    }
+
+    Reactor boost(Reactor r) {
+        return new Reactor(this.level + r.level);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Recursion</h2>
+            <p>A method can call itself. This is called recursion.</p>
+            <pre class="code-block">
+class Demo {
+    int factorial(int n) {
+        if (n == 1) return 1;
+        return n * factorial(n - 1);
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Access Control, static, final</h2>
+            <pre class="code-block">
+class Lab {
+    private int secret = 42;      // Access control
+    static int techCount = 5;     // Static
+    final int ID = 101;           // Constant
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Nested and Inner Classes</h2>
+            <p>Classes can be defined within another class.</p>
+            <pre class="code-block">
+class Avengers {
+    class Suit {
+        void show() {
+            System.out.println("Nano Suit Ready");
+        }
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>9. String Class</h2>
+            <pre class="code-block">
+public class Demo {
+    public static void main(String[] args) {
+        String hero = "IronMan";
+        System.out.println(hero.toUpperCase()); // IRONMAN
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>10. Command Line Arguments</h2>
+            <pre class="code-block">
+public class CommandDemo {
+    public static void main(String[] args) {
+        System.out.println("Hello, " + args[0]);
+    }
+}
+// Run: java CommandDemo Tony
+// Output: Hello, Tony
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>11. Inheritance Basics</h2>
+            <p>Inheritance allows one class to acquire properties of another.</p>
+            <pre class="code-block">
+class Hero {
+    void display() {
+        System.out.println("I’m a Hero");
+    }
+}
+
+class IronMan extends Hero {
+    void show() {
+        System.out.println("I’m IronMan");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>12. Using super and Multilevel Hierarchy</h2>
+            <pre class="code-block">
+class Avenger {
+    String name = "Unknown";
+}
+
+class Stark extends Avenger {
+    Stark() {
+        super.name = "Tony Stark";
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>13. Method Overriding and Dynamic Dispatch</h2>
+            <pre class="code-block">
+class AI {
+    void respond() {
+        System.out.println("Generic AI");
+    }
+}
+
+class Jarvis extends AI {
+    void respond() {
+        System.out.println("Yes, Mr. Stark.");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        AI system = new Jarvis();
+        system.respond(); // Output: Yes, Mr. Stark.
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>14. Abstract Class</h2>
+            <pre class="code-block">
+abstract class Armor {
+    abstract void activate();
+}
+
+class NanoSuit extends Armor {
+    void activate() {
+        System.out.println("Suit Activated!");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>15. Final with Inheritance</h2>
+            <pre class="code-block">
+final class Shield {}
+
+class IronShield extends Shield {  // Error! Cannot inherit final class
+    // ...
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>16. Object Class Methods</h2>
+            <p>Every class in Java inherits from <code>Object</code>. Common methods include:</p>
+            <ul>
+                <li><code>toString()</code></li>
+                <li><code>equals()</code></li>
+                <li><code>hashCode()</code></li>
+            </ul>
+            <pre class="code-block">
+class ArcReactor {
+    public String toString() {
+        return "Clean Energy Source";
+    }
+}
+        </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Packages, Interfaces, Exception Handling and Multithreading</h1>
+
+        <section class="section">
+            <h2>1. Packages</h2>
+            <pre class="code-block">
+package tech.stark;
+
+public class Reactor {
+    public void activate() {
+        System.out.println("Arc Reactor Online");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. Access Protection & Importing Packages</h2>
+            <pre class="code-block">
+import tech.stark.Reactor;
+
+public class Lab {
+    public static void main(String[] args) {
+        Reactor r = new Reactor();
+        r.activate();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Interfaces</h2>
+            <pre class="code-block">
+interface Suit {
+    void activate();
+}
+
+class NanoSuit implements Suit {
+    public void activate() {
+        System.out.println("NanoSuit Deployed");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Exception Handling Introduction</h2>
+            <pre class="code-block">
+public class Arc {
+    public static void main(String[] args) {
+        try {
+            int div = 10 / 0;
+        } catch (ArithmeticException e) {
+            System.out.println("Cannot divide by zero");
+        }
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Multiple catch clauses & Nested try</h2>
+            <pre class="code-block">
+public class TryDemo {
+    public static void main(String[] args) {
+        try {
+            try {
+                int a = 30 / 0;
+            } catch (ArithmeticException e) {
+                System.out.println("Inner catch: " + e);
+            }
+            int[] arr = new int[2];
+            arr[5] = 100;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("Outer catch: " + e);
+        }
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. throw, throws, finally</h2>
+            <pre class="code-block">
+public class Jarvis {
+    static void greet(int id) throws Exception {
+        if (id != 101) throw new Exception("Unauthorized");
+    }
+
+    public static void main(String[] args) {
+        try {
+            greet(100);
+        } catch (Exception e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("Access Attempted");
+        }
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Java's Built-in Exceptions</h2>
+            <ul>
+                <li>ArithmeticException</li>
+                <li>NullPointerException</li>
+                <li>ArrayIndexOutOfBoundsException</li>
+                <li>ClassCastException</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>8. Custom Exception Subclasses</h2>
+            <pre class="code-block">
+class PowerOverloadException extends Exception {
+    PowerOverloadException(String msg) {
+        super(msg);
+    }
+}
+
+class Reactor {
+    void boost(int level) throws PowerOverloadException {
+        if (level > 100) throw new PowerOverloadException("Too much power!");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>9. Java Thread Model & Main Thread</h2>
+            <pre class="code-block">
+public class MainThread {
+    public static void main(String[] args) {
+        System.out.println(Thread.currentThread().getName());
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>10. Creating a Thread</h2>
+            <pre class="code-block">
+class AI extends Thread {
+    public void run() {
+        System.out.println("AI System Activated");
+    }
+}
+
+public class Lab {
+    public static void main(String[] args) {
+        AI jarvis = new AI();
+        jarvis.start();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>11. Creating Multiple Threads</h2>
+            <pre class="code-block">
+class Bot extends Thread {
+    public void run() {
+        for (int i = 0; i < 3; i++) {
+            System.out.println(getName() + " running...");
+        }
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        new Bot().start();
+        new Bot().start();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>12. isAlive() and join()</h2>
+            <pre class="code-block">
+class StarkAI extends Thread {
+    public void run() {
+        System.out.println("Running...");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        StarkAI s = new StarkAI();
+        s.start();
+        System.out.println(s.isAlive());
+        s.join();
+        System.out.println("Finished");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>13. Thread Priorities</h2>
+            <pre class="code-block">
+class PriorityTest extends Thread {
+    public void run() {
+        System.out.println("Thread priority: " + getPriority());
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        PriorityTest t = new PriorityTest();
+        t.setPriority(Thread.MAX_PRIORITY);
+        t.start();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>14. Synchronization</h2>
+            <pre class="code-block">
+class Shared {
+    synchronized void print(String msg) {
+        System.out.println("[" + msg);
+        try { Thread.sleep(500); } catch (Exception e) {}
+        System.out.println("]");
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>15. Inter-thread Communication</h2>
+            <pre class="code-block">
+class Resource {
+    synchronized void waitForIt() throws InterruptedException {
+        wait();
+    }
+
+    synchronized void signalIt() {
+        notify();
+    }
+}
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>16. Suspending, Resuming, and Stopping Threads</h2>
+            <p><b>Note:</b> Methods like suspend(), resume(), and stop() are deprecated. Use flags instead.</p>
+            <pre class="code-block">
+class Worker extends Thread {
+    private boolean running = true;
+
+    public void run() {
+        while (running) {
+            System.out.println("Working...");
+            try { Thread.sleep(1000); } catch (Exception e) {}
+        }
+    }
+
+    public void stopWorking() {
+        running = false;
+    }
+}
+        </pre>
+        </section>
+    </div>
+
+    <!-- UNIT-IV -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Applets and Event Handling</h1>
+
+        <section class="section">
+            <h2>1. I/O Basics</h2>
+            <p>In Java, Input and Output operations are essential for interacting with the user and external files. Here
+                are the basics of reading console input and writing console output:</p>
+            <pre class="code-block">
+        // Reading console input
+        import java.util.Scanner;
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+
+        // Writing console output
+        System.out.println("Hello, " + name + "!");
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>2. The PrintWriter Class</h2>
+            <p>The <code>PrintWriter</code> class provides convenient methods for writing formatted text to files or the
+                console:</p>
+            <pre class="code-block">
+        import java.io.PrintWriter;
+        try {
+            PrintWriter writer = new PrintWriter("output.txt");
+            writer.println("This is a line of text.");
+            writer.close();
+        } catch (Exception e) {
+            System.out.println("Error writing to file.");
+        }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>3. Reading and Writing Files</h2>
+            <p>Reading from and writing to files can be done using classes like <code>FileReader</code> and
+                <code>FileWriter</code>.</p>
+            <pre class="code-block">
+        import java.io.FileReader;
+        import java.io.FileWriter;
+        import java.io.BufferedReader;
+
+        // Reading from file
+        try {
+            FileReader fr = new FileReader("input.txt");
+            BufferedReader br = new BufferedReader(fr);
+            String line;
+            while ((line = br.readLine()) != null) {
+                System.out.println(line);
+            }
+            br.close();
+        } catch (Exception e) {
+            System.out.println("Error reading file.");
+        }
+
+        // Writing to file
+        try {
+            FileWriter fw = new FileWriter("output.txt");
+            fw.write("This is a new line in the file.");
+            fw.close();
+        } catch (Exception e) {
+            System.out.println("Error writing to file.");
+        }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. The Applet Class</h2>
+            <p>An applet is a small Java program that can be embedded in a web page and run inside a browser. The basic
+                architecture of an applet consists of the <code>init()</code>, <code>start()</code>, and
+                <code>paint()</code> methods:</p>
+            <pre class="code-block">
+        import java.applet.Applet;
+        import java.awt.Graphics;
+
+        public class HelloWorldApplet extends Applet {
+            public void paint(Graphics g) {
+                g.drawString("Hello, Java Applet!", 50, 50);
+            }
+        }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Requesting Repainting</h2>
+            <p>To force an applet to repaint itself, use the <code>repaint()</code> method:</p>
+            <pre class="code-block">
+        public void paint(Graphics g) {
+            g.clearRect(0, 0, 300, 300); // Clear the area before drawing
+            g.drawString("Repainting the applet", 50, 50);
+        }
+
+        // Request repaint
+        repaint();
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. HTML APPLET Tag</h2>
+            <p>The <code>&lt;applet&gt;</code> HTML tag is used to embed an applet in a web page. The applet is
+                specified by its class file:</p>
+            <pre class="code-block">
+        <applet code="HelloWorldApplet.class" width="300" height="300">
+        </applet>
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>7. Passing Parameters to Applet</h2>
+            <p>You can pass parameters to applets using the <code>&lt;param&gt;</code> tag in HTML:</p>
+            <pre class="code-block">
+        <applet code="HelloWorldApplet.class" width="300" height="300">
+            <param name="message" value="Hello from HTML">
+        </applet>
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>8. Audio Clip Interface</h2>
+            <p>The <code>AudioClip</code> interface allows applets to play sound:</p>
+            <pre class="code-block">
+        import java.applet.Applet;
+        import java.applet.AudioClip;
+        import java.net.URL;
+
+        public class PlaySoundApplet extends Applet {
+            AudioClip clip;
+            public void init() {
+                try {
+                    URL sound = new URL(getCodeBase(), "sound.wav");
+                    clip = getAudioClip(sound);
+                } catch (Exception e) {
+                    System.out.println("Error loading sound.");
+                }
+            }
+
+            public void start() {
+                clip.play();
+            }
+        }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>9. Event Handling Mechanisms</h2>
+            <p>Event handling in Java uses a delegation model. Different event types trigger methods in the event
+                listener interfaces:</p>
+            <pre class="code-block">
+        import java.awt.event.ActionEvent;
+        import java.awt.event.ActionListener;
+
+        public class ButtonClickListener implements ActionListener {
+            public void actionPerformed(ActionEvent e) {
+                System.out.println("Button clicked!");
+            }
+        }
+        </pre>
+        </section>
+
+        <section class="section">
+            <h2>10. Event Listener Interfaces</h2>
+            <p>Event listener interfaces capture specific events. Common examples include:</p>
+            <ul>
+                <li><strong>ActionListener:</strong> Handles action events like button clicks.</li>
+                <li><strong>ItemListener:</strong> Handles item selection events.</li>
+                <li><strong>KeyListener:</strong> Handles keyboard events.</li>
+                <li><strong>MouseListener:</strong> Handles mouse click, enter, and exit events.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>11. Adapter Classes</h2>
+            <p>Adapter classes provide default implementations for event listener interfaces, allowing you to override
+                only the methods you need:</p>
+            <pre class="code-block">
+        import java.awt.event.MouseAdapter;
+        import java.awt.event.MouseEvent;
+
+        public class MouseClickListener extends MouseAdapter {
+            public void mouseClicked(MouseEvent e) {
+                System.out.println("Mouse clicked at " + e.getX() + ", " + e.getY());
+            }
+        }
+        </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 5 -->
+
+</body>
+
+</html>

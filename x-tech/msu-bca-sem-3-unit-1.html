@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Object Oriented Programming Using C++</div>
+
+
+    <div class="container">
+    
+        <a href="#unit1" class="unit">UNIT-I: Introduction</a>
+        <div id="unit1" class="content">
+            Introducing Object-Oriented Approach, Relating to other paradigms {Functional, Data decomposition}. Basic terms and ideas: Abstraction, Encapsulation, Inheritance, Polymorphism, Review of C, Difference between C and C++ - cin, cout, new, delete, operators.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: Classes and Objects</a>
+        <div id="unit2" class="content">
+            Encapsulation, information hiding, abstract data types, Objects & classes, attributes, methods, C++ class declaration, State identity and behaviour of an object, Constructors and destructors, instantiation of objects, Default parameter value, object types, C++ garbage collection, dynamic memory allocation, Meta class / abstract classes.
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: Inheritance and Polymorphism</a>
+        <div id="unit3" class="content">
+            Inheritance, Class hierarchy, derivation – public, private & protected, Aggregation, composition vs classification hierarchies, Polymorphism, Categorization of polymorphism techniques, Method polymorphism, Polymorphism by parameter, Operator overloading, Parametric Polymorphism.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Generic Functions</a>
+        <div id="unit4" class="content">
+            Template function, function name overloading, overriding inheritance methods, Run time polymorphism, Multiple Inheritance.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: Files and Exception Handling</a>
+        <div id="unit5" class="content">
+            Streams and files, Namespaces, Exception handling, Generic Classes.
+        </div>
+    </div>    
+
+    <!-- UNIT 1 -->
+    <div class="topic-container">
+        <h1>UNIT-I: Introduction to Object Oriented Programming (OOP)</h1>
+      
+        <h3>1. Object-Oriented Approach</h3>
+        <p>
+          Object-Oriented Programming (OOP) is a paradigm based on the concept of "objects", which contain data and methods. OOP helps in designing reusable, maintainable, and scalable software.
+        </p>
+      
+        <h3>2. Comparison with Other Paradigms</h3>
+        <ul>
+          <li><strong>Procedural Programming (like C):</strong> Focus is on functions and logic.</li>
+          <li><strong>Functional Programming:</strong> Focus is on pure functions and immutability (e.g., Lisp, Haskell).</li>
+          <li><strong>Data Decomposition:</strong> Focuses on breaking down data structures rather than functionality (used in data-centric applications).</li>
+        </ul>
+      
+        <h3>3. Basic OOP Concepts</h3>
+        <ul>
+          <li><strong>Abstraction:</strong> Hiding complex implementation and showing only essentials.</li>
+          <li><strong>Encapsulation:</strong> Wrapping data and functions together in a single unit (class).</li>
+          <li><strong>Inheritance:</strong> Ability to acquire properties of another class.</li>
+          <li><strong>Polymorphism:</strong> Ability to use a single interface with different underlying forms (function overloading and overriding).</li>
+        </ul>
+      
+        <h3>4. Review of C (Key Differences)</h3>
+        <p>C is a procedural language, whereas C++ is object-oriented. C++ includes features like classes, objects, and advanced memory management using <code>new</code> and <code>delete</code>.</p>
+      
+        <h3>5. Difference Between C and C++</h3>
+        <ul>
+          <li>C uses <code>printf</code>/<code>scanf</code>; C++ uses <code>cin</code>/<code>cout</code>.</li>
+          <li>C++ supports OOP; C does not.</li>
+          <li>C uses <code>malloc/free</code>; C++ uses <code>new/delete</code>.</li>
+        </ul>
+      
+        <h3>6. Example: Basic C++ Program using OOP Features</h3>
+        <div class="code-block">
+          #include &lt;iostream&gt;
+          using namespace std;<br>
+          class Student {<br>
+          &nbsp;&nbsp;private:
+          &nbsp;&nbsp;&nbsp;&nbsp;string name;
+          &nbsp;&nbsp;&nbsp;&nbsp;int age;<br>
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void setData(string n, int a) {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name = n;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;age = a;
+          &nbsp;&nbsp;&nbsp;&nbsp;}<br>
+          &nbsp;&nbsp;&nbsp;&nbsp;void display() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Name: " &lt;&lt; name &lt;&lt; ", Age: " &lt;&lt; age &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Student s1;
+          &nbsp;&nbsp;s1.setData("Amit", 20);
+          &nbsp;&nbsp;s1.display();
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      
+        <h3>7. Example: Use of new and delete</h3>
+        <div class="code-block">
+          int* ptr = new int; // dynamically allocate memory
+          *ptr = 100;
+          cout &lt;&lt; "Value: " &lt;&lt; *ptr &lt;&lt; endl;
+          delete ptr; // free memory
+        </div>
+      
+      </div>
+      
+
+    <!-- UNIT 2 -->
+    <div class="topic-container">
+        <h1>UNIT-II: Classes and Objects</h1>
+      
+        <h3>1. Encapsulation & Information Hiding</h3>
+        <p>
+          <strong>Encapsulation</strong> is the concept of bundling data and methods that operate on that data within one unit (class). 
+          <br><strong>Information hiding</strong> is achieved by using access specifiers like <code>private</code>, <code>public</code>, and <code>protected</code>.
+        </p>
+      
+        <h3>2. Abstract Data Types (ADT)</h3>
+        <p>
+          ADT refers to a data structure defined by the user that hides implementation details and exposes only operations.
+        </p>
+      
+        <h3>3. Objects & Classes</h3>
+        <ul>
+          <li><strong>Class:</strong> A blueprint for objects containing attributes (data members) and methods (member functions).</li>
+          <li><strong>Object:</strong> An instance of a class.</li>
+        </ul>
+      
+        <div class="code-block">
+          class Car {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;string brand;
+          &nbsp;&nbsp;&nbsp;&nbsp;int year;
+          &nbsp;&nbsp;&nbsp;&nbsp;void display() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; brand &lt;&lt; " - " &lt;&lt; year &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Car c1;
+          &nbsp;&nbsp;c1.brand = "Toyota";
+          &nbsp;&nbsp;c1.year = 2022;
+          &nbsp;&nbsp;c1.display();
+          }
+        </div>
+      
+        <h3>4. State, Identity, and Behaviour of an Object</h3>
+        <ul>
+          <li><strong>State:</strong> Represented by values of attributes.</li>
+          <li><strong>Identity:</strong> Unique name or memory location.</li>
+          <li><strong>Behaviour:</strong> Defined by methods/functions.</li>
+        </ul>
+      
+        <h3>5. Constructors and Destructors</h3>
+        <p>
+          <strong>Constructor:</strong> Special method called when an object is created. It has the same name as the class.<br>
+          <strong>Destructor:</strong> Called when the object goes out of scope to clean up resources.
+        </p>
+      
+        <div class="code-block">
+          class Student {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;Student() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Constructor called" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          &nbsp;&nbsp;&nbsp;&nbsp;~Student() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Destructor called" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Student s;
+          }
+        </div>
+      
+        <h3>6. Instantiation of Objects</h3>
+        <p>Creating objects of a class using class name.</p>
+        <div class="code-block">
+          Car c1, c2; // Two objects created
+        </div>
+      
+        <h3>7. Default Parameter Value</h3>
+        <p>Allows passing fewer arguments by giving default values in function declaration.</p>
+        <div class="code-block">
+          void greet(string name = "Guest") {<br>
+          &nbsp;&nbsp;cout &lt;&lt; "Hello, " &lt;&lt; name &lt;&lt; endl;<br>
+          }<br>
+          greet(); // Output: Hello, Guest<br>
+          greet("Nivesh"); // Output: Hello, Nivesh
+        </div>
+      
+        <h3>8. Object Types</h3>
+        <ul>
+          <li>Automatic (local)</li>
+          <li>Dynamic (using new)</li>
+          <li>Global/static</li>
+        </ul>
+      
+        <h3>9. C++ Garbage Collection</h3>
+        <p>
+          C++ does not have automatic garbage collection like Java. The <code>delete</code> operator is used to manually deallocate dynamic memory.
+        </p>
+      
+        <div class="code-block">
+          int* ptr = new int(10);<br>
+          cout &lt;&lt; *ptr;<br>
+          delete ptr;
+        </div>
+      
+        <h3>10. Dynamic Memory Allocation</h3>
+        <p>Using <code>new</code> and <code>delete</code> to allocate and free memory during runtime.</p>
+      
+        <h3>11. Meta Class / Abstract Class</h3>
+        <p>
+          An <strong>abstract class</strong> has at least one pure virtual function and cannot be instantiated directly.
+        </p>
+        <div class="code-block">
+          class Shape {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;virtual void draw() = 0; // Pure virtual function
+          };<br>
+          class Circle : public Shape {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void draw() override {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Drawing Circle" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Circle c;
+          &nbsp;&nbsp;c.draw();
+          }
+        </div>
+      
+      </div>
+
+      
+      <!-- UNIT 3 -->
+
+      <div class="topic-container">
+        <h1>UNIT-III: Inheritance and Polymorphism</h1>
+      
+        <h3>1. Inheritance</h3>
+        <p>
+          Inheritance allows one class to inherit the properties and behaviors (members) of another class.
+          It promotes code reusability and forms a hierarchy of classes.
+        </p>
+      
+        <h4>Example:</h4>
+        <div class="code-block">
+          class Animal {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void sound() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Animal sound" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          class Dog : public Animal {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void bark() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Bark" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Dog d;
+          &nbsp;&nbsp;d.sound();
+          &nbsp;&nbsp;d.bark();
+          }
+        </div>
+      
+        <h3>2. Class Hierarchy</h3>
+        <p>
+          A class hierarchy shows the relationship between a base class and its derived classes.
+          <br>It can be single, multilevel, hierarchical, or hybrid inheritance.
+        </p>
+      
+        <h3>3. Derivation – Public, Private & Protected</h3>
+        <p>
+          These determine how the members of the base class are inherited:
+          <ul>
+            <li><strong>Public:</strong> Public and protected members remain accessible in derived class.</li>
+            <li><strong>Private:</strong> All base members become private in derived class.</li>
+            <li><strong>Protected:</strong> Public and protected become protected.</li>
+          </ul>
+        </p>
+      
+        <h3>4. Aggregation</h3>
+        <p>
+          Aggregation is a "has-a" relationship where one class contains another as a member.
+        </p>
+      
+        <h4>Example:</h4>
+        <div class="code-block">
+          class Engine {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void start() { cout &lt;&lt; "Engine starts" &lt;&lt; endl; }
+          };<br>
+          class Car {
+          &nbsp;&nbsp;Engine e;
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void startCar() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;e.start();
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };
+        </div>
+      
+        <h3>5. Composition vs Classification Hierarchies</h3>
+        <p>
+          <strong>Composition:</strong> One object is made of other objects.<br>
+          <strong>Classification:</strong> An object is a specific type of a more general class.
+        </p>
+      
+        <h3>6. Polymorphism</h3>
+        <p>
+          Polymorphism means "many forms". It allows functions or operators to act differently based on the input.
+          <br><strong>Types:</strong> Compile-time (method/ operator overloading), Run-time (virtual functions).
+        </p>
+      
+        <h3>7. Categorization of Polymorphism Techniques</h3>
+        <ul>
+          <li>Compile-time: Function Overloading, Operator Overloading</li>
+          <li>Run-time: Function Overriding using Virtual Functions</li>
+        </ul>
+      
+        <h3>8. Method Polymorphism (Function Overloading)</h3>
+        <p>
+          Function with same name but different parameters.
+        </p>
+      
+        <div class="code-block">
+          class Print {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void show(int a) { cout &lt;&lt; a &lt;&lt; endl; }
+          &nbsp;&nbsp;&nbsp;&nbsp;void show(string s) { cout &lt;&lt; s &lt;&lt; endl; }
+          };<br>
+          Print p;
+          p.show(5);
+          p.show("Hello");
+        </div>
+      
+        <h3>9. Polymorphism by Parameter</h3>
+        <p>
+          Achieved when the same function name handles different types/number of parameters.
+        </p>
+      
+        <h3>10. Operator Overloading</h3>
+        <p>
+          Operator overloading allows redefining the meaning of operators for user-defined types.
+        </p>
+      
+        <div class="code-block">
+          class Complex {
+          &nbsp;&nbsp;int real, imag;
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;Complex(int r, int i) { real = r; imag = i; }
+          &nbsp;&nbsp;&nbsp;&nbsp;Complex operator + (Complex c) {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return Complex(real + c.real, imag + c.imag);
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          &nbsp;&nbsp;&nbsp;&nbsp;void display() { cout &lt;&lt; real &lt;&lt; "+" &lt;&lt; imag &lt;&lt; "i" &lt;&endl; }<br>
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Complex c1(2, 3), c2(4, 5);
+          &nbsp;&nbsp;Complex c3 = c1 + c2;
+          &nbsp;&nbsp;c3.display();
+          }
+        </div>
+      
+        <h3>11. Parametric Polymorphism</h3>
+        <p>
+          Using templates to write generic and reusable code.
+        </p>
+      
+        <div class="code-block">
+          template &lt;class T&gt;
+          T add(T a, T b) {
+          &nbsp;&nbsp;return a + b;
+          }<br>
+          int main() {
+          &nbsp;&nbsp;cout &lt;&lt; add&lt;int&gt;(5, 10) &lt;&lt; endl;
+          &nbsp;&nbsp;cout &lt;&lt; add&lt;float&gt;(2.5, 3.5);
+          }
+        </div>
+      
+      </div>
+
+      <!-- UNIT 4 -->
+      <div class="topic-container">
+        <h1>UNIT-IV: Generic Function</h1>
+      
+        <h3>1. Template Function</h3>
+        <p>
+          Template functions allow writing generic and reusable code. It enables the creation of functions that can operate on different data types without rewriting code.
+        </p>
+      
+        <div class="code-block">
+          template &lt;typename T&gt;
+          T add(T a, T b) {
+          &nbsp;&nbsp;return a + b;
+          }<br>
+          int main() {
+          &nbsp;&nbsp;cout &lt;&lt; add(10, 20) &lt;&lt; endl;         // For int
+          &nbsp;&nbsp;cout &lt;&lt; add(2.5, 3.6) &lt;&lt; endl;     // For float
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      
+        <h3>2. Function Overloading</h3>
+        <p>
+          Overloading allows functions with the same name but different parameters.
+        </p>
+      
+        <div class="code-block">
+          void print(int i) {
+          &nbsp;&nbsp;cout &lt;&lt; "Integer: " &lt;&lt; i &lt;&lt; endl;
+          }
+          void print(double d) {
+          &nbsp;&nbsp;cout &lt;&lt; "Double: " &lt;&lt; d &lt;&lt; endl;
+          }
+          void print(string s) {
+          &nbsp;&nbsp;cout &lt;&lt; "String: " &lt;&lt; s &lt;&lt; endl;
+          }
+        </div>
+      
+        <h3>3. Method Overriding</h3>
+        <p>
+          Overriding is redefining a base class method in the derived class using the same signature.
+        </p>
+      
+        <div class="code-block">
+          class Base {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;virtual void show() {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Base class" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };
+          class Derived : public Base {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void show() override {
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Derived class" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;}
+          };
+        </div>
+      
+        <h3>4. Run-Time Polymorphism</h3>
+        <p>
+          Achieved using virtual functions and base class pointers.
+        </p>
+      
+        <div class="code-block">
+          Base* ptr;
+          Derived d;
+          ptr = &amp;d;
+          ptr-&gt;show();   // Calls Derived's show() method
+        </div>
+      
+        <h3>5. Multiple Inheritance</h3>
+        <p>
+          A class can inherit from more than one base class.
+        </p>
+      
+        <div class="code-block">
+          class A {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void showA() { cout &lt;&lt; "Class A" &lt;&lt; endl; }
+          };
+          class B {
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;void showB() { cout &lt;&lt; "Class B" &lt;&lt; endl; }
+          };
+          class C : public A, public B { };<br>
+          int main() {
+          &nbsp;&nbsp;C obj;
+          &nbsp;&nbsp;obj.showA();
+          &nbsp;&nbsp;obj.showB();
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      </div>
+
+      
+      <!-- UNIT 5 -->
+      <div class="topic-container">
+        <h1>UNIT-V: Files and Exception Handling</h1>
+      
+        <h3>1. Streams and Files</h3>
+        <p>
+          Streams in C++ are used to perform input and output operations. Files allow storing and retrieving data from storage.
+        </p>
+      
+        <div class="code-block">
+          #include &lt;iostream&gt;
+          #include &lt;fstream&gt;
+          using namespace std;<br>
+          int main() {
+          &nbsp;&nbsp;ofstream outfile("example.txt");
+          &nbsp;&nbsp;if (outfile.is_open()) {
+          &nbsp;&nbsp;&nbsp;&nbsp;outfile &lt;&lt; "Hello, file!" &lt;&lt; endl;
+          &nbsp;&nbsp;&nbsp;&nbsp;outfile.close();
+          &nbsp;&nbsp;}
+          &nbsp;&nbsp;ifstream infile("example.txt");
+          &nbsp;&nbsp;string line;
+          &nbsp;&nbsp;while (getline(infile, line)) {
+          &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; line &lt;&lt; endl;
+          &nbsp;&nbsp;}
+          &nbsp;&nbsp;infile.close();
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      
+        <h3>2. Namespaces</h3>
+        <p>
+          Namespaces in C++ are used to organize code into logical groups and prevent name collisions.
+        </p>
+      
+        <div class="code-block">
+          #include &lt;iostream&gt;
+          using namespace std;<br>
+          namespace first_namespace {
+          &nbsp;&nbsp;void display() {
+          &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "This is the first namespace!" &lt;&lt; endl;
+          &nbsp;&nbsp;}
+          }<br>
+          int main() {
+          &nbsp;&nbsp;first_namespace::display();
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      
+        <h3>3. Exception Handling</h3>
+        <p>
+          Exception handling in C++ is done using try, catch, and throw keywords. It is used to handle runtime errors.
+        </p>
+      
+        <div class="code-block">
+          #include &lt;iostream&gt;
+          using namespace std;<br>
+          int divide(int a, int b) {
+          &nbsp;&nbsp;if (b == 0) {
+          &nbsp;&nbsp;&nbsp;&nbsp;throw "Division by zero!";
+          &nbsp;&nbsp;}
+          &nbsp;&nbsp;return a / b;
+          }<br>
+          int main() {
+          &nbsp;&nbsp;try {
+          &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Result: " &lt;&lt; divide(10, 0) &lt;&lt; endl;
+          &nbsp;&nbsp;}
+          &nbsp;&nbsp;catch (const char* msg) {
+          &nbsp;&nbsp;&nbsp;&nbsp;cout &lt;&lt; "Error: " &lt;&lt; msg &lt;&lt; endl;
+          &nbsp;&nbsp;}
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      
+        <h3>4. Generic Classes</h3>
+        <p>
+          Generic classes in C++ are used to create classes that can work with any data type.
+        </p>
+      
+        <div class="code-block">
+          template &lt;typename T&gt;
+          class Box {
+          &nbsp;&nbsp;T value;
+          &nbsp;&nbsp;public:
+          &nbsp;&nbsp;&nbsp;&nbsp;Box(T val) : value(val) {}
+          &nbsp;&nbsp;&nbsp;&nbsp;T getValue() { return value; }
+          };<br>
+          int main() {
+          &nbsp;&nbsp;Box&lt;int&gt; intBox(5);
+          &nbsp;&nbsp;cout &lt;&lt; "Integer Value: " &lt;&lt; intBox.getValue() &lt;&lt; endl;
+          &nbsp;&nbsp;Box&lt;double&gt; doubleBox(3.14);
+          &nbsp;&nbsp;cout &lt;&lt; "Double Value: " &lt;&lt; doubleBox.getValue() &lt;&lt; endl;
+          &nbsp;&nbsp;return 0;
+          }
+        </div>
+      </div>
+      
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+
+.topic-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #007acc;
+}
+
+.section {
+    margin-bottom: 40px;
+    padding: 15px;
+    border-left: 5px solid #007acc;
+    background-color: #e9f4fb;
+}
+
+.section h2 {
+    color: #005f99;
+}
+
+.section ul,
+.section ol {
+    padding-left: 20px;
+}
+
+.matrix, .problem {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-top: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* overflow: hidden; Avoids overflow of content */
+
+}
+
+.matrix pre, .problem pre {
+    background-color: #eee;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: 'Courier New', Courier, monospace;
+
+    /* white-space: pre-wrap; Prevents overflow of long lines */
+    /* word-wrap: break-word; Allows long text to wrap */
+}
+
+
+.topic-container {
+    line-height: 1.6;
+}
+
+.section h2 {
+    color: #2b4d7e;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: square;
+    margin-left: 20px;
+}
+
+pre {
+    background-color: white;
+    padding: 10px;
+    border-left: 4px solid #4da3ff;
+    overflow-x: auto;
+    font-size: 14px; /* Adjusted to make diagrams fit */
+    font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap;
+    color: black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #0b5ed7;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1;
+    transition: background-color 0.3s ease;
+  }
+  
+
+/* Code block style */
+.code-block {
+    background-color: rgb(0, 0, 0);  
+    padding: 10px;
+    font-family: 'Courier New', monospace; 
+    margin: 20px 0;
+    /* white-space: pre-wrap; */
+    color: white;
+    border-left: 4px solid #4da3ff;
+        /* padding-left: 0px; */
+}

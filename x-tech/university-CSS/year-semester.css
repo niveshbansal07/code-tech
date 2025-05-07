@@ -1,0 +1,74 @@
+.syllabus-university-header {
+    margin: 30px 200px;
+    padding: 10px 40px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+.syllabus-university-header .University-name{
+    color: green;
+}
+
+.year-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 10px;
+    width: 1020px;
+    margin: auto;
+}
+
+.semester-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.semester-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 550px;
+    height: 280px;
+    margin: 20px 0px;
+    padding-top: 10px;
+
+}
+
+.semester-box a{
+    color: green;
+    text-decoration:none ;
+}
+
+.semester-box a:hover{
+    text-decoration: underline;
+}
+
+.semester-unit{
+    margin: 4vh 3vw;
+    margin: auto;
+    margin-left: 6vh;
+    text-align: left;
+    list-style: circle;
+    padding: 0px;
+}
+
+.semester-unit li {
+    margin-top: 2vh;
+}
+
+.semester-unit a {
+    text-decoration: none;
+    font-size: 1.2rem; 
+    border-radius: 10px;
+    color: black;
+}
+
+.semester-unit a:hover{
+   color: green;
+   text-decoration: underline;
+}

@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Web Designing</div>
+
+    <div class="container">
+
+        <a href="#unit1" class="unit">UNIT-I: Introduction</a>
+        <div id="unit1" class="content">
+            Basic principles involved in developing a web site, Planning process, Domains and Hosting, Responsive Web
+            Designing, Types of Websites (Static and Dynamic Websites), Web Standards and W3C recommendations.
+            <br>Introduction to HTML: What is HTML, HTML Documents, Basic structure of an HTML document, Creating an
+            HTML document, Markup Tags, Headings, Paragraphs, Line Breaks.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Elements of HTML</a>
+        <div id="unit2" class="content">
+            HTML Tags, Working with Text, Working with Lists, Tables and Frames, Working with Hyperlinks, Images and
+            Multimedia, Working with Forms and Controls.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Concept of CSS</a>
+        <div id="unit3" class="content">
+            Creating Style Sheets, CSS Properties, CSS Styling (Background, Text Format, Controlling Fonts), Working
+            with block elements and objects, Working with Lists and Tables, CSS Id and Class.
+            <br>Box Model (Introduction, Border properties, Padding Properties, Margin properties), CSS Advanced
+            (Grouping, Dimension, Display, Positioning, Floating, Align, Pseudo class, Navigation Bar, Image Sprites,
+            Attribute selector), CSS Color, Creating page Layout and Site Designs.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: JavaScript & Client-Side Scripting</a>
+        <div id="unit4" class="content">
+            Introduction to Client-Side Scripting, Introduction to JavaScript, JavaScript Types, Variables in JS,
+            Operators in JS, Condition Statements, JavaScript Loops, JS Popup Boxes, JS Events, JS Arrays, Working with
+            Arrays, JS Objects, JS Functions.
+            <br>Using JavaScript in Real-time, Validation of Forms, Related Examples.
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Web Hosting & SEO</a>
+        <div id="unit5" class="content">
+            Web Hosting Basics, Types of Hosting Packages, Registering domains, Defining Name Servers, Using Control
+            Panel, Creating Emails in Cpanel, Using FTP Client, Maintaining a Website.
+            <br>Concepts of SEO: Basics of SEO, Importance of SEO, On-page Optimization Basics.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Introduction to Web Designing</h1>
+
+        <section class="section">
+            <h2>1. Basic Principles Involved in Developing a Website</h2>
+            <p>Developing a website requires understanding key principles such as:</p>
+            <ul>
+                <li><strong>User-Centered Design:</strong> The website must cater to the needs of its users.</li>
+                <li><strong>Content Strategy:</strong> Clear, engaging, and well-organized content is essential.</li>
+                <li><strong>Visual Design:</strong> Good aesthetics contribute to a pleasant user experience.</li>
+                <li><strong>Usability:</strong> The website should be easy to navigate and accessible.</li>
+                <li><strong>Performance:</strong> Websites should load quickly and efficiently.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. Planning Process</h2>
+            <p>The planning process involves defining the purpose, audience, and scope of the website.</p>
+            <ul>
+                <li><strong>Define Website Goals:</strong> What is the website meant to achieve?</li>
+                <li><strong>Identify Target Audience:</strong> Who are the primary users?</li>
+                <li><strong>Design Structure:</strong> Plan the layout, navigation, and content strategy.</li>
+                <li><strong>Choose Technology:</strong> HTML, CSS, JavaScript, or frameworks like React, Angular, etc.
+                </li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Domains and Hosting</h2>
+            <p>Websites need a domain name and hosting to be available on the internet:</p>
+            <ul>
+                <li><strong>Domain Name:</strong> A unique address for the website (e.g., www.example.com).</li>
+                <li><strong>Web Hosting:</strong> A service that allows you to store your website files and make them
+                    accessible on the internet.</li>
+            </ul>
+            <pre class="code-block">
+    Example:
+    <strong>Domain Name:</strong> www.yourwebsite.com
+    <strong>Web Hosting Service:</strong> Bluehost, GoDaddy, HostGator, etc.
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>4. Responsive Web Designing</h2>
+            <p>Responsive web design ensures that websites work across a variety of devices (desktops, tablets,
+                smartphones).</p>
+            <p><strong>Key Concepts:</strong></p>
+            <ul>
+                <li><strong>Flexible Grid Layout:</strong> Layout adjusts according to the screen size.</li>
+                <li><strong>Media Queries:</strong> Allows different styles for different screen sizes.</li>
+                <li><strong>Fluid Images:</strong> Images resize according to the container width.</li>
+            </ul>
+            <pre class="code-block">
+    Example of Media Query:
+    @media only screen and (max-width: 600px) {
+        body { font-size: 14px; }
+    }
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>5. Types of Websites</h2>
+            <h3>5.1 Static Websites</h3>
+            <p>Static websites are fixed-content websites that display the same information for every visitor. They are
+                easy to build and host.</p>
+            <pre class="code-block">
+    Example:
+    <strong>HTML Code for a Static Website:</strong>
+    &lt;html&gt;
+        &lt;head&gt;&lt;title&gt;Static Website&lt;/title&gt;&lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Static Website&lt;/h1&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+
+            <h3>5.2 Dynamic Websites</h3>
+            <p>Dynamic websites display different content based on user interaction or real-time data. They are more
+                complex and require back-end programming.</p>
+            <pre class="code-block">
+    Example:
+    <strong>Dynamic Content with PHP:</strong>
+    &lt;?php echo "Welcome, User!"; ?&gt;
+            </pre>
+        </section>
+
+        <section class="section">
+            <h2>6. Web Standards and W3C Recommendations</h2>
+            <p>The World Wide Web Consortium (W3C) sets standards for web development to ensure accessibility,
+                interoperability, and usability across different platforms.</p>
+            <p><strong>Key Standards:</strong></p>
+            <ul>
+                <li><strong>HTML5:</strong> Latest version of HTML for creating structured web content.</li>
+                <li><strong>CSS3:</strong> Latest version of CSS for styling web pages.</li>
+                <li><strong>WCAG:</strong> Web Content Accessibility Guidelines for making websites accessible to people
+                    with disabilities.</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>7. Introduction to HTML</h2>
+            <h3>7.1 What is HTML?</h3>
+            <p>HTML (Hypertext Markup Language) is the standard language used to create web pages. It defines the
+                structure and content of web documents.</p>
+
+            <h3>7.2 HTML Documents</h3>
+            <p>HTML documents are made up of elements that are represented by tags.</p>
+            <pre class="code-block">
+    Example:
+    &lt;html&gt;
+        &lt;head&gt;&lt;title&gt;My First HTML Page&lt;/title&gt;&lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+
+            <h3>7.3 Basic Structure of an HTML Document</h3>
+            <p>An HTML document typically contains a <strong>head</strong> section and a <strong>body</strong> section.
+            </p>
+            <pre class="code-block">
+    Example:
+    &lt;html&gt;
+        &lt;head&gt;&lt;title&gt;My Website&lt;/title&gt;&lt;/head&gt;
+        &lt;body&gt;
+            &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+        &lt;/body&gt;
+    &lt;/html&gt;
+            </pre>
+
+            <h3>7.4 Markup Tags</h3>
+            <p>HTML uses markup tags to define elements like headings, paragraphs, images, and links. Tags come in
+                pairs: opening and closing tags.</p>
+
+            <pre class="code-block">
+    Example:
+    &lt;h1&gt;This is a Heading&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            </pre>
+
+            <h3>7.5 Heading and Paragraphs</h3>
+            <p>Headings are used to define sections and sub-sections in your document. Paragraphs define blocks of text.
+            </p>
+            <pre class="code-block">
+    Example:
+    &lt;h2&gt;Introduction&lt;/h2&gt;
+    &lt;p&gt;This is the first paragraph of the webpage.&lt;/p&gt;
+            </pre>
+
+            <h3>7.6 Line Breaks</h3>
+            <p>The line break tag (<code>&lt;br&gt;</code>) is used to add a break in the content and move to the next
+                line.</p>
+            <pre class="code-block">
+    Example:
+    &lt;p&gt;This is the first line.&lt;br&gt;This is the second line.&lt;/p&gt;
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: HTML Forms and Input Elements</h1>
+
+        <section class="section">
+            <h2>1. Introduction to HTML Forms</h2>
+            <p>HTML forms are used to collect user input. A form is created using the `
+            <form>` tag and can contain various input elements like text fields, radio buttons, checkboxes, and buttons.
+                </p>
+
+                <h3>1.1 Basic Form Structure</h3>
+                <p>To create a basic form, the following syntax is used:</p>
+
+                <div class="code-block">
+                    <pre>
+            &lt;form action="submit_form.php" method="post"&gt;
+                &lt;label for="name"&gt;Name:&lt;/label&gt;
+                &lt;input type="text" id="name" name="name"&gt;
+                
+                &lt;label for="email"&gt;Email:&lt;/label&gt;
+                &lt;input type="email" id="email" name="email"&gt;
+                
+                &lt;input type="submit" value="Submit"&gt;
+            &lt;/form&gt;
+            </pre>
+                </div>
+        </section>
+
+        <section class="section">
+            <h2>2. Types of Input Elements</h2>
+            <p>HTML provides several types of input elements for different kinds of data. Here are the most common
+                types:</p>
+
+            <h3>2.1 Text Input</h3>
+            <div class="code-block">
+                <pre>
+            &lt;input type="text" id="username" name="username"&gt;
+            </pre>
+            </div>
+
+            <h3>2.2 Password Input</h3>
+            <div class="code-block">
+                <pre>
+            &lt;input type="password" id="password" name="password"&gt;
+            </pre>
+            </div>
+
+            <h3>2.3 Radio Button</h3>
+            <div class="code-block">
+                <pre>
+            &lt;input type="radio" id="male" name="gender" value="male"&gt; Male
+            &lt;input type="radio" id="female" name="gender" value="female"&gt; Female
+            </pre>
+            </div>
+
+            <h3>2.4 Checkbox</h3>
+            <div class="code-block">
+                <pre>
+            &lt;input type="checkbox" id="subscribe" name="subscribe"&gt; Subscribe to newsletter
+            </pre>
+            </div>
+
+            <h3>2.5 Dropdown Menu (Select)</h3>
+            <div class="code-block">
+                <pre>
+            &lt;select id="car" name="car"&gt;
+                &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+                &lt;option value="saab"&gt;Saab&lt;/option&gt;
+                &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+            &lt;/select&gt;
+            </pre>
+            </div>
+        </section>
+    </div>
+
+
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Concept of CSS</h1>
+
+        <section class="section">
+            <h2>1. Creating a Style Sheet</h2>
+            <p>CSS (Cascading Style Sheets) is used to control the style and layout of web pages.</p>
+            <p>There are three types of CSS:</p>
+            <ul>
+                <li><strong>Inline CSS:</strong> Applied directly inside an HTML element.</li>
+                <li><strong>Internal CSS:</strong> Placed inside a &lt;style&gt; tag in the &lt;head&gt; section.</li>
+                <li><strong>External CSS:</strong> Linked via an external .css file.</li>
+            </ul>
+            <div class="code-block">
+                <p><strong>Example of Internal CSS:</strong></p>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;style&gt;
+        body {
+            background-color: lightblue;
+        }
+        h1 {
+            color: navy;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello CSS&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>2. CSS Properties and Styling</h2>
+            <ul>
+                <li><strong>Background:</strong> Color or image behind the content.</li>
+                <li><strong>Text Format:</strong> Font size, weight, decoration.</li>
+                <li><strong>Font Control:</strong> Family, size, style.</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+h1 {
+    background-color: yellow;
+    font-family: Arial;
+    font-size: 24px;
+    text-align: center;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>3. Block Elements and Lists</h2>
+            <p>Block elements (like div, p, section) can be styled with margins, padding, etc.</p>
+            <div class="code-block">
+                <pre>
+div {
+    border: 2px solid black;
+    margin: 10px;
+    padding: 20px;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>4. Tables with CSS</h2>
+            <p>You can style tables to improve their appearance.</p>
+            <div class="code-block">
+                <pre>
+table {
+    border-collapse: collapse;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>5. CSS ID and Class</h2>
+            <p>IDs are unique; classes can be reused.</p>
+            <div class="code-block">
+                <pre>
+#header {
+    color: green;
+}
+.content {
+    font-size: 16px;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>6. Box Model</h2>
+            <p>Each element is a box: content + padding + border + margin.</p>
+            <ul>
+                <li><strong>Border</strong></li>
+                <li><strong>Padding</strong></li>
+                <li><strong>Margin</strong></li>
+            </ul>
+            <div class="code-block">
+                <pre>
+div {
+    padding: 10px;
+    border: 2px solid blue;
+    margin: 15px;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>7. Advanced CSS</h2>
+            <ul>
+                <li><strong>Grouping:</strong> Apply same style to multiple elements</li>
+                <li><strong>Dimension:</strong> Set width and height</li>
+                <li><strong>Display:</strong> block, inline, none</li>
+                <li><strong>Positioning:</strong> static, relative, absolute, fixed</li>
+                <li><strong>Floating:</strong> float: left or right</li>
+                <li><strong>Pseudo Classes:</strong> :hover, :first-child, etc.</li>
+                <li><strong>Image Sprites:</strong> Combine multiple images into one</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+.box {
+    width: 100px;
+    height: 100px;
+    float: left;
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>8. CSS Colors</h2>
+            <p>Colors can be defined using names, HEX, RGB, or HSL values.</p>
+            <div class="code-block">
+                <pre>
+h1 {
+    color: #ff6600;
+    background-color: rgb(255, 255, 200);
+}
+            </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>9. Page Layout and Site Design</h2>
+            <p>Use CSS to structure your entire website layout using flexbox, grid, and positioning.</p>
+            <div class="code-block">
+                <pre>
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+nav, main, aside {
+    padding: 10px;
+    background: #eee;
+}
+            </pre>
+            </div>
+        </section>
+    </div>
+
+    <!-- UNIT 4 -->
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: JavaScript and Client-Side Scripting</h1>
+
+        <section class="section">
+            <h2>1. Introduction to Client-Side Scripting</h2>
+            <p>Client-side scripting refers to code that runs on the user's browser rather than the server. It is used
+                to create dynamic and interactive web pages without reloading.</p>
+            <ul>
+                <li>Improves user experience</li>
+                <li>Reduces server load</li>
+                <li>Enables fast interaction</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>2. Introduction to JavaScript</h2>
+            <p>JavaScript is a lightweight, interpreted programming language primarily used for enhancing interactivity
+                in web applications.</p>
+            <ul>
+                <li>Client-side scripting language</li>
+                <li>Can manipulate HTML and CSS</li>
+                <li>Event-driven and object-oriented</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. JavaScript Types and Variables</h2>
+            <p>JavaScript supports various data types and variable declarations using <code>var</code>,
+                <code>let</code>, and <code>const</code>.
+            </p>
+
+            <div class="code-block">
+                <pre>
+  // Primitive Types
+  let name = "John";       // String
+  let age = 25;            // Number
+  let isStudent = true;    // Boolean
+  let value = null;        // Null
+  let data;                // Undefined
+  
+  // Declaring variables
+  var x = 10;
+  let y = 20;
+  const z = 30;
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>4. Operators in JavaScript</h2>
+            <p>JavaScript supports arithmetic, comparison, logical, and assignment operators.</p>
+
+            <div class="code-block">
+                <pre>
+  let a = 10;
+  let b = 5;
+  
+  // Arithmetic
+  console.log(a + b);
+  console.log(a - b);
+  console.log(a * b);
+  console.log(a / b);
+  
+  // Comparison
+  console.log(a == b);
+  console.log(a > b);
+  
+  // Logical
+  console.log(a > 5 && b < 10);
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>5. Conditional Statements</h2>
+            <p>JavaScript supports <code>if</code>, <code>else if</code>, <code>else</code>, and <code>switch</code> for
+                conditions.</p>
+
+            <div class="code-block">
+                <pre>
+  let age = 18;
+  if (age >= 18) {
+    console.log("Adult");
+  } else {
+    console.log("Minor");
+  }
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>6. JavaScript Loops</h2>
+            <p>Used to execute a block of code repeatedly. Includes <code>for</code>, <code>while</code>, and
+                <code>do...while</code>.
+            </p>
+
+            <div class="code-block">
+                <pre>
+  // For loop
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  
+  // While loop
+  let i = 0;
+  while (i < 5) {
+    console.log(i);
+    i++;
+  }
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>7. JavaScript Popup Boxes</h2>
+            <p>Used for interaction with users.</p>
+            <ul>
+                <li><code>alert()</code> – shows a message</li>
+                <li><code>confirm()</code> – asks for confirmation</li>
+                <li><code>prompt()</code> – takes user input</li>
+            </ul>
+
+            <div class="code-block">
+                <pre>
+  alert("Hello!");
+  let confirmBox = confirm("Are you sure?");
+  let userName = prompt("Enter your name:");
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>8. JavaScript Events</h2>
+            <p>Events are actions that occur in the browser, like clicking a button or loading a page.</p>
+
+            <div class="code-block">
+                <pre>
+<button type="button">Click Me</button>        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>9. JavaScript Arrays</h2>
+            <p>Arrays hold multiple values in a single variable.</p>
+
+            <div class="code-block">
+                <pre>
+  let fruits = ["Apple", "Banana", "Mango"];
+  console.log(fruits[0]);       // Apple
+  fruits.push("Orange");        // Add new element
+  console.log(fruits.length);   // Array length
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>10. JavaScript Objects</h2>
+            <p>Objects are used to store key-value pairs.</p>
+
+            <div class="code-block">
+                <pre>
+  let person = {
+    name: "Alice",
+    age: 30,
+    greet: function() {
+      console.log("Hello " + this.name);
+    }
+  };
+  
+  person.greet();
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>11. JavaScript Functions</h2>
+            <p>Functions are reusable blocks of code.</p>
+
+            <div class="code-block">
+                <pre>
+  function add(x, y) {
+    return x + y;
+  }
+  
+  let result = add(5, 3);
+  console.log(result);
+        </pre>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>12. Real-Time JavaScript Use</h2>
+            <p>JavaScript is commonly used for:</p>
+            <ul>
+                <li>Form validations</li>
+                <li>Animations</li>
+                <li>AJAX calls</li>
+                <li>DOM manipulation</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>13. Form Validation Example</h2>
+            <p>JavaScript can validate form inputs before sending them to the server.</p>
+
+            <div class="code-block">
+                <pre>
+<input type="text" placeholder="Enter something" />             
+<button type="button">submit</button>
+        </pre>
+            </div>
+        </section>
+    </div>
+
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Web Hosting & SEO</h1>
+    
+        <section class="section">
+            <h2>1. Web Hosting Basics</h2>
+            <p>Web hosting is a service that allows individuals and organizations to post a website or web page onto the Internet. A web host, or hosting provider, is a business that provides the technologies and services needed for the website to be viewed online.</p>
+            <p><strong>Key Concepts:</strong></p>
+            <ul>
+                <li>Web hosting allows you to store website files on a server.</li>
+                <li>It provides you with a unique address (domain name) to access your site.</li>
+                <li>It ensures uptime, support, and bandwidth for your website’s performance.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2. Types of Hosting Packages</h2>
+            <p>There are various types of hosting to suit different website needs:</p>
+            <ul>
+                <li><strong>Shared Hosting:</strong> Multiple websites share the same server resources. Budget-friendly for beginners.</li>
+                <li><strong>VPS Hosting:</strong> Virtual Private Server offers more control and dedicated resources.</li>
+                <li><strong>Dedicated Hosting:</strong> One server is dedicated entirely to your website.</li>
+                <li><strong>Cloud Hosting:</strong> Uses cloud resources and provides scalability.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>3. Registering Domains</h2>
+            <p>A domain is your website's address on the internet. Registering a domain involves choosing a unique name and purchasing it through a domain registrar.</p>
+            <div class="code-block">
+                Example:
+    <pre>
+    Domain: www.mywebsite.com
+    Registrar: GoDaddy, Namecheap, Google Domains
+    </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Defining Name Servers</h2>
+            <p>Name servers point your domain to the web hosting provider where your website files are stored. They act like a phone book for the internet.</p>
+            <div class="code-block">
+                Example:
+    <pre>
+    Name Server 1: ns1.myhost.com
+    Name Server 2: ns2.myhost.com
+    </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Using Control Panel (cPanel)</h2>
+            <p>cPanel is a web-based hosting control panel that simplifies website and server management tasks.</p>
+            <ul>
+                <li>Create and manage databases</li>
+                <li>Manage files and backups</li>
+                <li>Install WordPress or other CMS</li>
+            </ul>
+            <div class="code-block">
+                Example Actions in cPanel:
+    <pre>
+    - Create email accounts
+    - Add new domains or subdomains
+    - Monitor bandwidth usage
+    </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Creating Emails in cPanel</h2>
+            <p>You can create personalized email accounts based on your domain name (e.g., info@yourdomain.com).</p>
+            <div class="code-block">
+                Example:
+    <pre>
+    Login to cPanel > Email Accounts > Create
+    Email: support@mywebsite.com
+    Password: ********
+    </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Using FTP Client</h2>
+            <p>FTP (File Transfer Protocol) clients like FileZilla are used to upload and manage website files on the hosting server.</p>
+            <div class="code-block">
+                Example:
+    <pre>
+    Host: ftp.mywebsite.com
+    Username: ftpuser
+    Password: ********
+    Port: 21
+    </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Maintaining a Website</h2>
+            <p>Maintenance involves updating content, fixing broken links, securing the site, and ensuring backups are in place.</p>
+            <ul>
+                <li>Update CMS and plugins regularly</li>
+                <li>Monitor website uptime and performance</li>
+                <li>Backup files and databases periodically</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>9. Concepts of SEO (Search Engine Optimization)</h2>
+            <p>SEO is the process of optimizing your website to rank higher in search engine results, which helps bring organic traffic.</p>
+    
+            <h3>9.1 Basics of SEO</h3>
+            <p>SEO helps search engines understand your content and improves your visibility to users searching for relevant information.</p>
+            <ul>
+                <li>Use of proper HTML structure and semantic tags</li>
+                <li>Fast loading speed and mobile responsiveness</li>
+                <li>Optimized meta tags (title, description)</li>
+            </ul>
+    
+            <h3>9.2 Importance of SEO</h3>
+            <p>SEO is important because it increases visibility, drives traffic, and builds credibility.</p>
+            <ul>
+                <li>Higher rankings result in more visitors</li>
+                <li>Improves user experience and engagement</li>
+                <li>Cost-effective marketing strategy</li>
+            </ul>
+    
+            <h3>9.3 On-Page Optimization Basics</h3>
+            <p>On-page SEO refers to optimization techniques performed directly within the website content and code.</p>
+            <ul>
+                <li>Using relevant keywords in titles and content</li>
+                <li>Creating clean and structured URLs</li>
+                <li>Adding alt text to images for better indexing</li>
+            </ul>
+            <div class="code-block">
+       Example of Meta Tags:
+    <pre>
+    &lt;meta name="description" content="Learn web design and SEO basics"&gt;
+    &lt;meta name="keywords" content="web hosting, SEO, web design"&gt;
+    </pre>
+            </div>
+        </section>
+    </div>
+    
+</body>
+
+</html>

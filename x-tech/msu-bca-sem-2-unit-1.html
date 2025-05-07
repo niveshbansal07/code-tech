@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 1 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+    
+    <div class="sem-unit-header">Mathematics-I</div>
+
+    <div class="container">
+        <a href="#unit1" class="unit">UNIT-I: Sets</a>
+        <div id="unit1" class="content">
+            Sets, Subsets, Equal Sets, Universal Sets, Finite and Infinite Sets, Operations on Sets, Union, Intersection
+            and Complements of Sets, Cartesian Product, Cardinality of Sets, Simple Applications.
+        </div>
+
+        <a href="#unit2" class="unit">UNIT-II: Relations and Functions</a>
+        <div id="unit2" class="content">
+            Properties of Relations, Equivalence Relation, Partial Order Relation. Function: Domain and Range, Onto,
+            Into and One-to-One Functions, Composite and Inverse Functions. Introduction of Trigonometric, Logarithmic
+            and Exponential Functions.
+        </div>
+
+        <a href="#unit3" class="unit">UNIT-III: Partial Order Relations and Lattices</a>
+        <div id="unit3" class="content">
+            Partial Order Sets, Representation of POSETS using Hasse Diagram, Chains, Maximal and Minimal Points, GLB,
+            LUB, Lattices and Algebraic Systems, Principle of Duality.
+        </div>
+
+        <a href="#unit4" class="unit">UNIT-IV: Determinants and Matrices</a>
+        <div id="unit4" class="content">
+            Definition, Minors, Cofactors, Properties of Determinants. MATRICES: Definition, Types of Matrices,
+            Addition, Subtraction, Scalar Multiplication and Multiplication of Matrices, Adjoint, Inverse, Cramer's
+            Rule, Rank of Matrix, Dependence of Vectors, Eigen Vectors of a Matrix, Cayley-Hamilton Theorem (without
+            proof).
+        </div>
+
+        <a href="#unit5" class="unit">UNIT-V: Limits & Continuity</a>
+        <div id="unit5" class="content">
+            Limit at a Point, Properties of Limit, Computation of Limits of Various Types of Functions, Continuity at a
+            Point, Continuity Over an Interval, Intermediate Value Theorem, Types of Discontinuities.
+        </div>
+
+        <a href="#unit6" class="unit">UNIT-VI: Differentiation & Integration</a>
+        <div id="unit6" class="content">
+            Derivative, Derivatives of Sum, Differences, Product and Quotients, Chain Rule, Derivatives of Composite
+            Functions, Logarithmic Differentiation. Integral as Limit of Sum, Fundamental Theorem of Calculus (without
+            proof), Indefinite Integrals, Methods of Integration: Substitution, By Parts.
+        </div>
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Sets</h1>
+    
+        <section class="section">
+            <h2>1. Sets</h2>
+            <p>A <strong>Set</strong> is a well-defined collection of distinct objects or elements. Sets are usually denoted by capital letters and elements by lowercase letters.</p>
+            <pre class="matrix">
+    Example:
+    Set A = {1, 2, 3, 4, 5}
+    Set B = {a, e, i, o, u}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Subsets</h2>
+            <p>A <strong>subset</strong> is a set where all elements are also contained in another set. If A ⊆ B, every element of A is in B.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2}, B = {1, 2, 3}
+    Here, A ⊆ B
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Equal Sets</h2>
+            <p>Two sets are <strong>equal</strong> if they contain exactly the same elements, regardless of order.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2, 3}, B = {3, 2, 1}
+    Here, A = B
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Universal Set</h2>
+            <p>The <strong>universal set</strong> contains all elements under consideration, usually denoted by 'U'. Every other set is a subset of the universal set.</p>
+            <pre class="matrix">
+    Example:
+    U = {1, 2, 3, 4, 5}, A = {2, 3}
+    Here, A ⊆ U
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Finite and Infinite Sets</h2>
+            <p>A set is <strong>finite</strong> if it contains a limited number of elements, and <strong>infinite</strong> if it has unlimited elements.</p>
+            <pre class="matrix">
+    Example:
+    Finite Set: A = {1, 2, 3}
+    Infinite Set: N = {1, 2, 3, 4, 5, ...}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Operations on Sets</h2>
+            <p>Set operations include union, intersection, and complement.</p>
+        </section>
+    
+        <section class="section">
+            <h2>7. Union of Sets</h2>
+            <p>The <strong>union</strong> of two sets A and B (A ∪ B) includes all elements from both sets without repetition.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2, 3}, B = {3, 4, 5}
+    A ∪ B = {1, 2, 3, 4, 5}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Intersection of Sets</h2>
+            <p>The <strong>intersection</strong> of two sets A and B (A ∩ B) includes elements that are in both sets.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2, 3}, B = {2, 3, 4}
+    A ∩ B = {2, 3}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>9. Complement of Sets</h2>
+            <p>The <strong>complement</strong> of a set A (denoted A') includes all elements in the universal set U that are not in A.</p>
+            <pre class="matrix">
+    Example:
+    U = {1, 2, 3, 4, 5}, A = {1, 2}
+    A' = {3, 4, 5}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>10. Cartesian Product</h2>
+            <p>The <strong>Cartesian product</strong> of two sets A and B (A × B) is the set of all ordered pairs (a, b) where a ∈ A and b ∈ B.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2}, B = {x, y}
+    A × B = {(1, x), (1, y), (2, x), (2, y)}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>11. Cardinality of Set</h2>
+            <p>The <strong>cardinality</strong> of a set is the number of elements in the set.</p>
+            <pre class="matrix">
+    Example:
+    A = {5, 6, 7}
+    Cardinality of A = 3
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>12. Simple Applications</h2>
+            <p>Set theory is used in probability, database queries, and solving real-world logic problems.</p>
+            <pre class="matrix">
+    Example:
+    Let A = students who play cricket, B = students who play football.
+    
+    If A = {1, 2, 3, 4}, B = {3, 4, 5}, then:
+    A ∪ B = {1, 2, 3, 4, 5} → Students who play either
+    A ∩ B = {3, 4} → Students who play both
+            </pre>
+        </section>
+    </div>
+
+    
+    <!-- UNIT 2 -->
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Relations and Functions</h1>
+    
+        <section class="section">
+            <h2>1. Properties of Relations</h2>
+            <p>A relation <strong>R</strong> on a set is a subset of the Cartesian product of the set with itself. Common properties of relations:</p>
+            <ul>
+                <li><strong>Reflexive:</strong> Every element is related to itself. ∀a ∈ A, (a, a) ∈ R</li>
+                <li><strong>Symmetric:</strong> If (a, b) ∈ R, then (b, a) ∈ R</li>
+                <li><strong>Transitive:</strong> If (a, b) ∈ R and (b, c) ∈ R, then (a, c) ∈ R</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A = {1, 2}
+    R = {(1,1), (2,2), (1,2), (2,1)}
+    - Reflexive: Yes
+    - Symmetric: Yes
+    - Transitive: Yes
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Equivalence Relation</h2>
+            <p>An equivalence relation is a relation that is <strong>reflexive</strong>, <strong>symmetric</strong>, and <strong>transitive</strong>.</p>
+            <pre class="matrix">
+    Example:
+    Let A = {1, 2, 3}
+    R = {(1,1), (2,2), (3,3), (1,2), (2,1)}
+    Not transitive → Not an equivalence relation
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Partial Order Relation</h2>
+            <p>A <strong>partial order</strong> relation is <strong>reflexive</strong>, <strong>antisymmetric</strong>, and <strong>transitive</strong>.</p>
+            <pre class="matrix">
+    Example:
+    A = {1, 2, 3}, R = {(1,1), (2,2), (3,3), (1,2), (2,3), (1,3)}
+    This is a partial order relation.
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Domain and Range of a Function</h2>
+            <p>A <strong>function</strong> f from A to B assigns exactly one element of B to each element of A.</p>
+            <ul>
+                <li><strong>Domain:</strong> All input values (from set A)</li>
+                <li><strong>Range:</strong> The output values (subset of B)</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    f(x) = x²
+    Domain = {1, 2, 3}, Range = {1, 4, 9}
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Types of Functions</h2>
+            <ul>
+                <li><strong>One-to-One (Injective):</strong> Each output is mapped by only one input</li>
+                <li><strong>Onto (Surjective):</strong> Every element in the range is mapped</li>
+                <li><strong>Into:</strong> Not every element in codomain is mapped</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    f: A → B, A = {1, 2}, B = {a, b, c}
+    f(1)=a, f(2)=b → This is "into" (c is unused)
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Composite Function</h2>
+            <p>Given f: A → B and g: B → C, the composite function g∘f is defined as: (g∘f)(x) = g(f(x))</p>
+            <pre class="matrix">
+    Example:
+    f(x) = x + 2, g(x) = 3x
+    (g∘f)(x) = g(x + 2) = 3(x + 2) = 3x + 6
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Inverse Function</h2>
+            <p>An inverse function <strong>f<sup>−1</sup></strong> reverses the mapping of f. f(f<sup>−1</sup>(x)) = x</p>
+            <pre class="matrix">
+    Example:
+    f(x) = 2x + 3
+    Then, f⁻¹(x) = (x - 3)/2
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Trigonometric Functions</h2>
+            <p>Functions like sin(x), cos(x), tan(x) that relate angles to ratios of sides in right triangles.</p>
+            <pre class="matrix">
+    Example:
+    If angle = 30°
+    sin(30°) = 1/2, cos(30°) = √3/2, tan(30°) = 1/√3
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>9. Logarithmic Function</h2>
+            <p>The inverse of the exponential function. If a<sup>x</sup> = y, then log<sub>a</sub>(y) = x</p>
+            <pre class="matrix">
+    Example:
+    log₂(8) = 3, because 2³ = 8
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>10. Exponential Function</h2>
+            <p>An exponential function has the form f(x) = a<sup>x</sup>, where a is a constant.</p>
+            <pre class="matrix">
+    Example:
+    f(x) = 2^x
+    f(1) = 2, f(2) = 4, f(3) = 8
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Partial Order Relations and Lattices</h1>
+    
+        <section class="section">
+            <h2>1. Partial Order Sets (Posets)</h2>
+            <p>A <strong>partial order set (poset)</strong> is a set combined with a relation that is reflexive, antisymmetric, and transitive.</p>
+            <pre class="matrix">
+    Example:
+    Set A = {1, 2, 3}
+    Relation R = {(1,1), (2,2), (3,3), (1,2), (2,3), (1,3)}
+    R is reflexive, antisymmetric, and transitive → So (A, R) is a poset.
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Representation of Posets using Hasse Diagram</h2>
+            <p>A <strong>Hasse diagram</strong> is a graphical way to represent a poset by removing reflexive and implied edges, and drawing elements in a way that lower elements are placed below higher ones.</p>
+            <pre class="matrix">
+    Example:
+    Set A = {1, 2, 4, 8} with relation "divides"
+    Hasse diagram:
+    1
+    |
+    2
+    |
+    4
+    |
+    8
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Chains</h2>
+            <p>A <strong>chain</strong> in a poset is a subset in which every pair of elements is comparable (i.e., for any a and b, either a ≤ b or b ≤ a).</p>
+            <pre class="matrix">
+    Example:
+    In set A = {1, 2, 3, 4} with usual ≤ relation,
+    {2, 3, 4} is a chain since all elements are comparable.
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>4. Maximal and Minimal Points</h2>
+            <p><strong>Minimal point:</strong> An element in a poset that has no other element less than it.</p>
+            <p><strong>Maximal point:</strong> An element that has no other element greater than it.</p>
+            <pre class="matrix">
+    Example:
+    Set A = {a, b, c} with R = {(a,a), (b,b), (c,c)}
+    Here, a, b, and c are both maximal and minimal because they are incomparable.
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>5. Greatest Lower Bound (glb) and Least Upper Bound (lub)</h2>
+            <p><strong>glb (also called meet):</strong> The largest element that is less than or equal to both.</p>
+            <p><strong>lub (also called join):</strong> The smallest element that is greater than or equal to both.</p>
+            <pre class="matrix">
+    Example:
+    Set A = {1, 2, 4, 8}, Relation: divides
+    glb(4, 8) = 4, lub(2, 4) = 4
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Lattices and Algebraic Systems</h2>
+            <p>A <strong>lattice</strong> is a poset where every pair of elements has both a least upper bound (lub) and a greatest lower bound (glb).</p>
+            <p>It is an <strong>algebraic system</strong> with two binary operations: meet ( ∧ ) and join ( ∨ ).</p>
+            <pre class="matrix">
+    Example:
+    Set A = {1, 2, 4, 8} with divides relation
+    - glb(2, 4) = 2, lub(2, 4) = 4 → So it's a lattice
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Principle of Duality</h2>
+            <p>The <strong>Principle of Duality</strong> states that every statement in lattice theory remains true if we interchange ∧ (meet) with ∨ (join), and ≤ with ≥.</p>
+            <pre class="matrix">
+    Example:
+    Original: a ≤ b implies a ∧ b = a
+    Dual: a ≥ b implies a ∨ b = a
+    Both are valid due to duality.
+            </pre>
+        </section>
+    </div>
+
+    <!-- UNIT 4 -->
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Determinants and Matrices</h1>
+    
+        <section class="section">
+            <h2>1. Determinants: Definition</h2>
+            <p>A <strong>determinant</strong> is a scalar value that can be computed from the elements of a square matrix and represents certain properties like volume scaling and invertibility.</p>
+            <pre class="matrix">
+    Example:
+    |A| = | 1  2 |
+             | 3  4 | = (1×4) - (2×3) = 4 - 6 = -2
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>2. Minors and Cofactors</h2>
+            <p><strong>Minor:</strong> The minor of an element is the determinant formed by deleting its row and column.</p>
+            <p><strong>Cofactor:</strong> Cofactor = (–1)<sup>i+j</sup> × Minor of element at (i, j).</p>
+            <pre class="matrix">
+    Example:
+    Matrix: | 1 2 3 |
+                  | 0 4 5 |
+                  | 1 0 6 |
+    Minor of element (1,1): | 4 5 |
+                                          | 0 6 | = (4×6 - 5×0) = 24
+    Cofactor = (–1)<sup>1+1</sup> × 24 = 24
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>3. Properties of Determinants</h2>
+            <ul>
+                <li>If two rows (or columns) are identical, determinant = 0.</li>
+                <li>Swapping two rows or columns changes the sign.</li>
+                <li>Determinant of identity matrix is 1.</li>
+                <li>If a row/column is multiplied by scalar k, determinant is also multiplied by k.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>4. Matrices: Definition and Types</h2>
+            <p>A <strong>matrix</strong> is a rectangular array of numbers arranged in rows and columns.</p>
+            <ul>
+                <li><strong>Row Matrix:</strong> Only one row.</li>
+                <li><strong>Column Matrix:</strong> Only one column.</li>
+                <li><strong>Square Matrix:</strong> Same number of rows and columns.</li>
+                <li><strong>Diagonal Matrix:</strong> Non-diagonal elements are zero.</li>
+                <li><strong>Identity Matrix:</strong> Diagonal elements are 1; others are 0.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>5. Matrix Operations</h2>
+            <ul>
+                <li><strong>Addition/Subtraction:</strong> Add/subtract corresponding elements.</li>
+                <li><strong>Scalar Multiplication:</strong> Multiply each element by a scalar.</li>
+                <li><strong>Matrix Multiplication:</strong> Multiply row elements with column elements.</li>
+            </ul>
+            <pre class="matrix">
+    Example:
+    A = |1 2|, B = |3 4| → A + B = |4 6|
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>6. Adjoint and Inverse</h2>
+            <p><strong>Adjoint:</strong> Transpose of cofactor matrix.</p>
+            <p><strong>Inverse:</strong> A<sup>−1</sup> = adj(A) / det(A), if det(A) ≠ 0</p>
+            <pre class="matrix">
+    Example:
+    A = |1 2|
+            |3 4|
+    Det(A) = -2
+    Adj(A) = | 4 -2 |
+                  | -3 1 |
+    A<sup>−1</sup> = (1/−2) × Adj(A)
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>7. Cramer’s Rule</h2>
+            <p>Used to solve linear equations: A·X = B. X<sub>i</sub> = det(A<sub>i</sub>)/det(A)</p>
+            <pre class="matrix">
+    Example:
+    2x + 3y = 5
+    x + 2y = 4
+    
+    A = |2 3|
+            |1 2| → det = 1
+    Replace first column with B: |5 3| → det = 4 → x = 4/1 = 4
+                                                 |4 2|
+    Replace second column with B: |2 5| → det = 3 → y = 3/1 = 3
+                                                   |1 4|
+            </pre>
+        </section>
+    
+        <section class="section">
+            <h2>8. Rank of a Matrix</h2>
+            <p>The <strong>rank</strong> is the maximum number of linearly independent rows or columns.</p>
+            <p>It helps in solving systems of linear equations and determining consistency.</p>
+        </section>
+    
+        <section class="section">
+            <h2>9. Dependence of Vectors</h2>
+            <p>Vectors are <strong>linearly dependent</strong> if one can be written as a combination of others.</p>
+            <p>If no such combination exists, they are <strong>independent</strong>.</p>
+        </section>
+    
+        <section class="section">
+            <h2>10. Eigenvalues and Eigenvectors</h2>
+            <p>If A·v = λ·v, then λ is the <strong>eigenvalue</strong> and v is the <strong>eigenvector</strong>.</p>
+            <p>They describe directions that remain unchanged under linear transformation.</p>
+        </section>
+    
+        <section class="section">
+            <h2>11. Cayley-Hamilton Theorem</h2>
+            <p>This theorem states that every square matrix satisfies its own characteristic equation.</p>
+            <p><strong>Note:</strong> This is stated without proof.</p>
+            <pre class="matrix">
+    Example:
+    A = |2 1|
+            |1 2|
+    Characteristic equation: λ² - 4λ + 3 = 0
+    Cayley-Hamilton says: A² - 4A + 3I = 0
+            </pre>
+        </section>
+    </div>
+
+    
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Limits & Continuity</h1>
+      
+        <section class="section">
+          <h2>1. Limit at a Point</h2>
+          <p>The <strong>limit</strong> of a function <em>f(x)</em> as <em>x</em> approaches a value <em>a</em> is the value the function approaches as the input approaches <em>a</em>.</p>
+          <p>Written as: <strong>lim<sub>x→a</sub> f(x) = L</strong></p>
+          <pre class="example">
+      Example:
+      lim<sub>x→2</sub> (3x + 1) = 3(2) + 1 = 7
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>2. Properties of Limits</h2>
+          <ul>
+            <li><strong>Sum Rule:</strong> lim<sub>x→a</sub> [f(x) + g(x)] = lim f(x) + lim g(x)</li>
+            <li><strong>Difference Rule:</strong> lim<sub>x→a</sub> [f(x) - g(x)] = lim f(x) - lim g(x)</li>
+            <li><strong>Product Rule:</strong> lim<sub>x→a</sub> [f(x) × g(x)] = lim f(x) × lim g(x)</li>
+            <li><strong>Quotient Rule:</strong> lim<sub>x→a</sub> [f(x)/g(x)] = lim f(x) / lim g(x), if lim g(x) ≠ 0</li>
+            <li><strong>Constant Multiple Rule:</strong> lim<sub>x→a</sub> [c × f(x)] = c × lim f(x)</li>
+          </ul>
+        </section>
+      
+        <section class="section">
+          <h2>3. Computation of Limits of Various Types</h2>
+          <p>Limits can be evaluated for:</p>
+          <ul>
+            <li><strong>Polynomial Functions:</strong> Direct substitution</li>
+            <li><strong>Rational Functions:</strong> Use factorization or rationalization</li>
+            <li><strong>Trigonometric Functions:</strong> Use standard limits like:
+              <pre>lim<sub>x→0</sub> (sin x)/x = 1</pre>
+            </li>
+            <li><strong>Exponential/Logarithmic:</strong> Use limits like:
+              <pre>lim<sub>x→0</sub> (e<sup>x</sup> - 1)/x = 1</pre>
+            </li>
+          </ul>
+            <br>
+          <pre class="example">
+      Example:
+      lim<sub>x→0</sub> (sin x)/x = 1
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>4. Continuity at a Point</h2>
+          <p>A function f(x) is <strong>continuous at a point x = a</strong> if:</p>
+          <ul>
+            <li>lim<sub>x→a</sub> f(x) exists</li>
+            <li>f(a) is defined</li>
+            <li>lim<sub>x→a</sub> f(x) = f(a)</li>
+          </ul>
+          <pre class="example">
+      Example:
+      f(x) = x² is continuous at x = 2
+      → lim<sub>x→2</sub> f(x) = f(2) = 4
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>5. Continuity Over an Interval</h2>
+          <p>A function is <strong>continuous over [a, b]</strong> if it is continuous at every point in the interval and both one-sided limits at a and b exist and match function values:</p>
+          <ul>
+            <li>Left continuity at a: lim<sub>x→a<sup>+</sup></sub> f(x) = f(a)</li>
+            <li>Right continuity at b: lim<sub>x→b<sup>-</sup></sub> f(x) = f(b)</li>
+          </ul>
+        </section>
+      
+        <section class="section">
+          <h2>6. Intermediate Value Theorem</h2>
+          <p>If a function f is continuous on a closed interval [a, b] and k is any value between f(a) and f(b), then there exists at least one c ∈ [a, b] such that:</p>
+          <p><strong>f(c) = k</strong></p>
+          <pre class="example">
+      Example:
+      f(x) = x³, f(1) = 1, f(2) = 8
+      Then f(x) takes value 5 for some x ∈ [1, 2]
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>7. Types of Discontinuities</h2>
+          <ul>
+            <li><strong>Removable Discontinuity:</strong> Limit exists but f(a) is not defined or not equal to the limit.</li>
+            <li><strong>Jump Discontinuity:</strong> Left-hand and right-hand limits exist but are not equal.</li>
+            <li><strong>Infinite Discontinuity:</strong> Function approaches infinity near a point.</li>
+          </ul>
+          <pre class="example">
+      Example of jump:
+      f(x) = {
+        1, x < 0
+        2, x ≥ 0
+      }
+      → Discontinuous at x = 0 (jump)
+          </pre>
+        </section>
+      </div>
+
+      <!-- UNIT 6 -->
+      <div class="topic-container" id="unit6">
+        <h1>UNIT-VI: Differentiation & Integration</h1>
+      
+        <section class="section">
+          <h2>1. Derivative</h2>
+          <p>The <strong>derivative</strong> of a function shows how the function changes as the input changes. It is the slope of the tangent line to the curve at a point.</p>
+          <p>It is written as: <strong>f′(x)</strong> or <strong>dy/dx</strong></p>
+          <pre class="example">
+      Example:
+      If f(x) = x², then f′(x) = 2x
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>2. Derivatives of Sum, Difference, Product, and Quotient</h2>
+          <ul>
+            <li><strong>Sum Rule:</strong> (f + g)′ = f′ + g′</li>
+            <li><strong>Difference Rule:</strong> (f - g)′ = f′ - g′</li>
+            <li><strong>Product Rule:</strong> (f × g)′ = f′g + fg′</li>
+            <li><strong>Quotient Rule:</strong> (f / g)′ = (f′g - fg′) / g²</li>
+          </ul>
+          <pre class="example">
+      Example:
+      If f(x) = x² and g(x) = x,
+      Then (f × g)′ = (x² × x)′ = 2x × x + x² × 1 = 3x²
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>3. Chain Rule</h2>
+          <p>The <strong>chain rule</strong> is used when one function is inside another (composite functions).</p>
+          <p>If y = f(g(x)), then: <strong>dy/dx = f′(g(x)) × g′(x)</strong></p>
+          <pre class="example">
+      Example:
+      If y = (3x + 1)², then dy/dx = 2(3x + 1) × 3 = 6(3x + 1)
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>4. Derivatives of Composite Functions</h2>
+          <p>Composite functions involve functions inside other functions. Use the chain rule to find their derivatives.</p>
+          <pre class="example">
+      Example:
+      f(x) = sin(x²), then f′(x) = cos(x²) × 2x
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>5. Logarithmic Differentiation</h2>
+          <p>Used when differentiating complicated products, quotients, or powers. Take the natural log of both sides first.</p>
+          <pre class="example">
+      Example:
+      y = x^x
+      ln y = ln(x^x) = x ln x
+      Then, d(ln y)/dx = ln x + 1 ⇒ dy/dx = x^x (ln x + 1)
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>6. Integral as Limit of Sum</h2>
+          <p>The <strong>definite integral</strong> can be seen as the limit of a sum of areas of rectangles under a curve as the number of rectangles approaches infinity.</p>
+          <p>Written as: <strong>∫<sub>a</sub><sup>b</sup> f(x) dx = lim<sub>n→∞</sub> Σ f(x<sub>i</sub>) Δx</strong></p>
+        </section>
+      
+        <section class="section">
+          <h2>7. Fundamental Theorem of Calculus (Without Proof)</h2>
+          <p>The theorem connects differentiation and integration. It states that if F is the antiderivative of f, then:</p>
+          <p><strong>∫<sub>a</sub><sup>b</sup> f(x) dx = F(b) - F(a)</strong></p>
+        </section>
+      
+        <section class="section">
+          <h2>8. Indefinite Integrals</h2>
+          <p>Indefinite integral is the reverse of derivative. It gives a family of functions that differ by a constant.</p>
+          <p>Written as: <strong>∫ f(x) dx = F(x) + C</strong>, where C is the constant of integration.</p>
+          <pre class="example">
+      Example:
+      ∫ x² dx = (1/3)x³ + C
+          </pre>
+        </section>
+      
+        <section class="section">
+          <h2>9. Methods of Integration</h2>
+          <ul>
+            <li><strong>Substitution Method:</strong> Replace part of the function with a single variable u.</li>
+            <li><strong>Integration by Parts:</strong> Based on the product rule for differentiation.
+              <p>Formula: ∫ u dv = uv - ∫ v du</p>
+            </li>
+          </ul>
+          <pre class="example">
+      Example (Substitution):
+      ∫ 2x(x² + 1) dx → Let u = x² + 1, then du = 2x dx
+      → ∫ u du = (1/2)u² + C = (1/2)(x² + 1)² + C
+      
+      Example (By Parts):
+      ∫ x eˣ dx → u = x, dv = eˣ dx
+      → ∫ x eˣ dx = x eˣ - ∫ eˣ dx = x eˣ - eˣ + C
+          </pre>
+        </section>
+      </div>
+      
+
+</body>
+
+</html>

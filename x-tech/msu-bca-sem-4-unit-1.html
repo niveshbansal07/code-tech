@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Web Development using PHP</div>
+
+    <div class="container">
+        
+        <a href="#unit1" class="unit">UNIT-I: Introduction to PHP</a>
+        <div id="unit1" class="content">
+            Introduction to PHP, History of PHP, Versions of PHP, Features of PHP, Advantages of PHP over Other Scripting Languages, software requirements, Installation and Configuration of PHP, Installing and Configuring Apache to use PHP on Windows, Basic HTML, Embedding PHP in HTML, PHP Basic syntax, data types, comments, variables and constants, scope of variables, PHP arrays: creating array and accessing array elements, PHP String, PHP operators, precedence of operators, expressions, creating a PHP Script, running a PHP script.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: PHP Control Structures and Functions</a>
+        <div id="unit2" class="content">
+            PHP conditional statements, switch case, PHP looping statements, while, for and do while loop, break, continue, exit, PHP functions: built-in and user defined function, declaration and calling of a function, function argument with call by value, call by reference, string manipulation, mathematical, date and time functions.
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: Web Forms and Data Handling</a>
+        <div id="unit3" class="content">
+            Introduction to a web form, processing a web form, capturing form data, passing information between pages, PHP $_GET, PHP $_POST, with multi value fields, validating a web form, input validation, exception and error handling, introduction to cookies and session handling.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Database Connectivity with PHP</a>
+        <div id="unit4" class="content">
+            Working with database: PHP supported databases, using PHP & MySQL: Installation and configuration of MySQL on windows, checking configuration, connecting to database, selecting a database, adding table and altering table in a database, inserting, deleting and modifying data in a table, retrieving data, performing queries, processing result sets.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: Advanced PHP Concepts</a>
+        <div id="unit5" class="content">
+            Code re-use, require(), include(), and the include_path, PHP file permissions, working with files: opening, closing, reading, writing a file, file system functions and file input and output, working with directory: creating, deleting, changing a directory, file uploads, introduction to object oriented programming with PHP.
+        </div>
+    </div>
+
+    <!-- UNIT 1 -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Introduction to PHP</h1>
+    
+        <section class="section">
+            <h2>1. Introduction to PHP</h2>
+            <p>PHP (Hypertext Preprocessor) is a widely-used open-source server-side scripting language designed for web development. It can be embedded into HTML to create dynamic web pages.</p>
+    
+            <h3>History and Versions</h3>
+            <p>PHP was created by Rasmus Lerdorf in 1994. It has gone through several major versions:</p>
+            <ul>
+                <li>PHP 3: The first widely-used version</li>
+                <li>PHP 4: Introduced the Zend Engine</li>
+                <li>PHP 5: Introduced OOP and better MySQL support</li>
+                <li>PHP 7: Improved performance significantly</li>
+                <li>PHP 8: Introduced JIT compiler and other modern features</li>
+            </ul>
+    
+            <h3>Features of PHP</h3>
+            <ul>
+                <li>Open-source and free</li>
+                <li>Simple and easy to learn</li>
+                <li>Supports a wide range of databases</li>
+                <li>Fast performance</li>
+                <li>Cross-platform compatibility</li>
+            </ul>
+    
+            <h3>Advantages Over Other Scripting Languages</h3>
+            <ul>
+                <li>Built-in support for databases</li>
+                <li>Excellent documentation and community support</li>
+                <li>Flexible and loosely typed language</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2. Software Requirements</h2>
+            <ul>
+                <li>Web Server: Apache</li>
+                <li>PHP Interpreter</li>
+                <li>Text Editor (VS Code, Sublime Text, etc.)</li>
+                <li>Database: MySQL</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>3. Installation and Configuration</h2>
+            <p>You can install PHP using <strong>XAMPP</strong> or <strong>WAMP</strong> which bundles Apache, MySQL, and PHP.</p>
+    
+            <div class="code-block">
+                <pre>
+        Steps for Windows:
+        1. Download XAMPP from Apache Friends website.
+        2. Install and launch XAMPP Control Panel.
+        3. Start Apache and MySQL.
+        4. Place PHP files in the htdocs folder.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Basic HTML and Embedding PHP</h2>
+            <p>PHP is embedded in HTML using <code>&lt;?php ?&gt;</code> tags.</p>
+    
+            <div class="code-block">
+                <pre>
+        &lt;!DOCTYPE html&gt;
+        &lt;html&gt;
+        &lt;body&gt;
+            &lt;h1&gt;PHP Test&lt;/h1&gt;
+            &lt;?php
+                echo "Hello World!";
+            ?&gt;
+        &lt;/body&gt;
+        &lt;/html&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. PHP Syntax and Data Types</h2>
+            <ul>
+                <li>PHP statements end with a semicolon (;)</li>
+                <li>Case-sensitive variable names</li>
+                <li>Data Types: Integer, Float, String, Boolean, Array, Object, NULL</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+        $name = "John"; // String
+        $age = 25;      // Integer
+        $price = 19.99; // Float
+        $is_admin = true; // Boolean
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Variables, Constants, and Scope</h2>
+            <p>Variables are declared with a <code>$</code> sign. Constants use <code>define()</code>. Variable scope can be local, global, or static.</p>
+    
+            <div class="code-block">
+                <pre>
+        define("SITE_NAME", "MySite");
+        $x = 5; // Global variable
+    
+        function testScope() {
+            global $x;
+            echo $x;
+        }
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. PHP Arrays</h2>
+            <p>Arrays are used to store multiple values in one variable.</p>
+    
+            <div class="code-block">
+                <pre>
+        $fruits = array("Apple", "Banana", "Orange");
+        echo $fruits[1]; // Outputs: Banana
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. PHP Strings</h2>
+            <p>PHP provides several functions for working with strings like <code>strlen()</code>, <code>str_replace()</code>, and <code>strpos()</code>.</p>
+    
+            <div class="code-block">
+                <pre>
+        $msg = "Welcome";
+        echo strlen($msg); // Outputs: 7
+        echo str_replace("Wel", "Hel", $msg); // Outputs: Helcome
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Operators and Expressions</h2>
+            <p>PHP supports arithmetic, comparison, logical, and assignment operators.</p>
+    
+            <div class="code-block">
+                <pre>
+        $a = 10;
+        $b = 5;
+        $sum = $a + $b;
+        echo $sum; // 15
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. Creating and Running a PHP Script</h2>
+            <div class="code-block">
+                <pre>
+        // save as hello.php in htdocs
+        &lt;?php
+            echo "PHP is working!";
+        ?&gt;
+                </pre>
+            </div>
+            <p>To run: Open <code>http://localhost/hello.php</code> in your browser.</p>
+        </section>
+    </div>
+
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: PHP Control Structures and Functions</h1>
+    
+        <section class="section">
+            <h2>1. PHP Conditional Statements</h2>
+            <p>Conditional statements in PHP allow decision-making in code based on conditions.</p>
+    
+            <h3>if Statement</h3>
+            <p>Executes code if the condition is true.</p>
+            <div class="code-block">
+                <pre>
+    if (condition) {
+        // code to execute
+    }
+                </pre>
+            </div>
+    
+            <h3>if-else Statement</h3>
+            <p>Executes one block if true, another if false.</p>
+            <div class="code-block">
+                <pre>
+    if (condition) {
+        // true block
+    } else {
+        // false block
+    }
+                </pre>
+            </div>
+    
+            <h3>if-elseif-else Statement</h3>
+            <p>Multiple conditions can be checked in sequence.</p>
+            <div class="code-block">
+                <pre>
+    if (condition1) {
+        // block 1
+    } elseif (condition2) {
+        // block 2
+    } else {
+        // default block
+    }
+                </pre>
+            </div>
+    
+            <h3>switch Statement</h3>
+            <p>Used to perform different actions based on different conditions.</p>
+            <div class="code-block">
+                <pre>
+    switch (variable) {
+        case value1:
+            // code
+            break;
+        case value2:
+            // code
+            break;
+        default:
+            // default code
+    }
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. PHP Looping Statements</h2>
+            <p>Loops are used to execute the same block of code repeatedly.</p>
+    
+            <h3>while Loop</h3>
+            <div class="code-block">
+                <pre>
+    while (condition) {
+        // code to be executed
+    }
+                </pre>
+            </div>
+    
+            <h3>do-while Loop</h3>
+            <p>This loop runs the block once before checking the condition.</p>
+            <div class="code-block">
+                <pre>
+    do {
+        // code to be executed
+    } while (condition);
+                </pre>
+            </div>
+    
+            <h3>for Loop</h3>
+            <div class="code-block">
+                <pre>
+    for (initialization; condition; increment) {
+        // code to be executed
+    }
+                </pre>
+            </div>
+    
+            <h3>Control Statements</h3>
+            <ul>
+                <li><strong>break:</strong> Exits from the loop.</li>
+                <li><strong>continue:</strong> Skips current iteration.</li>
+                <li><strong>exit:</strong> Terminates the script execution.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>3. PHP Functions</h2>
+            <p>Functions are blocks of code that perform specific tasks.</p>
+    
+            <h3>Built-in Functions</h3>
+            <ul>
+                <li>String Functions: <code>strlen(), str_replace(), strpos()</code></li>
+                <li>Math Functions: <code>abs(), round(), pow(), sqrt()</code></li>
+                <li>Date/Time Functions: <code>date(), time(), strtotime()</code></li>
+            </ul>
+    
+            <h3>User-defined Functions</h3>
+            <p>These functions are created by the user.</p>
+            <div class="code-block">
+                <pre>
+    function greet() {
+        echo "Hello, World!";
+    }
+    greet();
+                </pre>
+            </div>
+    
+            <h3>Function Arguments</h3>
+            <h4>Call by Value</h4>
+            <div class="code-block">
+                <pre>
+    function increment($num) {
+        $num++;
+    }
+                </pre>
+            </div>
+    
+            <h4>Call by Reference</h4>
+            <div class="code-block">
+                <pre>
+    function increment(&$num) {
+        $num++;
+    }
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. String Manipulation Functions</h2>
+            <ul>
+                <li><code>strlen($str)</code> – Returns the length of a string.</li>
+                <li><code>strtoupper($str)</code> – Converts to uppercase.</li>
+                <li><code>strtolower($str)</code> – Converts to lowercase.</li>
+                <li><code>str_replace("old", "new", $str)</code> – Replaces text.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>5. Mathematical Functions</h2>
+            <ul>
+                <li><code>abs(-5)</code> – Returns 5</li>
+                <li><code>pow(2, 3)</code> – Returns 8</li>
+                <li><code>sqrt(16)</code> – Returns 4</li>
+                <li><code>round(4.6)</code> – Returns 5</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>6. Date and Time Functions</h2>
+            <ul>
+                <li><code>date("Y-m-d")</code> – Current date in format.</li>
+                <li><code>time()</code> – Returns current Unix timestamp.</li>
+                <li><code>strtotime("tomorrow")</code> – Parses English textual datetime.</li>
+            </ul>
+        </section>
+    </div>
+    
+    <!-- UNIT 3 -->
+
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: PHP Forms, Data Handling & Sessions</h1>
+    
+        <section class="section">
+            <h2>1. Introduction to a Web Form</h2>
+            <p>A web form allows users to input data and submit it to a server. Forms are created using the &lt;form&gt; tag.</p>
+            <div class="code-block">
+                <pre>
+    <form action="process.php" method="post">
+        Name: &lt;input type="text" name="username"&gt;
+        &lt;input type="submit" value="Submit"&gt;
+    </form>
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Processing a Web Form</h2>
+            <p>Form data can be processed using PHP with the <code>$_GET</code> or <code>$_POST</code> superglobals depending on the method used.</p>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    $name = $_POST['username'];
+    echo "Hello, " . $name;
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Capturing Form Data</h2>
+            <p>Data entered in the form fields can be captured using:</p>
+            <ul>
+                <li><code>$_GET</code> - Retrieves data from URL parameters</li>
+                <li><code>$_POST</code> - Retrieves data from the form body</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>4. Passing Information Between Pages</h2>
+            <p>You can pass data between pages using:</p>
+            <ul>
+                <li>URL query strings with <code>$_GET</code></li>
+                <li>Form submissions with <code>$_POST</code></li>
+                <li>Sessions and cookies</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    <!-- Using GET -->
+    <a href="nextpage.php?name=John">Click Here</a>
+    
+    <!-- nextpage.php -->
+    &lt;?php echo $_GET['name']; ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. PHP $_GET and $_POST with Multi-value Fields</h2>
+            <p>Checkboxes or multiple selects allow sending multiple values.</p>
+            <div class="code-block">
+                <pre>
+    <form method="post">
+        &lt;input type="checkbox" name="fruits[]" value="Apple"&gt;Apple
+        &lt;input type="checkbox" name="fruits[]" value="Banana"&gt;Banana
+        &lt;input type="submit"&gt;
+    </form>
+    
+    &lt;?php
+    if (isset($_POST['fruits'])) {
+        foreach ($_POST['fruits'] as $fruit) {
+            echo $fruit . "&lt;br&gt;";
+        }
+    }
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Validating a Web Form</h2>
+            <p>Validation ensures correct and expected input from users before processing.</p>
+            <h4>Example: Basic Name Validation</h4>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        $name = trim($_POST["name"]);
+        if (empty($name)) {
+            echo "Name is required.";
+        } else {
+            echo "Welcome, " . htmlspecialchars($name);
+        }
+    }
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Input Validation Techniques</h2>
+            <ul>
+                <li><strong>empty()</strong> – Checks if a field is empty</li>
+                <li><strong>filter_var()</strong> – Validates email, URLs, etc.</li>
+                <li><strong>preg_match()</strong> – Validates patterns (e.g., phone number)</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>8. Exception and Error Handling</h2>
+            <p>PHP supports try-catch blocks for handling exceptions gracefully.</p>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    try {
+        if (!file_exists("data.txt")) {
+            throw new Exception("File not found!");
+        }
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Introduction to Cookies</h2>
+            <p>Cookies store small amounts of data on the client-side browser.</p>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    setcookie("user", "John", time() + 3600);
+    echo $_COOKIE["user"];
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>10. Session Handling</h2>
+            <p>Sessions store user data on the server for use across multiple pages.</p>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    session_start();
+    $_SESSION["username"] = "John";
+    echo $_SESSION["username"];
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 4 -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Working with Database in PHP</h1>
+    
+        <section class="section">
+            <h2>1. PHP Supported Databases</h2>
+            <p>PHP supports a wide range of databases, including:</p>
+            <ul>
+                <li>MySQL / MariaDB</li>
+                <li>PostgreSQL</li>
+                <li>SQLite</li>
+                <li>Oracle</li>
+                <li>Microsoft SQL Server</li>
+                <li>MongoDB (using extensions)</li>
+            </ul>
+            <p>MySQL is the most commonly used database with PHP.</p>
+        </section>
+    
+        <section class="section">
+            <h2>2. Using PHP & MySQL</h2>
+            <h3>Installation and Configuration of MySQL on Windows</h3>
+            <ul>
+                <li>Install XAMPP/WAMP – these include Apache server, PHP, and MySQL.</li>
+                <li>Start MySQL from the control panel.</li>
+                <li>phpMyAdmin provides a web interface to manage databases.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>3. Checking Configuration</h2>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    phpinfo(); // Displays PHP configuration including MySQL support
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Connecting to a Database</h2>
+            <div class="code-block">
+                <pre>
+    &lt;?php
+    $conn = mysqli_connect("localhost", "root", "", "mydatabase");
+    
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+    echo "Connected successfully";
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Selecting a Database</h2>
+            <p>Already done during connection using <code>"mydatabase"</code>. You can also use:</p>
+            <div class="code-block">
+                <pre>
+    mysqli_select_db($conn, "mydatabase");
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Adding and Altering Tables</h2>
+            <h4>Create Table</h4>
+            <div class="code-block">
+                <pre>
+    $sql = "CREATE TABLE students (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        name VARCHAR(50),
+        age INT
+    )";
+    mysqli_query($conn, $sql);
+                </pre>
+            </div>
+    
+            <h4>Alter Table</h4>
+            <div class="code-block">
+                <pre>
+    $sql = "ALTER TABLE students ADD email VARCHAR(100)";
+    mysqli_query($conn, $sql);
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Inserting, Deleting, and Modifying Data</h2>
+            <h4>Insert Data</h4>
+            <div class="code-block">
+                <pre>
+    $sql = "INSERT INTO students (name, age) VALUES ('John', 20)";
+    mysqli_query($conn, $sql);
+                </pre>
+            </div>
+    
+            <h4>Delete Data</h4>
+            <div class="code-block">
+                <pre>
+    $sql = "DELETE FROM students WHERE id=1";
+    mysqli_query($conn, $sql);
+                </pre>
+            </div>
+    
+            <h4>Update Data</h4>
+            <div class="code-block">
+                <pre>
+    $sql = "UPDATE students SET age=21 WHERE name='John'";
+    mysqli_query($conn, $sql);
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Retrieving Data</h2>
+            <div class="code-block">
+                <pre>
+    $sql = "SELECT * FROM students";
+    $result = mysqli_query($conn, $sql);
+    
+    while ($row = mysqli_fetch_assoc($result)) {
+        echo $row["name"] . " - " . $row["age"] . "&lt;br&gt;";
+    }
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Performing Queries and Processing Result Sets</h2>
+            <p>Use <code>mysqli_query()</code> to perform queries and <code>mysqli_fetch_assoc()</code> to process results.</p>
+            <div class="code-block">
+                <pre>
+    $result = mysqli_query($conn, "SELECT * FROM students");
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_assoc($result)) {
+            echo "Name: " . $row["name"] . ", Age: " . $row["age"] . "&lt;br&gt;";
+        }
+    } else {
+        echo "No records found.";
+    }
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 5 -->
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Code Re-use, File Handling, and OOP in PHP</h1>
+    
+        <section class="section">
+            <h2>1. Code Re-use</h2>
+            <p>PHP allows reusing code using <code>require()</code> and <code>include()</code> functions. This helps keep your code modular and maintainable.</p>
+            <div class="code-block">
+                <pre>
+    // file: header.php
+    &lt;h1&gt;Welcome to My Site&lt;/h1&gt;
+    
+    // file: index.php
+    &lt;?php
+    include("header.php");
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. require(), include(), and include_path</h2>
+            <ul>
+                <li><code>include()</code> gives a warning if file not found, but script continues.</li>
+                <li><code>require()</code> gives a fatal error and halts the script.</li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    include("config.php");
+    require("database.php");
+                </pre>
+            </div>
+            <p><strong>include_path:</strong> It's a directive that tells PHP where to look for included files. You can set it in <code>php.ini</code> or at runtime.</p>
+        </section>
+    
+        <section class="section">
+            <h2>3. PHP File Permissions</h2>
+            <ul>
+                <li>PHP must have the correct read/write permissions to access files.</li>
+                <li>Use <code>chmod</code> in Linux to change file permissions.</li>
+                <li>On Windows, set permissions via file properties &gt; Security tab.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>4. Working with Files</h2>
+            <h4>Opening and Closing Files</h4>
+            <div class="code-block">
+                <pre>
+    $file = fopen("data.txt", "r");
+    fclose($file);
+                </pre>
+            </div>
+    
+            <h4>Reading a File</h4>
+            <div class="code-block">
+                <pre>
+    $file = fopen("data.txt", "r");
+    while (!feof($file)) {
+        echo fgets($file);
+    }
+    fclose($file);
+                </pre>
+            </div>
+    
+            <h4>Writing to a File</h4>
+            <div class="code-block">
+                <pre>
+    $file = fopen("data.txt", "w");
+    fwrite($file, "Hello World!");
+    fclose($file);
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. File System Functions</h2>
+            <ul>
+                <li><code>fopen(), fread(), fwrite(), fclose()</code> – Basic file operations</li>
+                <li><code>file_exists(), unlink(), filesize(), is_file()</code></li>
+            </ul>
+            <div class="code-block">
+                <pre>
+    if (file_exists("data.txt")) {
+        echo "File size: " . filesize("data.txt");
+    }
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>6. Working with Directory</h2>
+            <h4>Creating and Deleting Directory</h4>
+            <div class="code-block">
+                <pre>
+    mkdir("mydir");
+    rmdir("mydir");
+                </pre>
+            </div>
+    
+            <h4>Changing Directory</h4>
+            <div class="code-block">
+                <pre>
+    chdir("mydir");
+    echo getcwd(); // Get current working directory
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. File Uploads</h2>
+            <p>To upload files in PHP:</p>
+            <ol>
+                <li>Set form method to POST and <code>enctype="multipart/form-data"</code>.</li>
+                <li>Access uploaded file using <code>$_FILES</code>.</li>
+            </ol>
+            <div class="code-block">
+                <pre>
+    // HTML form
+    &lt;form action="upload.php" method="post" enctype="multipart/form-data"&gt;
+        &lt;input type="file" name="myfile"&gt;
+        &lt;input type="submit" value="Upload"&gt;
+    &lt;/form&gt;
+    
+    // PHP handler
+    &lt;?php
+    move_uploaded_file($_FILES["myfile"]["tmp_name"], "uploads/" . $_FILES["myfile"]["name"]);
+    ?&gt;
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Introduction to Object Oriented Programming with PHP</h2>
+            <p>PHP supports OOP with the following concepts:</p>
+            <ul>
+                <li>Class and Object</li>
+                <li>Inheritance</li>
+                <li>Encapsulation</li>
+                <li>Polymorphism</li>
+            </ul>
+    
+            <h4>Basic Example:</h4>
+            <div class="code-block">
+                <pre>
+    class Car {
+        public $color;
+    
+        function setColor($c) {
+            $this->color = $c;
+        }
+    
+        function getColor() {
+            return $this->color;
+        }
+    }
+    
+    $myCar = new Car();
+    $myCar->setColor("Red");
+    echo $myCar->getColor();
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+
+</body>
+</html>

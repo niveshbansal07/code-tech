@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCA - Sem - 3 (MSU)</title>
+    <link rel="stylesheet" href="x-CSS/x-nav-ftr.css">
+    <link rel="stylesheet" href="university-CSS/subject-unit.css">
+    <link rel="stylesheet" href="university-CSS/unit-topics.css">
+</head>
+
+<body>
+
+    <div class="sem-unit-header">Optimization Techniques</div>
+
+    <div class="container">
+       
+    
+        <a href="#unit1" class="unit">UNIT-I: Linear Programming</a>
+        <div id="unit1" class="content">
+            Central Problem of Linear Programming, various definitions, statements of basic theorem and their properties, simplex methods, primal and dual simplex method, transport problem, tic-tac problem, and its solution. Assignment problem and its solution. Graphical Method Formulation, Linear Programming Problem.
+        </div>
+    
+        <a href="#unit2" class="unit">UNIT-II: Queuing Theory</a>
+        <div id="unit2" class="content">
+            Characteristics of queuing system, classification of Queuing Model, Single Channel Queuing Theory, generalization of steady state M/M/1 queuing models (Model-I, Model-II).
+        </div>
+    
+        <a href="#unit3" class="unit">UNIT-III: Replacement Theory</a>
+        <div id="unit3" class="content">
+            Replacement of items that deteriorate, replacement of items that fail. Group replacement and individual replacement.
+        </div>
+    
+        <a href="#unit4" class="unit">UNIT-IV: Inventory Theory</a>
+        <div id="unit4" class="content">
+            Cost involved in inventory problem - single item deterministic model, economic lot size model without shortage and with shortage having production rate infinite and finite.
+        </div>
+    
+        <a href="#unit5" class="unit">UNIT-V: Job Sequencing</a>
+        <div id="unit5" class="content">
+            Introduction, solution of sequencing problem, Johnson’s algorithm for n jobs through 2 machines.
+        </div>
+    </div>    
+
+    <!-- UNIT 1 -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Linear Programming</h1>
+    
+        <section class="section">
+            <h2>1.1 Central Problem of Linear Programming</h2>
+            <p>Linear Programming is a mathematical approach used to determine the best outcome (such as maximum profit or minimum cost) in a mathematical model. The central problem of linear programming involves optimizing a linear objective function, subject to a set of linear constraints.</p>
+    
+            <h3>Definitions and Basic Terms:</h3>
+            <ul>
+                <li><strong>Decision Variables:</strong> The unknowns that need to be determined.</li>
+                <li><strong>Objective Function:</strong> The linear function that needs to be maximized or minimized.</li>
+                <li><strong>Constraints:</strong> A set of linear inequalities or equations that define the feasible region.</li>
+                <li><strong>Feasible Region:</strong> The set of all possible solutions that satisfy the constraints.</li>
+            </ul>
+    
+            <h3>Theorems and Properties:</h3>
+            <ul>
+                <li>The feasible region is always a convex set.</li>
+                <li>The optimal solution will always be at one of the vertices of the feasible region.</li>
+                <li>If the objective function is unbounded, there is no optimal solution.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>1.2 Simplex Method</h2>
+            <p>The Simplex Method is an algorithm for solving linear programming problems. It iterates through the vertices of the feasible region to find the optimal solution.</p>
+    
+            <h3>Steps in the Simplex Method:</h3>
+            <ul>
+                <li>Start with an initial feasible solution.</li>
+                <li>Check the objective function for optimality.</li>
+                <li>Choose the entering and leaving variables.</li>
+                <li>Pivot the tableau to move to the next solution.</li>
+                <li>Repeat until no further improvement is possible.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Simplex Method (Example)
+    1. Start with an initial feasible solution.
+    2. Evaluate the objective function (Z).
+    3. Select the entering variable based on the most negative coefficient in the objective function.
+    4. Identify the leaving variable using the ratio test.
+    5. Pivot and update the solution until optimality is reached.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>1.3 Primal and Dual Simplex Method</h2>
+            <p>The Primal and Dual Simplex Methods are variations of the Simplex Method used to solve linear programming problems.</p>
+    
+            <h3>Primal Simplex Method:</h3>
+            <p>Used when the initial solution is feasible. The method iterates through the feasible region to find the optimal solution.</p>
+    
+            <h3>Dual Simplex Method:</h3>
+            <p>Used when the initial solution is not feasible, but the optimality of the objective function is satisfied. The method makes the solution feasible while optimizing the objective function.</p>
+        </section>
+    
+        <section class="section">
+            <h2>1.4 Transport Problem</h2>
+            <p>The transportation problem involves finding the most efficient way to transport goods from suppliers to consumers while minimizing the transportation cost.</p>
+    
+            <h3>Key Components:</h3>
+            <ul>
+                <li><strong>Supply Points:</strong> Locations where goods are stored.</li>
+                <li><strong>Demand Points:</strong> Locations that require the goods.</li>
+                <li><strong>Transportation Cost:</strong> The cost to transport goods from a supplier to a consumer.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>We are given multiple suppliers and demand points. The goal is to minimize the total cost of transporting goods.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Transport Problem Setup:
+    Supply: [100, 150, 200]
+    Demand: [120, 130, 200]
+    Cost Matrix:
+         D1  D2  D3
+    S1  [4,  6,  8]
+    S2  [2,  5,  7]
+    S3  [3,  4,  6]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>1.5 Tic-Tac Problem and Its Solution</h2>
+            <p>The Tic-Tac-Toe problem involves finding an optimal way to fill the Tic-Tac-Toe grid under specific constraints. It is a type of combinatorial optimization problem.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example Tic-Tac-Toe Problem Setup:
+    Define each grid cell as a variable.
+    Constraints: Ensure one player wins, or it results in a draw.
+    Use Linear Programming or optimization methods to solve.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>1.6 Assignment Problem</h2>
+            <p>The Assignment Problem is a special type of optimization problem where tasks are assigned to agents to minimize the total cost or maximize the total efficiency.</p>
+    
+            <h3>Example:</h3>
+            <p>Given 4 workers and 4 tasks, we need to assign each worker to one task such that the total cost is minimized.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example Assignment Problem:
+    Workers: W1, W2, W3, W4
+    Tasks: T1, T2, T3, T4
+    Cost Matrix:
+         T1  T2  T3  T4
+    W1  [9,  2,  5,  8]
+    W2  [4,  6,  7,  3]
+    W3  [3,  5,  4,  2]
+    W4  [7,  6,  5,  9]
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>1.7 Graphical Method Formulation</h2>
+            <p>The graphical method is a technique used to solve linear programming problems with two variables. The solution is found at the vertex of the feasible region formed by the constraints.</p>
+    
+            <h3>Steps:</h3>
+            <ul>
+                <li>Plot each constraint as a line on the graph.</li>
+                <li>Identify the feasible region formed by all constraints.</li>
+                <li>Find the point(s) that maximize or minimize the objective function within the feasible region.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Graphical Method:
+    Maximize: Z = 3x + 2y
+    Subject to:
+        x + y <= 4
+        x >= 0
+        y >= 0
+    
+    # Plot the constraints, identify the feasible region, and find the optimal solution.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>1.8 Linear Programming Problem Formulation</h2>
+            <p>A Linear Programming Problem (LPP) is formulated by defining the objective function and the constraints that need to be optimized.</p>
+    
+            <h3>General Formulation:</h3>
+            <ul>
+                <li>Objective Function: A linear function that needs to be maximized or minimized.</li>
+                <li>Constraints: A set of linear inequalities or equations that represent limitations on the decision variables.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # General Linear Programming Problem Formulation:
+    Maximize Z = c1*x1 + c2*x2 + ... + cn*xn
+    Subject to:
+        a11*x1 + a12*x2 + ... + a1n*xn <= b1
+        a21*x1 + a22*x2 + ... + a2n*xn <= b2
+        ...
+        xn >= 0 for all x.
+                </pre>
+            </div>
+        </section>
+    
+    </div>
+    
+    
+    <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Queuing Theory</h1>
+    
+        <section class="section">
+            <h2>2.1 Characteristics of Queuing System</h2>
+            <p>Queuing theory is the mathematical study of waiting lines or queues. It is used to model the process of arriving customers, waiting for service, and receiving service in various systems.</p>
+    
+            <h3>Key Characteristics:</h3>
+            <ul>
+                <li><strong>Arrival Rate (λ):</strong> The rate at which customers arrive at the queue.</li>
+                <li><strong>Service Rate (μ):</strong> The rate at which the server can serve customers.</li>
+                <li><strong>Queue Length:</strong> The number of customers waiting for service.</li>
+                <li><strong>Service Discipline:</strong> The order in which customers are served (e.g., FIFO, LIFO, priority).</li>
+                <li><strong>Population Size:</strong> The size of the population from which customers arrive (finite or infinite).</li>
+                <li><strong>Queue Capacity:</strong> The maximum number of customers that can be in the queue.</li>
+                <li><strong>Number of Servers:</strong> The number of servers available for serving customers.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2.2 Classification of Queuing Model</h2>
+            <p>Queuing models are classified based on various factors, such as the arrival process, service mechanism, and number of servers. These classifications help to analyze the performance of the system.</p>
+    
+            <h3>Common Classifications:</h3>
+            <ul>
+                <li><strong>Single Channel vs. Multiple Channel:</strong> A single channel model has only one server, while a multiple channel model has more than one server.</li>
+                <li><strong>Finite vs. Infinite Population:</strong> A finite population limits the number of customers, whereas an infinite population assumes an unlimited number of potential customers.</li>
+                <li><strong>Deterministic vs. Stochastic Arrivals:</strong> A deterministic arrival process has fixed intervals, while a stochastic arrival process has random intervals.</li>
+                <li><strong>FIFO vs. Non-FIFO Service Discipline:</strong> FIFO (First-In-First-Out) serves customers in the order they arrive, while non-FIFO may prioritize some customers over others.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>2.3 Single Channel Queuing Theory</h2>
+            <p>In a single-channel queuing system, there is only one server available to serve all the customers. This is the simplest queuing model and is used in situations where only one service is available at a time.</p>
+    
+            <h3>Key Features:</h3>
+            <ul>
+                <li>Arrival Process: Customers arrive at the system according to some arrival distribution (usually exponential).</li>
+                <li>Service Process: The service rate is generally assumed to be exponential (memoryless service).</li>
+                <li>Queue Discipline: Most single-channel models use FIFO (First-In-First-Out) as the service discipline.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>Consider a scenario where customers arrive at a bank at a rate of 10 per hour, and the server can serve customers at a rate of 12 per hour. The system is analyzed using the single-channel queuing theory.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Single Channel Queuing System (M/M/1)
+    Arrival Rate (λ) = 10 customers/hour
+    Service Rate (μ) = 12 customers/hour
+    Utilization (ρ) = λ / μ = 10 / 12 = 0.83
+    
+    The system is stable because ρ < 1.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2.4 Generalization of Steady State M/M/1 Queuing Models</h2>
+            <p>The M/M/1 model is one of the most commonly used queuing models. It assumes that both the arrival and service processes follow an exponential distribution, and there is a single server. This model can be generalized to handle different cases based on variations in the system.</p>
+    
+            <h3>Model-I: M/M/1 Queuing Model</h3>
+            <p>The basic M/M/1 model assumes:</p>
+            <ul>
+                <li>Single server.</li>
+                <li>Poisson arrival process (exponentially distributed inter-arrival times).</li>
+                <li>Exponential service times.</li>
+                <li>Infinite capacity (no limit to the number of customers in the system).</li>
+            </ul>
+    
+            <h3>Steady-State Equations for M/M/1:</h3>
+            <ul>
+                <li>Utilization (ρ) = λ / μ</li>
+                <li>Average number of customers in the system (L) = ρ / (1 - ρ)</li>
+                <li>Average time a customer spends in the system (W) = 1 / (μ - λ)</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    # Example of M/M/1 System:
+    Arrival Rate (λ) = 5 customers/hour
+    Service Rate (μ) = 8 customers/hour
+    
+    Utilization (ρ) = λ / μ = 5 / 8 = 0.625
+    Average number of customers (L) = 0.625 / (1 - 0.625) = 1.67
+    Average time in the system (W) = 1 / (8 - 5) = 0.33 hours
+                </pre>
+            </div>
+    
+            <h3>Model-II: Generalized M/M/1 Queuing Model</h3>
+            <p>In the generalized M/M/1 model, some variations in assumptions allow for more complex systems, such as considering different arrival and service rate distributions or adding server priority rules.</p>
+    
+            <h3>Example of Generalization:</h3>
+            <p>Consider a queuing system with multiple servers (M/M/c) or systems with finite capacity (M/M/1/K), where K is the maximum number of customers the system can hold.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of M/M/c (Multiple Server) System:
+    Arrival Rate (λ) = 10 customers/hour
+    Service Rate (μ) = 12 customers/hour per server
+    Number of servers (c) = 2
+    
+    Utilization (ρ) = λ / (c * μ) = 10 / (2 * 12) = 0.4167
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 3 -->
+    <div class="topic-container" id="unit3">
+        <h1>UNIT-III: Replacement Theory</h1>
+    
+        <section class="section">
+            <h2>3.1 Replacement of Item that Deteriorates</h2>
+            <p>Replacement theory deals with replacing items that either deteriorate or fail over time. The key focus is on replacing items before they fail to minimize maintenance costs or replacing items as soon as they deteriorate to prevent inefficiencies.</p>
+    
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Deterioration:</strong> The process by which an item's performance or quality decreases over time, leading to a reduction in efficiency.</li>
+                <li><strong>Replacement Decision:</strong> The decision to replace an item is typically based on a cost analysis, which considers both the cost of maintaining the deteriorating item and the cost of replacing it.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>Consider a machine that has an initial cost of ₹10,000 and deteriorates at a rate that increases maintenance costs over time. The decision to replace it would depend on comparing the maintenance costs over time to the cost of replacing the machine at various intervals.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Replacement Problem (Deteriorating Item)
+    Initial Cost of Item = ₹10,000
+    Maintenance Cost per Year = ₹2,000
+    Replacement Cost = ₹15,000
+    
+    To decide whether to replace, compare the total maintenance cost over time to the cost of replacing the item after a few years.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3.2 Replacement of Items that Fail</h2>
+            <p>This type of replacement is concerned with replacing items that have failed completely and are no longer useful. The failure could be due to mechanical breakdowns or any other form of failure, and replacement is necessary to ensure continuity of operations.</p>
+    
+            <h3>Key Concepts:</h3>
+            <ul>
+                <li><strong>Failure Rate:</strong> The rate at which an item fails. This can be modeled using exponential distributions or other statistical methods.</li>
+                <li><strong>Replacement Policy:</strong> The policy that dictates when and how often an item should be replaced after failure. It could be a planned replacement after failure or a preventive replacement at a certain time.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>Consider a machine that breaks down randomly, and the maintenance costs increase with the age of the machine. The company may decide to replace the machine when the expected cost of maintaining it exceeds the cost of replacing it.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Replacement Problem (Failed Item)
+    Initial Cost of Machine = ₹15,000
+    Maintenance Cost after Failure = ₹5,000
+    Expected Cost of Failure (per year) = ₹10,000
+    
+    To replace or repair, compare the expected maintenance cost with the cost of replacement.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3.3 Group Replacement</h2>
+            <p>Group replacement occurs when a group of items is replaced simultaneously, typically due to the fact that the cost of replacing items individually becomes higher over time.</p>
+    
+            <h3>Key Features:</h3>
+            <ul>
+                <li><strong>Cost Sharing:</strong> Group replacement allows for the sharing of costs among the group of items, which could lead to savings in maintenance and replacement costs.</li>
+                <li><strong>Uniformity in Replacement:</strong> All items in the group are replaced at the same time, which simplifies the management process.</li>
+                <li><strong>Planning:</strong> Group replacement is often used when dealing with multiple identical machines or items that deteriorate at similar rates.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>Suppose a company operates ten identical machines that deteriorate at the same rate. The company may decide to replace all machines after a certain number of years to minimize downtime and maintenance costs.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Group Replacement
+    Initial Cost of Each Machine = ₹10,000
+    Maintenance Cost per Year = ₹2,000
+    Number of Machines = 10
+    
+    Group Replacement Plan: Replace all machines after 5 years if the combined maintenance cost exceeds the cost of replacement.
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3.4 Individual Replacement</h2>
+            <p>Individual replacement refers to replacing items one at a time, as each item either deteriorates or fails. This method is useful when the items do not have similar lifespans or deterioration rates.</p>
+    
+            <h3>Key Features:</h3>
+            <ul>
+                <li><strong>Flexibility:</strong> Items can be replaced at different times, depending on their individual failure or deterioration.</li>
+                <li><strong>Cost Efficiency:</strong> Replacement is done based on the condition of each item, potentially reducing the overall cost of replacement.</li>
+                <li><strong>Risk of Downtime:</strong> With individual replacement, some items may still function while others fail, which could lead to production issues.</li>
+            </ul>
+    
+            <h3>Example:</h3>
+            <p>In a factory with multiple machines, individual replacement may involve replacing each machine as it reaches the end of its useful life, rather than replacing all machines at once.</p>
+    
+            <div class="code-block">
+                <pre>
+    # Example of Individual Replacement
+    Initial Cost of Machine = ₹12,000
+    Maintenance Cost per Year = ₹3,000
+    
+    Replace each machine individually when maintenance costs exceed ₹5,000 per year, depending on their individual wear and tear.
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 4 -->
+
+    <div class="topic-container" id="unit4">
+        <h1>UNIT-IV: Inventory Theory</h1>
+    
+        <section class="section">
+            <h2>4.1 Cost Involved in Inventory Problems</h2>
+            <p>Inventory theory deals with determining the optimal quantity and timing of inventory orders to minimize costs while meeting demand. There are various types of costs involved in inventory management:</p>
+            <ul>
+                <li><strong>Ordering Cost:</strong> Cost incurred every time an order is placed (administration, delivery, etc.).</li>
+                <li><strong>Holding Cost:</strong> Cost of storing unsold goods (warehouse, insurance, etc.).</li>
+                <li><strong>Shortage Cost:</strong> Cost arising when inventory is insufficient to meet demand (loss of goodwill, sales loss).</li>
+                <li><strong>Purchase Cost:</strong> Cost to purchase inventory units.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    Total Inventory Cost = Ordering Cost + Holding Cost + Shortage Cost + Purchase Cost
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4.2 Single Item Deterministic Model</h2>
+            <p>This model assumes that demand for a single item is known and constant. The objective is to minimize total inventory costs by choosing the optimal order quantity.</p>
+            <ul>
+                <li><strong>EOQ (Economic Order Quantity):</strong> The ideal order quantity that minimizes total cost.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    EOQ Formula: 
+    Q = √(2DS / H)
+    Where:
+    D = Demand per year
+    S = Ordering cost per order
+    H = Holding cost per unit per year
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4.3 Economic Lot Size Model Without Shortage</h2>
+            <p>This model finds the optimal lot size when shortages are not allowed. The inventory level never drops to zero.</p>
+            <p><strong>Assumptions:</strong></p>
+            <ul>
+                <li>Demand rate is constant.</li>
+                <li>No stockout is allowed.</li>
+                <li>Inventory is replenished instantly.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    EOQ = √(2DS / H)
+    Total Cost = (D/Q × S) + (Q/2 × H)
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4.4 Economic Lot Size Model With Shortage</h2>
+            <p>This model allows for temporary shortages, where unmet demand is backlogged and fulfilled later. It balances holding and shortage costs.</p>
+    
+            <div class="code-block">
+                <pre>
+    EOQ with Shortage:
+    Q = √(2DS / H(1 - (S / (S + B))))
+    Where:
+    B = Shortage cost per unit per year
+                </pre>
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4.5 With Production Rate (Infinite and Finite)</h2>
+            <p>When items are produced instead of purchased, production rate is considered:</p>
+    
+            <h3>Infinite Production Rate (Instant Replenishment)</h3>
+            <ul>
+                <li>Same as the basic EOQ model, assumes immediate availability.</li>
+            </ul>
+    
+            <h3>Finite Production Rate (Gradual Replenishment)</h3>
+            <ul>
+                <li>Used when items are produced at a finite rate.</li>
+                <li>Production is continuous, so inventory builds up gradually.</li>
+            </ul>
+    
+            <div class="code-block">
+                <pre>
+    EOQ for Finite Production Rate:
+    Q = √(2DS / H × (1 - D/P))
+    Where:
+    P = Production rate per year
+    D = Demand rate per year
+    S = Setup/ordering cost
+    H = Holding cost per unit per year
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+    <!-- UNIT 5 -->
+
+    <div class="topic-container" id="unit5">
+        <h1>UNIT-V: Job Sequencing</h1>
+    
+        <section class="section">
+            <h2>5.1 Introduction</h2>
+            <p>Job sequencing is the process of determining the order in which a series of jobs should be processed through one or more machines to minimize total elapsed time or idle time.</p>
+            <p>This is commonly used in manufacturing and operations to increase efficiency and reduce delays.</p>
+        </section>
+    
+        <section class="section">
+            <h2>5.2 Sequencing Problem</h2>
+            <p>The basic sequencing problem involves finding the best sequence of jobs processed through machines so that:</p>
+            <ul>
+                <li>Total time taken is minimized.</li>
+                <li>Idle time on machines is minimized.</li>
+                <li>Jobs are completed in the least possible time.</li>
+            </ul>
+        </section>
+    
+        <section class="section">
+            <h2>5.3 Johnson's Algorithm for n Jobs through 2 Machines</h2>
+            <p>Johnson’s Rule is an efficient method used to minimize the total time required to process a set of jobs on two machines.</p>
+            <p><strong>Assumptions:</strong></p>
+            <ul>
+                <li>Each job is processed on Machine A, then Machine B.</li>
+                <li>Only one job can be processed at a time on a machine.</li>
+            </ul>
+    
+            <h3>Steps of Johnson's Algorithm:</h3>
+            <ol>
+                <li>List the processing times of all jobs on both machines (A and B).</li>
+                <li>Find the smallest processing time among all jobs.</li>
+                <li>
+                    If the smallest time is on Machine A, place the job as early as possible in the sequence.
+                </li>
+                <li>
+                    If the smallest time is on Machine B, place the job as late as possible in the sequence.
+                </li>
+                <li>Remove the job from the list and repeat the process until all jobs are scheduled.</li>
+            </ol>
+    
+            <div class="code-block">
+                <pre>
+    Example:
+    Jobs: J1, J2, J3
+    Machine A: 3, 8, 5
+    Machine B: 6, 4, 7
+    
+    Step 1: Smallest time = 3 (J1 on Machine A) → Schedule J1 first
+    Step 2: Remaining: J2, J3
+    Smallest = 4 (J2 on Machine B) → Schedule J2 last
+    Step 3: Remaining: J3 → Place in the middle
+    
+    Final Sequence: J1 → J3 → J2
+                </pre>
+            </div>
+        </section>
+    </div>
+    
+
+
+
+</body>
+</html>
