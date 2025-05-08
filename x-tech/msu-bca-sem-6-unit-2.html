@@ -61,6 +61,596 @@
             organizational growth.
         </div>
     </div>
+
+    <!-- UNIT 1: Information System Analysis Design and Implementation -->
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Overview of System Analysis and Design</h1>
+
+    <section class="section">
+        <h2>1. Systems Development Life Cycle (SDLC)</h2>
+        <p>The SDLC is a structured approach for developing information systems through phases including planning, analysis, design, implementation, and maintenance.</p>
+        <ul>
+            <li><strong>Planning:</strong> Identify objectives and resources.</li>
+            <li><strong>Analysis:</strong> Gather and interpret system requirements.</li>
+            <li><strong>Design:</strong> Logical and physical designs are created.</li>
+            <li><strong>Implementation:</strong> System is developed and deployed.</li>
+            <li><strong>Maintenance:</strong> Ongoing support and updates.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Models of SDLC</h2>
+        <p>Different approaches to SDLC:</p>
+        <ul>
+            <li><strong>Waterfall Model:</strong> Sequential process.</li>
+            <li><strong>Iterative Model:</strong> Repeats steps through loops.</li>
+            <li><strong>Agile Model:</strong> Flexible and collaborative.</li>
+            <li><strong>Spiral Model:</strong> Combines prototyping and risk analysis.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Requirements Determination</h2>
+        <p>Process of identifying what the system must do, usually through interviews, observations, and documentation study.</p>
+    </section>
+
+    <section class="section">
+        <h2>4. Logical and Physical Design</h2>
+        <p>
+            <strong>Logical Design:</strong> Abstract model showing *what* the system will do. <br>
+            <strong>Physical Design:</strong> Concrete model showing *how* the system will work.
+        </p>
+        <div class="code-block">
+            <pre>
+Logical: Entity-Relationship Diagram
+Physical: SQL Tables with indexes and keys
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Test Planning and Implementation</h2>
+        <p>Defining test strategies and implementing the final system with integration and user training.</p>
+    </section>
+
+    <section class="section">
+        <h2>6. Planning and Performance Evaluation</h2>
+        <p>System performance is evaluated for speed, accuracy, scalability, and user satisfaction.</p>
+    </section>
+
+    <section class="section">
+        <h2>7. Communication and Interviewing Skills</h2>
+        <p>Essential for understanding user needs and expectations.</p>
+        <ul>
+            <li><strong>Interviewing:</strong> One-on-one or group questioning.</li>
+            <li><strong>Presentation:</strong> Clear and structured information delivery.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>8. Group Dynamics</h2>
+        <p>Study of group behavior and interaction during the development process. Team collaboration and effective roles are vital.</p>
+    </section>
+
+    <section class="section">
+        <h2>9. Risk and Feasibility Analysis</h2>
+        <p>Examines the likelihood of project success based on technical, economic, legal, operational, and schedule feasibility.</p>
+
+        <div class="code-block">
+            <pre>
+Example:
+Economic Feasibility = Benefit - Cost > 0? → Proceed
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>10. Group-Based Approaches</h2>
+        <ul>
+            <li><strong>JAD (Joint Application Development):</strong> Structured group session for collecting requirements.</li>
+            <li><strong>Structured Walkthroughs:</strong> Step-by-step peer review of logic/design/code.</li>
+            <li><strong>Design and Code Reviews:</strong> Detailed checks for errors and improvements.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>11. Prototyping</h2>
+        <p>Creating early working models to refine system features and gather feedback.</p>
+        <div class="code-block">
+            <pre>
+Example:
+Developing a mock login page to test user experience before actual coding.
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>12. Database Design</h2>
+        <p>Designing schemas, tables, relationships, and ensuring normalization.</p>
+        <div class="code-block">
+            <pre>
+Student(ID, Name, DeptID)
+Dept(DeptID, DeptName)
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>13. Software Quality Metrics</h2>
+        <p>Used to assess software quality in terms of reliability, efficiency, maintainability, and usability.</p>
+    </section>
+
+    <section class="section">
+        <h2>14. Application Categories and Software Package Evaluation</h2>
+        <p>Applications are categorized as transaction processing, decision support, office automation, etc. Evaluation involves comparing based on features, cost, and support.</p>
+    </section>
+
+    <section class="section">
+        <h2>15. Software Acquisition</h2>
+        <p>Process of identifying, evaluating, and purchasing off-the-shelf or custom software solutions.</p>
+        <div class="code-block">
+            <pre>
+Steps:
+1. Identify needs
+2. Search vendors
+3. Compare features
+4. Cost-benefit analysis
+5. Vendor selection
+            </pre>
+        </div>
+    </section>
+</div>
+
+<!-- UNIT-II: Information Requirement Analysis -->
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Information Requirement Analysis</h1>
+
+    <section class="section">
+        <h2>1. Information Requirement Analysis</h2>
+        <p>This is the process of identifying, collecting, and analyzing the data requirements of a system. It ensures that the system meets the informational needs of stakeholders.</p>
+        <ul>
+            <li>Helps understand what data is needed.</li>
+            <li>Focuses on what users do, not how the system should do it.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Process Modeling</h2>
+        <p>Process modeling is the graphical representation of business processes that capture, manipulate, store, and distribute data between a system and its environment.</p>
+
+        <h3>Physical Data Flow Diagram (DFD)</h3>
+        <p>Shows how the system is currently implemented, including actual devices, people, and file systems used.</p>
+        <div class="code-block">
+            <pre>
+Example:
+- Physical DFD may include:
+  → "Customer fills form manually"
+  → "Data is entered into Excel by clerk"
+            </pre>
+        </div>
+
+        <h3>Logical Data Flow Diagram (DFD)</h3>
+        <p>Focuses on what the system must do, describing processes, data flows, and data stores without specifying technology.</p>
+        <div class="code-block">
+            <pre>
+Example:
+- Logical DFD:
+  → Process: "Receive Customer Order"
+  → Data Store: "Customer Database"
+  → Data Flow: "Order Details"
+            </pre>
+        </div>
+
+        <p><strong>DFD Levels:</strong></p>
+        <ul>
+            <li>Level 0: Context Diagram – shows entire system as a single process</li>
+            <li>Level 1: Breaks down main process into subprocesses</li>
+            <li>Level 2+: Further detail each subprocess</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Data Modeling</h2>
+        <p>Data modeling is the process of creating a structure for how data will be stored, organized, and accessed.</p>
+    </section>
+
+    <section class="section">
+        <h2>4. Logical Entity-Relationship Diagram (ERD)</h2>
+        <p>Logical ERDs describe data entities, their attributes, and the relationships between them without considering physical implementation (e.g., databases).</p>
+        <div class="code-block">
+            <pre>
+Entities:
+- Student(Student_ID, Name, Course)
+- Course(Course_ID, Title, Credits)
+
+Relationship:
+- Enrolls(Student_ID → Course_ID)
+            </pre>
+        </div>
+
+        <ul>
+            <li><strong>Entity:</strong> Real-world object (e.g., Student, Course)</li>
+            <li><strong>Attribute:</strong> Property of entity (e.g., Name, Title)</li>
+            <li><strong>Relationship:</strong> Link between entities (e.g., Student "enrolls" in Course)</li>
+        </ul>
+
+        <p>Logical ERD ignores:
+            <ul>
+                <li>Primary keys and indexes</li>
+                <li>Data types</li>
+                <li>Storage details</li>
+            </ul>
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>5. Importance in System Design</h2>
+        <p>Both process modeling and data modeling help in:</p>
+        <ul>
+            <li>Visualizing system requirements clearly</li>
+            <li>Improving communication between developers and stakeholders</li>
+            <li>Reducing errors during implementation</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT-III: Developing a Proposal & System Design -->
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Developing a Proposal & System Design</h1>
+
+    <section class="section">
+        <h2>1. Developing a Proposal</h2>
+        <p>Developing a proposal is the process of planning and presenting a detailed report for a proposed system, including its feasibility, costs, and benefits. It ensures that stakeholders understand and approve the system idea before development begins.</p>
+        <ul>
+            <li>Provides a structured outline of the system to be developed.</li>
+            <li>Acts as a contract between developers and stakeholders.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Feasibility Study</h2>
+        <p>This is an analysis to determine if a system is practical and beneficial to develop. It includes several types of feasibility checks:</p>
+        <ul>
+            <li><strong>Technical Feasibility:</strong> Can the current technology support the system?</li>
+            <li><strong>Economic Feasibility:</strong> Is it cost-effective and within budget?</li>
+            <li><strong>Operational Feasibility:</strong> Will users accept and use the system?</li>
+            <li><strong>Legal Feasibility:</strong> Does it comply with laws and regulations?</li>
+            <li><strong>Schedule Feasibility:</strong> Can the system be developed on time?</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Cost Estimation</h2>
+        <p>Cost estimation involves predicting the resources and expenses required for system development.</p>
+        <ul>
+            <li>Includes cost of software, hardware, labor, and training.</li>
+            <li>Helps in budgeting and financial planning.</li>
+        </ul>
+        <div class="code-block">
+            <pre>
+Example:
+- Software Licenses: ₹50,000
+- Developer Salary: ₹2,00,000
+- Hardware Costs: ₹75,000
+- Total Estimated Cost: ₹3,25,000
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. System Design</h2>
+        <p>System design involves creating a blueprint of the system’s components and interactions. It covers how the system will work and how users will interact with it.</p>
+    </section>
+
+    <section class="section">
+        <h3>4.1 Design of Input and Control</h3>
+        <p>Focuses on how data enters the system and how it's validated or secured.</p>
+        <ul>
+            <li>Design user-friendly input forms.</li>
+            <li>Implement input validation and error handling.</li>
+            <li>Control mechanisms to avoid invalid or duplicate data.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>4.2 Design of Output and Control</h3>
+        <p>Involves determining the format, content, and method of delivering system outputs.</p>
+        <ul>
+            <li>Report generation, screen displays, notifications.</li>
+            <li>Output accuracy and security.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>4.3 File Design / Database Design</h3>
+        <p>Describes how data will be stored, retrieved, and managed.</p>
+        <ul>
+            <li>Design tables, keys, indexes, and relationships.</li>
+            <li>Normalize data to reduce redundancy.</li>
+        </ul>
+        <div class="code-block">
+            <pre>
+Example:
+Table: Users(UserID, Username, Email, Password)
+Table: Orders(OrderID, UserID, Product, Quantity)
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>4.4 Process Design</h3>
+        <p>Defines how data will be processed by the system.</p>
+        <ul>
+            <li>Flow of data between processes.</li>
+            <li>Automation of repetitive tasks.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>4.5 User Interface Design</h3>
+        <p>Focuses on designing screens, navigation, and layout for user interaction.</p>
+        <ul>
+            <li>Must be user-friendly and visually appealing.</li>
+            <li>Accessible on multiple devices.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>4.6 Prototyping</h3>
+        <p>Prototyping is the creation of an early working model of the system to gather user feedback and refine requirements.</p>
+        <ul>
+            <li>Helps in visualizing the system before full development.</li>
+            <li>Supports iterative development and improvements.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Software Constructors</h2>
+        <p>These are tools or environments used to build software components.</p>
+        <ul>
+            <li>Examples: IDEs (Visual Studio, Eclipse), code generators, compilers.</li>
+            <li>Enhance productivity and accuracy.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Documentation</h2>
+        <p>Documentation refers to all written details about the system for developers, users, and maintainers.</p>
+        <ul>
+            <li><strong>User Manual:</strong> Helps end users operate the system.</li>
+            <li><strong>Technical Documentation:</strong> Supports maintenance and future upgrades.</li>
+            <li><strong>Design Documents:</strong> Detail system architecture and design choices.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT-IV: Application Development Methodologies and CASE Tools -->
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Application Development Methodologies and CASE Tools</h1>
+
+    <section class="section">
+        <h2>1. Application Development Methodologies</h2>
+        <p>Application development methodologies define the structured approach used to design, develop, and maintain software systems. Each methodology offers unique advantages depending on the project type and complexity.</p>
+    </section>
+
+    <section class="section">
+        <h3>1.1 Information Engineering</h3>
+        <p>A data-centric and business-driven methodology that focuses on strategic planning and enterprise-wide system development.</p>
+        <ul>
+            <li>Emphasizes data modeling before process modeling.</li>
+            <li>Supports enterprise-level integration.</li>
+            <li>Useful for large-scale, long-term system planning.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>1.2 Structured System Analysis and Design</h3>
+        <p>A traditional method that uses step-by-step procedures to analyze and design systems.</p>
+        <ul>
+            <li>Uses tools like Data Flow Diagrams (DFDs), structure charts, and decision tables.</li>
+            <li>Emphasizes modularity and top-down design.</li>
+            <li>Suitable for well-defined, predictable systems.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h3>1.3 Object-Oriented Methodologies</h3>
+        <p>Focuses on objects that encapsulate data and behavior. Useful for complex, reusable, and scalable systems.</p>
+        <ul>
+            <li>Key concepts: Class, Object, Inheritance, Encapsulation, Polymorphism.</li>
+            <li>Promotes reuse and maintainability.</li>
+            <li>Common tools: UML (Unified Modeling Language).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Data Modeling</h2>
+        <p>Data modeling is the process of defining the structure of data for a system. It includes entities, attributes, and relationships.</p>
+        <div class="code-block">
+            <pre>
+Example:
+Entities:
+- Student(Student_ID, Name)
+- Course(Course_ID, Title)
+
+Relationship:
+- Enrolls(Student_ID → Course_ID)
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Process Modeling</h2>
+        <p>Process modeling involves representing workflows and processes to understand how data flows through a system.</p>
+        <ul>
+            <li>Uses tools like DFDs, flowcharts, and activity diagrams.</li>
+            <li>Helps in breaking down complex processes into manageable parts.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. User Interface Design</h2>
+        <p>This involves creating layouts and navigation paths that allow users to interact with the system effectively and efficiently.</p>
+        <ul>
+            <li>Focuses on usability, accessibility, and aesthetics.</li>
+            <li>Ensures intuitive navigation and responsive design.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Prototyping</h2>
+        <p>Prototyping is the creation of a preliminary version of the system to validate requirements and gather user feedback.</p>
+        <ul>
+            <li>Can be low-fidelity (sketches) or high-fidelity (working models).</li>
+            <li>Reduces development risk and improves user satisfaction.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. CASE Tools (Computer-Aided Software Engineering)</h2>
+        <p>CASE tools are software applications that assist in various stages of software development.</p>
+        <ul>
+            <li>Support analysis, design, coding, testing, and maintenance.</li>
+            <li>Improve productivity, accuracy, and documentation.</li>
+            <li>Examples: Rational Rose, Enterprise Architect, StarUML.</li>
+        </ul>
+
+        <h3>Types of CASE Tools:</h3>
+        <ul>
+            <li><strong>Upper CASE Tools:</strong> Support early SDLC phases like requirements and design (e.g., DFD, ERD tools).</li>
+            <li><strong>Lower CASE Tools:</strong> Support implementation and testing (e.g., code generators, debuggers).</li>
+            <li><strong>Integrated CASE Tools:</strong> Provide end-to-end support for the entire development cycle.</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT-V: Design and Implementation on OO Platform -->
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Design and Implementation on OO Platform</h1>
+
+    <section class="section">
+        <h2>1. Object-Oriented Analysis and Design (OOAD)</h2>
+        <p>OOAD is a methodology that uses object modeling to analyze and design systems based on real-world entities.</p>
+        <ul>
+            <li>Emphasizes modularity, reusability, and encapsulation.</li>
+            <li>Aligns system design closely with real-world problems.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Object Modeling Technique (OMT)</h2>
+        <p>OMT is used to represent system components as objects with attributes and behaviors.</p>
+        <ul>
+            <li>Describes "what" the system contains using object diagrams.</li>
+            <li>Identifies key objects and their relationships.</li>
+        </ul>
+        <div class="code-block">
+            <pre>
+Example:
+Class: Car
+Attributes: model, color, engine_type
+Methods: start(), stop(), accelerate()
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Dynamic Modeling</h2>
+        <p>Describes the behavior of objects over time, focusing on object interactions and states.</p>
+        <ul>
+            <li>Includes state diagrams and sequence diagrams.</li>
+            <li>Helps model system logic and flow of control.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Functional Object-Oriented Design</h2>
+        <p>This step focuses on translating object models into implementable functional components.</p>
+        <ul>
+            <li>Designs how objects interact to perform system operations.</li>
+            <li>Defines method functionalities and class hierarchies.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Object-Oriented Programming Systems (OOPS)</h2>
+        <p>OOPS implements designs through object-oriented programming languages like Java, C++, or Python.</p>
+        <ul>
+            <li>Uses classes and objects for implementation.</li>
+            <li>Supports concepts like inheritance, polymorphism, and abstraction.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Object-Oriented Databases</h2>
+        <p>These databases store data as objects rather than tables.</p>
+        <ul>
+            <li>Ideal for applications with complex data types.</li>
+            <li>Examples: db4o, ObjectDB, Versant.</li>
+        </ul>
+    </section>
+</div>
+
+
+<!-- UNIT-VI: Managerial Issues in Software Projects -->
+<div class="topic-container" id="unit6">
+    <h1>UNIT-VI: Managerial Issues in Software Projects</h1>
+
+    <section class="section">
+        <h2>1. Introduction to Software Markets</h2>
+        <p>The software market involves development, distribution, and support of software products and services.</p>
+        <ul>
+            <li>Includes system software, application software, and embedded software.</li>
+            <li>Growing demand for cloud, mobile, and AI-based applications.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Planning of Software Projects</h2>
+        <p>Planning ensures the successful execution of a software project within time and budget.</p>
+        <ul>
+            <li>Defines objectives, scope, resources, and risk assessments.</li>
+            <li>Develops timelines and assigns responsibilities.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Size and Cost Estimates</h2>
+        <p>Project size and cost estimation help predict the effort and resources needed for development.</p>
+        <ul>
+            <li>Techniques: Function Point Analysis, Use Case Points, COCOMO model.</li>
+            <li>Helps in budget and resource planning.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Project Scheduling</h2>
+        <p>Scheduling organizes project tasks into a timeline with milestones and deadlines.</p>
+        <ul>
+            <li>Tools: Gantt charts, PERT charts, Work Breakdown Structure (WBS).</li>
+            <li>Ensures project progress tracking and timely delivery.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Measurement of Software Quality and Productivity</h2>
+        <p>Metrics are used to assess the quality and efficiency of software and development processes.</p>
+        <ul>
+            <li><strong>Quality Metrics:</strong> Defect density, reliability, usability.</li>
+            <li><strong>Productivity Metrics:</strong> Lines of code/hour, function points/hour.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. ISO and Capability Maturity Models (CMM)</h2>
+        <p>Standard models ensure consistent quality and continuous process improvement in software organizations.</p>
+        <ul>
+            <li><strong>ISO Standards:</strong> ISO 9001 (Quality Management), ISO/IEC 12207 (Software Life Cycle).</li>
+            <li><strong>CMM:</strong> Ranks maturity in 5 levels – Initial, Repeatable, Defined, Managed, Optimizing.</li>
+        </ul>
+    </section>
+</div>
+
 </body>
 
 </html>

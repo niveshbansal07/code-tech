@@ -50,11 +50,573 @@
         </div>
     </div>
 
-      <!-- UNIT 1 -->
-    <!-- UNIT 2 -->
+     
+       <!-- UNIT 1 --> 
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Combinatorics</h1>
+
+    <section class="section">
+        <h2>1. Permutation and Combination</h2>
+        <p>Permutation is the arrangement of objects in a specific order. Combination is the selection of objects without considering the order.</p>
+
+        <h3>Permutation Formula:</h3>
+        <div class="code-block">
+            <pre>
+P(n, r) = n! / (n - r)!
+            </pre>
+        </div>
+
+        <h3>Combination Formula:</h3>
+        <div class="code-block">
+            <pre>
+C(n, r) = n! / [r! (n - r)!]
+            </pre>
+        </div>
+
+        <h3>Example:</h3>
+        <p>How many ways can you arrange 3 letters out of 5?</p>
+        <div class="code-block">
+            <pre>
+Permutation: P(5,3) = 5! / (5-3)! = 60
+Combination: C(5,3) = 5! / (3!2!) = 10
+            </pre>
+        </div>
+
+        <h3>Diagram (Text form):</h3>
+        <div class="code-block">
+            <pre>
+Set = {A, B, C, D, E}
+Permutation (3 items): ABC, ACB, BAC, BCA, CAB, CBA...
+Combination (3 items): ABC, ABD, ABE, ACD...
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Repetition and Constrained Repetition</h2>
+        <p>
+            Repetition allows objects to be selected more than once.
+            Constrained repetition limits the number of times an object can be selected.
+        </p>
+
+        <h3>Permutation with Repetition:</h3>
+        <div class="code-block">
+            <pre>
+Total = n^r
+(Choose r items from n, allowing repetition)
+            </pre>
+        </div>
+
+        <h3>Example:</h3>
+        <p>How many 2-digit numbers using 3 digits {1,2,3} with repetition?</p>
+        <div class="code-block">
+            <pre>
+3^2 = 9 combinations: 11, 12, 13, 21, 22, ...
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Binomial Coefficients</h2>
+        <p>Binomial coefficients are the values of C(n, r), used in the Binomial Theorem and Pascal's Triangle.</p>
+
+        <div class="code-block">
+            <pre>
+C(n, r) = n! / [r!(n-r)!]
+Pascal's Triangle:
+       1
+      1 1
+     1 2 1
+    1 3 3 1
+   1 4 6 4 1
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Binomial Theorem</h2>
+        <p>The Binomial Theorem gives a way to expand expressions of the form (a + b)<sup>n</sup>.</p>
+
+        <h3>Formula:</h3>
+        <div class="code-block">
+            <pre>
+(a + b)^n = Σ [C(n, k) * a^(n-k) * b^k] for k = 0 to n
+            </pre>
+        </div>
+
+        <h3>Example:</h3>
+        <div class="code-block">
+            <pre>
+(a + b)^2 = C(2,0)a^2 + C(2,1)ab + C(2,2)b^2
+          = a^2 + 2ab + b^2
+            </pre>
+        </div>
+    </section>
+</div>
+
+   
+
+    <!-- UNIT 2 --> 
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Frequency Distributions and Statistical Measures</h1>
+
+    <section class="section">
+        <h2>1. Frequency Distributions</h2>
+        <p>A frequency distribution organizes raw data into a table showing the frequency (number of times) each value appears.</p>
+
+        <div class="code-block">
+            <pre>
+Example:
+Data: 2, 3, 2, 5, 3, 2, 4, 5
+Frequency Table:
+Value | Frequency
+------|----------
+  2   |     3
+  3   |     2
+  4   |     1
+  5   |     2
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Histograms and Frequency Polygons</h2>
+        <p>
+            A <strong>histogram</strong> is a graphical representation of a frequency distribution using bars. <br>
+            A <strong>frequency polygon</strong> is a line graph created by joining midpoints of class intervals.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Textual Histogram:
+[10-20]: ||||
+[20-30]: ||||||
+[30-40]: |||
+[40-50]: |||||
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Measures of Central Tendency</h2>
+
+        <h3>Mean</h3>
+        <p>Average of the data values.</p>
+        <div class="code-block">
+            <pre>
+Mean = (2 + 4 + 6 + 8) / 4 = 5
+            </pre>
+        </div>
+
+        <h3>Median</h3>
+        <p>The middle value when data is arranged in order.</p>
+        <div class="code-block">
+            <pre>
+Data: 3, 5, 7 —&gt; Median = 5
+If even count: average of middle two numbers.
+            </pre>
+        </div>
+
+        <h3>Mode</h3>
+        <p>The value that appears most frequently.</p>
+        <div class="code-block">
+            <pre>
+Data: 2, 3, 3, 4, 5 —&gt; Mode = 3
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Dispersion Measures</h2>
+
+        <h3>Mean Deviation</h3>
+        <p>The average of absolute deviations from the mean.</p>
+        <div class="code-block">
+            <pre>
+Mean = 4, Data = 3, 4, 5
+Deviations = 1, 0, 1 —&gt; Mean Deviation = (1+0+1)/3 = 0.67
+            </pre>
+        </div>
+
+        <h3>Standard Deviation (σ)</h3>
+        <p>Shows how much data deviates from the mean. Formula:</p>
+        <div class="code-block">
+            <pre>
+σ = √[Σ(x - mean)² / N]
+Example: Data = 2, 4, 4, 4, 5, 5, 7, 9
+Mean = 5, σ ≈ 2
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Moments</h2>
+        <p>Moments are used to describe the shape characteristics of a distribution.</p>
+        <ul>
+            <li>1st Moment: Mean</li>
+            <li>2nd Moment: Variance</li>
+            <li>3rd Moment: Skewness</li>
+            <li>4th Moment: Kurtosis</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Skewness</h2>
+        <p>Measures asymmetry of data:</p>
+        <ul>
+            <li>Positive Skew: Tail on right</li>
+            <li>Negative Skew: Tail on left</li>
+            <li>Symmetric: Normal distribution</li>
+        </ul>
+
+        <div class="code-block">
+            <pre>
+Diagram (Text):
+Left-skewed:      * * * * * * *      *
+Symmetrical:      *   * * * * *   *
+Right-skewed:     *      * * * * * * *
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Kurtosis</h2>
+        <p>Measures the peakedness of the distribution.</p>
+        <ul>
+            <li>Leptokurtic: More peaked than normal</li>
+            <li>Mesokurtic: Normal curve</li>
+            <li>Platykurtic: Flatter than normal</li>
+        </ul>
+
+        <div class="code-block">
+            <pre>
+Diagram (Text):
+Leptokurtic:      ^
+Mesokurtic:       ^
+Platykurtic:     ^
+            </pre>
+        </div>
+    </section>
+</div>
+
     <!-- UNIT 3 -->
-    <!-- UNIT 4 -->
-    <!-- UNIT 5 -->
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Elementary Probability and Theoretical Distributions</h1>
+
+    <section class="section">
+        <h2>1. Elementary Probability Theory</h2>
+        <p>
+            <strong>Probability:</strong> The measure of the likelihood that an event will occur.<br>
+            If 'S' is the sample space and 'E' is an event, then:<br>
+            <strong>P(E) = Number of favorable outcomes / Total number of outcomes</strong>
+        </p>
+
+        <h3>Conditional Probability</h3>
+        <p>
+            The probability of an event A given that event B has occurred.<br>
+            <strong>P(A | B) = P(A ∩ B) / P(B)</strong>, provided P(B) ≠ 0
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>2. Probability Distributions</h2>
+        <p>
+            A probability distribution assigns probabilities to all possible outcomes of a random variable.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Example:
+X:     0   1   2
+P(X):  0.2 0.5 0.3
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Mathematical Expectation</h2>
+        <p>
+            The expected value (mean) of a random variable is the weighted average of all possible values.
+        </p>
+
+        <div class="code-block">
+            <pre>
+E(X) = Σ [x * P(x)]
+Example:
+X:     1   2   3
+P(X):  0.2 0.5 0.3
+E(X) = 1*0.2 + 2*0.5 + 3*0.3 = 2.1
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Theoretical Distributions</h2>
+
+        <h3>Binomial Distribution</h3>
+        <p>
+            Used when there are fixed number of trials (n), each with two outcomes: success or failure.<br>
+            Formula: <strong>P(X = r) = nCr * p^r * (1-p)^(n-r)</strong>
+        </p>
+
+        <div class="code-block">
+            <pre>
+Example: n = 4, p = 0.5
+P(X = 2) = 4C2 * (0.5)^2 * (0.5)^2 = 0.375
+            </pre>
+        </div>
+
+        <h3>Poisson Distribution</h3>
+        <p>
+            Used for rare events occurring over fixed intervals of time or space.<br>
+            Formula: <strong>P(X = r) = (λ^r * e^(-λ)) / r!</strong>
+        </p>
+
+        <div class="code-block">
+            <pre>
+Example: λ = 3, r = 2
+P(X=2) = (3^2 * e^-3) / 2! ≈ 0.224
+            </pre>
+        </div>
+
+        <h3>Normal Distribution</h3>
+        <p>
+            A continuous distribution that is symmetric and bell-shaped. Mean = Median = Mode.<br>
+            Formula (standard normal): <strong>Z = (X - μ) / σ</strong>
+        </p>
+
+        <div class="code-block">
+            <pre>
+Example: μ = 100, σ = 15, X = 115
+Z = (115 - 100) / 15 = 1.0
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Relationship Between Binomial, Poisson, and Normal</h2>
+        <ul>
+            <li>Binomial → Poisson: When n is large, p is small, λ = np</li>
+            <li>Binomial → Normal: For large n, p not too close to 0 or 1</li>
+            <li>Poisson → Normal: When λ is large</li>
+        </ul>
+
+        <div class="code-block">
+            <pre>
+Approximations:
+Binomial(n, p) ≈ Poisson(λ = np) if n→∞, p→0
+Binomial(n, p) ≈ Normal(μ = np, σ = √npq) if n is large
+Poisson(λ) ≈ Normal(μ = λ, σ = √λ) if λ is large
+            </pre>
+        </div>
+    </section>
+</div>
+<!-- UNIT 4 -->
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Correlation, Regression, Curve Fitting & Chi-Square Test</h1>
+
+    <section class="section">
+        <h2>1. Correlation</h2>
+        <p>
+            Correlation measures the degree of relationship between two variables.
+        </p>
+
+        <h3>Linear Correlation</h3>
+        <p>
+            A linear relationship exists when the change in one variable causes a proportional change in another.
+        </p>
+
+        <h3>Measure of Correlation</h3>
+        <p>
+            The most common measure is Pearson’s correlation coefficient (r):<br>
+            <strong>r = Σ[(X - X̄)(Y - Ȳ)] / √[Σ(X - X̄)² * Σ(Y - Ȳ)²]</strong><br>
+            Value of r lies between -1 and 1.
+        </p>
+        <ul>
+            <li>r = 1: Perfect positive correlation</li>
+            <li>r = -1: Perfect negative correlation</li>
+            <li>r = 0: No correlation</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Regression</h2>
+        <p>
+            Regression is used to predict the value of one variable based on another.
+        </p>
+
+        <h3>Least Square Regression Lines</h3>
+        <p>
+            The regression line minimizes the sum of squares of the vertical distances from data points to the line.
+        </p>
+        <ul>
+            <li><strong>Regression line of Y on X:</strong> Y = a + bX</li>
+            <li><strong>Regression line of X on Y:</strong> X = a + bY</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Curve Fitting</h2>
+        <p>
+            Curve fitting is the process of finding a curve that best fits the given data using the method of least squares.
+        </p>
+
+        <h3>Method of Least Squares</h3>
+        <p>
+            This method minimizes the sum of the squares of the errors (deviations) between the observed and fitted values.
+        </p>
+
+        <h3>Least Squares Line</h3>
+        <p>
+            A straight line fit: Y = a + bX, where a and b are calculated using least squares method.
+        </p>
+
+        <h3>Least Squares Parabola</h3>
+        <p>
+            A curve of the form Y = a + bX + cX² fitted to data using least squares approach.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>4. Chi-Square Test</h2>
+        <p>
+            The Chi-square (χ²) test is a statistical test to determine if there is a significant difference between observed and expected frequencies.
+        </p>
+
+        <h3>Definition of Chi-Square</h3>
+        <p>
+            <strong>χ² = Σ[(O - E)² / E]</strong><br>
+            Where O = observed frequency, E = expected frequency.
+        </p>
+
+        <h3>Significance Test</h3>
+        <p>
+            Used to test the independence of two categorical variables.
+        </p>
+
+        <h3>Contingency Test</h3>
+        <p>
+            Used for testing the independence between row and column variables in a contingency table.
+        </p>
+
+        <h3>Coefficient of Contingency</h3>
+        <p>
+            A measure derived from Chi-square to express the degree of association between two attributes.<br>
+            <strong>C = √[χ² / (χ² + N)]</strong>, where N = total number of observations.
+        </p>
+    </section>
+</div>
+
+<!-- UNIT 5 -->
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Basics of Sampling Theory</h1>
+
+    <section class="section">
+        <h2>1. Sample Mean and Variance</h2>
+        <p>
+            The sample mean is the average of a set of sample data. It is used to estimate the population mean.
+            The sample variance measures how much the data points differ from the sample mean.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Sample Mean (x̄) = Σx / n
+Sample Variance (s²) = Σ(x - x̄)² / (n - 1)
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Student's t-test</h2>
+        <p>
+            The t-test is used to determine if there is a significant difference between the means of two groups, 
+            particularly when sample sizes are small and population variance is unknown.
+        </p>
+
+        <div class="code-block">
+            <pre>
+t = (x̄ - μ) / (s / √n)
+Where:
+x̄ = sample mean, μ = population mean, s = sample standard deviation, n = sample size
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Test of Hypotheses and Significance</h2>
+        <p>
+            Hypothesis testing is used to test an assumption regarding a population parameter. A hypothesis can be 
+            either null (H₀) or alternative (H₁). The goal is to determine whether the evidence is strong enough 
+            to reject the null hypothesis.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Null Hypothesis (H₀): Assumes no effect or difference.
+Alternative Hypothesis (H₁): Assumes there is an effect or difference.
+p-value: Probability of observing data at least as extreme as the current data under the null hypothesis.
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Degree of Freedom</h2>
+        <p>
+            The degree of freedom refers to the number of independent values or quantities which can be assigned 
+            to a statistical distribution. It is used in the calculation of the t-distribution and chi-square tests.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Degree of freedom (df) = n - 1
+Where n is the sample size.
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Z-test</h2>
+        <p>
+            The Z-test is used to test the hypothesis about the population mean when the population variance is known 
+            or the sample size is large (n > 30). It compares the observed sample mean with the population mean.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Z = (x̄ - μ) / (σ / √n)
+Where:
+x̄ = sample mean, μ = population mean, σ = population standard deviation, n = sample size
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>6. Small and Large Sampling</h2>
+        <p>
+            Small sampling refers to samples with fewer than 30 data points. Large sampling refers to samples with 
+            more than 30 data points. Statistical tests like t-tests and Z-tests are applied differently based on the sample size.
+        </p>
+    </section>
+
+    <section class="section">
+        <h2>7. Introduction to Monte Carlo Method</h2>
+        <p>
+            The Monte Carlo method is a statistical technique that uses random sampling to obtain numerical results. 
+            It is commonly used in simulations, optimization problems, and modeling complex systems.
+        </p>
+
+        <div class="code-block">
+            <pre>
+Monte Carlo Simulation Steps:
+1. Define the problem and random variables.
+2. Generate random numbers for variables.
+3. Run simulations and collect results.
+4. Analyze the results to estimate the solution.
+            </pre>
+        </div>
+    </section>
+</div>
+
 </body>
 
 </html>

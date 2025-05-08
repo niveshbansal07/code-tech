@@ -13,49 +13,619 @@
 
 <body>
 
-    <div class="sem-unit-header">Computer Network</div>
-    
-    <div class="container">
-    
-        <a href="#unit" class="unit">UNIT-I: Basic Concepts</a>
-        <div id="unit6" class="content">
-            Components of data communication, distributed processing, standards and organizations. Line configuration,
-            topology, Transmission mode, and categories of networks. OSI and TCP/IP Models: Layers and their functions,
-            comparison of models. Digital Transmission: Interfaces and Modems: DTE-DCE Interface, Modems, Cable modems.
-        </div>
+    <!-- UNIT-I: -->
+    <div class="topic-container" id="unit1">
+        <h1>UNIT-I: Basic Concepts</h1>
 
-        <a href="#unit" class="unit">UNIT-II: Transmission Media</a>
-        <div id="unit7" class="content">
-            Guided and unguided, Attenuation, distortion, noise, throughput, propagation speed and time, wavelength,
-            Shannon capacity, comparison of media.
-        </div>
+        <section class="section">
+            <h2>1. Components of Data Communication</h2>
+            <p>Data communication refers to the exchange of data between devices using a transmission medium. The
+                essential components of data communication include:</p>
+            <ul>
+                <li><strong>Sender</strong>: The device that sends data.</li>
+                <li><strong>Receiver</strong>: The device that receives data.</li>
+                <li><strong>Transmission Medium</strong>: The physical path between the sender and receiver (e.g.,
+                    cables, wireless).</li>
+                <li><strong>Message</strong>: The actual data that is transmitted.</li>
+                <li><strong>Protocol</strong>: Rules that govern data communication.</li>
+            </ul>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                [Sender] ---> [Transmission Medium] ---> [Receiver]
+                (Message)
+                (Protocol governs the exchange)
+            </div>
+        </section>
 
-        <a href="#unit8" class="unit">UNIT-III: Telephony</a>
-        <div id="unit8" class="content">
-            Multiplexing, error detection and correction: Many to one, One to many, WDM, TDM, FDM, Circuit switching,
-            packet switching and message switching. Data link control protocols: Line discipline, flow control, error
-            control, synchronous and asynchronous protocols, character and bit oriented protocols, Link access
-            procedures. Point to point controls: Transmission states, PPP layers, LCP, Authentication, NCP. ISDN:
-            Services, Historical outline, subscriber’s access, ISDN Layers and broadcast ISDN.
-        </div>
+        <section class="section">
+            <h2>2. Distributed Processing</h2>
+            <p>Distributed processing involves dividing tasks among multiple computers that communicate over a network.
+            </p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                [Client 1] [Client 2]
+                \ /
+                \ /
+                [Distributed Server Cluster]
+            </div>
+        </section>
 
-        <a href="#unit9" class="unit">UNIT-IV: Devices</a>
-        <div id="unit9" class="content">
-            Repeaters, bridges, gateways, routers, The Network Layer; Design issues, Routing algorithms, Congestion
-            control Algorithms, Quality of service, Internet working, Network Layer in the internet.
-        </div>
+        <section class="section">
+            <h2>3. Standards and Organizations</h2>
+            <p>Some key standard organizations are ISO, IEEE, ITU, and IETF, which ensure interoperability and
+                compatibility in communication systems.</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                Organizations: [ISO] [IEEE] [IETF] [ITU]
+                |
+                Define
+                |
+                [Protocols & Standards]
+            </div>
+        </section>
 
-        <a href="#unit10" class="unit">UNIT-V: Transport and Upper Layers</a>
-        <div id="unit10" class="content">
-            Transport layer functions, connection management, functions of session layers, presentation layer and
-            application layer.
-        </div>
+        <section class="section">
+            <h2>4. Line Configuration</h2>
+            <p>Defines how devices are connected in a communication line.</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                Point-to-Point: [Device A] ----- [Device B]
+                Multipoint: [Device A]
+                |
+                ---------------
+                | | |
+                [Device B][Device C][Device D]
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>5. Topology</h2>
+            <p>Defines the structure of a network.</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                Star Topology:
+                [Switch]
+                / | \
+                [PC1] [PC2] [PC3]
+
+                Ring Topology:
+                [PC1]---[PC2]---[PC3]
+                \ /
+                ---[PC4]---
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>6. Transmission Mode</h2>
+            <p><strong>Simplex:</strong> One way only</p>
+            <p><strong>Half-Duplex:</strong> Two-way, one at a time</p>
+            <p><strong>Full-Duplex:</strong> Two-way simultaneously</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                Simplex: [A] ---> [B]
+                Half-Duplex: [A] <--- [B] (One direction at a time) Full-Duplex: [A] <--> [B] (Both directions
+                    simultaneously)
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>7. Categories of Networks</h2>
+            <p>Classification based on geographic spread.</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                PAN: [Smartphone] <--> [Laptop]
+                    LAN: [PC1] --- [PC2] --- [Printer] (Same building)
+                    MAN: [Campus Network] across a city
+                    WAN: [Internet: Connects cities/countries]
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>8. OSI and TCP/IP Models</h2>
+            <p><strong>OSI Model:</strong> 7 Layers</p>
+            <p><strong>TCP/IP Model:</strong> 4 Layers</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                OSI Model: TCP/IP Model:
+                ----------------- ----------------
+                Application Application
+                Presentation |
+                Session |
+                Transport Transport
+                Network Internet
+                Data Link Network Access
+                Physical
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>9. Digital Transmission: Interfaces and Modems</h2>
+            <p>Digital communication often uses modems and interface standards.</p>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                [Computer] --(DTE)--> [Modem] --(DCE)--> [Telephone Line] --> [Remote Modem] --> [Server]
+            </div>
+        </section>
     </div>
-      <!-- UNIT 1 -->
-    <!-- UNIT 2 -->
-    <!-- UNIT 3 -->
-    <!-- UNIT 4 -->
-    <!-- UNIT 5 -->
+
+ <!-- UNIT 2 -->
+
+    <div class="topic-container" id="unit2">
+        <h1>UNIT-II: Transmission Media</h1>
+    
+        <section class="section">
+            <h2>1. Guided and Unguided Media</h2>
+            <p><strong>Guided Media</strong> involves physical cables through which signals are guided.</p>
+            <ul>
+                <li>Twisted Pair Cable</li>
+                <li>Coaxial Cable</li>
+                <li>Fiber Optic Cable</li>
+            </ul>
+            <p><strong>Unguided Media</strong> transmits signals through air or vacuum (wireless).</p>
+            <ul>
+                <li>Radio Waves</li>
+                <li>Microwaves</li>
+                <li>Infrared</li>
+            </ul>
+            <p><strong>Example Diagram:</strong></p>
+            <div class="code-block">
+                Guided Media:
+                [Device A] ---- Twisted Pair ---- [Device B]
+    
+                Unguided Media:
+                [Device A] ))))) Radio Signal ))))) [Device B]
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>2. Attenuation</h2>
+            <p>Attenuation refers to the loss of signal strength as it travels through the medium.</p>
+            <p><strong>Example:</strong> A signal sent at 100 dB might be received at 70 dB.</p>
+            <div class="code-block">
+                Signal Strength Decrease:
+                100 dB --> 90 dB --> 80 dB --> 70 dB
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>3. Distortion</h2>
+            <p>Distortion occurs when the signal changes its form or shape due to delay in different components of the signal.</p>
+            <div class="code-block">
+                Sent Signal:    /\/\/\/\/\
+                Received:       /\_/\/\__\
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>4. Noise</h2>
+            <p>Noise is unwanted energy that alters or interferes with the original signal.</p>
+            <ul>
+                <li>Thermal Noise</li>
+                <li>Intermodulation Noise</li>
+                <li>Crosstalk</li>
+                <li>Impulse Noise</li>
+            </ul>
+            <div class="code-block">
+                Clean Signal:     10101010
+                With Noise:       10111000
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>5. Throughput</h2>
+            <p>Throughput is the actual rate at which data is successfully transmitted over the channel.</p>
+            <p><strong>Example:</strong> A channel with a bandwidth of 10 Mbps might only transmit 8 Mbps due to overhead and noise.</p>
+        </section>
+    
+        <section class="section">
+            <h2>6. Propagation Speed and Time</h2>
+            <p><strong>Propagation Speed</strong> is the rate at which a signal travels through the medium (close to speed of light).</p>
+            <p><strong>Propagation Time</strong> is the time it takes for a signal to reach the receiver.</p>
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                Propagation Time = Distance / Propagation Speed
+                Example: 3000 km / (2 x 10^8 m/s) = 0.015 s
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>7. Wavelength</h2>
+            <p>Wavelength is the distance between two consecutive peaks of a signal.</p>
+            <p><strong>Formula:</strong> λ = Propagation Speed / Frequency</p>
+            <div class="code-block">
+                Example:
+                Frequency = 2 GHz, Speed = 3x10^8 m/s
+                λ = 3x10^8 / 2x10^9 = 0.15 meters
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>8. Shannon Capacity</h2>
+            <p>Maximum data rate of a noisy channel.</p>
+            <p><strong>Formula:</strong></p>
+            <div class="code-block">
+                C = B * log2(1 + S/N)
+                Where:
+                C = Channel Capacity (bps)
+                B = Bandwidth (Hz)
+                S = Signal Power
+                N = Noise Power
+    
+                Example:
+                B = 3000 Hz, S/N = 1000
+                C = 3000 * log2(1 + 1000) ≈ 3000 * 9.97 = 29.9 kbps
+            </div>
+        </section>
+    
+        <section class="section">
+            <h2>9. Comparison of Media</h2>
+            <table border="1" cellpadding="5">
+                <thead>
+                    <tr>
+                        <th>Media Type</th>
+                        <th>Bandwidth</th>
+                        <th>Noise Resistance</th>
+                        <th>Cost</th>
+                        <th>Usage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Twisted Pair</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>LANs, Telephones</td>
+                    </tr>
+                    <tr>
+                        <td>Coaxial Cable</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>Cable TV</td>
+                    </tr>
+                    <tr>
+                        <td>Fiber Optic</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>High</td>
+                        <td>Backbone, Long-distance</td>
+                    </tr>
+                    <tr>
+                        <td>Radio Waves</td>
+                        <td>Medium</td>
+                        <td>Low</td>
+                        <td>Low</td>
+                        <td>Wireless LANs</td>
+                    </tr>
+                    <tr>
+                        <td>Microwaves</td>
+                        <td>High</td>
+                        <td>Medium</td>
+                        <td>Medium</td>
+                        <td>Cellular, Satellite</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
+
+    <!-- UNIT-III: TELEPHONY, DATA LINK CONTROL, PPP, ISDN -->
+
+<div class="topic-container" id="unit3">
+    <h1>UNIT-III: Telephony</h1>
+
+    <section class="section">
+        <h2>1. Multiplexing</h2>
+        <p>Multiplexing is the process of combining multiple signals for transmission over a single medium.</p>
+        <ul>
+            <li><strong>Many to One:</strong> Combines many sources into one line (e.g., many calls over one wire).</li>
+            <li><strong>One to Many:</strong> One source is distributed to many destinations.</li>
+        </ul>
+        <p><strong>Types of Multiplexing:</strong></p>
+        <ul>
+            <li><strong>WDM (Wavelength Division Multiplexing):</strong> Used in fiber optics. Each signal is assigned a different wavelength (color of light).</li>
+            <li><strong>TDM (Time Division Multiplexing):</strong> Each signal is assigned a time slot.</li>
+            <li><strong>FDM (Frequency Division Multiplexing):</strong> Each signal is transmitted in a separate frequency band.</li>
+        </ul>
+        <div class="code-block">
+            Example (TDM):
+            Time Slots: | A | B | C | A | B | C | ...
+            Each device sends in its time slot.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Switching Techniques</h2>
+        <ul>
+            <li><strong>Circuit Switching:</strong> A dedicated path is established for the duration of the communication. (e.g., Telephone calls)</li>
+            <li><strong>Packet Switching:</strong> Data is broken into packets and sent independently. (e.g., Internet)</li>
+            <li><strong>Message Switching:</strong> Whole messages are stored and forwarded. No dedicated path needed.</li>
+        </ul>
+        <div class="code-block">
+            Circuit: A ──────── B (reserved line)
+            Packet: A → (packet 1) → B
+                          → (packet 2) → B
+            Message: A → Store → Forward → B
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Error Detection and Correction</h2>
+        <ul>
+            <li><strong>Detection:</strong> Identifies the presence of an error (e.g., Parity Check, CRC).</li>
+            <li><strong>Correction:</strong> Locates and corrects the error (e.g., Hamming Code).</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            Original: 1010 → Transmitted: 1010 → Received: 1110 (Error detected)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Data Link Control Protocols</h2>
+        <ul>
+            <li><strong>Line Discipline:</strong> Determines which device can send and when.</li>
+            <li><strong>Flow Control:</strong> Manages data rate between sender and receiver (e.g., Stop-and-Wait, Sliding Window).</li>
+            <li><strong>Error Control:</strong> Ensures error-free delivery using ACKs and retransmissions.</li>
+        </ul>
+        <p><strong>Types:</strong></p>
+        <ul>
+            <li><strong>Synchronous:</strong> Blocks of data transmitted with synchronization bits.</li>
+            <li><strong>Asynchronous:</strong> Data sent character by character with start/stop bits.</li>
+            <li><strong>Character-Oriented:</strong> Uses characters for control (e.g., ASCII).</li>
+            <li><strong>Bit-Oriented:</strong> Uses bit patterns for control (e.g., HDLC).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Link Access Procedures</h2>
+        <p>Define how a device accesses the link, used in WAN protocols. Examples include:</p>
+        <ul>
+            <li>LAPB – used in X.25 networks</li>
+            <li>LAPD – used in ISDN</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Point-to-Point Protocol (PPP)</h2>
+        <p>PPP is used to establish a direct connection between two nodes.</p>
+        <p><strong>Transmission States:</strong></p>
+        <ul>
+            <li>Link Establishment</li>
+            <li>Authentication</li>
+            <li>Network Layer Protocol Configuration</li>
+        </ul>
+        <p><strong>PPP Layers:</strong></p>
+        <ul>
+            <li><strong>LCP (Link Control Protocol):</strong> Establishes and configures the link.</li>
+            <li><strong>Authentication:</strong> PAP/CHAP used to verify identity.</li>
+            <li><strong>NCP (Network Control Protocol):</strong> Configures network layer protocols like IP.</li>
+        </ul>
+        <div class="code-block">
+            PPP Communication:
+            | LCP | → | Authentication | → | NCP | → | Data Transfer |
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. ISDN (Integrated Services Digital Network)</h2>
+        <ul>
+            <li><strong>Services:</strong> Voice, Video, Text, and Data over a single line.</li>
+            <li><strong>Historical Outline:</strong> Introduced to replace analog telephone systems with digital.</li>
+            <li><strong>Subscriber's Access:</strong> Uses B (Bearer) and D (Delta) channels.</li>
+            <li><strong>ISDN Layers:</strong> Similar to OSI model; physical, data link, and network layers.</li>
+            <li><strong>Broadcast ISDN:</strong> Extension of ISDN to support broadcasting like video conferencing.</li>
+        </ul>
+        <div class="code-block">
+            Basic ISDN:
+            - 2B (64 kbps) + 1D (16 kbps) = 144 kbps
+            Primary Rate:
+            - 23B + 1D (North America)
+            - 30B + 2D (Europe)
+        </div>
+    </section>
+</div>
+
+<!-- UNIT-IV: NETWORK DEVICES, NETWORK LAYER & ROUTING -->
+
+<div class="topic-container" id="unit4">
+    <h1>UNIT-IV: Network Devices & The Network Layer</h1>
+
+    <section class="section">
+        <h2>1. Devices</h2>
+        <ul>
+            <li><strong>Repeaters:</strong> Regenerate weak signals to extend transmission distance. Operate at the Physical Layer.</li>
+            <li><strong>Bridges:</strong> Connect and filter traffic between two LAN segments. Operate at the Data Link Layer.</li>
+            <li><strong>Routers:</strong> Direct data packets between different networks. Operate at the Network Layer.</li>
+            <li><strong>Gateways:</strong> Connect networks using different protocols. Work at multiple OSI layers including the Application Layer.</li>
+        </ul>
+        <div class="code-block">
+            Diagram Example:
+            [PC] ── [Repeater] ── [Bridge] ── [Router] ── [Gateway] ── [Internet]
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Network Layer</h2>
+        <p>The Network Layer is responsible for delivery of packets from source to destination across multiple networks.</p>
+        <p><strong>Main Functions:</strong></p>
+        <ul>
+            <li>Logical addressing (IP address)</li>
+            <li>Routing and forwarding</li>
+            <li>Packet switching</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Design Issues in the Network Layer</h2>
+        <ul>
+            <li>Packet delivery</li>
+            <li>Routing efficiency</li>
+            <li>Congestion control</li>
+            <li>Error handling and diagnostics</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Routing Algorithms</h2>
+        <p>Routing is the process of selecting paths in a network along which to send data packets.</p>
+        <ul>
+            <li><strong>Static Routing:</strong> Predefined routes, no change during transmission.</li>
+            <li><strong>Dynamic Routing:</strong> Adapts routes based on network changes (e.g., RIP, OSPF).</li>
+        </ul>
+        <p><strong>Examples of Algorithms:</strong></p>
+        <ul>
+            <li><strong>Shortest Path (Dijkstra's Algorithm)</strong></li>
+            <li><strong>Flooding:</strong> Packet sent to all possible paths</li>
+            <li><strong>Distance Vector</strong> (e.g., RIP)</li>
+            <li><strong>Link State</strong> (e.g., OSPF)</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            A --1-- B --1-- C
+            Shortest Path A to C: A → B → C (Total cost = 2)
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Congestion Control Algorithms</h2>
+        <p>Used to prevent too much traffic in the network which leads to performance degradation.</p>
+        <ul>
+            <li><strong>Open Loop:</strong> Prevent congestion before it occurs (e.g., traffic shaping).</li>
+            <li><strong>Closed Loop:</strong> Detect and respond to congestion (e.g., feedback mechanisms).</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Quality of Service (QoS)</h2>
+        <p>QoS refers to the performance level of a service like delay, jitter, bandwidth, and packet loss.</p>
+        <ul>
+            <li>Traffic shaping</li>
+            <li>Resource reservation</li>
+            <li>Prioritization</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            Video Call → High QoS (low latency)
+            Email → Low QoS needed
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>7. Internetworking</h2>
+        <p>Internetworking connects multiple distinct networks into a larger network (like the internet).</p>
+        <p><strong>Devices involved:</strong> Routers and Gateways</p>
+    </section>
+
+    <section class="section">
+        <h2>8. Network Layer in the Internet</h2>
+        <p>Uses the Internet Protocol (IP) to route packets globally.</p>
+        <ul>
+            <li><strong>IPv4:</strong> 32-bit addressing</li>
+            <li><strong>IPv6:</strong> 128-bit addressing</li>
+        </ul>
+        <p><strong>Other protocols:</strong></p>
+        <ul>
+            <li>ICMP – error reporting</li>
+            <li>ARP – address resolution</li>
+        </ul>
+    </section>
+</div>
+
+<!-- UNIT-V: TRANSPORT AND UPPER LAYERS IN OSI MODEL -->
+
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Transport and Upper Layers in OSI Model</h1>
+
+    <section class="section">
+        <h2>1. Transport Layer Functions</h2>
+        <p>The Transport Layer ensures reliable data transfer between end systems. It acts as a source-to-destination delivery service.</p>
+        <ul>
+            <li><strong>Segmentation and Reassembly:</strong> Divides data into segments and reassembles them at the destination.</li>
+            <li><strong>Connection Control:</strong> Can be connection-oriented (TCP) or connectionless (UDP).</li>
+            <li><strong>Flow Control:</strong> Ensures sender doesn't overwhelm receiver (e.g., TCP's sliding window).</li>
+            <li><strong>Error Control:</strong> Detects and retransmits lost or corrupted segments.</li>
+            <li><strong>Multiplexing:</strong> Multiple applications use the same network connection using port numbers.</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            TCP port 80 → HTTP<br>
+            TCP port 443 → HTTPS
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>2. Connection Management</h2>
+        <p>Connection management involves establishing, maintaining, and terminating connections.</p>
+        <ul>
+            <li><strong>Connection Establishment:</strong> 3-way handshake (SYN, SYN-ACK, ACK in TCP)</li>
+            <li><strong>Connection Maintenance:</strong> Managing data flow and error handling</li>
+            <li><strong>Connection Termination:</strong> Using FIN and ACK packets</li>
+        </ul>
+        <div class="code-block">
+            Example (TCP Handshake):
+            Client → SYN → Server<br>
+            Server → SYN-ACK → Client<br>
+            Client → ACK → Server
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>3. Session Layer Functions</h2>
+        <p>The Session Layer manages sessions (continuous exchanges of information) between applications.</p>
+        <ul>
+            <li>Establishes, maintains, and terminates sessions</li>
+            <li>Synchronizes data with checkpoints</li>
+            <li>Controls dialog (e.g., full or half-duplex communication)</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            Video conference software uses sessions to keep the stream active and in sync.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Presentation Layer Functions</h2>
+        <p>This layer handles syntax and data format translation between communicating systems.</p>
+        <ul>
+            <li>Data conversion (e.g., ASCII to EBCDIC)</li>
+            <li>Encryption and decryption</li>
+            <li>Compression and decompression</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            Encrypting data before sending → Decryption at the receiver side
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>5. Application Layer Functions</h2>
+        <p>The Application Layer is the closest to the user. It provides network services to applications.</p>
+        <ul>
+            <li>Provides services like email, file transfer, and browsing</li>
+            <li>Examples: HTTP, FTP, SMTP, DNS, SNMP</li>
+        </ul>
+        <div class="code-block">
+            Example:
+            - Web Browsing → HTTP<br>
+            - Email → SMTP<br>
+            - File Transfer → FTP
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Diagram: OSI Model (Layers 4 to 7)</h2>
+        <div class="code-block">
+            | Layer 7 | Application | Email, HTTP, FTP         |
+            | Layer 6 | Presentation| Encryption, Encoding     |
+            | Layer 5 | Session     | Dialog Control           |
+            | Layer 4 | Transport   | TCP, UDP (Reliable transfer) |
+        </div>
+    </section>
+</div>
+
 </body>
 
 </html>

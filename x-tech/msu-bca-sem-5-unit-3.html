@@ -55,10 +55,582 @@
         </div>
     </div>
       <!-- UNIT 1 -->
+
+      <!-- UNIT-I: COMPUTER GRAPHICS & MULTIMEDIA APPLICATION -->
+
+<div class="topic-container" id="unit1">
+    <h1>UNIT-I: Introduction to Computer Graphics & Multimedia Application</h1>
+
+    <section class="section">
+        <h2>1. The Advantages of Interactive Graphics</h2>
+        <ul>
+            <li>Improves user engagement and experience</li>
+            <li>Useful for simulations, games, and design software</li>
+            <li>Enables real-time feedback and interaction</li>
+            <li>Helpful in data visualization and modeling</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Representative Uses of Computer Graphics</h2>
+        <ul>
+            <li>CAD (Computer-Aided Design) for engineering and architecture</li>
+            <li>Medical Imaging (e.g., MRI, CT scans)</li>
+            <li>Virtual Reality and Augmented Reality</li>
+            <li>Scientific visualization and simulations</li>
+            <li>Entertainment (video games, movies, animations)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Classification of Applications</h2>
+        <ul>
+            <li><strong>Interactive Graphics:</strong> Drawing tools, games, CAD systems</li>
+            <li><strong>Non-Interactive Graphics:</strong> Reports, image rendering, scientific diagrams</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>4. Development of Hardware and Software</h2>
+        <ul>
+            <li><strong>Hardware:</strong> Monitors, graphic cards, plotters, digitizers</li>
+            <li><strong>Software:</strong> Graphic libraries (OpenGL, DirectX), drivers, rendering engines</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Conceptual Framework for Interactive Graphics</h2>
+        <p>This includes the stages of interaction:</p>
+        <ul>
+            <li>User input (mouse, keyboard)</li>
+            <li>Application processing (e.g., rotation, zoom)</li>
+            <li>Output generation (display on screen)</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Overview of Scan Conversion</h2>
+        <p>Scan conversion is the process of converting geometric primitives (lines, circles, ellipses) into pixels for raster displays.</p>
+    </section>
+
+    <section class="section">
+        <h2>7. Scan Converting Lines</h2>
+        <p>Lines are approximated by plotting intermediate points on a pixel grid.</p>
+        <div class="code-block">
+            Example: Bresenham’s Line Algorithm<br>
+            Input: (x1, y1) and (x2, y2)<br>
+            Step: Choose the nearest pixel to the theoretical line<br>
+            Output: Set of pixels forming a line
+        </div>
+        <p><strong>Diagram:</strong></p>
+        <div class="code-block">
+            • → plotted pixel<br>
+            <pre>
+            (x1, y1) ●———●———●———●———(x2, y2)
+                     ↑     ↑     ↑     ↑
+                    Pixels chosen based on error term
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>8. Scan Converting Circles</h2>
+        <p>Used to draw circular shapes using symmetry and efficient algorithms.</p>
+        <div class="code-block">
+            Example: Midpoint Circle Algorithm<br>
+            Input: Radius r and center (xc, yc)<br>
+            Use 8-way symmetry to reduce computation
+        </div>
+        <p><strong>Diagram:</strong></p>
+        <div class="code-block">
+            Plot one-eighth and mirror it:
+            <pre>
+                    ●●●
+                 ●       ●
+                ●         ●
+                 ●       ●
+                    ●●●
+            </pre>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>9. Scan Converting Ellipses</h2>
+        <p>Uses midpoint algorithm with two regions for x and y dominance.</p>
+        <div class="code-block">
+            Input: rx, ry (x and y radii), center (xc, yc)<br>
+            Apply symmetry in all four quadrants
+        </div>
+        <p><strong>Diagram:</strong></p>
+        <div class="code-block">
+            Ellipse (symmetrical on x and y axes):
+            <pre>
+                   ●●●●
+                ●       ●
+               ●         ●
+                ●       ●
+                   ●●●●
+            </pre>
+        </div>
+    </section>
+</div>
+
     <!-- UNIT 2 -->
+
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Computer Graphics Technologies and Clipping Algorithms</h1>
+
+    <section class="section">
+        <h2>1. Hardcopy Technologies</h2>
+        <p>Hardcopy devices convert digital graphics into physical output:</p>
+        <ul>
+            <li><strong>Printers:</strong> Inkjet, Laser, Dot Matrix</li>
+            <li><strong>Plotters:</strong> Used for engineering drawings and large vector graphics</li>
+            <li><strong>Film Recorders:</strong> Used in multimedia and motion picture production</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Display Technologies</h2>
+        <p>Types of display devices:</p>
+        <ul>
+            <li><strong>CRT (Cathode Ray Tube)</strong></li>
+            <li><strong>LCD (Liquid Crystal Display)</strong></li>
+            <li><strong>LED (Light Emitting Diode)</strong></li>
+            <li><strong>OLED (Organic LED)</strong></li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Raster-Scan Display System</h2>
+        <p>Raster-scan systems draw graphics by illuminating pixels row-wise (scanlines).</p>
+        <p><strong>Diagram:</strong></p>
+        <div class="code-block">
+            Scanlines: →→→→<br>
+            Pixels: [●●●●●●●]<br>
+            Each pixel is addressed individually and refreshed regularly
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Video Controller</h2>
+        <p>It acts as the interface between display hardware and the CPU. It:</p>
+        <ul>
+            <li>Reads pixel values from the frame buffer</li>
+            <li>Generates the signal to drive the monitor</li>
+            <li>Synchronizes display timing</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Random-Scan Display Processor</h2>
+        <p>Also known as vector displays, they draw graphics using commands rather than pixels.</p>
+        <ul>
+            <li>Uses electron beam to draw directly on screen</li>
+            <li>Efficient for line drawings and CAD</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Input Devices for Operator Interaction</h2>
+        <ul>
+            <li>Keyboard</li>
+            <li>Mouse</li>
+            <li>Joystick</li>
+            <li>Light Pen</li>
+            <li>Graphics Tablet</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Image Scanners</h2>
+        <p>Convert printed images or documents into digital form.</p>
+        <ul>
+            <li>Flatbed scanners</li>
+            <li>Handheld scanners</li>
+            <li>Drum scanners</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>8. Working Exposure on Graphics Tools</h2>
+        <ul>
+            <li><strong>Dreamweaver:</strong> Visual editor for web design (HTML, CSS)</li>
+            <li><strong>3D Effects:</strong> Tools like Blender or Adobe After Effects for modeling and animation</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>9. Clipping</h2>
+        <p>Clipping is the process of cutting parts of graphics that lie outside a defined region (viewport).</p>
+    </section>
+
+    <section class="section">
+        <h3>Southland-Cohen Algorithm</h3>
+        <p>Efficient line clipping algorithm for rectangular clipping window using region codes.</p>
+        <div class="code-block">
+            Steps:<br>
+            1. Assign region codes to endpoints<br>
+            2. Use bitwise AND to test visibility<br>
+            3. Recursively clip lines outside region
+        </div>
+        <div class="code-block">
+            Diagram:<br>
+            Region Codes: 1000 | 1001 | 1010<br>
+                         0000 | LINE | 0000<br>
+                         0100 | 0101 | 0110
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Cyrus-Beck Algorithm</h3>
+        <p>Used for clipping lines against convex polygonal windows.</p>
+        <div class="code-block">
+            Uses parametric line equation:<br>
+            P(t) = P0 + t(P1 - P0), where 0 ≤ t ≤ 1<br>
+            Calculates entering and exiting values of t
+        </div>
+        <div class="code-block">
+            Diagram:<br>
+            Convex polygon → line intersects → compute t-in and t-out
+        </div>
+    </section>
+
+    <section class="section">
+        <h3>Midpoint Subdivision Algorithm</h3>
+        <p>Recursively divides the line into halves and checks which part lies within the window.</p>
+        <div class="code-block">
+            1. Test if line segment is completely inside/outside<br>
+            2. If partially inside, divide at midpoint<br>
+            3. Repeat until clipped completely or fully outside
+        </div>
+        <div class="code-block">
+            Diagram:<br>
+            Initial Line → Midpoint → Divide → Test each part recursively
+        </div>
+    </section>
+</div>
+
     <!-- UNIT 3 -->
+     
+
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Output Devices, Clipping Algorithms & Graphics Tools</h1>
+
+    <section class="section">
+        <h2>1. Hardcopy Technologies</h2>
+        <ul>
+            <li>Devices that produce a permanent output on physical media.</li>
+            <li>Examples: Printers (Inkjet, Laser), Plotters.</li>
+            <li>Used for blueprints, CAD drawings, printed images, etc.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Display Technologies</h2>
+        <ul>
+            <li>CRT (Cathode Ray Tube)</li>
+            <li>LCD (Liquid Crystal Display)</li>
+            <li>LED (Light Emitting Diode)</li>
+            <li>OLED, Plasma, Touch screens</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Raster-Scan Display System</h2>
+        <p>Displays the image as a matrix of pixels in a raster format.</p>
+        <div class="code-block">
+            Process:<br>
+            → Beam scans pixel row-by-row (left to right, top to bottom)<br>
+            → Frame buffer stores pixel color values
+        </div>
+        <p><strong>Diagram:</strong></p>
+        <div class="code-block">
+            Scan direction:<br>
+            →
+            ●●●●●●●●●●<br>
+            →
+            ●●●●●●●●●●<br>
+            →
+            ●●●●●●●●●●<br>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Video Controller</h2>
+        <ul>
+            <li>Controls refresh operations and access to the frame buffer</li>
+            <li>Synchronizes scanning beam and pixel data</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Random-Scan Display Processor</h2>
+        <p>Also called vector display; draws lines directly between points.</p>
+        <ul>
+            <li>Used in oscilloscopes and early graphics systems</li>
+            <li>Efficient for wireframe models</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Input Devices for Operator Interaction</h2>
+        <ul>
+            <li>Keyboard, Mouse, Trackball, Light pen</li>
+            <li>Touchscreens, Joysticks, Graphics Tablets</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Image Scanners</h2>
+        <ul>
+            <li>Convert physical images/documents into digital format</li>
+            <li>Flatbed, Handheld, Drum scanners</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>8. Graphics Tools Exposure</h2>
+        <ul>
+            <li><strong>Dreamweaver:</strong> Web design tool with visual interface</li>
+            <li><strong>3D Effects Tools:</strong> Blender, Autodesk Maya, After Effects</li>
+            <li><strong>Use Cases:</strong> Animation, modeling, VFX, interface design</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>9. Clipping Algorithms</h2>
+        <p>Used to cut portions of graphics that fall outside a defined region (viewport).</p>
+
+        <h3>Southland-Cohen Algorithm</h3>
+        <div class="code-block">
+            Step-by-step:<br>
+            1. Assign region codes to endpoints<br>
+            2. Use bitwise operations to check visibility<br>
+            3. If partially visible, clip against viewport boundaries
+        </div>
+        <div class="code-block">
+            Diagram (region codes):<br>
+             100 | 101 | 001<br>
+            -----+-----+-----<br>
+             100 | 000 | 001<br>
+            -----+-----+-----<br>
+             110 | 011 | 010
+        </div>
+
+        <h3>Cyrus-Beck Algorithm</h3>
+        <ul>
+            <li>Parametric line-clipping for convex polygon clipping window</li>
+            <li>Uses dot product to determine entering and leaving points</li>
+        </ul>
+        <div class="code-block">
+            P(t) = P1 + t(P2 - P1), where 0 ≤ t ≤ 1
+        </div>
+
+        <h3>Midpoint Subdivision Algorithm</h3>
+        <ul>
+            <li>Divide the line segment into two halves recursively</li>
+            <li>Check for visibility at each midpoint</li>
+            <li>Efficient for recursive clipping implementation</li>
+        </ul>
+    </section>
+</div>
+
     <!-- UNIT 4 -->
+     
+<div class="topic-container" id="unit2">
+    <h1>UNIT-II: Hardcopy Technologies, Display Technologies, and Algorithms</h1>
+
+    <section class="section">
+        <h2>1. Hardcopy Technologies</h2>
+        <ul>
+            <li><strong>Printers:</strong> Inkjet, Laser, Dot-matrix</li>
+            <li><strong>Plotters:</strong> Used for producing large drawings, such as blueprints</li>
+            <li><strong>3D Printers:</strong> For physical object creation from 3D models</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>2. Display Technologies</h2>
+        <ul>
+            <li><strong>CRT (Cathode Ray Tube):</strong> Traditional display used in older monitors and televisions</li>
+            <li><strong>LCD (Liquid Crystal Display):</strong> Modern display technology used in most flat-screen monitors</li>
+            <li><strong>LED (Light Emitting Diode):</strong> A more efficient and high-quality display type</li>
+            <li><strong>OLED (Organic LED):</strong> Offers superior contrast and color quality</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Raster-Scan Display System</h2>
+        <p>A raster-scan display system generates images by lighting up pixels in a grid pattern.</p>
+        <ul>
+            <li><strong>Function:</strong> Pixels are lit in sequence to form images, such as in CRT and LCD monitors</li>
+            <li><strong>Drawbacks:</strong> Limited by pixel resolution and requires fast refresh rates for smooth images</li>
+        </ul>
+        <div class="code-block">
+            <strong>Example:</strong> A simple raster-scan display will start at the top-left corner and sweep across each row, lighting up pixels as it moves.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Video Controller</h2>
+        <p>The video controller processes image data and converts it into signals to drive the display hardware.</p>
+        <ul>
+            <li><strong>Function:</strong> Responsible for video timing, controlling color, and resolution.</li>
+            <li><strong>Components:</strong> RAMDAC (RAM Digital-to-Analog Converter), video memory</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Random-Scan Display Processor</h2>
+        <p>Random-scan displays (also known as vector displays) render images directly using lines and geometric shapes.</p>
+        <ul>
+            <li><strong>Function:</strong> Draws objects line by line, without scanning each pixel</li>
+            <li><strong>Use:</strong> Best for applications like CAD, where sharp and clear lines are important</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Input Devices for Operator Interaction</h2>
+        <ul>
+            <li><strong>Mouse:</strong> Pointing and clicking device</li>
+            <li><strong>Keyboard:</strong> Used for textual input</li>
+            <li><strong>Touchscreen:</strong> Input through touch (common in modern devices)</li>
+            <li><strong>Stylus:</strong> Used for precise input on tablets and digital drawing boards</li>
+            <li><strong>Trackpad:</strong> Input through finger gestures</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>7. Image Scanners</h2>
+        <p>Devices that convert physical images into digital formats.</p>
+        <ul>
+            <li><strong>Flatbed Scanners:</strong> Used for scanning images, documents, and photos</li>
+            <li><strong>Handheld Scanners:</strong> Portable devices that scan images directly</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>8. Working Exposure on Graphics Tools</h2>
+        <p>Familiarization with graphics software tools used for creating, editing, and rendering images.</p>
+        <ul>
+            <li><strong>Dreamweaver:</strong> A web design and development tool used for HTML, CSS, and JavaScript editing</li>
+            <li><strong>3D Effects:</strong> Tools like Blender or Autodesk Maya used for 3D modeling, animation, and rendering</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>9. Clipping Algorithms</h2>
+        <p>Clipping is the process of trimming the objects to fit within a specified region.</p>
+        <ul>
+            <li><strong>Southland-Cohen Algorithm:</strong> A line-clipping algorithm used for clipping a line to a rectangular viewport.</li>
+            <li><strong>Cyrus-Beck Algorithm:</strong> A parametric line-clipping algorithm that is more efficient for arbitrary polygons.</li>
+            <li><strong>Midpoint Subdivision Algorithm:</strong> An algorithm used for clipping lines to fit within specific regions.</li>
+        </ul>
+    </section>
+</div>
+
+
     <!-- UNIT 5 -->
+
+  
+<div class="topic-container" id="unit5">
+    <h1>UNIT-V: Introductory Concepts & Multimedia Usage</h1>
+
+    <section class="section">
+        <h2>1. Multimedia Definition</h2>
+        <ul>
+            <li>Multimedia refers to the integration of multiple forms of media, such as text, audio, images, video, and animation, into a single interactive experience.</li>
+            <li>Commonly used in educational content, entertainment, advertising, and virtual reality environments.</li>
+        </ul>
+        <div class="code-block">
+            Example: An interactive educational website combining text, videos, and animations.
+        </div>
+
+        <h2>2. CD-ROM and the Multimedia Highway</h2>
+        <ul>
+            <li><strong>CD-ROM:</strong> A storage medium that allows users to access large amounts of data (videos, music, images, etc.) in a compact format.</li>
+            <li><strong>Multimedia Highway:</strong> A term used to describe high-speed communication networks that deliver multimedia content, enabling real-time interactions and streaming.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>3. Computer Animation</h2>
+
+        <h3>3.1 Design</h3>
+        <ul>
+            <li>Animation design involves creating sequences of images or frames that create the illusion of movement.</li>
+            <li>It includes storyboarding, scene design, and timing the movements of characters or objects.</li>
+        </ul>
+        <div class="code-block">
+            Example: A simple walking animation with keyframes showing different stages of movement.
+        </div>
+
+        <h3>3.2 Types of Animation</h3>
+        <ul>
+            <li><strong>2D Animation:</strong> Flat images and drawings are animated in a two-dimensional space.</li>
+            <li><strong>3D Animation:</strong> Involves modeling objects in three-dimensional space and moving them within that environment.</li>
+            <li><strong>Stop Motion:</strong> Physical objects are moved in small increments between individual frames.</li>
+        </ul>
+
+        <h3>3.3 Using Different Functions in Animation</h3>
+        <ul>
+            <li>Animations often use transformations like translation (movement), rotation, and scaling to manipulate objects.</li>
+            <li>Other functions include timing control, easing functions, and path animations.</li>
+        </ul>
+        <div class="code-block">
+            Example: A 3D object rotating around an axis using transformation functions in software.
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>4. Uses of Multimedia</h2>
+        <ul>
+            <li><strong>Education:</strong> Interactive lessons, simulations, and e-learning courses.</li>
+            <li><strong>Entertainment:</strong> Movies, games, virtual reality environments.</li>
+            <li><strong>Advertising:</strong> Multimedia ads combining video, sound, and interactive elements.</li>
+            <li><strong>Medical:</strong> Visualizations for medical training, patient care, and virtual diagnostics.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>5. Introduction to Making Multimedia</h2>
+
+        <h3>5.1 The Stages of a Multimedia Project</h3>
+        <ul>
+            <li><strong>Planning:</strong> Define objectives, target audience, and project scope.</li>
+            <li><strong>Design:</strong> Develop the user interface and flow of the multimedia experience.</li>
+            <li><strong>Development:</strong> Assemble all components (images, audio, video, etc.) into a working prototype.</li>
+            <li><strong>Testing:</strong> Test for usability, performance, and user interaction.</li>
+            <li><strong>Distribution:</strong> Publish or distribute the final multimedia project.</li>
+        </ul>
+
+        <h3>5.2 Hardware & Software Requirements</h3>
+        <ul>
+            <li><strong>Hardware:</strong> A powerful computer with high processing capabilities, RAM, a good graphics card, and peripherals like a scanner and camera.</li>
+            <li><strong>Software:</strong> Applications for creating multimedia like Adobe Photoshop, Premiere Pro, Blender, Dreamweaver, etc.</li>
+        </ul>
+
+        <h3>5.3 Skills and Training Opportunities in Multimedia</h3>
+        <ul>
+            <li>Skills include graphic design, video editing, 3D modeling, animation, and web design.</li>
+            <li>Training can be done through online courses, workshops, and certifications in multimedia tools like Adobe Suite, Autodesk, and Unity.</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>6. Motivation for Multimedia Usage</h2>
+        <ul>
+            <li>Multimedia enhances user engagement by offering interactive and immersive experiences.</li>
+            <li>It can help in simplifying complex information, making learning more effective and enjoyable.</li>
+            <li>It is also an essential tool for marketing, creating compelling advertisements that grab attention and leave a lasting impact.</li>
+        </ul>
+        <div class="code-block">
+            Example: A company using interactive 3D product demos to increase customer engagement.
+        </div>
+    </section>
+</div>
 
 </body>
 
